@@ -1,20 +1,34 @@
-import { Container, CssBaseline, Grid, Typography } from "@material-ui/core";
+import {
+  Container,
+  CssBaseline,
+  Grid,
+  Tab,
+  Tabs,
+  Typography,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useEffect, useState } from "react";
-import { TournamentBracket } from "../components/TournamentBracket";
-import { makeTree } from "../components/TournamentBracket/TreeMaker";
+import { TournamentBoard } from "../components/TournamentBoard";
 import {
   fetchContestResults,
   fetchOrderedUserList,
   fetchRatingMap,
 } from "../utils/API";
-import { UNDEFINED_NODE } from "../utils/Constants";
-import { resolveTournament } from "../utils/ResultResolver";
 import "./tournament.scss";
+import { MAXIMUM_MEMBER } from "../utils/Constants";
 
-interface Props {
-  seasonId: string;
-}
+const formatClass = (index: number) => {
+  if (index === 0) {
+    return "A";
+  }
+  if (index < 3) {
+    return `B${index}`;
+  }
+  if (index < 7) {
+    return `C${index - 2}`;
+  }
+  return `D${index - 6}`;
+};
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -22,13 +36,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+interface Props {
+  seasonId: string;
+}
+
 export const Tournament = (props: Props) => {
-  const [atCoderUserIds, setAtCoderUserIds] = useState<string[]>([]);
-  const [ratingMap, setRatingMap] = useState<Map<string, number> | null>(null);
-  const [contestResults, setContestResults] = useState<
-    Map<string, number>[] | null
-  >(null);
   const classes = useStyles();
+  const [atCoderUserIds, setAtCoderUserIds] = useState<string[]>([]);
+  const [ratingMap, setRatingMap] = useState<Map<string, number> | undefined>(
+    undefined
+  );
+  const [contestResults, setContestResults] = useState<
+    Map<string, number>[] | undefined
+  >(undefined);
+  const [selectedDivision, setSelectedDivision] = useState(0);
 
   useEffect(() => {
     fetchOrderedUserList(props.seasonId).then((users) =>
@@ -44,35 +65,22 @@ export const Tournament = (props: Props) => {
     }
   });
 
-  const pickWinner = (index: number, children: string[]) => {
-    if (!contestResults || contestResults.length <= index) {
-      return UNDEFINED_NODE;
-    }
-    const ranks = children.map((child) => {
-      return contestResults[index].get(child) ?? 100000;
-    });
-    const ratings = children.map((child) => {
-      return ratingMap?.get(child) ?? 0;
-    });
-    const userInfo = children.map((userId, i) => ({
-      userId,
-      rating: ratings[i],
-      rank: ranks[i],
-    }));
-    const sorted = userInfo.sort((a, b) => {
-      if (a.rank === b.rank) {
-        return b.rating - a.rating;
-      }
-      return a.rank - b.rank;
-    });
-    return sorted[0].userId;
-  };
+  const divisionCount = Math.ceil(atCoderUserIds.length / MAXIMUM_MEMBER);
+  const divisionMembers = Math.ceil(
+    atCoderUserIds.length / Math.max(divisionCount, 1)
+  );
 
-  const root =
-    atCoderUserIds.length > 0
-      ? makeTree(atCoderUserIds)
-      : { name: "loading", children: [] };
-  const resolvedRoot = resolveTournament(root, pickWinner);
+  const divisions = [] as string[][];
+  let i = atCoderUserIds.length - 1;
+  while (i >= 0) {
+    const division = [] as string[];
+    while (i >= 0 && division.length < divisionMembers) {
+      division.push(atCoderUserIds[i]);
+      i -= 1;
+    }
+    divisions.push(division.reverse());
+  }
+  divisions.reverse();
 
   return (
     <>
@@ -98,20 +106,30 @@ export const Tournament = (props: Props) => {
             登録締め切り : 2020年8月29日 19:00 JST
           </Typography>
           <Typography
-              component="div"
-              variant="body1"
-              align="center"
-              color="textPrimary"
-              gutterBottom
+            component="div"
+            variant="body1"
+            align="center"
+            color="textPrimary"
+            gutterBottom
           >
             {`現在の参加人数: ${atCoderUserIds.length}`}
           </Typography>
-          <TournamentBracket
-            root={resolvedRoot}
-            getRating={(userId) => ratingMap?.get(userId)}
-          />
+          <Tabs
+            value={selectedDivision}
+            onChange={(e, v) => setSelectedDivision(v)}
+            centered
+          >
+            {divisions.map((d, i) => (
+              <Tab label={`CLASS ${formatClass(i)}`} key={i} />
+            ))}
+          </Tabs>
         </Grid>
       </Container>
+      <TournamentBoard
+        atCoderUserIds={divisions[selectedDivision] ?? []}
+        ratingMap={ratingMap}
+        contestResults={contestResults}
+      />
     </>
   );
 };

@@ -1,3 +1,4 @@
+import { Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { BracketNode } from "./index";
@@ -44,22 +45,34 @@ const RatingName = (props: {
 }) => {
   const classes = useStyle();
   const rating = props.getRating(props.children);
-  if (!rating || rating < 400) {
+  if (!rating) {
     return <p>{props.children}</p>;
-  } else if (rating < 800) {
-    return <p className={classes.brown}>{props.children}</p>;
-  } else if (rating < 1200) {
-    return <p className={classes.green}>{props.children}</p>;
-  } else if (rating < 1600) {
-    return <p className={classes.lightBlue}>{props.children}</p>;
-  } else if (rating < 2000) {
-    return <p className={classes.blue}>{props.children}</p>;
-  } else if (rating < 2400) {
-    return <p className={classes.yellow}>{props.children}</p>;
-  } else if (rating < 2800) {
-    return <p className={classes.orange}>{props.children}</p>;
   }
-  return <p className={classes.red}>{props.children}</p>;
+  let c: string;
+  if (rating < 400) {
+    c = classes.grey;
+  } else if (rating < 800) {
+    c = classes.brown;
+  } else if (rating < 1200) {
+    c = classes.green;
+  } else if (rating < 1600) {
+    c = classes.lightBlue;
+  } else if (rating < 2000) {
+    c = classes.blue;
+  } else if (rating < 2400) {
+    c = classes.yellow;
+  } else if (rating < 2800) {
+    c = classes.orange;
+  } else {
+    c = classes.red;
+  }
+  return (
+    <p>
+      <Link className={c} href={`https://atcoder.jp/users/${props.children}`}>
+        {props.children}
+      </Link>
+    </p>
+  );
 };
 
 interface Props {
