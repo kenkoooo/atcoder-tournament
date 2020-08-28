@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { TournamentBracket } from "../components/TournamentBracket";
 import { makeTree } from "../components/TournamentBracket/TreeMaker";
 import "./tournament.scss";
-import { fetchAllUserList, fetchUserList } from "../utils/API";
+import { fetchOrderedUserList } from "../utils/API";
 
 interface Props {
   seasonId: string;
@@ -21,14 +21,8 @@ export const Tournament = (props: Props) => {
   const classes = useStyles();
 
   useEffect(() => {
-    Promise.all([fetchAllUserList(), fetchUserList(props.seasonId)]).then(
-      ([allUsers, registeredUsers]) => {
-        const userSet = new Set(allUsers);
-        const validUsers = registeredUsers.filter((userId) =>
-          userSet.has(userId)
-        );
-        setAtCoderUserIds(validUsers);
-      }
+    fetchOrderedUserList(props.seasonId).then((users) =>
+      setAtCoderUserIds(users)
     );
   }, [props.seasonId]);
 
