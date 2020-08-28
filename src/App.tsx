@@ -127,7 +127,7 @@ const App = () => {
               render={({ match }) => {
                 const seasonId: string | undefined = match.params.id;
                 return (
-                  <Tournament season_id={seasonId ?? SEASON_ID.toString()} />
+                  <Tournament seasonId={seasonId ?? SEASON_ID.toString()} />
                 );
               }}
             />

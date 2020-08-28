@@ -4,9 +4,10 @@ import React, { useEffect, useState } from "react";
 import { TournamentBracket } from "../components/TournamentBracket";
 import { makeTree } from "../components/TournamentBracket/TreeMaker";
 import "./tournament.scss";
+import { fetchAllUserList, fetchUserList } from "../utils/API";
 
 interface Props {
-  season_id: string;
+  seasonId: string;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -20,12 +21,16 @@ export const Tournament = (props: Props) => {
   const classes = useStyles();
 
   useEffect(() => {
-    fetch(
-      `https://atcoder-tournament.herokuapp.com/api/users?season_id=${props.season_id}`
-    )
-      .then((response) => response.json())
-      .then((response) => setAtCoderUserIds(response));
-  }, [props.season_id]);
+    Promise.all([fetchAllUserList(), fetchUserList(props.seasonId)]).then(
+      ([allUsers, registeredUsers]) => {
+        const userSet = new Set(allUsers);
+        const validUsers = registeredUsers.filter((userId) =>
+          userSet.has(userId)
+        );
+        setAtCoderUserIds(validUsers);
+      }
+    );
+  }, [props.seasonId]);
 
   const root =
     atCoderUserIds.length > 0
