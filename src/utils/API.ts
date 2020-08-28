@@ -5,31 +5,36 @@ async function fetchUserList(seasonId: string) {
   return userIds;
 }
 
-async function fetchAllUserList() {
-  const ac: { user_id: string; problem_count: number }[] = await fetch(
-    "./ac.json"
+export async function fetchRatingMap() {
+  const allUsers: { user_id: string; rating: number }[] = await fetch(
+    "./ratings.json"
   ).then((response) => response.json());
-  return ac;
+  const userMap = new Map<string, number>();
+  allUsers.forEach((user) => {
+    userMap.set(user.user_id, user.rating);
+  });
+  return userMap;
 }
 
 export async function fetchOrderedUserList(seasonId: string) {
-  const [allUsers, registeredUsers] = await Promise.all([
-    fetchAllUserList(),
+  const [userMap, registeredUsers] = await Promise.all([
+    fetchRatingMap(),
     fetchUserList(seasonId),
   ]);
 
-  const userMap = new Map<string, number>();
-  allUsers.forEach((user) => {
-    userMap.set(user.user_id, user.problem_count);
-  });
-
-  const validUsers = [] as { count: number; userId: string }[];
+  const validUsers = [] as { rating: number; userId: string }[];
   registeredUsers.forEach((userId) => {
-    const count = userMap.get(userId);
-    if (count) {
-      validUsers.push({ count, userId });
+    const rating = userMap.get(userId);
+    if (rating) {
+      validUsers.push({ rating, userId });
     }
   });
-  validUsers.sort((a, b) => a.count - b.count);
+  validUsers.sort((a, b) => {
+    if (a.rating === b.rating) {
+      return a.userId.localeCompare(b.userId);
+    } else {
+      return a.rating - b.rating;
+    }
+  });
   return validUsers.map((user) => user.userId);
 }

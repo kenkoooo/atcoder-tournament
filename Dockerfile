@@ -13,6 +13,6 @@ ADD ./src ./src
 RUN cargo build --release
 
 FROM rust:1.44.0
-COPY --from=builder /app/target/release/atcoder-tournament                /usr/bin/atcoder-tournament
+COPY --from=builder /app/target/release/atcoder-tournament /usr/bin/atcoder-tournament
 
 CMD atcoder-tournament

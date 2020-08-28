@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { TournamentBracket } from "../components/TournamentBracket";
 import { makeTree } from "../components/TournamentBracket/TreeMaker";
 import "./tournament.scss";
-import { fetchOrderedUserList } from "../utils/API";
+import { fetchOrderedUserList, fetchRatingMap } from "../utils/API";
 
 interface Props {
   seasonId: string;
@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const Tournament = (props: Props) => {
   const [atCoderUserIds, setAtCoderUserIds] = useState<string[]>([]);
+  const [ratingMap, setRatingMap] = useState<Map<string, number> | null>(null);
   const classes = useStyles();
 
   useEffect(() => {
@@ -25,6 +26,11 @@ export const Tournament = (props: Props) => {
       setAtCoderUserIds(users)
     );
   }, [props.seasonId]);
+  useEffect(() => {
+    if (!ratingMap) {
+      fetchRatingMap().then((map) => setRatingMap(map));
+    }
+  });
 
   const root =
     atCoderUserIds.length > 0
@@ -54,7 +60,10 @@ export const Tournament = (props: Props) => {
           >
             登録締め切り : 2020年8月29日 19:00 JST
           </Typography>
-          <TournamentBracket root={root} />
+          <TournamentBracket
+            root={root}
+            getRating={(userId) => ratingMap?.get(userId)}
+          />
         </Grid>
       </Container>
     </>
