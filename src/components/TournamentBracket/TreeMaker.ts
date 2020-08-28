@@ -1,3 +1,4 @@
+import { UNDEFINED_NODE } from "../../utils/Constants";
 import { BracketNode } from "./index";
 
 export const makeTree = (players: string[]): BracketNode => {
@@ -12,7 +13,7 @@ export const makeTree = (players: string[]): BracketNode => {
       const player1 = players[i];
       const player2 = players[leafCount + i];
       leafPlayers.push({
-        name: "...",
+        name: UNDEFINED_NODE,
         children: [
           { name: player2, children: [] },
           { name: player1, children: [] },
@@ -33,10 +34,10 @@ export const makeTree = (players: string[]): BracketNode => {
     for (let i = 0; i < currentPlayers.length; i += 2) {
       const node1 = currentPlayers[i];
       if (i + 1 === currentPlayers.length) {
-        nextPlayers.push({ name: "...", children: [node1] });
+        nextPlayers.push({ name: UNDEFINED_NODE, children: [node1] });
       } else {
         const node2 = currentPlayers[i + 1];
-        nextPlayers.push({ name: "...", children: [node1, node2] });
+        nextPlayers.push({ name: UNDEFINED_NODE, children: [node1, node2] });
       }
     }
     currentPlayers = nextPlayers;

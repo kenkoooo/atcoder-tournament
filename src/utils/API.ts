@@ -33,8 +33,28 @@ export async function fetchOrderedUserList(seasonId: string) {
     if (a.rating === b.rating) {
       return a.userId.localeCompare(b.userId);
     } else {
-      return a.rating - b.rating;
+      return b.rating - a.rating;
     }
   });
   return validUsers.map((user) => user.userId);
+}
+
+async function fetchSingleContestMap(contestId: string) {
+  const contestResult = await fetch(`./${contestId}.json`).then((response) =>
+    response.json()
+  );
+  const results: { Rank: number; UserName: string }[] =
+    contestResult.StandingsData;
+  const map = new Map<string, number>();
+  results.forEach((result) => {
+    map.set(result.UserName, result.Rank);
+  });
+  return map;
+}
+
+export async function fetchContestResults() {
+  return Promise.all([
+    // fetchSingleContestMap("abc176"),
+    // fetchSingleContestMap("abc176"),
+  ]);
 }
