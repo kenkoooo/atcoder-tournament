@@ -1,0 +1,10 @@
+[package]
+name = "atcoder-tournament"
+version = "0.1.0"
+authors = ["kenkoooo <kenkou.n@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+tide = "0.13.0"
+sqlx = { version="0.3.5", features=["postgres"] }
+async-std = { version="1.6.3", features=["attributes"] }
