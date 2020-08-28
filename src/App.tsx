@@ -1,26 +1,143 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  Container,
+  createMuiTheme,
+  MuiThemeProvider,
+  CssBaseline,
+  AppBar,
+  Typography,
+  Link,
+  Toolbar,
+} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
+import {
+  HashRouter,
+  Switch,
+  Route,
+  Redirect,
+  Link as RouterLink,
+} from "react-router-dom";
+import "./App.css";
+import { RulePage } from "./pages/RulePage";
+import { SubmitPage } from "./pages/SubmitPage";
+import { Tournament } from "./pages/Tournament";
 
-function App() {
+export const SEASON_ID = 1;
+const theme = createMuiTheme({
+  palette: {
+    type: "dark",
+  },
+});
+
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    borderBottom: `1px solid ${theme.palette.divider}`,
+  },
+  toolbar: {
+    flexWrap: "wrap",
+  },
+  toolbarTitle: {
+    flexGrow: 1,
+    textDecoration: "none",
+  },
+  link: {
+    margin: theme.spacing(1, 1.5),
+  },
+  heroContent: {
+    padding: theme.spacing(8, 0, 6),
+  },
+  cardHeader: {
+    backgroundColor:
+      theme.palette.type === "light"
+        ? theme.palette.grey[200]
+        : theme.palette.grey[700],
+  },
+  cardPricing: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "baseline",
+    marginBottom: theme.spacing(2),
+  },
+  footer: {
+    borderTop: `1px solid ${theme.palette.divider}`,
+    marginTop: theme.spacing(8),
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: theme.spacing(6),
+      paddingBottom: theme.spacing(6),
+    },
+  },
+}));
+const App = () => {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <HashRouter>
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        <AppBar
+          position="static"
+          color="default"
+          elevation={0}
+          className={classes.appBar}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Toolbar className={classes.toolbar}>
+            <Typography
+              component={RouterLink}
+              variant="h6"
+              color="inherit"
+              noWrap
+              className={classes.toolbarTitle}
+              to="/"
+            >
+              ABC トーナメント
+            </Typography>
+            <nav>
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/submit"
+                className={classes.link}
+              >
+                登録
+              </Link>
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/rule"
+                className={classes.link}
+              >
+                ルール
+              </Link>
+            </nav>
+          </Toolbar>
+        </AppBar>
+        <Container component="main" maxWidth="lg">
+          <Switch>
+            <Route
+              exact
+              path="/tournament/:id([0-9]+)"
+              render={({ match }) => {
+                const seasonId: string | undefined = match.params.id;
+                return (
+                  <Tournament season_id={seasonId ?? SEASON_ID.toString()} />
+                );
+              }}
+            />
+            <Route path="/submit">
+              <SubmitPage />
+            </Route>
+            <Route path="/rule">
+              <RulePage />
+            </Route>
+            <Redirect path="/" to={`/tournament/${SEASON_ID}`} />
+          </Switch>
+        </Container>
+      </MuiThemeProvider>
+    </HashRouter>
   );
-}
+};
 
 export default App;
