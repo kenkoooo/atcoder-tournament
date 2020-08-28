@@ -8,12 +8,13 @@ export interface BracketNode {
 
 interface Props {
   root: BracketNode;
+  getRating: (userId: string) => number | undefined;
 }
 
 export const TournamentBracket = (props: Props) => {
   return (
     <div className="wrapper">
-      <GameNode node={props.root} />
+      <GameNode getRating={props.getRating} node={props.root} />
     </div>
   );
 };

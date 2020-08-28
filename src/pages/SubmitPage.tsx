@@ -9,8 +9,8 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useState } from "react";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import { SEASON_ID } from "../App";
 import { Redirect } from "react-router-dom";
+import { SEASON_ID } from "../utils/Constants";
 
 type RegisterState = "Registered" | "Input" | "Failed";
 

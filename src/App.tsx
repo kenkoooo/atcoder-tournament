@@ -1,29 +1,27 @@
 import {
+  AppBar,
   Container,
   createMuiTheme,
-  MuiThemeProvider,
   CssBaseline,
-  AppBar,
-  Typography,
   Link,
+  MuiThemeProvider,
   Toolbar,
+  Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import {
   HashRouter,
-  Switch,
-  Route,
-  Redirect,
   Link as RouterLink,
+  Redirect,
+  Route,
+  Switch,
 } from "react-router-dom";
 import "./App.css";
 import { RulePage } from "./pages/RulePage";
 import { SubmitPage } from "./pages/SubmitPage";
 import { Tournament } from "./pages/Tournament";
-
-export const SEASON_ID = 1;
-export const DEADLINE = 1598695200;
+import { DEADLINE, SEASON_ID } from "./utils/Constants";
 
 const theme = createMuiTheme({
   palette: {
