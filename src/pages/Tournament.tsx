@@ -54,6 +54,15 @@ export const Tournament = (props: Props) => {
           >
             登録締め切り : 2020年8月29日 19:00 JST
           </Typography>
+          <Typography
+              component="div"
+              variant="body1"
+              align="center"
+              color="textPrimary"
+              gutterBottom
+          >
+            {`現在の参加人数: ${atCoderUserIds.length}`}
+          </Typography>
           <TournamentBracket root={root} />
         </Grid>
       </Container>
