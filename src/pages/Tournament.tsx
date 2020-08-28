@@ -46,6 +46,15 @@ export const Tournament = (props: Props) => {
           >
             AtCoder Beginner Contest Tournament
           </Typography>
+          <Typography
+            component="h4"
+            variant="h4"
+            align="center"
+            color="textPrimary"
+            gutterBottom
+          >
+            登録締め切り : 2020年8月29日 19:00 JST
+          </Typography>
           <TournamentBracket root={root} />
         </Grid>
       </Container>
