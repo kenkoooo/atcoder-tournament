@@ -23,10 +23,10 @@ const useStyle = makeStyles(() => ({
     color: yellow[500],
   },
   blue: {
-    color: blue[500],
+    color: blue[800],
   },
   lightBlue: {
-    color: lightBlue[500],
+    color: lightBlue[300],
   },
   green: {
     color: green[500],
