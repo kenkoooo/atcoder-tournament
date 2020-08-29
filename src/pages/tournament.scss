@@ -1,5 +1,8 @@
-$side-margin: 50px;
-$vertical-margin: 10px;
+$side-margin: 60px;
+$vertical-margin: 1px;
+$line-width: 3px;
+
+$node-padding: 3px;
 
 .wrapper{
   display: flex;
@@ -10,11 +13,14 @@ $vertical-margin: 10px;
   display: flex;
   flex-direction: row-reverse;
   p{
-    padding: 20px;
+    padding: $node-padding;
     margin: 0;
-    background-color: #595a5e;
-    //color: white;
+    background-color: #7a7b7d;
     text-shadow: rgb(34,34,34) 1px 1px 1px;
+    font-size: 14px;
+    font-family: "Roboto Light", sans-serif;
+    border-width: 0;
+    border-radius: $node-padding;
   }
 
   &-parent{
@@ -26,7 +32,7 @@ $vertical-margin: 10px;
       position: absolute;
       content: '';
       width: $side-margin/2;
-      height: 2px;
+      height: $line-width;
       left: 0;
       top: 50%;
       background-color: #fff;
@@ -52,16 +58,16 @@ $vertical-margin: 10px;
       right: 0;
       top: 50%;
       transform: translateX(100%);
-      width: 25px;
-      height: 2px;
+      width: $side-margin/2;
+      height: $line-width;
     }
     &:after{
       content: '';
       position: absolute;
       background-color: #fff;
       right: -$side-margin / 2;
-      height: calc(50% + 22px) ;
-      width: 2px;
+      height: calc(50% + #{$vertical-margin} * 2) ;
+      width: $line-width;
       top: 50%;
     }
     &:last-child{
