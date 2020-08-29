@@ -1,3 +1,10 @@
+async function fetchFixedUserList(seasonId: string) {
+  const userIds: string[] = await fetch(
+    `./users-${seasonId}.json`
+  ).then((response) => response.json());
+  return userIds;
+}
+
 async function fetchUserList(seasonId: string) {
   const userIds: string[] = await fetch(
     `https://atcoder-tournament.herokuapp.com/api/users?season_id=${seasonId}`
@@ -19,7 +26,7 @@ export async function fetchRatingMap() {
 export async function fetchOrderedUserList(seasonId: string) {
   const [userMap, registeredUsers] = await Promise.all([
     fetchRatingMap(),
-    fetchUserList(seasonId),
+    fetchFixedUserList(seasonId),
   ]);
 
   const validUsers = [] as { rating: number; userId: string }[];

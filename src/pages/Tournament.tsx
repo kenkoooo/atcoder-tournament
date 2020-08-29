@@ -103,7 +103,7 @@ export const Tournament = (props: Props) => {
             color="textPrimary"
             gutterBottom
           >
-            登録締め切り : 2020年8月29日 19:00 JST
+            シーズン 1
           </Typography>
           <Typography
             component="div"
@@ -112,7 +112,7 @@ export const Tournament = (props: Props) => {
             color="textPrimary"
             gutterBottom
           >
-            {`現在の参加人数: ${atCoderUserIds.length}`}
+            {`参加人数: ${atCoderUserIds.length}`}
           </Typography>
           <Tabs
             value={selectedDivision}
