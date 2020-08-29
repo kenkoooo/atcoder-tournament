@@ -1,5 +1,5 @@
 import React from "react";
-import { TournamentBracket } from "./TournamentBracket";
+import { GameNode } from "./TournamentBracket/GameNode";
 import { makeTree } from "./TournamentBracket/TreeMaker";
 import { resolveTournament } from "../utils/ResultResolver";
 
@@ -30,9 +30,9 @@ export const TournamentBoard = (props: Props) => {
   const resolvedRoot = resolveTournament(root, makeUserInfo);
 
   return (
-    <TournamentBracket
-      root={resolvedRoot}
+    <GameNode
       getRating={(userId) => ratingMap?.get(userId)}
+      node={resolvedRoot}
     />
   );
 };

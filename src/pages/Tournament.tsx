@@ -1,4 +1,5 @@
 import {
+  Box,
   Container,
   CssBaseline,
   Grid,
@@ -122,11 +123,14 @@ export const Tournament = (props: Props) => {
             <Tab label={`CLASS ${formatClass(i)}`} key={i} />
           ))}
         </Tabs>
-        <TournamentBoard
-          atCoderUserIds={divisions[selectedDivision] ?? []}
-          ratingMap={ratingMap}
-          contestResults={contestResults}
-        />
+
+        <Box display="flex" justifyContent="center">
+          <TournamentBoard
+            atCoderUserIds={divisions[selectedDivision] ?? []}
+            ratingMap={ratingMap}
+            contestResults={contestResults}
+          />
+        </Box>
       </Grid>
     </>
   );
