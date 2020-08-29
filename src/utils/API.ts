@@ -43,18 +43,24 @@ async function fetchSingleContestMap(contestId: string) {
   const contestResult = await fetch(`./${contestId}.json`).then((response) =>
     response.json()
   );
-  const results: { Rank: number; UserName: string }[] =
-    contestResult.StandingsData;
+  const results: {
+    Rank: number;
+    UserScreenName: string;
+    TotalResult: { Score: number };
+  }[] = contestResult.StandingsData;
   const map = new Map<string, number>();
   results.forEach((result) => {
-    map.set(result.UserName, result.Rank);
+    if (result.TotalResult.Score > 0) {
+      map.set(result.UserScreenName, result.Rank);
+    }
   });
   return map;
 }
 
 export async function fetchContestResults() {
   return Promise.all([
-    // fetchSingleContestMap("abc176"),
+    // fetchSingleContestMap("abc174"),
+    // fetchSingleContestMap("abc175"),
     // fetchSingleContestMap("abc176"),
   ]);
 }

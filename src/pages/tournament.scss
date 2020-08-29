@@ -21,6 +21,8 @@ $node-padding: 3px;
     font-family: "Roboto Light", sans-serif;
     border-width: 0;
     border-radius: $node-padding;
+    min-width: 130px;
+    text-align: center;
   }
 
   &-parent{

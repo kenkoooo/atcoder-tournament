@@ -18,7 +18,9 @@ export const TournamentBoard = (props: Props) => {
       return UNDEFINED_NODE;
     }
     const ranks = children.map((child) => {
-      return contestResults[index].get(child) ?? 100000;
+      const resultMap = contestResults[index];
+      const nextRank = resultMap.size + 1;
+      return contestResults[index].get(child) ?? nextRank;
     });
     const ratings = children.map((child) => {
       return ratingMap?.get(child) ?? 0;
