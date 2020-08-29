@@ -1,13 +1,11 @@
 import {
   Box,
-  Container,
   CssBaseline,
   Grid,
   Tab,
   Tabs,
   Typography,
 } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import React, { useEffect, useState } from "react";
 import { TournamentBoard } from "../components/TournamentBoard";
 import {
@@ -15,7 +13,6 @@ import {
   fetchOrderedUserList,
   fetchRatingMap,
 } from "../utils/API";
-import "./tournament.scss";
 import { MAXIMUM_MEMBER } from "../utils/Constants";
 
 const formatClass = (index: number) => {
@@ -31,18 +28,11 @@ const formatClass = (index: number) => {
   return `D${index - 6}`;
 };
 
-const useStyles = makeStyles((theme) => ({
-  heroContent: {
-    padding: theme.spacing(8, 0, 6),
-  },
-}));
-
 interface Props {
   seasonId: string;
 }
 
 export const Tournament = (props: Props) => {
-  const classes = useStyles();
   const [atCoderUserIds, setAtCoderUserIds] = useState<string[]>([]);
   const [ratingMap, setRatingMap] = useState<Map<string, number> | undefined>(
     undefined
