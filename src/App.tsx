@@ -129,9 +129,9 @@ const App = () => {
                 );
               }}
             />
-            <Route path="/submit">
-              <SubmitPage />
-            </Route>
+            {/*<Route path="/submit">*/}
+            {/*  <SubmitPage />*/}
+            {/*</Route>*/}
             <Route path="/rule">
               <RulePage />
             </Route>
