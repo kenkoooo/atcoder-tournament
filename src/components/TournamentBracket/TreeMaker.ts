@@ -1,5 +1,5 @@
+import { BracketNode } from "../../models/BracketNode";
 import { UNDEFINED_NODE } from "../../utils/Constants";
-import { BracketNode } from "./index";
 
 export const makeTree = (players: string[]): BracketNode => {
   let leafCount = 1;

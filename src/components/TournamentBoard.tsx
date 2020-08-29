@@ -1,7 +1,6 @@
 import React from "react";
 import { TournamentBracket } from "./TournamentBracket";
 import { makeTree } from "./TournamentBracket/TreeMaker";
-import { UNDEFINED_NODE } from "../utils/Constants";
 import { resolveTournament } from "../utils/ResultResolver";
 
 interface Props {
@@ -13,37 +12,22 @@ interface Props {
 export const TournamentBoard = (props: Props) => {
   const { atCoderUserIds, contestResults, ratingMap } = props;
 
-  const pickWinner = (index: number, children: string[]) => {
+  const makeUserInfo = (index: number, userId: string) => {
     if (!contestResults || contestResults.length <= index) {
-      return UNDEFINED_NODE;
+      return undefined;
     }
-    const ranks = children.map((child) => {
-      const resultMap = contestResults[index];
-      const nextRank = resultMap.size + 1;
-      return contestResults[index].get(child) ?? nextRank;
-    });
-    const ratings = children.map((child) => {
-      return ratingMap?.get(child) ?? 0;
-    });
-    const userInfo = children.map((userId, i) => ({
-      userId,
-      rating: ratings[i],
-      rank: ranks[i],
-    }));
-    const sorted = userInfo.sort((a, b) => {
-      if (a.rank === b.rank) {
-        return b.rating - a.rating;
-      }
-      return a.rank - b.rank;
-    });
-    return sorted[0].userId;
+    const resultMap = contestResults[index];
+    const nextRank = resultMap.size + 1;
+    const rank = contestResults[index].get(userId) ?? nextRank;
+    const rating = ratingMap?.get(userId) ?? 0;
+    return { userId, rank, rating };
   };
 
   const root =
     atCoderUserIds.length > 0
       ? makeTree(atCoderUserIds)
       : { name: "loading", children: [] };
-  const resolvedRoot = resolveTournament(root, pickWinner);
+  const resolvedRoot = resolveTournament(root, makeUserInfo);
 
   return (
     <>

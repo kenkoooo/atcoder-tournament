@@ -1,7 +1,7 @@
-import { Link } from "@material-ui/core";
+import { Link, Tooltip } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import { BracketNode } from "./index";
+import { BracketNode } from "../../models/BracketNode";
 import {
   red,
   orange,
@@ -75,26 +75,44 @@ const RatingName = (props: {
   );
 };
 
+const RankedRatingName = (props: {
+  node: BracketNode;
+  getRating: (userId: string) => number | undefined;
+}) => {
+  const { node, getRating } = props;
+  return node.rank ? (
+    <Tooltip title={`Rank: ${node.rank}`} arrow>
+      <div>
+        <RatingName getRating={getRating}>{node.name}</RatingName>
+      </div>
+    </Tooltip>
+  ) : (
+    <div>
+      <RatingName getRating={getRating}>{node.name}</RatingName>
+    </div>
+  );
+};
+
 interface Props {
   node: BracketNode;
   getRating: (userId: string) => number | undefined;
 }
 
 export const GameNode = (props: Props) => {
-  if (props.node.children.length === 0) {
-    return (
-      <RatingName getRating={props.getRating}>{props.node.name}</RatingName>
-    );
+  const { node, getRating } = props;
+
+  if (node.children.length === 0) {
+    return <RankedRatingName node={node} getRating={getRating} />;
   } else {
     return (
       <div className="item">
         <div className="item-parent">
-          <RatingName getRating={props.getRating}>{props.node.name}</RatingName>
+          <RankedRatingName node={node} getRating={getRating} />
         </div>
         <div className="item-children">
-          {props.node.children.map((node, i) => (
+          {node.children.map((node, i) => (
             <div key={i} className="item-child">
-              <GameNode getRating={props.getRating} node={node} />
+              <GameNode getRating={getRating} node={node} />
             </div>
           ))}
         </div>

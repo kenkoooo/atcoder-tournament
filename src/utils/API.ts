@@ -66,7 +66,7 @@ async function fetchSingleContestMap(contestId: string) {
 
 export async function fetchContestResults() {
   return Promise.all([
-    // fetchSingleContestMap("abc174"),
+    fetchSingleContestMap("abc177"),
     // fetchSingleContestMap("abc175"),
     // fetchSingleContestMap("abc176"),
   ]);

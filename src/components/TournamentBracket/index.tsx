@@ -1,10 +1,6 @@
 import React from "react";
+import { BracketNode } from "../../models/BracketNode";
 import { GameNode } from "./GameNode";
-
-export interface BracketNode {
-  name: string;
-  children: BracketNode[];
-}
 
 interface Props {
   root: BracketNode;
