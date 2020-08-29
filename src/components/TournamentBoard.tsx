@@ -30,11 +30,9 @@ export const TournamentBoard = (props: Props) => {
   const resolvedRoot = resolveTournament(root, makeUserInfo);
 
   return (
-    <>
-      <TournamentBracket
-        root={resolvedRoot}
-        getRating={(userId) => ratingMap?.get(userId)}
-      />
-    </>
+    <TournamentBracket
+      root={resolvedRoot}
+      getRating={(userId) => ratingMap?.get(userId)}
+    />
   );
 };

@@ -117,7 +117,7 @@ const App = () => {
             </nav>
           </Toolbar>
         </AppBar>
-        <Container component="main" maxWidth="lg">
+        <Container component="main" maxWidth={false}>
           <Switch>
             <Route
               exact

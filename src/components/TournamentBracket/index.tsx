@@ -8,9 +8,5 @@ interface Props {
 }
 
 export const TournamentBracket = (props: Props) => {
-  return (
-    <div className="wrapper">
-      <GameNode getRating={props.getRating} node={props.root} />
-    </div>
-  );
+  return <GameNode getRating={props.getRating} node={props.root} />;
 };

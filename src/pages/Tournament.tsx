@@ -85,51 +85,49 @@ export const Tournament = (props: Props) => {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="lg" className={classes.heroContent}>
-        <Grid container justify="center" direction="column">
-          <Typography
-            component="h1"
-            variant="h2"
-            align="center"
-            color="textPrimary"
-            gutterBottom
-          >
-            AtCoder Beginner Contest Tournament
-          </Typography>
-          <Typography
-            component="h4"
-            variant="h4"
-            align="center"
-            color="textPrimary"
-            gutterBottom
-          >
-            シーズン 1
-          </Typography>
-          <Typography
-            component="div"
-            variant="body1"
-            align="center"
-            color="textPrimary"
-            gutterBottom
-          >
-            {`参加人数: ${atCoderUserIds.length}`}
-          </Typography>
-          <Tabs
-            value={selectedDivision}
-            onChange={(e, v) => setSelectedDivision(v)}
-            centered
-          >
-            {divisions.map((d, i) => (
-              <Tab label={`CLASS ${formatClass(i)}`} key={i} />
-            ))}
-          </Tabs>
-        </Grid>
-      </Container>
-      <TournamentBoard
-        atCoderUserIds={divisions[selectedDivision] ?? []}
-        ratingMap={ratingMap}
-        contestResults={contestResults}
-      />
+      <Grid container justify="center" direction="column">
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+        >
+          AtCoder Beginner Contest Tournament
+        </Typography>
+        <Typography
+          component="h4"
+          variant="h4"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+        >
+          シーズン 1
+        </Typography>
+        <Typography
+          component="div"
+          variant="body1"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+        >
+          {`参加人数: ${atCoderUserIds.length}`}
+        </Typography>
+        <Tabs
+          value={selectedDivision}
+          onChange={(e, v) => setSelectedDivision(v)}
+          centered
+        >
+          {divisions.map((d, i) => (
+            <Tab label={`CLASS ${formatClass(i)}`} key={i} />
+          ))}
+        </Tabs>
+        <TournamentBoard
+          atCoderUserIds={divisions[selectedDivision] ?? []}
+          ratingMap={ratingMap}
+          contestResults={contestResults}
+        />
+      </Grid>
     </>
   );
 };
