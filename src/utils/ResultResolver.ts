@@ -1,10 +1,8 @@
-import { BracketNode } from "../models/BracketNode";
-
-interface UserInfo {
-  userId: string;
-  rating: number;
-  rank: number;
-}
+import {
+  BracketNode,
+  FinishedUserNode,
+  WaitingUserNode,
+} from "../models/BracketNode";
 
 const getDepth = (node: BracketNode, depth: number) => {
   let maxDepth = depth;
@@ -14,10 +12,16 @@ const getDepth = (node: BracketNode, depth: number) => {
   return maxDepth;
 };
 
-const pickWinner = (userInfoList: UserInfo[]) => {
+const pickWinner = (userInfoList: FinishedUserNode[]) => {
   const sorted = userInfoList.sort((a, b) => {
-    if (a.rank === b.rank) {
+    if (a.type === "AbsentUser" && b.type === "AbsentUser") {
       return b.rating - a.rating;
+    }
+    if (a.type === "AbsentUser") {
+      return 1;
+    }
+    if (b.type === "AbsentUser") {
+      return -1;
     }
     return a.rank - b.rank;
   });
@@ -28,36 +32,56 @@ const resolveByDfs = (
   node: BracketNode,
   depth: number,
   maxDepth: number,
-  makeUserInfo: (index: number, userId: string) => UserInfo | undefined
+  putContestResult: (
+    index: number,
+    node: WaitingUserNode
+  ) => WaitingUserNode | FinishedUserNode
 ): BracketNode => {
   const index = maxDepth - depth - 1;
-  const children = node.children.map((child) =>
-    resolveByDfs(child, depth + 1, maxDepth, makeUserInfo)
-  );
-  const userInfoList = [] as UserInfo[];
-  children.forEach((user) => {
-    const userInfo = makeUserInfo(index, user.name);
-    if (userInfo) {
-      userInfoList.push(userInfo);
+  const children = node.children.map((child) => {
+    const resolvedUserNode = resolveByDfs(
+      child,
+      depth + 1,
+      maxDepth,
+      putContestResult
+    );
+    if (resolvedUserNode.type === "WaitingUser") {
+      return putContestResult(index, resolvedUserNode);
+    } else {
+      return resolvedUserNode;
     }
   });
 
-  if (children.length === 0 || children.length !== userInfoList.length) {
-    return { name: node.name, children };
+  const finishedChildren = [] as FinishedUserNode[];
+  children.forEach((child) => {
+    if (child.type === "AbsentUser" || child.type === "ParticipatedUser") {
+      finishedChildren.push(child);
+    }
+  });
+
+  if (children.length === 0 || finishedChildren.length !== children.length) {
+    return {
+      ...node,
+      children,
+    };
   }
 
-  const childrenWithResult = children.map((child, i) => ({
-    ...userInfoList[i],
-    ...child,
-  }));
-  const winner = pickWinner(userInfoList);
-  return { name: winner.userId, children: childrenWithResult };
+  const winner = pickWinner(finishedChildren);
+  return {
+    type: "WaitingUser",
+    rating: winner.rating,
+    name: winner.name,
+    children,
+  };
 };
 
 export const resolveTournament = (
   root: BracketNode,
-  makeUserInfo: (index: number, userId: string) => UserInfo | undefined
+  putContestResult: (
+    index: number,
+    node: WaitingUserNode
+  ) => WaitingUserNode | FinishedUserNode
 ) => {
   const depth = getDepth(root, 0);
-  return resolveByDfs(root, 0, depth, makeUserInfo);
+  return resolveByDfs(root, 0, depth, putContestResult);
 };

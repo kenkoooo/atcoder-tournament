@@ -1,7 +1,6 @@
 import { BracketNode } from "../../models/BracketNode";
-import { UNDEFINED_NODE } from "../../utils/Constants";
 
-export const makeTree = (players: string[]): BracketNode => {
+export const makeTree = (players: BracketNode[]): BracketNode => {
   let leafCount = 1;
   while (leafCount * 2 <= players.length) {
     leafCount *= 2;
@@ -13,31 +12,25 @@ export const makeTree = (players: string[]): BracketNode => {
       const player1 = players[i];
       const player2 = players[leafCount + i];
       leafPlayers.push({
-        name: UNDEFINED_NODE,
-        children: [
-          { name: player2, children: [] },
-          { name: player1, children: [] },
-        ],
+        type: "Empty",
+        children: [player1, player2],
       });
     } else {
-      leafPlayers.push({
-        name: players[i],
-        children: [],
-      });
+      leafPlayers.push(players[i]);
     }
   }
 
   let currentPlayers = leafPlayers;
 
   while (currentPlayers.length > 1) {
-    const nextPlayers = [];
+    const nextPlayers = [] as BracketNode[];
     for (let i = 0; i < currentPlayers.length; i += 2) {
       const node1 = currentPlayers[i];
       if (i + 1 === currentPlayers.length) {
-        nextPlayers.push({ name: UNDEFINED_NODE, children: [node1] });
+        nextPlayers.push({ type: "Empty", children: [node1] });
       } else {
         const node2 = currentPlayers[i + 1];
-        nextPlayers.push({ name: UNDEFINED_NODE, children: [node1, node2] });
+        nextPlayers.push({ type: "Empty", children: [node1, node2] });
       }
     }
     currentPlayers = nextPlayers;

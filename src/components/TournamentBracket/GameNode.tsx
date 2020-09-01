@@ -95,49 +95,72 @@ const RatingName = (props: {
   );
 };
 
-const RankedRatingName = (props: {
-  node: BracketNode;
-  rating: number | undefined;
-}) => {
-  const { node, rating } = props;
+const RankedRatingName = (props: { node: BracketNode }) => {
+  const { node } = props;
   const classes = useStyle();
-  return node.rank ? (
-    <Box display="flex" justifyContent="center" className={classes.nodeText}>
-      <div>
-        <RatingName rating={rating}>{node.name}</RatingName>
-      </div>
-      <Box display="flex" alignItems="center" className={classes.rankBadge}>
-        {node.rank}
-      </Box>
-    </Box>
-  ) : (
-    <div className={classes.nodeText}>
-      <RatingName rating={rating}>{node.name}</RatingName>
-    </div>
-  );
+  switch (node.type) {
+    case "Empty":
+      return (
+        <div className={classes.nodeText}>
+          <p>...</p>
+        </div>
+      );
+    case "WaitingUser":
+      return (
+        <div className={classes.nodeText}>
+          <RatingName rating={node.rating}>{node.name}</RatingName>
+        </div>
+      );
+    case "AbsentUser":
+      return (
+        <Box
+          display="flex"
+          justifyContent="center"
+          className={classes.nodeText}
+        >
+          <div>
+            <RatingName rating={node.rating}>{node.name}</RatingName>
+          </div>
+          <Box display="flex" alignItems="center" className={classes.rankBadge}>
+            -
+          </Box>
+        </Box>
+      );
+    case "ParticipatedUser":
+      return (
+        <Box
+          display="flex"
+          justifyContent="center"
+          className={classes.nodeText}
+        >
+          <div>
+            <RatingName rating={node.rating}>{node.name}</RatingName>
+          </div>
+          <Box display="flex" alignItems="center" className={classes.rankBadge}>
+            {node.rank}
+          </Box>
+        </Box>
+      );
+  }
 };
 
 interface Props {
   node: BracketNode;
-  getRating: (userId: string) => number | undefined;
 }
 
 export const GameNode = (props: Props) => {
-  const { node, getRating } = props;
-  const rating = getRating(node.name);
-
-  if (node.children.length === 0) {
-    return <RankedRatingName node={node} rating={rating} />;
+  if (props.node.children.length === 0) {
+    return <RankedRatingName node={props.node} />;
   } else {
     return (
       <div className="item">
         <div className="item-parent">
-          <RankedRatingName node={node} rating={rating} />
+          <RankedRatingName node={props.node} />
         </div>
         <div className="item-children">
-          {node.children.map((node, i) => (
+          {props.node.children.map((child, i) => (
             <div key={i} className="item-child">
-              <GameNode getRating={getRating} node={node} />
+              <GameNode node={child} />
             </div>
           ))}
         </div>

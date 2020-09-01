@@ -8,11 +8,8 @@ import {
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { TournamentBoard } from "../components/TournamentBoard";
-import {
-  fetchContestResults,
-  fetchOrderedUserList,
-  fetchRatingMap,
-} from "../utils/API";
+import { BracketNode } from "../models/BracketNode";
+import { fetchContestResults, fetchOrderedUserList } from "../utils/API";
 import { MAXIMUM_MEMBER } from "../utils/Constants";
 
 const formatClass = (index: number) => {
@@ -33,10 +30,7 @@ interface Props {
 }
 
 export const Tournament = (props: Props) => {
-  const [atCoderUserIds, setAtCoderUserIds] = useState<string[]>([]);
-  const [ratingMap, setRatingMap] = useState<Map<string, number> | undefined>(
-    undefined
-  );
+  const [atCoderUserIds, setAtCoderUserIds] = useState<BracketNode[]>([]);
   const [contestResults, setContestResults] = useState<
     Map<string, number>[] | undefined
   >(undefined);
@@ -48,9 +42,6 @@ export const Tournament = (props: Props) => {
     );
   }, [props.seasonId]);
   useEffect(() => {
-    if (!ratingMap) {
-      fetchRatingMap().then((map) => setRatingMap(map));
-    }
     if (!contestResults) {
       fetchContestResults().then((maps) => setContestResults(maps));
     }
@@ -61,10 +52,10 @@ export const Tournament = (props: Props) => {
     atCoderUserIds.length / Math.max(divisionCount, 1)
   );
 
-  const divisions = [] as string[][];
+  const divisions = [] as BracketNode[][];
   let i = atCoderUserIds.length - 1;
   while (i >= 0) {
-    const division = [] as string[];
+    const division = [] as BracketNode[];
     while (i >= 0 && division.length < divisionMembers) {
       division.push(atCoderUserIds[i]);
       i -= 1;
@@ -116,8 +107,7 @@ export const Tournament = (props: Props) => {
 
         <Box display="flex" justifyContent="center">
           <TournamentBoard
-            atCoderUserIds={divisions[selectedDivision] ?? []}
-            ratingMap={ratingMap}
+            nodes={divisions[selectedDivision] ?? []}
             contestResults={contestResults}
           />
         </Box>

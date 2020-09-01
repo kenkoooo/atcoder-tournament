@@ -1,38 +1,46 @@
 import React from "react";
+import {
+  BracketNode,
+  FinishedUserNode,
+  WaitingUserNode,
+} from "../models/BracketNode";
 import { GameNode } from "./TournamentBracket/GameNode";
 import { makeTree } from "./TournamentBracket/TreeMaker";
 import { resolveTournament } from "../utils/ResultResolver";
 
 interface Props {
-  atCoderUserIds: string[];
-  ratingMap?: Map<string, number>;
+  nodes: BracketNode[];
   contestResults?: Map<string, number>[];
 }
 
 export const TournamentBoard = (props: Props) => {
-  const { atCoderUserIds, contestResults, ratingMap } = props;
+  const { nodes, contestResults } = props;
 
-  const makeUserInfo = (index: number, userId: string) => {
+  const putContestResult = (
+    index: number,
+    node: WaitingUserNode
+  ): WaitingUserNode | FinishedUserNode => {
     if (!contestResults || contestResults.length <= index) {
-      return undefined;
+      return node;
     }
-    const resultMap = contestResults[index];
-    const nextRank = resultMap.size + 1;
-    const rank = contestResults[index].get(userId) ?? nextRank;
-    const rating = ratingMap?.get(userId) ?? 0;
-    return { userId, rank, rating };
+    const rank = contestResults[index].get(node.name);
+    if (rank) {
+      return {
+        ...node,
+        type: "ParticipatedUser",
+        rank: rank,
+      };
+    } else {
+      return {
+        ...node,
+        type: "AbsentUser",
+      };
+    }
   };
 
-  const root =
-    atCoderUserIds.length > 0
-      ? makeTree(atCoderUserIds)
-      : { name: "loading", children: [] };
-  const resolvedRoot = resolveTournament(root, makeUserInfo);
+  const root: BracketNode =
+    nodes.length > 0 ? makeTree(nodes) : { type: "Empty", children: [] };
+  const resolvedRoot = resolveTournament(root, putContestResult);
 
-  return (
-    <GameNode
-      getRating={(userId) => ratingMap?.get(userId)}
-      node={resolvedRoot}
-    />
-  );
+  return <GameNode node={resolvedRoot} />;
 };

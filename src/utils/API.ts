@@ -1,3 +1,5 @@
+import { WaitingUserNode } from "../models/BracketNode";
+
 async function fetchFixedUserList(seasonId: string) {
   const userIds: string[] = await fetch(
     `./users-${seasonId}.json`
@@ -5,6 +7,7 @@ async function fetchFixedUserList(seasonId: string) {
   return userIds;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function fetchUserList(seasonId: string) {
   const userIds: string[] = await fetch(
     `https://atcoder-tournament.herokuapp.com/api/users?season_id=${seasonId}`
@@ -36,21 +39,26 @@ export async function fetchOrderedUserList(seasonId: string) {
     fetchFixedUserList(seasonId),
   ]);
 
-  const validUsers = [] as { rating: number; userId: string }[];
+  const validUsers = [] as WaitingUserNode[];
   registeredUsers.forEach((userId) => {
     const rating = userMap.get(userId);
     if (rating) {
-      validUsers.push({ rating, userId });
+      validUsers.push({
+        type: "WaitingUser",
+        rating,
+        name: userId,
+        children: [],
+      });
     }
   });
   validUsers.sort((a, b) => {
     if (a.rating === b.rating) {
-      return a.userId.localeCompare(b.userId);
+      return a.name.localeCompare(b.name);
     } else {
       return b.rating - a.rating;
     }
   });
-  return validUsers.map((user) => user.userId);
+  return validUsers;
 }
 
 const CONTEST_MAP_CACHE = new Map<string, Promise<Map<string, number>>>();

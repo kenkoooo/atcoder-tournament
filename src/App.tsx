@@ -19,9 +19,8 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import { RulePage } from "./pages/RulePage";
-import { SubmitPage } from "./pages/SubmitPage";
 import { Tournament } from "./pages/Tournament";
-import { DEADLINE, SEASON_ID } from "./utils/Constants";
+import { SEASON_ID } from "./utils/Constants";
 
 const theme = createMuiTheme({
   palette: {
@@ -71,7 +70,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 const App = () => {
   const classes = useStyles();
-  const now = Date.now() / 1000;
   return (
     <HashRouter>
       <MuiThemeProvider theme={theme}>
@@ -94,17 +92,15 @@ const App = () => {
               ABC トーナメント
             </Typography>
             <nav>
-              {now < DEADLINE && (
-                <Link
-                  component={RouterLink}
-                  variant="button"
-                  color="textPrimary"
-                  to="/submit"
-                  className={classes.link}
-                >
-                  登録
-                </Link>
-              )}
+              {/*<Link*/}
+              {/*    component={RouterLink}*/}
+              {/*    variant="button"*/}
+              {/*    color="textPrimary"*/}
+              {/*    to="/submit"*/}
+              {/*    className={classes.link}*/}
+              {/*>*/}
+              {/*  登録*/}
+              {/*</Link>*/}
               <Link
                 component={RouterLink}
                 variant="button"
