@@ -49,7 +49,13 @@ export const RulePage = () => {
                   AtCoder Beginner Contest 177
                 </Link>
               </li>
-              <li>2 回戦以降 - AtCoder からアナウンスがあり次第更新します。</li>
+              <li>
+                2 回戦 -{" "}
+                <Link href="https://atcoder.jp/contests/abc178">
+                  AtCoder Beginner Contest 178
+                </Link>
+              </li>
+              <li>3 回戦以降 - AtCoder からアナウンスがあり次第更新します。</li>
             </ul>
           </li>
         </ul>
