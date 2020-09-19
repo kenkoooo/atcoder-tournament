@@ -2,7 +2,7 @@ use anyhow::Result;
 use serde::{Deserialize, Serialize};
 use std::cmp::{max, Reverse};
 use std::collections::{BTreeMap, BTreeSet};
-use std::fs::read_to_string;
+use std::fs::{read_to_string, write};
 use std::iter::FromIterator;
 
 const MAX_NUM: usize = 128;
@@ -37,7 +37,7 @@ fn main() -> Result<()> {
 
     registered_users.sort_by(|a, b| {
         if a.rating == b.rating {
-            a.user_id.cmp(&b.user_id)
+            a.user_id.to_lowercase().cmp(&b.user_id.to_lowercase())
         } else {
             b.rating.cmp(&b.rating)
         }
@@ -153,7 +153,7 @@ fn main() -> Result<()> {
         result.insert(class, resolve(division, &standings, layer));
     }
 
-    println!("{}", serde_json::to_string(&result)?);
+    write("./public/bracket-1.json", serde_json::to_string(&result)?)?;
     Ok(())
 }
 
