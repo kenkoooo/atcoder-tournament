@@ -165,7 +165,7 @@ fn resolve<'a>(node: &'a Node, standings: &'a [BTreeMap<String, i64>], layer: us
         .collect::<Vec<_>>();
     let user = if !children.is_empty() && standings.len() >= layer {
         let mut sorting = children.clone();
-        sorting.sort_by_key(|a| (a.rank.unwrap_or(INF_RANK), Reverse(a.user.unwrap().rating)));
+        sorting.sort_by_key(|a| (a.rank.unwrap(), Reverse(a.user.unwrap().rating)));
         sorting[0].user
     } else {
         node.user
@@ -179,7 +179,10 @@ fn resolve<'a>(node: &'a Node, standings: &'a [BTreeMap<String, i64>], layer: us
             layer,
             children
         );
-        standings[layer].get(&user.unwrap().user_id).cloned()
+        match standings[layer].get(&user.unwrap().user_id) {
+            Some(&rank) => Some(rank),
+            None => Some(INF_RANK),
+        }
     } else {
         None
     };
@@ -210,8 +213,17 @@ struct Standing {
     #[serde(rename = "Rank")]
     rank: i64,
 
-    #[serde(rename = "UserName")]
+    #[serde(rename = "UserScreenName")]
     username: String,
+
+    #[serde(rename = "TotalResult")]
+    contest_result: ContestResult,
+}
+
+#[derive(Deserialize)]
+struct ContestResult {
+    #[serde(rename = "Score")]
+    score: i64,
 }
 
 fn load_standings(filename: &str) -> Result<BTreeMap<String, i64>> {
@@ -220,7 +232,9 @@ fn load_standings(filename: &str) -> Result<BTreeMap<String, i64>> {
 
     let mut map = BTreeMap::new();
     for standing in standings.standings {
-        map.insert(standing.username, standing.rank);
+        if standing.contest_result.score > 0 {
+            map.insert(standing.username, standing.rank);
+        }
     }
     Ok(map)
 }

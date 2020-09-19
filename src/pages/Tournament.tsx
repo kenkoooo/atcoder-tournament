@@ -7,62 +7,24 @@ import {
   Typography,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import { TournamentBoard } from "../components/TournamentBoard";
-import { BracketNode } from "../models/BracketNode";
-import { fetchContestResults, fetchOrderedUserList } from "../utils/API";
-import { MAXIMUM_MEMBER } from "../utils/Constants";
-
-const formatClass = (index: number) => {
-  if (index === 0) {
-    return "A";
-  }
-  if (index < 3) {
-    return `B${index}`;
-  }
-  if (index < 7) {
-    return `C${index - 2}`;
-  }
-  return `D${index - 6}`;
-};
+import { GameNode } from "../components/TournamentBracket/GameNode";
+import { TournamentResponse } from "../models/TournamentNode";
+import { fetchTournament } from "../utils/API";
 
 interface Props {
   seasonId: string;
 }
 
 export const Tournament = (props: Props) => {
-  const [atCoderUserIds, setAtCoderUserIds] = useState<BracketNode[]>([]);
-  const [contestResults, setContestResults] = useState<
-    Map<string, number>[] | undefined
-  >(undefined);
-  const [selectedDivision, setSelectedDivision] = useState(0);
+  const [tournament, setTournament] = useState<TournamentResponse>({});
+  const [selectedDivision, setSelectedDivision] = useState<number>(0);
+  const keys = Object.keys(tournament);
 
   useEffect(() => {
-    fetchOrderedUserList(props.seasonId).then((users) =>
-      setAtCoderUserIds(users)
-    );
+    fetchTournament(props.seasonId).then((response) => {
+      setTournament(response);
+    });
   }, [props.seasonId]);
-  useEffect(() => {
-    if (!contestResults) {
-      fetchContestResults().then((maps) => setContestResults(maps));
-    }
-  });
-
-  const divisionCount = Math.ceil(atCoderUserIds.length / MAXIMUM_MEMBER);
-  const divisionMembers = Math.ceil(
-    atCoderUserIds.length / Math.max(divisionCount, 1)
-  );
-
-  const divisions = [] as BracketNode[][];
-  let i = atCoderUserIds.length - 1;
-  while (i >= 0) {
-    const division = [] as BracketNode[];
-    while (i >= 0 && division.length < divisionMembers) {
-      division.push(atCoderUserIds[i]);
-      i -= 1;
-    }
-    divisions.push(division.reverse());
-  }
-  divisions.reverse();
 
   return (
     <>
@@ -86,30 +48,20 @@ export const Tournament = (props: Props) => {
         >
           シーズン 1
         </Typography>
-        <Typography
-          component="div"
-          variant="body1"
-          align="center"
-          color="textPrimary"
-          gutterBottom
-        >
-          {`参加人数: ${atCoderUserIds.length}`}
-        </Typography>
         <Tabs
           value={selectedDivision}
           onChange={(e, v) => setSelectedDivision(v)}
           centered
         >
-          {divisions.map((d, i) => (
-            <Tab label={`CLASS ${formatClass(i)}`} key={i} />
+          {keys.map((key, i) => (
+            <Tab label={`CLASS ${key}`} key={i} />
           ))}
         </Tabs>
 
         <Box display="flex" justifyContent="center">
-          <TournamentBoard
-            nodes={divisions[selectedDivision] ?? []}
-            contestResults={contestResults}
-          />
+          {keys[selectedDivision] && (
+            <GameNode tournament={tournament[keys[selectedDivision]]} />
+          )}
         </Box>
       </Grid>
     </>

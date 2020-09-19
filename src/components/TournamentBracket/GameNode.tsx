@@ -1,7 +1,6 @@
 import { Box, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import { BracketNode } from "../../models/BracketNode";
 import {
   red,
   orange,
@@ -13,6 +12,7 @@ import {
   grey,
 } from "@material-ui/core/colors";
 import "./tournament.scss";
+import { TournamentNode, User } from "../../models/TournamentNode";
 
 const useStyle = makeStyles(() => ({
   red: {
@@ -95,72 +95,77 @@ const RatingName = (props: {
   );
 };
 
-const RankedRatingName = (props: { node: BracketNode }) => {
-  const { node } = props;
+const RankedRatingName = (props: {
+  user: User | null;
+  rank: number | null;
+}) => {
+  const { user, rank } = props;
   const classes = useStyle();
-  switch (node.type) {
-    case "Empty":
-      return (
-        <div className={classes.nodeText}>
-          <p>...</p>
-        </div>
-      );
-    case "WaitingUser":
-      return (
-        <div className={classes.nodeText}>
-          <RatingName rating={node.rating}>{node.name}</RatingName>
-        </div>
-      );
-    case "AbsentUser":
-      return (
-        <Box
-          display="flex"
-          justifyContent="center"
-          className={classes.nodeText}
-        >
-          <div>
-            <RatingName rating={node.rating}>{node.name}</RatingName>
-          </div>
-          <Box display="flex" alignItems="center" className={classes.rankBadge}>
-            -
-          </Box>
-        </Box>
-      );
-    case "ParticipatedUser":
-      return (
-        <Box
-          display="flex"
-          justifyContent="center"
-          className={classes.nodeText}
-        >
-          <div>
-            <RatingName rating={node.rating}>{node.name}</RatingName>
-          </div>
-          <Box display="flex" alignItems="center" className={classes.rankBadge}>
-            {node.rank}
-          </Box>
-        </Box>
-      );
+
+  if (!user) {
+    return (
+      <div className={classes.nodeText}>
+        <p>...</p>
+      </div>
+    );
   }
+  if (!rank) {
+    return (
+      <div className={classes.nodeText}>
+        <RatingName rating={user.rating}>{user.user_id}</RatingName>
+      </div>
+    );
+  }
+
+  if (rank > 100000) {
+    return (
+      <Box display="flex" justifyContent="center" className={classes.nodeText}>
+        <div>
+          <RatingName rating={user.rating}>{user.user_id}</RatingName>
+        </div>
+        <Box display="flex" alignItems="center" className={classes.rankBadge}>
+          -
+        </Box>
+      </Box>
+    );
+  }
+  return (
+    <Box display="flex" justifyContent="center" className={classes.nodeText}>
+      <div>
+        <RatingName rating={user.rating}>{user.user_id}</RatingName>
+      </div>
+      <Box display="flex" alignItems="center" className={classes.rankBadge}>
+        {rank}
+      </Box>
+    </Box>
+  );
 };
 
 interface Props {
-  node: BracketNode;
+  tournament: TournamentNode;
 }
 
 export const GameNode = (props: Props) => {
-  if (props.node.children.length === 0) {
-    return <RankedRatingName node={props.node} />;
+  if (props.tournament.children.length === 0) {
+    return (
+      <RankedRatingName
+        user={props.tournament.user}
+        rank={props.tournament.rank}
+      />
+    );
   } else {
     return (
       <div className="item">
         <div className="item-parent">
-          <RankedRatingName node={props.node} />
+          <RankedRatingName
+            user={props.tournament.user}
+            rank={props.tournament.rank}
+          />
         </div>
         <div className="item-children">
-          {props.node.children.map((child, i) => (
+          {props.tournament.children.map((child, i) => (
             <div key={i} className="item-child">
-              <GameNode node={child} />
+              <GameNode tournament={child} />
             </div>
           ))}
         </div>
