@@ -1,21 +1,23 @@
 use anyhow::Result;
 use serde::{Deserialize, Serialize};
-use std::cmp::Reverse;
+use std::cmp::{max, Reverse};
 use std::collections::{BTreeMap, BTreeSet};
 use std::fs::read_to_string;
 use std::iter::FromIterator;
 
 const MAX_NUM: usize = 128;
+const INF_RANK: i64 = 1 << 50;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 struct UserRating {
     user_id: String,
     rating: i64,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Clone)]
 struct Node<'a> {
     user: Option<&'a UserRating>,
+    rank: Option<i64>,
     children: Vec<Node<'a>>,
 }
 
@@ -64,7 +66,12 @@ fn main() -> Result<()> {
 
         let mut nodes = vec![];
 
-        let mut second = division.split_off(MAX_NUM / 2);
+        let mut first = 1;
+        while first * 2 < division.len() {
+            first *= 2;
+        }
+
+        let mut second = division.split_off(first);
         second.reverse();
         let first = division;
         for first in first {
@@ -84,17 +91,21 @@ fn main() -> Result<()> {
             match node.len() {
                 1 => division.push(Node {
                     user: Some(&node[0]),
+                    rank: None,
                     children: vec![],
                 }),
                 2 => division.push(Node {
                     user: None,
+                    rank: None,
                     children: vec![
                         Node {
                             user: Some(&node[0]),
+                            rank: None,
                             children: vec![],
                         },
                         Node {
                             user: Some(&node[1]),
+                            rank: None,
                             children: vec![],
                         },
                     ],
@@ -103,31 +114,113 @@ fn main() -> Result<()> {
             }
         }
 
-        divisions.push(division);
+        while division.len() > 1 {
+            assert_eq!(division.len() % 2, 0);
+            let mut next = vec![];
+            while !division.is_empty() {
+                let second = division
+                    .pop()
+                    .ok_or_else(|| anyhow::anyhow!("division_length={}", division.len()))?;
+                let first = division
+                    .pop()
+                    .ok_or_else(|| anyhow::anyhow!("division_length={}", division.len()))?;
+                let node = Node {
+                    user: None,
+                    rank: None,
+                    children: vec![first, second],
+                };
+                next.push(node);
+            }
+            next.reverse();
+            division = next;
+        }
+        assert_eq!(division.len(), 1);
+        divisions.push(division.pop().expect("unreachable"));
     }
 
-    let standings = vec![];
+    let standings = vec![
+        load_standings("./data/season-1/abc177.json")?,
+        load_standings("./data/season-1/abc178.json")?,
+        load_standings("./data/season-1/abc179.json")?,
+    ];
 
+    let mut result = BTreeMap::new();
+    for (division, class) in divisions
+        .iter()
+        .zip(["A", "B1", "B2", "C1", "C2", "C3"].iter())
+    {
+        let layer = get_layer(division);
+        result.insert(class, resolve(division, &standings, layer));
+    }
+
+    println!("{}", serde_json::to_string(&result)?);
     Ok(())
+}
+
+fn resolve<'a>(node: &'a Node, standings: &'a [BTreeMap<String, i64>], layer: usize) -> Node<'a> {
+    let children = node
+        .children
+        .iter()
+        .map(|child| resolve(child, standings, layer - 1))
+        .collect::<Vec<_>>();
+    let user = if !children.is_empty() && standings.len() >= layer {
+        let mut sorting = children.clone();
+        sorting.sort_by_key(|a| (a.rank.unwrap_or(INF_RANK), Reverse(a.user.unwrap().rating)));
+        sorting[0].user
+    } else {
+        node.user
+    };
+
+    let rank = if standings.len() > layer {
+        assert!(
+            user.is_some(),
+            "{:?} layer={} children={:?}",
+            node,
+            layer,
+            children
+        );
+        standings[layer].get(&user.unwrap().user_id).cloned()
+    } else {
+        None
+    };
+    Node {
+        user,
+        rank,
+        children,
+    }
+}
+
+fn get_layer(node: &Node) -> usize {
+    assert!(node.children.len() == 0 || node.children.len() == 2);
+    if node.children.is_empty() {
+        0
+    } else {
+        max(get_layer(&node.children[0]), get_layer(&node.children[1])) + 1
+    }
 }
 
 #[derive(Deserialize)]
 struct Standings {
-    #[serde(name = "StandingsData")]
+    #[serde(rename = "StandingsData")]
     standings: Vec<Standing>,
 }
 
 #[derive(Deserialize)]
 struct Standing {
-    #[serde(name = "Rank")]
+    #[serde(rename = "Rank")]
     rank: i64,
 
-    #[serde(name = "UserName")]
+    #[serde(rename = "UserName")]
     username: String,
 }
 
-fn load_standings(filename: &str) -> Result<Vec<Standing>> {
+fn load_standings(filename: &str) -> Result<BTreeMap<String, i64>> {
     let file = read_to_string(filename)?;
     let standings: Standings = serde_json::from_str(&file)?;
-    standings.standings
+
+    let mut map = BTreeMap::new();
+    for standing in standings.standings {
+        map.insert(standing.username, standing.rank);
+    }
+    Ok(map)
 }
