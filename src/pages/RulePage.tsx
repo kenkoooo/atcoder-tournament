@@ -16,7 +16,7 @@ export const RulePage = () => {
       </Typography>
       <Typography variant="h5" color="textSecondary" component="p">
         <ul>
-          <li>ABC の結果を使ったトーナメント戦です。</li>
+          <li>ABC級コンテストの結果を使ったトーナメント戦です。</li>
           <li>
             各試合は 1 対 1 で行われ、AtCoder の ABC
             級のコンテストでの順位が高かった方が勝者となり、次の試合に進出します。
@@ -24,6 +24,9 @@ export const RulePage = () => {
           <li>
             ABC級のコンテストとはレーティング更新対象が 0 - 1999
             のコンテストです。
+          </li>
+          <li>
+            ABC級のコンテストのうち、企業がスポンサードしているものについては対象とはなりません。
           </li>
           <li>
             同順位の場合は2020年8月29日 19:00
@@ -61,7 +64,13 @@ export const RulePage = () => {
                   AtCoder Beginner Contest 179
                 </Link>
               </li>
-              <li>4 回戦以降 - AtCoder からアナウンスがあり次第更新します。</li>
+              <li>
+                4 回戦 -{" "}
+                <Link href="https://atcoder.jp/contests/abl">
+                  ACL Beginner Contest
+                </Link>
+              </li>
+              <li>準決勝以降 - AtCoder からアナウンスがあり次第更新します。</li>
             </ul>
           </li>
         </ul>
