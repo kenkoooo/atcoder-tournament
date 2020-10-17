@@ -143,6 +143,7 @@ fn main() -> Result<()> {
         load_standings("./data/season-1/abc178.json")?,
         load_standings("./data/season-1/abc179.json")?,
         load_standings("./data/season-1/abl.json")?,
+        load_standings("./data/season-1/abc180.json")?,
     ];
 
     let mut result = BTreeMap::new();
