@@ -40,13 +40,22 @@ export const Tournament = (props: Props) => {
           AtCoder Beginner Contest Tournament
         </Typography>
         <Typography
-          component="h4"
-          variant="h4"
-          align="center"
-          color="textPrimary"
-          gutterBottom
+            component="h4"
+            variant="h4"
+            align="center"
+            color="textPrimary"
+            gutterBottom
         >
           シーズン 1
+        </Typography>
+        <Typography
+            component="h5"
+            variant="h5"
+            align="center"
+            color="textPrimary"
+            gutterBottom
+        >
+          ABC181はトーナメント対象となりません。（<a href="https://twitter.com/kenkoooo/status/1322741614465351685">告知</a>）
         </Typography>
         <Tabs
           value={selectedDivision}

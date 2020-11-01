@@ -70,7 +70,18 @@ export const RulePage = () => {
                   ACL Beginner Contest
                 </Link>
               </li>
-              <li>準決勝以降 - AtCoder からアナウンスがあり次第更新します。</li>
+              <li>
+                準々決勝 -{" "}
+                <Link href="https://atcoder.jp/contests/abc180">
+                  AtCoder Beginner Contest 180
+                </Link>
+              </li>
+              <li>
+                準決勝 - 未定
+              </li>
+              <li>
+                決勝 - 未定
+              </li>
             </ul>
           </li>
         </ul>
