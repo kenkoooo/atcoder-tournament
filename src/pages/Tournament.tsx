@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   CssBaseline,
   Grid,
   Tab,
@@ -18,6 +19,7 @@ interface Props {
 export const Tournament = (props: Props) => {
   const [tournament, setTournament] = useState<TournamentResponse>({});
   const [selectedDivision, setSelectedDivision] = useState<number>(0);
+  const [showTop16, setShowTop16] = useState(false);
   const keys = Object.keys(tournament);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ export const Tournament = (props: Props) => {
       <CssBaseline />
       <Grid container justify="center" direction="column">
         <Typography variant="h4" align="center" color="textPrimary">
-          第1期
+          第{props.seasonId}期
         </Typography>
         <Typography
           variant="h2"
@@ -51,10 +53,17 @@ export const Tournament = (props: Props) => {
             <Tab label={`CLASS ${key}`} key={i} />
           ))}
         </Tabs>
+        <Button onClick={() => setShowTop16(!showTop16)}>
+          {showTop16 ? "全て表示する" : "Top16のみ表示する"}
+        </Button>
 
         <Box display="flex" justifyContent="center">
           {keys[selectedDivision] && (
-            <GameNode tournament={tournament[keys[selectedDivision]]} />
+            <GameNode
+              tournament={tournament[keys[selectedDivision]]}
+              depth={0}
+              depthLimit={showTop16 ? 4 : 100}
+            />
           )}
         </Box>
       </Grid>

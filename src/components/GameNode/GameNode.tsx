@@ -96,12 +96,17 @@ const useStyle = makeStyles(() => ({
 interface Props {
   tournament: TournamentNode;
   promotedUser?: string;
+  depth: number;
+  depthLimit: number;
 }
 
 export const GameNode = (props: Props) => {
   const classes = useStyle();
   const promotedUser = props.tournament.user?.user_id;
-  if (props.tournament.children.length === 0) {
+  if (
+    props.tournament.children.length === 0 ||
+    props.depthLimit <= props.depth
+  ) {
     return (
       <RankedRatingName
         user={props.tournament.user}
@@ -128,7 +133,12 @@ export const GameNode = (props: Props) => {
         <div className={classes.itemChildren}>
           {props.tournament.children.map((child, i) => (
             <div key={i} className={classes.itemChild}>
-              <GameNode tournament={child} promotedUser={promotedUser} />
+              <GameNode
+                tournament={child}
+                promotedUser={promotedUser}
+                depth={props.depth + 1}
+                depthLimit={props.depthLimit}
+              />
             </div>
           ))}
         </div>
