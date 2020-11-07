@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import { GameNode } from "../components/TournamentBracket/GameNode";
+import { GameNode } from "../components/GameNode/GameNode";
 import { TournamentResponse } from "../models/TournamentNode";
 import { fetchTournament } from "../utils/API";
 
