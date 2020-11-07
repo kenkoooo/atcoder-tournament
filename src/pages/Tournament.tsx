@@ -30,32 +30,17 @@ export const Tournament = (props: Props) => {
     <>
       <CssBaseline />
       <Grid container justify="center" direction="column">
+        <Typography variant="h4" align="center" color="textPrimary">
+          第1期
+        </Typography>
         <Typography
-          component="h1"
           variant="h2"
           align="center"
           color="textPrimary"
-          gutterBottom
+          display="inline"
+          noWrap
         >
           AtCoder Beginner Contest Tournament
-        </Typography>
-        <Typography
-            component="h4"
-            variant="h4"
-            align="center"
-            color="textPrimary"
-            gutterBottom
-        >
-          シーズン 1
-        </Typography>
-        <Typography
-            component="h5"
-            variant="h5"
-            align="center"
-            color="textPrimary"
-            gutterBottom
-        >
-          ABC181はトーナメント対象となりません。（<a href="https://twitter.com/kenkoooo/status/1322741614465351685">告知</a>）
         </Typography>
         <Tabs
           value={selectedDivision}

@@ -18,7 +18,6 @@ import {
   Switch,
 } from "react-router-dom";
 import "./App.css";
-import { RulePage } from "./pages/RulePage";
 import { Tournament } from "./pages/Tournament";
 import { SEASON_ID } from "./utils/Constants";
 
@@ -75,7 +74,7 @@ const App = () => {
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <AppBar
-          position="static"
+          position="relative"
           color="default"
           elevation={0}
           className={classes.appBar}
@@ -102,10 +101,11 @@ const App = () => {
               {/*  登録*/}
               {/*</Link>*/}
               <Link
-                component={RouterLink}
+                href="https://github.com/kenkoooo/atcoder-tournament/tree/master/rules"
+                target="_blank"
+                rel="noopener noreferrer"
                 variant="button"
                 color="textPrimary"
-                to="/rule"
                 className={classes.link}
               >
                 ルール
@@ -128,9 +128,6 @@ const App = () => {
             {/*<Route path="/submit">*/}
             {/*  <SubmitPage />*/}
             {/*</Route>*/}
-            <Route path="/rule">
-              <RulePage />
-            </Route>
             <Redirect path="/" to={`/tournament/${SEASON_ID}`} />
           </Switch>
         </Container>
