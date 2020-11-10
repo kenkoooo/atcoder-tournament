@@ -6,12 +6,11 @@ edition = "2018"
 publish = false
 
 [dependencies]
-tide = "0.13.0"
-sqlx = { version="0.3.5", features=["postgres"] }
-async-std = { version="1.6.3", features=["attributes"] }
-anyhow = "1.0.32"
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-scraper = "0.12.0"
-reqwest = { version="0.10.8", features = ["gzip"] }
-tokio = { version="0.2.22", features=["rt-threaded", "macros"] }
+actix-web = "3.2.0"
+anyhow = "1.0.34"
+sqlx = { version = "0.3.5", features = ["postgres"] }
+serde = { version = "1.0.117", features = ["derive"] }
+reqwest = { version = "0.10.8", features = ["json"] }
+serde_json = "1.0.59"
+env_logger = "0.8.1"
+log = "0.4.11"
