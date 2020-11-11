@@ -1,8 +1,9 @@
 use actix_web::dev::HttpResponseBuilder;
-use actix_web::{post, web, App, HttpResponse, HttpServer};
+use actix_web::{get, post, web, App, HttpResponse, HttpServer};
 use reqwest::StatusCode;
 use serde::Deserialize;
-use sqlx::PgPool;
+use sqlx::postgres::PgRow;
+use sqlx::{PgPool, Row};
 use std::env;
 use std::time::Duration;
 
@@ -31,6 +32,16 @@ async fn insert_user(user_id: &str, token: &str, pg_pool: &PgPool) -> anyhow::Re
 
     Ok(())
 }
+async fn get_users(pg_pool: &PgPool) -> anyhow::Result<Vec<String>> {
+    let user_ids: Vec<String> = sqlx::query("SELECT atcoder_id FROM tbl_users")
+        .map(|row: PgRow| {
+            let user_id: String = row.get("atcoder_id");
+            user_id
+        })
+        .fetch_all(pg_pool)
+        .await?;
+    Ok(user_ids)
+}
 
 #[derive(Deserialize)]
 struct RegisterRequest {
@@ -52,6 +63,18 @@ async fn register(
     let response = HttpResponseBuilder::new(StatusCode::OK)
         .header("Access-Control-Allow-Origin", "*")
         .finish();
+    Ok(response)
+}
+
+#[get("/api/users")]
+async fn users(pg_pool: web::Data<PgPool>) -> actix_web::Result<HttpResponse, actix_web::Error> {
+    let users = get_users(pg_pool.get_ref()).await.map_err(|e| {
+        log::error!("{:?}", e);
+        HttpResponseBuilder::new(StatusCode::INTERNAL_SERVER_ERROR)
+    })?;
+    let response = HttpResponseBuilder::new(StatusCode::OK)
+        .header("Access-Control-Allow-Origin", "*")
+        .json(&users);
     Ok(response)
 }
 
@@ -79,9 +102,14 @@ async fn main() -> anyhow::Result<()> {
     .execute(&pg_pool)
     .await?;
 
-    HttpServer::new(move || App::new().service(register).data(pg_pool.clone()))
-        .bind(address)?
-        .run()
-        .await?;
+    HttpServer::new(move || {
+        App::new()
+            .service(register)
+            .service(users)
+            .data(pg_pool.clone())
+    })
+    .bind(address)?
+    .run()
+    .await?;
     Ok(())
 }
