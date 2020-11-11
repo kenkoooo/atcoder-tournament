@@ -132,7 +132,7 @@ const construct2ndTournament = (
   } else {
     const right = [] as User[];
     const left = [] as User[];
-    if (depth === 1) {
+    if (depth === 1 && seed.length > 0) {
       users.forEach((user, i) => {
         if (i % 6 === 0 || i % 6 === 5) {
           left.push(user);
