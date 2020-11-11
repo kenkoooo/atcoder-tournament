@@ -194,6 +194,9 @@ export const RegisterPage = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
+          第2期
+        </Typography>
+        <Typography component="h1" variant="h5">
           ABCトーナメント参加登録
         </Typography>
         {registerState.type === "Input" && (
