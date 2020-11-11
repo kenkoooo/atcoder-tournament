@@ -59,8 +59,15 @@ const useStyle = makeStyles(() => ({
       top: "50%",
 
       right: `calc(-${SIDE_MARGIN} / 2)`,
+      // height: `calc(75% + ${VERTICAL_MARGIN} * 2)`,
       height: `calc(50% + ${VERTICAL_MARGIN} * 2)`,
       width: BORDER,
+    },
+
+    "&:not(:last-child):not(:first-child)": {
+      "&:after": {
+        transform: "translateY(-50%) scaleY(2)",
+      },
     },
 
     "&:last-child": {

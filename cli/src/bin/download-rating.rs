@@ -21,7 +21,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     for i in 0.. {
         eprintln!("page={}", i + 1);
         let html = client
-            .get(&format!("https://atcoder.jp/ranking?page={}", i + 1))
+            .get(&format!("https://atcoder.jp/ranking/all?page={}", i + 1))
             .send()
             .await?
             .text()
@@ -43,7 +43,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .next()
                 .unwrap()
                 .to_string();
-            let rating: u32 = tds[3].text().next().unwrap().parse().unwrap();
+            let rating: u32 = tds[4].text().next().unwrap().parse().unwrap();
             ratings.push(RatingEntry { user_id, rating });
         }
         if prev_size == ratings.len() {
