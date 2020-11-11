@@ -78,6 +78,12 @@ const constructAll2ndTournament = (users: User[]): TournamentResponse => {
   });
 
   seedA.sort((a, b) => a.firstRank - b.firstRank);
+  while (seedA.length > 2) {
+    const popped = seedA.pop()?.user;
+    if (popped) {
+      classes.A.push(popped);
+    }
+  }
 
   const response: TournamentResponse = {};
   Object.entries(classes).forEach(([key, bracketUsers]) => {
