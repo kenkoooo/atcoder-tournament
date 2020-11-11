@@ -1,10 +1,16 @@
 import {
   AppBar,
+  Button,
   Container,
   createMuiTheme,
   CssBaseline,
+  FormControl,
+  InputLabel,
   Link,
+  Menu,
+  MenuItem,
   MuiThemeProvider,
+  Select,
   Toolbar,
   Typography,
 } from "@material-ui/core";
@@ -91,6 +97,15 @@ const App = () => {
               ABC トーナメント
             </Typography>
             <nav>
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/tournament/2"
+                className={classes.link}
+              >
+                第2期
+              </Link>
               <Link
                 component={RouterLink}
                 variant="button"
