@@ -1,5 +1,5 @@
 use actix_web::dev::HttpResponseBuilder;
-use actix_web::{post, web, App, HttpServer};
+use actix_web::{post, web, App, HttpResponse, HttpServer};
 use reqwest::StatusCode;
 use serde::Deserialize;
 use sqlx::PgPool;
@@ -40,16 +40,19 @@ struct RegisterRequest {
 
 #[post("/api/user")]
 async fn register(
-    request: web::Json<RegisterRequest>,
+    request: web::Form<RegisterRequest>,
     pg_pool: web::Data<PgPool>,
-) -> actix_web::Result<&'static str, actix_web::Error> {
+) -> actix_web::Result<HttpResponse, actix_web::Error> {
     insert_user(&request.user_id, &request.token, pg_pool.get_ref())
         .await
         .map_err(|e| {
             log::error!("{:?}", e);
             HttpResponseBuilder::new(StatusCode::INTERNAL_SERVER_ERROR)
         })?;
-    Ok("done")
+    let response = HttpResponseBuilder::new(StatusCode::OK)
+        .header("Access-Control-Allow-Origin", "*")
+        .finish();
+    Ok(response)
 }
 
 #[actix_web::main]
