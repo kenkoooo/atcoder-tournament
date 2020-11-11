@@ -89,6 +89,7 @@ interface InputState {
 interface VerifyState {
   type: "Verify";
   userId: string;
+  secret: string;
   code: string;
 }
 interface RegisteredState {
@@ -149,6 +150,7 @@ export const RegisterPage = () => {
         setRegisterState({
           type: "Verify",
           userId: input.userId,
+          secret: response.secret,
           code: response.verification_code,
         });
       })
@@ -165,7 +167,7 @@ export const RegisterPage = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ user_id: verify.userId }),
+      body: JSON.stringify({ user_id: verify.userId, secret: verify.secret }),
     })
       .then((response) => response.json())
       .then((response) => {

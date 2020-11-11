@@ -1,16 +1,10 @@
 import {
   AppBar,
-  Button,
   Container,
   createMuiTheme,
   CssBaseline,
-  FormControl,
-  InputLabel,
   Link,
-  Menu,
-  MenuItem,
   MuiThemeProvider,
-  Select,
   Toolbar,
   Typography,
 } from "@material-ui/core";
