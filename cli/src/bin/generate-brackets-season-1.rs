@@ -1,14 +1,14 @@
 use anyhow::Result;
 use serde::{Deserialize, Serialize};
 use std::cmp::{max, Reverse};
-use std::collections::{BTreeMap, BTreeSet};
+use std::collections::{BTreeMap, BTreeSet, VecDeque};
 use std::fs::{read_to_string, write};
 use std::iter::FromIterator;
 
 const MAX_NUM: usize = 128;
 const INF_RANK: i64 = 1 << 50;
 
-#[derive(Debug, Serialize, Deserialize, Clone)]
+#[derive(Debug, Serialize, Deserialize, Clone, Eq, PartialEq)]
 struct UserRating {
     user_id: String,
     rating: i64,
@@ -19,6 +19,12 @@ struct Node<'a> {
     user: Option<&'a UserRating>,
     rank: Option<i64>,
     children: Vec<Node<'a>>,
+}
+
+#[derive(Serialize, Clone, Debug)]
+struct Brackets<'a> {
+    node: Node<'a>,
+    top4: Option<Vec<UserRating>>,
 }
 
 fn main() -> Result<()> {
@@ -145,6 +151,7 @@ fn main() -> Result<()> {
         load_standings("./data/season-1/abl.json")?,
         load_standings("./data/season-1/abc180.json")?,
         load_standings("./data/season-1/abc182.json")?,
+        load_standings("./data/season-1/abc183.json")?,
     ];
 
     let mut result = BTreeMap::new();
@@ -153,11 +160,41 @@ fn main() -> Result<()> {
         .zip(["A", "B1", "B2", "C1", "C2", "C3"].iter())
     {
         let layer = get_layer(division);
-        result.insert(class, resolve(division, &standings, layer));
+        let node = resolve(division, &standings, layer);
+        let top4 = pick_top_bfs(&node, 2);
+        eprintln!("{:?}", top4);
+        let v = Brackets {
+            node,
+            top4: Some(top4),
+        };
+        let value = serde_json::to_value(&v)?;
+        result.insert(class, value);
     }
 
     write("./public/bracket-1.json", serde_json::to_string(&result)?)?;
     Ok(())
+}
+
+fn pick_top_bfs(node: &Node, max_depth: usize) -> Vec<UserRating> {
+    let mut q = VecDeque::new();
+    let mut top = vec![];
+    q.push_back((0, node));
+    while let Some((depth, node)) = q.pop_front() {
+        if let Some(user) = node.user {
+            if !top.contains(user) {
+                top.push(user.clone());
+            }
+        } else {
+            continue;
+        }
+
+        if depth + 1 <= max_depth {
+            for children in &node.children {
+                q.push_back((depth + 1, children));
+            }
+        }
+    }
+    top
 }
 
 fn resolve<'a>(node: &'a Node, standings: &'a [BTreeMap<String, i64>], layer: usize) -> Node<'a> {

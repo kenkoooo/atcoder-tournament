@@ -89,9 +89,9 @@ const constructAll2ndTournament = (users: User[]): TournamentResponse => {
   Object.entries(classes).forEach(([key, bracketUsers]) => {
     if (key === "A") {
       const seed = seedA.map(({ user }) => user);
-      response[key] = construct2ndTournament(bracketUsers, seed, 0);
+      response[key] = { node: construct2ndTournament(bracketUsers, seed, 0) };
     } else {
-      response[key] = construct2ndTournament(bracketUsers, [], 0);
+      response[key] = { node: construct2ndTournament(bracketUsers, [], 0) };
     }
   });
   return response;

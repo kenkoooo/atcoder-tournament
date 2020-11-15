@@ -10,5 +10,8 @@ export interface TournamentNode {
 }
 
 export interface TournamentResponse {
-  [key: string]: TournamentNode;
+  [key: string]: {
+    node: TournamentNode;
+    top4?: User[] | null;
+  };
 }
