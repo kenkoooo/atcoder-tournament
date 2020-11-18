@@ -1,1 +1,1 @@
-export const SEASON_ID = 1;
+export const SEASON_ID = 2;

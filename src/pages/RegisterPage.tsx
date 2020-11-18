@@ -201,6 +201,9 @@ export const RegisterPage = () => {
         <Typography component="h1" variant="h5">
           ABCトーナメント参加登録
         </Typography>
+        <Typography component="h2" variant="h5">
+          2020/11/22 19:00 JST 〆切
+        </Typography>
         {registerState.type === "Input" && (
           <RegistrationForm
             state={registerState}
