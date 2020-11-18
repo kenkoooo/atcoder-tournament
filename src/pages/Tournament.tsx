@@ -7,6 +7,7 @@ import {
   Tab,
   Tabs,
   Typography,
+  withStyles,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { GameNode } from "../components/GameNode/GameNode";
@@ -54,6 +55,12 @@ const SingleWinnerTable = (props: { users: User[] | null | undefined }) => {
     </Container>
   );
 };
+const AntTab = withStyles(() => ({
+  root: {
+    minWidth: 10,
+  },
+  selected: {},
+}))(Tab);
 
 export const Tournament = (props: Props) => {
   const [tournament, setTournament] = useState<TournamentResponse>({});
@@ -84,12 +91,13 @@ export const Tournament = (props: Props) => {
           AtCoder Beginner Contest Tournament
         </Typography>
         <Tabs
+          variant="fullWidth"
           value={selectedDivision}
           onChange={(e, v) => setSelectedDivision(v)}
           centered
         >
           {keys.map((key, i) => (
-            <Tab label={`CLASS ${key}`} key={i} />
+            <AntTab label={`${key}`} key={i} />
           ))}
         </Tabs>
         {keys[selectedDivision] && (
