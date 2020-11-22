@@ -1,3 +1,4 @@
+use crate::types::Standings;
 use crate::User;
 use anyhow::Result;
 use std::collections::BTreeMap;
@@ -35,4 +36,15 @@ pub fn load_season_user_list(season_id: u32) -> Result<Vec<User>> {
     }
 
     Ok(result)
+}
+
+pub fn load_standings(filename: &str) -> Result<BTreeMap<String, i64>> {
+    let standings: Standings = read_from_file(filename)?;
+    let mut map = BTreeMap::new();
+    for standing in standings.standings {
+        if standing.contest_result.score > 0 {
+            map.insert(standing.username, standing.rank);
+        }
+    }
+    Ok(map)
 }

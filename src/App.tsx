@@ -17,7 +17,6 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import { RegisterPage } from "./pages/RegisterPage";
 import { Tournament } from "./pages/Tournament";
 import { SEASON_ID } from "./utils/Constants";
 
@@ -109,15 +108,15 @@ const App = () => {
               >
                 第2期
               </Link>
-              <Link
-                component={RouterLink}
-                variant="button"
-                color="textPrimary"
-                to="/register"
-                className={classes.link}
-              >
-                登録
-              </Link>
+              {/*<Link*/}
+              {/*  component={RouterLink}*/}
+              {/*  variant="button"*/}
+              {/*  color="textPrimary"*/}
+              {/*  to="/register"*/}
+              {/*  className={classes.link}*/}
+              {/*>*/}
+              {/*  登録*/}
+              {/*</Link>*/}
               <Link
                 href="https://github.com/kenkoooo/atcoder-tournament/tree/master/rules"
                 target="_blank"
@@ -143,9 +142,9 @@ const App = () => {
                 );
               }}
             />
-            <Route path="/register">
-              <RegisterPage />
-            </Route>
+            {/*<Route path="/register">*/}
+            {/*  <RegisterPage />*/}
+            {/*</Route>*/}
             <Redirect path="/" to={`/tournament/${SEASON_ID}`} />
           </Switch>
         </Container>

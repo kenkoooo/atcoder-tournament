@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { GameNode } from "../components/GameNode/GameNode";
+import { LeagueTable } from "../components/LeagueTable/LeagueTable";
 import { TournamentResponse, User } from "../models/TournamentNode";
 import { fetchTournament } from "../utils/API";
 
@@ -68,6 +69,14 @@ export const Tournament = (props: Props) => {
   const [showTop16, setShowTop16] = useState(false);
   const keys = Object.keys(tournament);
 
+  const node = keys[selectedDivision]
+    ? tournament[keys[selectedDivision]].node
+    : null;
+
+  const league = keys[selectedDivision]
+    ? tournament[keys[selectedDivision]].league
+    : null;
+
   useEffect(() => {
     fetchTournament(props.seasonId).then((response) => {
       setTournament(response);
@@ -118,14 +127,22 @@ export const Tournament = (props: Props) => {
           {showTop16 ? "全て表示する" : "Top16のみ表示する"}
         </Button>
         <Box display="flex" justifyContent="center">
-          {keys[selectedDivision] && (
+          {node && (
             <GameNode
-              tournament={tournament[keys[selectedDivision]].node}
+              tournament={node}
               depth={0}
               depthLimit={showTop16 ? 4 : 100}
             />
           )}
         </Box>
+        {league && (
+          <Box display="flex" justifyContent="center" flexDirection="column">
+            <Typography variant="h4" align="center" color="textPrimary">
+              順位決定リーグ
+            </Typography>
+            <LeagueTable league={league} />
+          </Box>
+        )}
       </Grid>
     </>
   );
