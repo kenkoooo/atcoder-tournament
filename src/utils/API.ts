@@ -5,13 +5,9 @@ import {
 } from "../models/TournamentNode";
 
 export const fetchTournament = (seasonId: string) => {
-  if (seasonId === "2") {
-    return fetchTournament2nd();
-  } else {
-    return fetch(`./bracket-${seasonId}.json`)
-      .then((response) => response.json())
-      .then((response) => response as TournamentResponse);
-  }
+  return fetch(`./bracket-${seasonId}.json`)
+    .then((response) => response.json())
+    .then((response) => response as TournamentResponse);
 };
 
 async function fetchTournament2nd(): Promise<TournamentResponse> {
