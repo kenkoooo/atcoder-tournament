@@ -13,9 +13,10 @@
 - 各試合の対象となる ABC は以下のとおりです。他のコンテストとの兼ね合いなどで変更になことがあるので、注意してください。
   - 1 回戦: AtCoder Beginner Contest 184
   - 2 回戦: AtCoder Beginner Contest 185
-  - 準々決勝: AtCoder Beginner Contest 186
-  - 準決勝: AtCoder Beginner Contest 187
-  - 決勝: AtCoder Beginner Contest 188
+  - ~~準々決勝: AtCoder Beginner Contest 186~~
+  - 準々決勝: AtCoder Beginner Contest 187
+  - 準決勝: AtCoder Beginner Contest 188
+  - 決勝: AtCoder Beginner Contest 189
 
 ## 順位決定リーグ
 
