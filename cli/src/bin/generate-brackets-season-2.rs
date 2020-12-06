@@ -83,27 +83,27 @@ fn get_league_matches<'a>(
 
 fn resolve_one_round<'a>(
     standings: &BTreeMap<UserId, i64>,
-    losers: &mut Vec<&'a User>,
+    league_users: &mut Vec<&'a User>,
     users_result: &mut BTreeMap<UserId, Vec<BattleResultDetail<'a>>>,
     node: &mut Node<'a>,
     user_rank_sum: &mut BTreeMap<UserId, i64>,
     writers: &[&str],
 ) {
     // resolve league results
-    for loser in losers.iter() {
-        let results = users_result.get_mut(&loser.user_id).unwrap();
+    for user in league_users.iter() {
+        let results = users_result.get_mut(&user.user_id).unwrap();
         let last = results.last_mut().unwrap();
         if let BattleResult::NotYet = last.result {
             let opponent = last.opponent.unwrap();
             let opponent_rank = standings.get(&opponent.user_id).cloned();
-            let my_rank = standings.get(&loser.user_id).cloned();
-            last.result = loser.resolve_result(opponent, my_rank, opponent_rank);
+            let my_rank = standings.get(&user.user_id).cloned();
+            last.result = user.resolve_league_match_result(opponent, my_rank, opponent_rank);
         } else {
             unreachable!("{:?}", results);
         }
     }
     // resolve tournament results
-    node.resolve_tournament_result(standings, users_result, losers);
+    node.resolve_tournament_result(standings, users_result, league_users);
 
     // resolve writer results
     for (user_id, result) in users_result.iter_mut() {
@@ -132,8 +132,8 @@ fn resolve_one_round<'a>(
         }
     }
 
-    // match league
-    let matches = get_league_matches(users_result, user_rank_sum, losers);
+    // next league matches
+    let matches = get_league_matches(users_result, user_rank_sum, league_users);
     for (user_a, user_b) in matches {
         users_result
             .get_mut(&user_a.user_id)
@@ -170,7 +170,8 @@ fn main() -> Result<()> {
 
     let mut node_map = BTreeMap::new();
     let mut losers: BTreeMap<_, Vec<&User>> = BTreeMap::new();
-    let mut users_result: BTreeMap<_, Vec<BattleResultDetail>> = BTreeMap::new();
+    let mut users_result: BTreeMap<String, BTreeMap<UserId, Vec<BattleResultDetail>>> =
+        BTreeMap::new();
 
     for i in 0..4 {
         let nodes = if i == 0 {
@@ -181,7 +182,8 @@ fn main() -> Result<()> {
         for (j, node) in nodes.into_iter().enumerate() {
             let class_name = format!("{}{}", CLASS_KEY[i], j + 1);
             node_map.insert(class_name.clone(), node);
-            losers.insert(class_name, vec![]);
+            losers.insert(class_name.clone(), vec![]);
+            users_result.insert(class_name, BTreeMap::new());
         }
     }
 
@@ -192,20 +194,32 @@ fn main() -> Result<()> {
             "./data/season-2/abc184.json",
             vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
         ),
-        // (
-        //     "./data/season-2/abc184.json",
-        //     vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
-        // ),
+        (
+            "./data/season-2/abc184.json",
+            vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
+        ),
+        (
+            "./data/season-2/abc184.json",
+            vec![
+                "beet",
+                "evima",
+                "kyopro_friends",
+                "tatyam",
+                "sheyasutaka",
+                "leaf1415",
+            ],
+        ),
     ]
     .into_iter()
     {
         let standings = load_standings(filename)?;
         for (class_name, node) in node_map.iter_mut() {
             let losers = losers.get_mut(class_name).unwrap();
+            let users_result = users_result.get_mut(class_name).unwrap();
             resolve_one_round(
                 &standings,
                 losers,
-                &mut users_result,
+                users_result,
                 node,
                 &mut user_rank_sum,
                 &writers,
@@ -218,7 +232,7 @@ fn main() -> Result<()> {
         let losers = losers.get(&class_name).unwrap();
         let mut league = vec![];
         for loser in losers.iter() {
-            let results = users_result[&loser.user_id].clone();
+            let results = users_result[&class_name][&loser.user_id].clone();
             let win_count = count_wins(&results);
             let rank_sum = user_rank_sum[&loser.user_id];
             league.push(LeagueEntry {

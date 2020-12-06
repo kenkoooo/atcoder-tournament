@@ -11,7 +11,7 @@ pub struct User {
 }
 
 impl User {
-    pub fn resolve_result(
+    pub fn resolve_league_match_result(
         &self,
         opponent: &User,
         user_rank: Option<i64>,
@@ -28,8 +28,7 @@ impl User {
                 }
             }
             (Some(my_rank), None) => BattleResult::Win { rank: my_rank },
-            (None, Some(_)) => BattleResult::SkipLose,
-            (None, None) => self.same_rank(opponent),
+            (None, _) => BattleResult::SkipLose,
         }
     }
     fn same_rank(&self, opponent: &User) -> BattleResult {
