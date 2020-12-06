@@ -2,6 +2,8 @@ use serde::{Deserialize, Serialize};
 use std::cmp::{Ordering, Reverse};
 use std::collections::BTreeMap;
 
+const INF_RANK: i64 = 1000000;
+
 #[derive(Serialize, Deserialize, Eq, PartialEq, Debug)]
 pub struct User {
     pub user_id: String,
@@ -65,7 +67,7 @@ pub struct Node<'a> {
 }
 
 impl<'a> Node<'a> {
-    pub fn resolve(
+    pub fn resolve_tournament_result(
         &mut self,
         standings: &BTreeMap<String, i64>,
         battle_results: &mut BTreeMap<String, Vec<BattleResultDetail<'a>>>,
@@ -75,73 +77,58 @@ impl<'a> Node<'a> {
             .children
             .iter()
             .all(|child| child.user.is_some() && child.rank.is_none());
-        if children_filled {
+        if !children_filled {
             for child in self.children.iter_mut() {
-                if let Some(rank) = standings.get(&child.user.unwrap().user_id) {
-                    child.rank = Some(*rank);
-                }
+                child.resolve_tournament_result(standings, battle_results, losers);
             }
-            let winner = self
-                .children
-                .iter()
-                .min_by_key(|user| {
-                    (
-                        user.rank.unwrap_or(1000000),
-                        Reverse(user.user.unwrap().rating),
-                        user.user.unwrap().user_id.to_lowercase(),
-                    )
-                })
-                .unwrap()
-                .user
-                .unwrap();
-            self.user = Some(winner);
+            return;
+        }
 
-            for child in self.children.iter_mut() {
-                let user = child.user.unwrap();
-                if user.user_id == winner.user_id {
-                    if let Some(rank) = child.rank {
-                        battle_results
-                            .entry(user.user_id.clone())
-                            .or_insert_with(Vec::new)
-                            .push(BattleResultDetail {
-                                opponent: Some(winner),
-                                result: BattleResult::Win { rank },
-                            });
-                    } else {
-                        child.rank = Some(1000000);
-                        battle_results
-                            .entry(user.user_id.clone())
-                            .or_insert_with(Vec::new)
-                            .push(BattleResultDetail {
-                                opponent: Some(winner),
-                                result: BattleResult::SkipWin,
-                            });
-                    }
-                } else {
-                    losers.push(user);
-                    if let Some(rank) = child.rank {
-                        battle_results
-                            .entry(user.user_id.clone())
-                            .or_insert_with(Vec::new)
-                            .push(BattleResultDetail {
-                                opponent: Some(winner),
-                                result: BattleResult::Lose { rank },
-                            });
-                    } else {
-                        child.rank = Some(1000000);
-                        battle_results
-                            .entry(user.user_id.clone())
-                            .or_insert_with(Vec::new)
-                            .push(BattleResultDetail {
-                                opponent: Some(winner),
-                                result: BattleResult::SkipLose,
-                            });
-                    }
-                }
+        for child in self.children.iter_mut() {
+            if let Some(&rank) = standings.get(&child.user.unwrap().user_id) {
+                child.rank = Some(rank);
             }
-        } else {
-            for child in self.children.iter_mut() {
-                child.resolve(standings, battle_results, losers);
+        }
+
+        let mut user_rank = self
+            .children
+            .iter()
+            .map(|node| {
+                let user = node.user.unwrap();
+                (user, node.rank.unwrap_or(INF_RANK))
+            })
+            .collect::<Vec<_>>();
+        user_rank
+            .sort_by_key(|&(user, rank)| (rank, Reverse(user.rating), user.user_id.to_lowercase()));
+        self.user = Some(user_rank[0].0);
+        let winner = user_rank[0].0;
+
+        for child in self.children.iter_mut() {
+            let user = child.user.unwrap();
+            let (result, opponent) = if user.user_id == winner.user_id {
+                if let Some(rank) = child.rank {
+                    (BattleResult::Win { rank }, winner) //TODO
+                } else {
+                    (BattleResult::SkipWin, winner) //TODO
+                }
+            } else {
+                if let Some(rank) = child.rank {
+                    (BattleResult::Lose { rank }, winner)
+                } else {
+                    (BattleResult::SkipLose, winner)
+                }
+            };
+            child.rank = Some(child.rank.unwrap_or(INF_RANK));
+            battle_results
+                .entry(user.user_id.clone())
+                .or_insert_with(Vec::new)
+                .push(BattleResultDetail {
+                    opponent: Some(opponent),
+                    result,
+                });
+
+            if user.user_id != winner.user_id {
+                losers.push(user);
             }
         }
     }

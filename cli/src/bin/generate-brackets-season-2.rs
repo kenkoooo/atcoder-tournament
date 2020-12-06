@@ -12,6 +12,75 @@ use std::fs::write;
 const CLASS_KEY: [&str; 4] = ["A", "B", "C", "D"];
 type UserId = String;
 
+fn count_wins(results: &[BattleResultDetail]) -> i64 {
+    let mut win_count = 0;
+    for result in results.iter() {
+        match result.result {
+            BattleResult::Win { .. } | BattleResult::SkipWin => {
+                win_count += 1;
+            }
+            _ => {}
+        }
+    }
+    win_count
+}
+
+fn get_league_matches<'a>(
+    users_result: &BTreeMap<UserId, Vec<BattleResultDetail<'a>>>,
+    user_rank_sum: &BTreeMap<UserId, i64>,
+    league_users: &[&'a User],
+) -> Vec<(&'a User, &'a User)> {
+    let n = league_users.len();
+    assert!(n >= 2);
+
+    let mut league_users = league_users
+        .iter()
+        .map(|loser| {
+            let results = &users_result[&loser.user_id];
+            let win_count = count_wins(results);
+            (*loser, win_count, user_rank_sum[&loser.user_id])
+        })
+        .collect::<Vec<_>>();
+    league_users.sort_by_key(|&(user, win, rank)| {
+        (
+            Reverse(win),
+            rank,
+            Reverse(user.rating),
+            Reverse(user.user_id.as_str()),
+        )
+    });
+
+    let mut result = vec![];
+    let mut i = 0;
+    while i * 2 + 1 < n {
+        let cur_win_count = league_users[i * 2].1;
+        let mut same_win_users = vec![];
+        while i * 2 + 1 < n && league_users[i * 2].1 == cur_win_count {
+            same_win_users.push(league_users[i * 2].0);
+            same_win_users.push(league_users[i * 2 + 1].0);
+            i += 1;
+        }
+
+        let mut rng = StdRng::seed_from_u64(717);
+        same_win_users.shuffle(&mut rng);
+        let pairs = same_win_users.len() / 2;
+        for i in 0..pairs {
+            let user_a = same_win_users[i];
+            let user_b = same_win_users[pairs + i];
+            result.push((user_a, user_b));
+        }
+    }
+
+    assert!((n % 2 == 0 && n == i * 2) || (n % 2 == 1 && n == i * 2 + 1));
+
+    if n % 2 == 1 {
+        let user_a = league_users[n - 1].0;
+        let user_b = league_users[n - 2].0;
+        result.push((user_a, user_b));
+    }
+    result
+}
+
 fn resolve_one_round<'a>(
     standings: &BTreeMap<UserId, i64>,
     losers: &mut Vec<&'a User>,
@@ -34,7 +103,7 @@ fn resolve_one_round<'a>(
         }
     }
     // resolve tournament results
-    node.resolve(standings, users_result, losers);
+    node.resolve_tournament_result(standings, users_result, losers);
 
     // resolve writer results
     for (user_id, result) in users_result.iter_mut() {
@@ -51,102 +120,35 @@ fn resolve_one_round<'a>(
 
     // update rank sum
     for (user_id, user_result) in users_result.iter() {
+        let cur_sum = user_rank_sum.entry(user_id.clone()).or_insert(0);
         match user_result.last().unwrap().result {
             BattleResult::Win { rank } | BattleResult::Lose { rank } => {
-                *user_rank_sum.entry(user_id.clone()).or_insert(0) += rank;
+                *cur_sum += rank;
             }
             BattleResult::SkipLose | BattleResult::SkipWin => {
-                *user_rank_sum.entry(user_id.clone()).or_insert(0) += standings.len() as i64 + 1;
+                *cur_sum += standings.len() as i64 + 1;
             }
-            BattleResult::Writer | BattleResult::NotYet => {
-                user_rank_sum.entry(user_id.clone()).or_insert(0);
-            }
+            BattleResult::Writer | BattleResult::NotYet => {}
         }
     }
 
     // match league
-    let mut league_users = vec![];
-    for loser in losers.iter() {
-        let results = users_result.get(&loser.user_id).unwrap();
-        let mut win_count = 0;
-        for result in results.iter() {
-            match result.result {
-                BattleResult::Win { .. } | BattleResult::SkipWin => {
-                    win_count += 1;
-                }
-                _ => {}
-            }
-        }
-        league_users.push((*loser, win_count, user_rank_sum[&loser.user_id]));
-    }
-    league_users
-        .sort_by_key(|&(user, win, rank)| (win, Reverse(rank), user.rating, user.user_id.as_str()));
-
-    let remain_opponent = if league_users.len() % 2 == 1 {
-        Some(league_users[league_users.len() - 2].0)
-    } else {
-        None
-    };
-    while let Some((user, cur_win, _)) = league_users.pop() {
-        let mut same_win = vec![user];
-        while let Some((user, win, rank)) = league_users.pop() {
-            if win == cur_win {
-                same_win.push(user);
-            } else {
-                league_users.push((user, win, rank));
-            }
-        }
-        if same_win.len() % 2 == 1 {
-            if let Some((user, _, _)) = league_users.pop() {
-                same_win.push(user);
-            }
-        }
-
-        let remain = if same_win.len() % 2 == 1 {
-            same_win.pop()
-        } else {
-            None
-        };
-
-        let mut rng = StdRng::seed_from_u64(717);
-        same_win.shuffle(&mut rng);
-        let n = same_win.len() / 2;
-        for i in 0..n {
-            let user_a = same_win[i];
-            let user_b = same_win[n + i];
-            users_result
-                .get_mut(&user_a.user_id)
-                .unwrap()
-                .push(BattleResultDetail {
-                    opponent: Some(user_b),
-                    result: BattleResult::NotYet,
-                });
-            users_result
-                .get_mut(&user_b.user_id)
-                .unwrap()
-                .push(BattleResultDetail {
-                    opponent: Some(user_a),
-                    result: BattleResult::NotYet,
-                });
-        }
-
-        if let Some(user_a) = remain {
-            let user_b = remain_opponent.unwrap();
-            users_result
-                .get_mut(&user_a.user_id)
-                .unwrap()
-                .push(BattleResultDetail {
-                    opponent: Some(user_b),
-                    result: BattleResult::NotYet,
-                });
-            users_result
-                .get_mut(&user_b.user_id)
-                .unwrap()
-                .push(BattleResultDetail {
-                    opponent: Some(user_a),
-                    result: BattleResult::NotYet,
-                });
-        }
+    let matches = get_league_matches(users_result, user_rank_sum, losers);
+    for (user_a, user_b) in matches {
+        users_result
+            .get_mut(&user_a.user_id)
+            .unwrap()
+            .push(BattleResultDetail {
+                opponent: Some(user_b),
+                result: BattleResult::NotYet,
+            });
+        users_result
+            .get_mut(&user_b.user_id)
+            .unwrap()
+            .push(BattleResultDetail {
+                opponent: Some(user_a),
+                result: BattleResult::NotYet,
+            });
     }
 }
 
@@ -185,10 +187,16 @@ fn main() -> Result<()> {
 
     let mut user_rank_sum = BTreeMap::new();
 
-    for (filename, writers) in vec![(
-        "./data/season-2/abc184.json",
-        vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
-    )]
+    for (filename, writers) in vec![
+        (
+            "./data/season-2/abc184.json",
+            vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
+        ),
+        // (
+        //     "./data/season-2/abc184.json",
+        //     vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
+        // ),
+    ]
     .into_iter()
     {
         let standings = load_standings(filename)?;
@@ -211,15 +219,7 @@ fn main() -> Result<()> {
         let mut league = vec![];
         for loser in losers.iter() {
             let results = users_result[&loser.user_id].clone();
-            let mut win_count = 0;
-            for result in results.iter() {
-                match result.result {
-                    BattleResult::Win { .. } | BattleResult::SkipWin => {
-                        win_count += 1;
-                    }
-                    _ => {}
-                }
-            }
+            let win_count = count_wins(&results);
             let rank_sum = user_rank_sum[&loser.user_id];
             league.push(LeagueEntry {
                 user: *loser,
