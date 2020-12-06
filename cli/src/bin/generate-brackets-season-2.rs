@@ -10,6 +10,145 @@ use std::collections::BTreeMap;
 use std::fs::write;
 
 const CLASS_KEY: [&str; 4] = ["A", "B", "C", "D"];
+type UserId = String;
+
+fn resolve_one_round<'a>(
+    standings: &BTreeMap<UserId, i64>,
+    losers: &mut Vec<&'a User>,
+    users_result: &mut BTreeMap<UserId, Vec<BattleResultDetail<'a>>>,
+    node: &mut Node<'a>,
+    user_rank_sum: &mut BTreeMap<UserId, i64>,
+    writers: &[&str],
+) {
+    // resolve league results
+    for loser in losers.iter() {
+        let results = users_result.get_mut(&loser.user_id).unwrap();
+        let last = results.last_mut().unwrap();
+        if let BattleResult::NotYet = last.result {
+            let opponent = last.opponent.unwrap();
+            let opponent_rank = standings.get(&opponent.user_id).cloned();
+            let my_rank = standings.get(&loser.user_id).cloned();
+            last.result = loser.resolve_result(opponent, my_rank, opponent_rank);
+        } else {
+            unreachable!("{:?}", results);
+        }
+    }
+    // resolve tournament results
+    node.resolve(standings, users_result, losers);
+
+    // resolve writer results
+    for (user_id, result) in users_result.iter_mut() {
+        if writers.contains(&user_id.as_str()) {
+            let last = result.last_mut().unwrap();
+            match last.result {
+                BattleResult::SkipLose => {
+                    last.result = BattleResult::Writer;
+                }
+                _ => unreachable!(),
+            }
+        }
+    }
+
+    // update rank sum
+    for (user_id, user_result) in users_result.iter() {
+        match user_result.last().unwrap().result {
+            BattleResult::Win { rank } | BattleResult::Lose { rank } => {
+                *user_rank_sum.entry(user_id.clone()).or_insert(0) += rank;
+            }
+            BattleResult::SkipLose | BattleResult::SkipWin => {
+                *user_rank_sum.entry(user_id.clone()).or_insert(0) += standings.len() as i64 + 1;
+            }
+            BattleResult::Writer | BattleResult::NotYet => {
+                user_rank_sum.entry(user_id.clone()).or_insert(0);
+            }
+        }
+    }
+
+    // match league
+    let mut league_users = vec![];
+    for loser in losers.iter() {
+        let results = users_result.get(&loser.user_id).unwrap();
+        let mut win_count = 0;
+        for result in results.iter() {
+            match result.result {
+                BattleResult::Win { .. } | BattleResult::SkipWin => {
+                    win_count += 1;
+                }
+                _ => {}
+            }
+        }
+        league_users.push((*loser, win_count, user_rank_sum[&loser.user_id]));
+    }
+    league_users
+        .sort_by_key(|&(user, win, rank)| (win, Reverse(rank), user.rating, user.user_id.as_str()));
+
+    let remain_opponent = if league_users.len() % 2 == 1 {
+        Some(league_users[league_users.len() - 2].0)
+    } else {
+        None
+    };
+    while let Some((user, cur_win, _)) = league_users.pop() {
+        let mut same_win = vec![user];
+        while let Some((user, win, rank)) = league_users.pop() {
+            if win == cur_win {
+                same_win.push(user);
+            } else {
+                league_users.push((user, win, rank));
+            }
+        }
+        if same_win.len() % 2 == 1 {
+            if let Some((user, _, _)) = league_users.pop() {
+                same_win.push(user);
+            }
+        }
+
+        let remain = if same_win.len() % 2 == 1 {
+            same_win.pop()
+        } else {
+            None
+        };
+
+        let mut rng = StdRng::seed_from_u64(717);
+        same_win.shuffle(&mut rng);
+        let n = same_win.len() / 2;
+        for i in 0..n {
+            let user_a = same_win[i];
+            let user_b = same_win[n + i];
+            users_result
+                .get_mut(&user_a.user_id)
+                .unwrap()
+                .push(BattleResultDetail {
+                    opponent: Some(user_b),
+                    result: BattleResult::NotYet,
+                });
+            users_result
+                .get_mut(&user_b.user_id)
+                .unwrap()
+                .push(BattleResultDetail {
+                    opponent: Some(user_a),
+                    result: BattleResult::NotYet,
+                });
+        }
+
+        if let Some(user_a) = remain {
+            let user_b = remain_opponent.unwrap();
+            users_result
+                .get_mut(&user_a.user_id)
+                .unwrap()
+                .push(BattleResultDetail {
+                    opponent: Some(user_b),
+                    result: BattleResult::NotYet,
+                });
+            users_result
+                .get_mut(&user_b.user_id)
+                .unwrap()
+                .push(BattleResultDetail {
+                    opponent: Some(user_a),
+                    result: BattleResult::NotYet,
+                });
+        }
+    }
+}
 
 fn main() -> Result<()> {
     let users = load_season_user_list(2)?;
@@ -54,138 +193,15 @@ fn main() -> Result<()> {
     {
         let standings = load_standings(filename)?;
         for (class_name, node) in node_map.iter_mut() {
-            // resolve league results
             let losers = losers.get_mut(class_name).unwrap();
-            for loser in losers.iter() {
-                let results = users_result.get_mut(&loser.user_id).unwrap();
-                let last = results.last_mut().unwrap();
-                if let BattleResult::NotYet = last.result {
-                    let opponent = last.opponent.unwrap();
-                    let opponent_rank = standings.get(&opponent.user_id).cloned();
-                    let my_rank = standings.get(&loser.user_id).cloned();
-                    last.result = loser.resolve_result(opponent, my_rank, opponent_rank);
-                } else {
-                    unreachable!("{:?}", results);
-                }
-            }
-
-            // resolve tournament results
-            node.resolve(&standings, &mut users_result, losers);
-
-            // resolve writer results
-            for (user_id, result) in users_result.iter_mut() {
-                if writers.contains(&user_id.as_str()) {
-                    let last = result.last_mut().unwrap();
-                    match last.result {
-                        BattleResult::SkipLose => {
-                            last.result = BattleResult::Writer;
-                        }
-                        _ => unreachable!(),
-                    }
-                }
-            }
-
-            // update rank sum
-            for (user_id, user_result) in users_result.iter() {
-                match user_result.last().unwrap().result {
-                    BattleResult::Win { rank } | BattleResult::Lose { rank } => {
-                        *user_rank_sum.entry(user_id.clone()).or_insert(0) += rank;
-                    }
-                    BattleResult::SkipLose | BattleResult::SkipWin => {
-                        *user_rank_sum.entry(user_id.clone()).or_insert(0) +=
-                            standings.len() as i64 + 1;
-                    }
-                    BattleResult::Writer | BattleResult::NotYet => {
-                        user_rank_sum.entry(user_id.clone()).or_insert(0);
-                    }
-                }
-            }
-
-            // match league
-            let mut league_users = vec![];
-            for loser in losers.iter() {
-                let results = users_result.get(&loser.user_id).unwrap();
-                let mut win_count = 0;
-                for result in results.iter() {
-                    match result.result {
-                        BattleResult::Win { .. } | BattleResult::SkipWin => {
-                            win_count += 1;
-                        }
-                        _ => {}
-                    }
-                }
-                league_users.push((*loser, win_count, user_rank_sum[&loser.user_id]));
-            }
-            league_users.sort_by_key(|&(user, win, rank)| {
-                (win, Reverse(rank), user.rating, user.user_id.as_str())
-            });
-
-            let remain_opponent = if league_users.len() % 2 == 1 {
-                Some(league_users[league_users.len() - 2].0)
-            } else {
-                None
-            };
-            while let Some((user, cur_win, _)) = league_users.pop() {
-                let mut same_win = vec![user];
-                while let Some((user, win, rank)) = league_users.pop() {
-                    if win == cur_win {
-                        same_win.push(user);
-                    } else {
-                        league_users.push((user, win, rank));
-                    }
-                }
-                if same_win.len() % 2 == 1 {
-                    if let Some((user, _, _)) = league_users.pop() {
-                        same_win.push(user);
-                    }
-                }
-
-                let remain = if same_win.len() % 2 == 1 {
-                    same_win.pop()
-                } else {
-                    None
-                };
-
-                let mut rng = StdRng::seed_from_u64(717);
-                same_win.shuffle(&mut rng);
-                let n = same_win.len() / 2;
-                for i in 0..n {
-                    let user_a = same_win[i];
-                    let user_b = same_win[n + i];
-                    users_result
-                        .get_mut(&user_a.user_id)
-                        .unwrap()
-                        .push(BattleResultDetail {
-                            opponent: Some(user_b),
-                            result: BattleResult::NotYet,
-                        });
-                    users_result
-                        .get_mut(&user_b.user_id)
-                        .unwrap()
-                        .push(BattleResultDetail {
-                            opponent: Some(user_a),
-                            result: BattleResult::NotYet,
-                        });
-                }
-
-                if let Some(user_a) = remain {
-                    let user_b = remain_opponent.unwrap();
-                    users_result
-                        .get_mut(&user_a.user_id)
-                        .unwrap()
-                        .push(BattleResultDetail {
-                            opponent: Some(user_b),
-                            result: BattleResult::NotYet,
-                        });
-                    users_result
-                        .get_mut(&user_b.user_id)
-                        .unwrap()
-                        .push(BattleResultDetail {
-                            opponent: Some(user_a),
-                            result: BattleResult::NotYet,
-                        });
-                }
-            }
+            resolve_one_round(
+                &standings,
+                losers,
+                &mut users_result,
+                node,
+                &mut user_rank_sum,
+                &writers,
+            );
         }
     }
 
