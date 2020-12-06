@@ -105,10 +105,11 @@ impl<'a> Node<'a> {
         for child in self.children.iter_mut() {
             let user = child.user.unwrap();
             let (result, opponent) = if user.user_id == winner.user_id {
+                let second = user_rank[1].0;
                 if let Some(rank) = child.rank {
-                    (BattleResult::Win { rank }, winner) //TODO
+                    (BattleResult::Win { rank }, second)
                 } else {
-                    (BattleResult::SkipWin, winner) //TODO
+                    (BattleResult::SkipWin, second)
                 }
             } else {
                 if let Some(rank) = child.rank {
@@ -185,4 +186,5 @@ pub struct LeagueEntry<'a> {
     pub win_count: i64,
     pub rank_sum: i64,
     pub results: Vec<BattleResultDetail<'a>>,
+    pub provisional_rank: u32,
 }

@@ -22,6 +22,7 @@ export interface LeagueEntry {
   win_count: number;
   rank_sum: number;
   results: BattleResultDetail[];
+  provisional_rank: number;
 }
 
 export interface BattleResultDetail {

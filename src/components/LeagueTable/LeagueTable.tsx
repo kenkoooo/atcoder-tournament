@@ -24,21 +24,21 @@ export const LeagueTable = (props: Props) => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>リーグ内順位</TableCell>
+            <TableCell align="right">暫定順位</TableCell>
             <TableCell>ユーザー</TableCell>
             {Array.from(Array(maxResultCount).keys()).map((e, i) => (
               <TableCell key={i} align="center">
                 {i + 1}回戦
               </TableCell>
             ))}
-            <TableCell>勝利数</TableCell>
-            <TableCell>順位合計</TableCell>
+            <TableCell align="right">勝利数</TableCell>
+            <TableCell align="right">順位合計</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.league.map((entry, i) => (
+          {props.league.map((entry) => (
             <TableRow key={entry.user.user_id}>
-              <TableCell>{i + 1}</TableCell>
+              <TableCell align="right">{entry.provisional_rank}</TableCell>
               <TableCell>
                 <RatingName rating={entry.user.rating}>
                   {entry.user.user_id}

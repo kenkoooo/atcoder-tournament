@@ -29,7 +29,7 @@ fn get_league_matches<'a>(
     users_result: &BTreeMap<UserId, Vec<BattleResultDetail<'a>>>,
     user_rank_sum: &BTreeMap<UserId, i64>,
     league_users: &[&'a User],
-) -> Vec<(&'a User, &'a User)> {
+) -> (Vec<(&'a User, &'a User)>, Option<(&'a User, &'a User)>) {
     let n = league_users.len();
     assert!(n >= 2);
 
@@ -61,9 +61,23 @@ fn get_league_matches<'a>(
             i += 1;
         }
 
-        let mut rng = StdRng::seed_from_u64(717);
-        same_win_users.shuffle(&mut rng);
         let pairs = same_win_users.len() / 2;
+        let mut rng = StdRng::seed_from_u64(717);
+        for _ in 0..20 {
+            same_win_users.shuffle(&mut rng);
+            let mut ok = true;
+            for i in 0..pairs {
+                let user_a = same_win_users[i];
+                let user_b = same_win_users[pairs + i];
+                if is_matched_before(user_a, user_b, users_result) {
+                    ok = false;
+                    break;
+                }
+            }
+            if ok {
+                break;
+            }
+        }
         for i in 0..pairs {
             let user_a = same_win_users[i];
             let user_b = same_win_users[pairs + i];
@@ -76,9 +90,20 @@ fn get_league_matches<'a>(
     if n % 2 == 1 {
         let user_a = league_users[n - 1].0;
         let user_b = league_users[n - 2].0;
-        result.push((user_a, user_b));
+        (result, Some((user_a, user_b)))
+    } else {
+        (result, None)
     }
-    result
+}
+
+fn is_matched_before(
+    user_a: &User,
+    user_b: &User,
+    users_result: &BTreeMap<UserId, Vec<BattleResultDetail>>,
+) -> bool {
+    users_result[&user_a.user_id]
+        .iter()
+        .any(|r| r.opponent == Some(user_b))
 }
 
 fn resolve_one_round<'a>(
@@ -104,6 +129,11 @@ fn resolve_one_round<'a>(
     }
     // resolve tournament results
     node.resolve_tournament_result(standings, users_result, league_users);
+    let mut finished = false;
+    if users_result.len() == league_users.len() + 1 {
+        league_users.pop().unwrap();
+        finished = true;
+    }
 
     // resolve writer results
     for (user_id, result) in users_result.iter_mut() {
@@ -133,22 +163,33 @@ fn resolve_one_round<'a>(
     }
 
     // next league matches
-    let matches = get_league_matches(users_result, user_rank_sum, league_users);
-    for (user_a, user_b) in matches {
-        users_result
-            .get_mut(&user_a.user_id)
-            .unwrap()
-            .push(BattleResultDetail {
-                opponent: Some(user_b),
-                result: BattleResult::NotYet,
-            });
-        users_result
-            .get_mut(&user_b.user_id)
-            .unwrap()
-            .push(BattleResultDetail {
-                opponent: Some(user_a),
-                result: BattleResult::NotYet,
-            });
+    if !finished {
+        let (matches, odd) = get_league_matches(users_result, user_rank_sum, league_users);
+        for (user_a, user_b) in matches {
+            users_result
+                .get_mut(&user_a.user_id)
+                .unwrap()
+                .push(BattleResultDetail {
+                    opponent: Some(user_b),
+                    result: BattleResult::NotYet,
+                });
+            users_result
+                .get_mut(&user_b.user_id)
+                .unwrap()
+                .push(BattleResultDetail {
+                    opponent: Some(user_a),
+                    result: BattleResult::NotYet,
+                });
+        }
+        if let Some((last, prev)) = odd {
+            users_result
+                .get_mut(&last.user_id)
+                .unwrap()
+                .push(BattleResultDetail {
+                    opponent: Some(prev),
+                    result: BattleResult::NotYet,
+                });
+        }
     }
 }
 
@@ -197,25 +238,31 @@ fn main() -> Result<()> {
             }
 
             let class_name = format!("{}{}", CLASS_KEY[i], j + 1);
-            let mut league = vec![];
-            for &loser in losers.iter() {
-                let results = users_result[&loser.user_id].clone();
-                let win_count = count_wins(&results);
-                let rank_sum = user_rank_sum[&loser.user_id];
-                league.push(LeagueEntry {
-                    user: loser,
+            let mut league = losers
+                .iter()
+                .map(|&loser| {
+                    let results = users_result[&loser.user_id].clone();
+                    let win_count = count_wins(&results);
+                    let rank_sum = user_rank_sum[&loser.user_id];
+                    (loser, win_count, rank_sum, results)
+                })
+                .collect::<Vec<_>>();
+            league.sort_by_key(|(user, win_count, rank_sum, _)| {
+                (Reverse(*win_count), *rank_sum, Reverse(user.rating))
+            });
+
+            let tournament_count = users_result.len() - league.len();
+            let league = league
+                .into_iter()
+                .enumerate()
+                .map(|(i, (user, win_count, rank_sum, results))| LeagueEntry {
+                    user,
                     win_count,
                     rank_sum,
                     results,
-                });
-            }
-            league.sort_by_key(|entry| {
-                (
-                    Reverse(entry.win_count),
-                    entry.rank_sum,
-                    Reverse(entry.user.rating),
-                )
-            });
+                    provisional_rank: (tournament_count + 1 + i) as u32,
+                })
+                .collect::<Vec<_>>();
             responses.insert(class_name, Response { node, league });
         }
     }
