@@ -168,88 +168,56 @@ fn main() -> Result<()> {
         }
     }
 
-    let mut node_map = BTreeMap::new();
-    let mut losers: BTreeMap<_, Vec<&User>> = BTreeMap::new();
-    let mut users_result: BTreeMap<String, BTreeMap<UserId, Vec<BattleResultDetail>>> =
-        BTreeMap::new();
-
+    let mut responses = BTreeMap::new();
     for i in 0..4 {
         let nodes = if i == 0 {
             construct_2nd_class_a_tournaments(&mut classes[i])
         } else {
             construct_normal_tournaments(&mut classes[i])
         };
-        for (j, node) in nodes.into_iter().enumerate() {
+        for (j, mut node) in nodes.into_iter().enumerate() {
+            let mut losers = vec![];
+            let mut users_result: BTreeMap<UserId, Vec<BattleResultDetail>> = BTreeMap::new();
+            let mut user_rank_sum = BTreeMap::new();
+            for (filename, writers) in vec![(
+                "./data/season-2/abc184.json",
+                vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
+            )]
+            .into_iter()
+            {
+                let standings = load_standings(filename)?;
+                resolve_one_round(
+                    &standings,
+                    &mut losers,
+                    &mut users_result,
+                    &mut node,
+                    &mut user_rank_sum,
+                    &writers,
+                );
+            }
+
             let class_name = format!("{}{}", CLASS_KEY[i], j + 1);
-            node_map.insert(class_name.clone(), node);
-            losers.insert(class_name.clone(), vec![]);
-            users_result.insert(class_name, BTreeMap::new());
-        }
-    }
-
-    let mut user_rank_sum = BTreeMap::new();
-
-    for (filename, writers) in vec![
-        (
-            "./data/season-2/abc184.json",
-            vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
-        ),
-        (
-            "./data/season-2/abc184.json",
-            vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
-        ),
-        (
-            "./data/season-2/abc184.json",
-            vec![
-                "beet",
-                "evima",
-                "kyopro_friends",
-                "tatyam",
-                "sheyasutaka",
-                "leaf1415",
-            ],
-        ),
-    ]
-    .into_iter()
-    {
-        let standings = load_standings(filename)?;
-        for (class_name, node) in node_map.iter_mut() {
-            let losers = losers.get_mut(class_name).unwrap();
-            let users_result = users_result.get_mut(class_name).unwrap();
-            resolve_one_round(
-                &standings,
-                losers,
-                users_result,
-                node,
-                &mut user_rank_sum,
-                &writers,
-            );
-        }
-    }
-
-    let mut responses = BTreeMap::new();
-    for (class_name, node) in node_map.into_iter() {
-        let losers = losers.get(&class_name).unwrap();
-        let mut league = vec![];
-        for loser in losers.iter() {
-            let results = users_result[&class_name][&loser.user_id].clone();
-            let win_count = count_wins(&results);
-            let rank_sum = user_rank_sum[&loser.user_id];
-            league.push(LeagueEntry {
-                user: *loser,
-                win_count,
-                rank_sum,
-                results,
+            let mut league = vec![];
+            for &loser in losers.iter() {
+                let results = users_result[&loser.user_id].clone();
+                let win_count = count_wins(&results);
+                let rank_sum = user_rank_sum[&loser.user_id];
+                league.push(LeagueEntry {
+                    user: loser,
+                    win_count,
+                    rank_sum,
+                    results,
+                });
+            }
+            league.sort_by_key(|entry| {
+                (
+                    Reverse(entry.win_count),
+                    entry.rank_sum,
+                    Reverse(entry.user.rating),
+                )
             });
+            responses.insert(class_name, Response { node, league });
         }
-        league.sort_by_key(|entry| {
-            (
-                Reverse(entry.win_count),
-                entry.rank_sum,
-                Reverse(entry.user.rating),
-            )
-        });
-        responses.insert(class_name, Response { node, league });
     }
 
     write(
