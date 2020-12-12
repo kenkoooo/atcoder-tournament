@@ -77,12 +77,16 @@ export const Tournament = (props: Props) => {
     ? tournament[keys[selectedDivision]].league
     : null;
 
+  const defendingChampion = keys[selectedDivision]
+    ? tournament[keys[selectedDivision]].defending_champion
+    : undefined;
+
   useEffect(() => {
     fetchTournament(props.seasonId).then((response) => {
       setTournament(response);
     });
   }, [props.seasonId]);
-
+  const depthLimit = showTop16 ? 4 : 100;
   return (
     <>
       <CssBaseline />
@@ -131,7 +135,7 @@ export const Tournament = (props: Props) => {
             <GameNode
               tournament={node}
               depth={0}
-              depthLimit={showTop16 ? 4 : 100}
+              config={{ depthLimit, defendingChampion }}
             />
           )}
         </Box>

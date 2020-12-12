@@ -14,6 +14,7 @@ export interface TournamentResponse {
     node: TournamentNode;
     league?: LeagueEntry[];
     top4?: User[] | null;
+    defending_champion?: string;
   };
 }
 

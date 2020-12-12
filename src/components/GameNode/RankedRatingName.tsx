@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core";
+import { Box, Tooltip } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { User } from "../../models/TournamentNode";
@@ -8,6 +8,7 @@ interface Props {
   user: User | null;
   rank: number | null;
   winner?: boolean;
+  defendingChampion?: boolean;
 }
 
 const useStyle = makeStyles({
@@ -59,22 +60,28 @@ export const RankedRatingName = (props: Props) => {
       </div>
     );
   }
+
+  const nameElement = (
+    <div className={classes.nameContainer}>
+      {props.defendingChampion ? (
+        <Tooltip title="前回優勝者">
+          <span role="img" aria-label="king">
+            👑{" "}
+          </span>
+        </Tooltip>
+      ) : null}
+      <RatingName rating={user.rating}>{user.user_id}</RatingName>
+    </div>
+  );
+
   if (!rank) {
-    return (
-      <div className={classes.nodeBox}>
-        <div className={classes.nameContainer}>
-          <RatingName rating={user.rating}>{user.user_id}</RatingName>
-        </div>
-      </div>
-    );
+    return <div className={classes.nodeBox}>{nameElement}</div>;
   }
 
   const rankText = rank > 100000 ? "-" : rank;
   return (
     <Box display="flex" justifyContent="center" className={classes.nodeBox}>
-      <div className={classes.nameContainer}>
-        <RatingName rating={user.rating}>{user.user_id}</RatingName>
-      </div>
+      {nameElement}
       <Box
         display="flex"
         alignItems="center"

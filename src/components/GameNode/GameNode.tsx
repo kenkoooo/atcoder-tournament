@@ -104,23 +104,27 @@ interface Props {
   tournament: TournamentNode;
   promotedUser?: string;
   depth: number;
-  depthLimit: number;
+  config: {
+    depthLimit: number;
+    defendingChampion?: string;
+  };
 }
 
 export const GameNode = (props: Props) => {
+  const { tournament, depth, config, promotedUser } = props;
   const classes = useStyle();
-  const promotedUser = props.tournament.user?.user_id;
-  if (
-    props.tournament.children.length === 0 ||
-    props.depthLimit <= props.depth
-  ) {
+  const nextPromotedUser = tournament.user?.user_id;
+  if (tournament.children.length === 0 || config.depthLimit <= depth) {
     return (
       <RankedRatingName
-        user={props.tournament.user}
-        rank={props.tournament.rank}
+        user={tournament.user}
+        rank={tournament.rank}
+        defendingChampion={
+          tournament.user?.user_id === config.defendingChampion
+        }
         winner={
-          props.promotedUser !== undefined &&
-          props.tournament.user?.user_id === props.promotedUser
+          promotedUser !== undefined &&
+          tournament.user?.user_id === promotedUser
         }
       />
     );
@@ -129,22 +133,25 @@ export const GameNode = (props: Props) => {
       <div className={classes.item}>
         <div className={classes.itemParent}>
           <RankedRatingName
-            user={props.tournament.user}
-            rank={props.tournament.rank}
+            user={tournament.user}
+            rank={tournament.rank}
+            defendingChampion={
+              tournament.user?.user_id === config.defendingChampion
+            }
             winner={
-              props.promotedUser !== undefined &&
-              props.tournament.user?.user_id === props.promotedUser
+              promotedUser !== undefined &&
+              tournament.user?.user_id === promotedUser
             }
           />
         </div>
         <div className={classes.itemChildren}>
-          {props.tournament.children.map((child, i) => (
+          {tournament.children.map((child, i) => (
             <div key={i} className={classes.itemChild}>
               <GameNode
                 tournament={child}
-                promotedUser={promotedUser}
-                depth={props.depth + 1}
-                depthLimit={props.depthLimit}
+                promotedUser={nextPromotedUser}
+                depth={depth + 1}
+                config={config}
               />
             </div>
           ))}

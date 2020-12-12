@@ -263,7 +263,14 @@ fn main() -> Result<()> {
                     provisional_rank: (tournament_count + 1 + i) as u32,
                 })
                 .collect::<Vec<_>>();
-            responses.insert(class_name, Response { node, league });
+            responses.insert(
+                class_name,
+                Response {
+                    node,
+                    league,
+                    defending_champion: "heno239",
+                },
+            );
         }
     }
 

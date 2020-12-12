@@ -24,7 +24,7 @@ export const LeagueTable = (props: Props) => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell align="right">暫定順位</TableCell>
+            <TableCell align="right">順位</TableCell>
             <TableCell>ユーザー</TableCell>
             {Array.from(Array(maxResultCount).keys()).map((e, i) => (
               <TableCell key={i} align="center">
@@ -38,7 +38,9 @@ export const LeagueTable = (props: Props) => {
         <TableBody>
           {props.league.map((entry) => (
             <TableRow key={entry.user.user_id}>
-              <TableCell align="right">{entry.provisional_rank}</TableCell>
+              <TableCell align="right">{`${
+                entry.provisional_rank
+              }${ordinalSuffixOf(entry.provisional_rank)}`}</TableCell>
               <TableCell>
                 <RatingName rating={entry.user.rating}>
                   {entry.user.user_id}
