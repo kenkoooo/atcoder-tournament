@@ -220,10 +220,24 @@ fn main() -> Result<()> {
             let mut losers = vec![];
             let mut users_result: BTreeMap<UserId, Vec<BattleResultDetail>> = BTreeMap::new();
             let mut user_rank_sum = BTreeMap::new();
-            for (filename, writers) in vec![(
-                "./data/season-2/abc184.json",
-                vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
-            )]
+            for (filename, writers) in vec![
+                (
+                    "./data/season-2/abc184.json",
+                    vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
+                ),
+                (
+                    "./data/season-2/abc185.json",
+                    vec![
+                        "beet",
+                        "gazelle",
+                        "kobae964",
+                        "kort0n",
+                        "kyopro_friends",
+                        "QCFium",
+                        "satashun",
+                    ],
+                ),
+            ]
             .into_iter()
             {
                 let standings = load_standings(filename)?;
