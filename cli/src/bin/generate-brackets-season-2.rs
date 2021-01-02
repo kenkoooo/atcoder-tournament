@@ -237,6 +237,17 @@ fn main() -> Result<()> {
                         "satashun",
                     ],
                 ),
+                (
+                    "./data/season-2/abc187.json",
+                    vec![
+                        "kort0n",
+                        "Kmcode",
+                        "satashun",
+                        "tatyam",
+                        "tempura0224",
+                        "tozangezan",
+                    ],
+                ),
             ]
             .into_iter()
             {
