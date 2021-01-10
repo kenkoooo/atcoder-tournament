@@ -1,7 +1,7 @@
 use anyhow::Result;
 use cli::{
-    count_wins, load_season_user_list, load_standings, resolve_one_round, BattleResultDetail,
-    LeagueEntry, Node, Response, User,
+    construct_tournament, count_wins, load_season_user_list, load_standings, resolve_one_round,
+    BattleResultDetail, LeagueEntry, Node, Response, User,
 };
 use std::cmp::Reverse;
 use std::collections::BTreeMap;
@@ -27,11 +27,11 @@ fn main() -> Result<()> {
     }
 
     let mut responses = BTreeMap::new();
-    for (i, mut class) in classes.into_iter().enumerate() {
+    for (i, class) in classes.into_iter().enumerate() {
         let nodes = if i == 0 {
-            construct_2nd_class_a_tournaments(&mut class)
+            construct_2nd_class_a_tournaments(class)
         } else {
-            construct_normal_tournaments(&mut class)
+            construct_normal_tournaments(class)
         };
         for (j, mut node) in nodes.into_iter().enumerate() {
             let mut losers = vec![];
@@ -151,7 +151,7 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn construct_2nd_class_a_tournaments<'a>(users: &mut Vec<&'a User>) -> Vec<Node<'a>> {
+fn construct_2nd_class_a_tournaments(mut users: Vec<&User>) -> Vec<Node> {
     users.sort();
     users.reverse();
     const NEXT_A1: [&str; 14] = [
@@ -210,11 +210,11 @@ fn construct_2nd_class_a_tournaments<'a>(users: &mut Vec<&'a User>) -> Vec<Node<
     vec![
         construct_tournament(&a[0], 0),
         construct_tournament(&a[1], 0),
-        construct_tournament(users, 0),
+        construct_tournament(&users, 0),
     ]
 }
 
-fn construct_normal_tournaments<'a>(users: &mut Vec<&'a User>) -> Vec<Node<'a>> {
+fn construct_normal_tournaments(mut users: Vec<&User>) -> Vec<Node> {
     let class_limit = users.len() / 6 * 2;
     users.sort();
     vec![
@@ -222,46 +222,4 @@ fn construct_normal_tournaments<'a>(users: &mut Vec<&'a User>) -> Vec<Node<'a>> 
         construct_tournament(&users[class_limit..(2 * class_limit)], 0),
         construct_tournament(&users[(2 * class_limit)..], 0),
     ]
-}
-
-fn construct_tournament<'a>(sorted_users: &[&'a User], depth: usize) -> Node<'a> {
-    if sorted_users.len() == 1 {
-        Node {
-            user: Some(sorted_users[0]),
-            rank: None,
-            children: vec![],
-        }
-    } else if depth == 4 {
-        let children = sorted_users
-            .iter()
-            .map(|user| Node {
-                user: Some(*user),
-                rank: None,
-                children: vec![],
-            })
-            .collect::<Vec<_>>();
-        Node {
-            user: None,
-            rank: None,
-            children,
-        }
-    } else {
-        let mut left = vec![];
-        let mut right = vec![];
-        for (i, user) in sorted_users.iter().enumerate() {
-            if i % 4 == 0 || i % 4 == 3 {
-                left.push(*user);
-            } else {
-                right.push(*user);
-            }
-        }
-        Node {
-            user: None,
-            rank: None,
-            children: vec![
-                construct_tournament(&left, depth + 1),
-                construct_tournament(&right, depth + 1),
-            ],
-        }
-    }
 }
