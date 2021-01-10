@@ -7,12 +7,57 @@ import {
   TableHead,
   TableRow,
 } from "@material-ui/core";
-import React from "react";
+import React, { Fragment } from "react";
 import { BattleResult, LeagueEntry } from "../../models/TournamentNode";
 import { RatingName } from "../RatingName";
 
+const UserEntryRow = (props: {
+  entry: LeagueEntry;
+  maxResultCount: number;
+}) => {
+  const { entry, maxResultCount } = props;
+  return (
+    <TableRow>
+      <TableCell align="right">{`${entry.provisional_rank}${ordinalSuffixOf(
+        entry.provisional_rank
+      )}`}</TableCell>
+      <TableCell>
+        <RatingName rating={entry.user.rating}>{entry.user.user_id}</RatingName>
+      </TableCell>
+      {Array.from(Array(maxResultCount).keys()).map((e, i) => {
+        const result = entry.results[i];
+        if (result) {
+          return (
+            <TableCell key={i} align="center">
+              <Box
+                display="flex"
+                justifyContent="center"
+                flexDirection="column"
+              >
+                {result.opponent && (
+                  <RatingName rating={result.opponent.rating}>
+                    {result.opponent.user_id}
+                  </RatingName>
+                )}
+                <span>{formatBattleResult(result.result)}</span>
+                <span>{formatRank(result.result)}</span>
+              </Box>
+            </TableCell>
+          );
+        } else {
+          return <TableCell key={i}>{i + 1}回戦</TableCell>;
+        }
+      })}
+      <TableCell align="right">{entry.win_count}</TableCell>
+      <TableCell align="right">{entry.rank_sum}</TableCell>
+    </TableRow>
+  );
+};
+
 interface Props {
   league: LeagueEntry[];
+  promotionRank?: number;
+  dropRank?: number;
 }
 
 export const LeagueTable = (props: Props) => {
@@ -36,44 +81,39 @@ export const LeagueTable = (props: Props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.league.map((entry) => (
-            <TableRow key={entry.user.user_id}>
-              <TableCell align="right">{`${
-                entry.provisional_rank
-              }${ordinalSuffixOf(entry.provisional_rank)}`}</TableCell>
-              <TableCell>
-                <RatingName rating={entry.user.rating}>
-                  {entry.user.user_id}
-                </RatingName>
-              </TableCell>
-              {Array.from(Array(maxResultCount).keys()).map((e, i) => {
-                const result = entry.results[i];
-                if (result) {
-                  return (
-                    <TableCell key={i} align="center">
-                      <Box
-                        display="flex"
-                        justifyContent="center"
-                        flexDirection="column"
-                      >
-                        {result.opponent && (
-                          <RatingName rating={result.opponent.rating}>
-                            {result.opponent.user_id}
-                          </RatingName>
-                        )}
-                        <span>{formatBattleResult(result.result)}</span>
-                        <span>{formatRank(result.result)}</span>
-                      </Box>
+          {props.league.map((entry) => {
+            if (entry.provisional_rank === props.promotionRank) {
+              return (
+                <Fragment key={entry.user.user_id}>
+                  <UserEntryRow entry={entry} maxResultCount={maxResultCount} />
+                  <TableRow>
+                    <TableCell colSpan={maxResultCount + 4}>
+                      昇格ライン
                     </TableCell>
-                  );
-                } else {
-                  return <TableCell key={i}>{i + 1}回戦</TableCell>;
-                }
-              })}
-              <TableCell align="right">{entry.win_count}</TableCell>
-              <TableCell align="right">{entry.rank_sum}</TableCell>
-            </TableRow>
-          ))}
+                  </TableRow>
+                </Fragment>
+              );
+            } else if (entry.provisional_rank === props.dropRank) {
+              return (
+                <Fragment key={entry.user.user_id}>
+                  <TableRow>
+                    <TableCell colSpan={maxResultCount + 4}>
+                      残留ライン
+                    </TableCell>
+                  </TableRow>
+                  <UserEntryRow entry={entry} maxResultCount={maxResultCount} />
+                </Fragment>
+              );
+            } else {
+              return (
+                <UserEntryRow
+                  entry={entry}
+                  maxResultCount={maxResultCount}
+                  key={entry.user.user_id}
+                />
+              );
+            }
+          })}
         </TableBody>
       </Table>
     </TableContainer>

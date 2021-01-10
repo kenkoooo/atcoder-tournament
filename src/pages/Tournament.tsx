@@ -69,17 +69,13 @@ export const Tournament = (props: Props) => {
   const [showTop16, setShowTop16] = useState(false);
   const keys = Object.keys(tournament);
 
-  const node = keys[selectedDivision]
-    ? tournament[keys[selectedDivision]].node
+  const bracket = keys[selectedDivision]
+    ? tournament[keys[selectedDivision]]
     : null;
 
-  const league = keys[selectedDivision]
-    ? tournament[keys[selectedDivision]].league
-    : null;
-
-  const defendingChampion = keys[selectedDivision]
-    ? tournament[keys[selectedDivision]].defending_champion
-    : undefined;
+  const node = bracket?.node;
+  const league = bracket?.league;
+  const defendingChampion = bracket?.defending_champion;
 
   useEffect(() => {
     fetchTournament(props.seasonId).then((response) => {
@@ -144,7 +140,11 @@ export const Tournament = (props: Props) => {
             <Typography variant="h4" align="center" color="textPrimary">
               順位決定リーグ
             </Typography>
-            <LeagueTable league={league} />
+            <LeagueTable
+              league={league}
+              promotionRank={bracket?.promotion_rank}
+              dropRank={bracket?.drop_rank}
+            />
           </Box>
         )}
       </Grid>

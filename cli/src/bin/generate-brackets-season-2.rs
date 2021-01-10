@@ -288,12 +288,29 @@ fn main() -> Result<()> {
                     provisional_rank: (tournament_count + 1 + i) as u32,
                 })
                 .collect::<Vec<_>>();
+            let defending_champion = if class_name.as_str() == "A1" {
+                Some("heno239")
+            } else {
+                None
+            };
+            let promotion_rank = match class_name.as_str() {
+                "A2" => Some(10),
+                "A3" => Some(16),
+                _ => None,
+            };
+            let drop_rank = match class_name.as_str() {
+                "A1" => Some(17),
+                "A2" => Some(23),
+                _ => None,
+            };
             responses.insert(
                 class_name,
                 Response {
                     node,
                     league,
-                    defending_champion: "heno239",
+                    defending_champion,
+                    promotion_rank,
+                    drop_rank,
                 },
             );
         }

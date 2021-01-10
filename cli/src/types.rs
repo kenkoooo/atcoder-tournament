@@ -138,7 +138,9 @@ impl<'a> Node<'a> {
 pub struct Response<'a> {
     pub node: Node<'a>,
     pub league: Vec<LeagueEntry<'a>>,
-    pub defending_champion: &'a str,
+    pub defending_champion: Option<&'a str>,
+    pub drop_rank: Option<i32>,
+    pub promotion_rank: Option<i32>,
 }
 
 #[derive(Deserialize)]

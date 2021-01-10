@@ -15,6 +15,8 @@ export interface TournamentResponse {
     league?: LeagueEntry[];
     top4?: User[] | null;
     defending_champion?: string;
+    promotion_rank?: number;
+    drop_rank?: number;
   };
 }
 
