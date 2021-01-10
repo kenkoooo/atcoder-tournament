@@ -17,6 +17,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import { RegisterPage } from "./pages/RegisterPage";
 import { Tournament } from "./pages/Tournament";
 import { SEASON_ID } from "./utils/Constants";
 
@@ -142,9 +143,9 @@ const App = () => {
                 );
               }}
             />
-            {/*<Route path="/register">*/}
-            {/*  <RegisterPage />*/}
-            {/*</Route>*/}
+            <Route path="/register">
+              <RegisterPage />
+            </Route>
             <Redirect path="/" to={`/tournament/${SEASON_ID}`} />
           </Switch>
         </Container>
