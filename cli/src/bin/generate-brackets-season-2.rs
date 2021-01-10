@@ -1,9 +1,8 @@
 use anyhow::Result;
 use cli::{
-    construct_tournament, count_wins, load_season_user_list, load_standings, resolve_one_round,
-    BattleResultDetail, LeagueEntry, Node, Response, User,
+    construct_league, construct_tournament, load_season_user_list, load_standings,
+    resolve_one_round, BattleResultDetail, Node, Response, User,
 };
-use std::cmp::Reverse;
 use std::collections::BTreeMap;
 use std::fs::write;
 
@@ -91,31 +90,7 @@ fn main() -> Result<()> {
             }
 
             let class_name = format!("{}{}", CLASS_KEY[i], j + 1);
-            let mut league = losers
-                .iter()
-                .map(|&loser| {
-                    let results = users_result[&loser.user_id].clone();
-                    let win_count = count_wins(&results);
-                    let rank_sum = user_rank_sum[&loser.user_id];
-                    (loser, win_count, rank_sum, results)
-                })
-                .collect::<Vec<_>>();
-            league.sort_by_key(|(user, win_count, rank_sum, _)| {
-                (Reverse(*win_count), *rank_sum, Reverse(user.rating))
-            });
-
-            let tournament_count = users_result.len() - league.len();
-            let league = league
-                .into_iter()
-                .enumerate()
-                .map(|(i, (user, win_count, rank_sum, results))| LeagueEntry {
-                    user,
-                    win_count,
-                    rank_sum,
-                    results,
-                    provisional_rank: (tournament_count + 1 + i) as u32,
-                })
-                .collect::<Vec<_>>();
+            let league = construct_league(&losers, &users_result, &user_rank_sum);
             let defending_champion = if class_name.as_str() == "A1" {
                 Some("heno239")
             } else {

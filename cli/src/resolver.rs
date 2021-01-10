@@ -1,4 +1,4 @@
-use crate::{BattleResult, BattleResultDetail, Node, User};
+use crate::{BattleResult, BattleResultDetail, LeagueEntry, Node, User};
 use rand::prelude::*;
 use std::cmp::Reverse;
 use std::collections::BTreeMap;
@@ -92,7 +92,7 @@ pub fn resolve_one_round<'a>(
         }
     }
 }
-pub fn count_wins(results: &[BattleResultDetail]) -> i64 {
+fn count_wins(results: &[BattleResultDetail]) -> i64 {
     let mut win_count = 0;
     for result in results.iter() {
         match result.result {
@@ -184,4 +184,37 @@ pub fn get_league_matches<'a>(
     } else {
         (result, None)
     }
+}
+
+pub fn construct_league<'a>(
+    losers: &[&'a User],
+    users_result: &BTreeMap<UserId, Vec<BattleResultDetail<'a>>>,
+    user_rank_sum: &BTreeMap<UserId, i64>,
+) -> Vec<LeagueEntry<'a>> {
+    let mut league = losers
+        .iter()
+        .map(|&loser| {
+            let results = users_result[&loser.user_id].clone();
+            let win_count = count_wins(&results);
+            let rank_sum = user_rank_sum[&loser.user_id];
+            (loser, win_count, rank_sum, results)
+        })
+        .collect::<Vec<_>>();
+    league.sort_by_key(|(user, win_count, rank_sum, _)| {
+        (Reverse(*win_count), *rank_sum, Reverse(user.rating))
+    });
+
+    let tournament_count = users_result.len() - league.len();
+    let league = league
+        .into_iter()
+        .enumerate()
+        .map(|(i, (user, win_count, rank_sum, results))| LeagueEntry {
+            user,
+            win_count,
+            rank_sum,
+            results,
+            provisional_rank: (tournament_count + 1 + i) as u32,
+        })
+        .collect::<Vec<_>>();
+    league
 }

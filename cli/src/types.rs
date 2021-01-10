@@ -19,7 +19,7 @@ impl User {
     ) -> BattleResult {
         match (user_rank, opponent_rank) {
             (Some(user_rank), Some(opponent_rank)) => match user_rank.cmp(&opponent_rank) {
-                Ordering::Equal => self.same_rank(opponent),
+                Ordering::Equal => self.same_rank(opponent, user_rank),
                 Ordering::Greater => BattleResult::Lose { rank: user_rank },
                 Ordering::Less => BattleResult::Win { rank: user_rank },
             },
@@ -27,17 +27,11 @@ impl User {
             (None, _) => BattleResult::SkipLose,
         }
     }
-    fn same_rank(&self, opponent: &User) -> BattleResult {
-        match self.rating.cmp(&opponent.rating) {
-            Ordering::Equal => {
-                if self.user_id > opponent.user_id {
-                    BattleResult::SkipWin
-                } else {
-                    BattleResult::SkipLose
-                }
-            }
-            Ordering::Greater => BattleResult::SkipWin,
-            Ordering::Less => BattleResult::SkipLose,
+    fn same_rank(&self, opponent: &User, rank: i64) -> BattleResult {
+        match self.cmp(opponent) {
+            Ordering::Less => BattleResult::Win { rank },
+            Ordering::Greater => BattleResult::Lose { rank },
+            _ => unreachable!("comparing the same user"),
         }
     }
 }
@@ -184,4 +178,21 @@ pub struct LeagueEntry<'a> {
     pub rank_sum: i64,
     pub results: Vec<BattleResultDetail<'a>>,
     pub provisional_rank: u32,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_compare_users() {
+        let user1 = User {
+            rating: 100,
+            user_id: "user1".to_string(),
+        };
+        let user2 = User {
+            rating: 200,
+            user_id: "user2".to_string(),
+        };
+        assert!(user1 > user2);
+    }
 }
