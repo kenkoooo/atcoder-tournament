@@ -18,30 +18,26 @@ impl User {
         opponent_rank: Option<i64>,
     ) -> BattleResult {
         match (user_rank, opponent_rank) {
-            (Some(user_rank), Some(opponent_rank)) => {
-                if user_rank == opponent_rank {
-                    self.same_rank(opponent)
-                } else if user_rank < opponent_rank {
-                    BattleResult::Win { rank: user_rank }
-                } else {
-                    BattleResult::Lose { rank: user_rank }
-                }
-            }
+            (Some(user_rank), Some(opponent_rank)) => match user_rank.cmp(&opponent_rank) {
+                Ordering::Equal => self.same_rank(opponent),
+                Ordering::Greater => BattleResult::Lose { rank: user_rank },
+                Ordering::Less => BattleResult::Win { rank: user_rank },
+            },
             (Some(my_rank), None) => BattleResult::Win { rank: my_rank },
             (None, _) => BattleResult::SkipLose,
         }
     }
     fn same_rank(&self, opponent: &User) -> BattleResult {
-        if self.rating == opponent.rating {
-            if self.user_id > opponent.user_id {
-                BattleResult::SkipWin
-            } else {
-                BattleResult::SkipLose
+        match self.rating.cmp(&opponent.rating) {
+            Ordering::Equal => {
+                if self.user_id > opponent.user_id {
+                    BattleResult::SkipWin
+                } else {
+                    BattleResult::SkipLose
+                }
             }
-        } else if self.rating > opponent.rating {
-            BattleResult::SkipWin
-        } else {
-            BattleResult::SkipLose
+            Ordering::Greater => BattleResult::SkipWin,
+            Ordering::Less => BattleResult::SkipLose,
         }
     }
 }
@@ -111,12 +107,10 @@ impl<'a> Node<'a> {
                 } else {
                     (BattleResult::SkipWin, second)
                 }
+            } else if let Some(rank) = child.rank {
+                (BattleResult::Lose { rank }, winner)
             } else {
-                if let Some(rank) = child.rank {
-                    (BattleResult::Lose { rank }, winner)
-                } else {
-                    (BattleResult::SkipLose, winner)
-                }
+                (BattleResult::SkipLose, winner)
             };
             child.rank = Some(child.rank.unwrap_or(INF_RANK));
             battle_results

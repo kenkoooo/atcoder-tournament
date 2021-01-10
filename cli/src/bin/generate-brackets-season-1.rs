@@ -188,7 +188,7 @@ fn pick_top_bfs(node: &Node, max_depth: usize) -> Vec<UserRating> {
             continue;
         }
 
-        if depth + 1 <= max_depth {
+        if depth < max_depth {
             for children in &node.children {
                 q.push_back((depth + 1, children));
             }
@@ -234,7 +234,7 @@ fn resolve<'a>(node: &'a Node, standings: &'a [BTreeMap<String, i64>], layer: us
 }
 
 fn get_layer(node: &Node) -> usize {
-    assert!(node.children.len() == 0 || node.children.len() == 2);
+    assert!(node.children.is_empty() || node.children.len() == 2);
     if node.children.is_empty() {
         0
     } else {
