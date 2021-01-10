@@ -248,6 +248,16 @@ fn main() -> Result<()> {
                         "tozangezan",
                     ],
                 ),
+                (
+                    "./data/season-2/abc188.json",
+                    vec![
+                        "kort0n",
+                        "kyopro_friends",
+                        "QCFium",
+                        "tatyam",
+                        "ynymxiaolongbao",
+                    ],
+                ),
             ]
             .into_iter()
             {
