@@ -27,11 +27,11 @@ fn main() -> Result<()> {
     }
 
     let mut responses = BTreeMap::new();
-    for i in 0..4 {
+    for (i, mut class) in classes.into_iter().enumerate() {
         let nodes = if i == 0 {
-            construct_2nd_class_a_tournaments(&mut classes[i])
+            construct_2nd_class_a_tournaments(&mut class)
         } else {
-            construct_normal_tournaments(&mut classes[i])
+            construct_normal_tournaments(&mut class)
         };
         for (j, mut node) in nodes.into_iter().enumerate() {
             let mut losers = vec![];
@@ -79,6 +79,7 @@ fn main() -> Result<()> {
             .into_iter()
             {
                 let standings = load_standings(filename)?;
+                eprintln!("Resolving {} ...", filename);
                 resolve_one_round(
                     &standings,
                     &mut losers,
