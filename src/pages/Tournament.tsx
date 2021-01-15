@@ -19,40 +19,34 @@ interface Props {
   seasonId: string;
 }
 
-const SingleWinnerTable = (props: { users: User[] | null | undefined }) => {
-  const { users } = props;
-  if (!users || users.length < 4) {
+const SingleWinnerTable = ({ top4 }: { top4?: { [_: number]: User[] } }) => {
+  if (!top4) {
     return null;
   }
   return (
     <Container>
-      <Box m={2}>
-        <Typography variant="h3" align="center" color="textPrimary">
-          優勝
-        </Typography>
-        <Typography variant="h3" align="center" color="textPrimary">
-          {users[0].user_id}
-        </Typography>
-      </Box>
-      <Box m={2}>
-        <Typography variant="h4" align="center" color="textPrimary">
-          準優勝
-        </Typography>
-        <Typography variant="h4" align="center" color="textPrimary">
-          {users[1].user_id}
-        </Typography>
-      </Box>
-      <Box m={2}>
-        <Typography variant="h5" align="center" color="textPrimary">
-          3位タイ
-        </Typography>
-        <Typography variant="h5" align="center" color="textPrimary">
-          {users[2].user_id}
-        </Typography>
-        <Typography variant="h5" align="center" color="textPrimary">
-          {users[3].user_id}
-        </Typography>
-      </Box>
+      {Object.entries(top4).map(([rank, users]) => {
+        const variant = rank === "1" ? "h3" : rank === "2" ? "h4" : "h5";
+        const title =
+          rank === "1" ? "優勝" : rank === "2" ? "準優勝" : `${rank}位`;
+        return (
+          <Box m={2} key={rank}>
+            <Typography variant={variant} align="center" color="textPrimary">
+              {title}
+            </Typography>
+            {users.map((user) => (
+              <Typography
+                variant={variant}
+                align="center"
+                color="textPrimary"
+                key={user.user_id}
+              >
+                {user.user_id}
+              </Typography>
+            ))}
+          </Box>
+        );
+      })}
     </Container>
   );
 };
@@ -121,7 +115,7 @@ export const Tournament = (props: Props) => {
           ))}
         </Tabs>
         {keys[selectedDivision] && (
-          <SingleWinnerTable users={tournament[keys[selectedDivision]].top4} />
+          <SingleWinnerTable top4={tournament[keys[selectedDivision]].top4} />
         )}
         <Button onClick={() => setShowTop16(!showTop16)}>
           {showTop16 ? "全て表示する" : "Top16のみ表示する"}

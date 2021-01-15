@@ -24,7 +24,7 @@ struct Node<'a> {
 #[derive(Serialize, Clone, Debug)]
 struct Brackets<'a> {
     node: Node<'a>,
-    top4: Option<Vec<UserRating>>,
+    top4: Option<BTreeMap<usize, Vec<UserRating>>>,
 }
 
 fn main() -> Result<()> {
@@ -163,9 +163,15 @@ fn main() -> Result<()> {
         let node = resolve(division, &standings, layer);
         let top4 = pick_top_bfs(&node, 2);
         eprintln!("{:?}", top4);
+
+        let mut top4_map = BTreeMap::new();
+        for (i, user) in top4.into_iter().enumerate() {
+            let rank = (i + 1).min(3);
+            top4_map.entry(rank).or_insert_with(Vec::new).push(user);
+        }
         let v = Brackets {
             node,
-            top4: Some(top4),
+            top4: Some(top4_map),
         };
         let value = serde_json::to_value(&v)?;
         result.insert(class, value);

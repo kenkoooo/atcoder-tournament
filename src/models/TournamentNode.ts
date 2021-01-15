@@ -13,7 +13,7 @@ export interface TournamentResponse {
   [key: string]: {
     node: TournamentNode;
     league?: LeagueEntry[];
-    top4?: User[] | null;
+    top4?: { [key: number]: User[] };
     defending_champion?: string;
     promotion_rank?: number;
     drop_rank?: number;
