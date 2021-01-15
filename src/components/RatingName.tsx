@@ -14,27 +14,35 @@ import React from "react";
 
 const useRatingColorStyle = makeStyles(() => ({
   red: {
+    fontWeight: "bold",
     color: red[500],
   },
   orange: {
+    fontWeight: "bold",
     color: orange[500],
   },
   yellow: {
+    fontWeight: "bold",
     color: yellow[500],
   },
   blue: {
+    fontWeight: "bold",
     color: blue[600],
   },
   lightBlue: {
+    fontWeight: "bold",
     color: lightBlue[200],
   },
   green: {
-    color: green[400],
+    fontWeight: "bold",
+    color: green[600],
   },
   brown: {
+    fontWeight: "bold",
     color: brown[400],
   },
   grey: {
+    fontWeight: "bold",
     color: grey[500],
   },
 }));

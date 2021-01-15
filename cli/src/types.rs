@@ -129,6 +129,7 @@ pub struct Response<'a> {
     pub defending_champion: Option<&'a str>,
     pub drop_rank: Option<i32>,
     pub promotion_rank: Option<i32>,
+    pub top4: Option<BTreeMap<i64, Vec<&'a User>>>,
 }
 
 #[derive(Deserialize)]

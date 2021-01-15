@@ -1,6 +1,6 @@
 use anyhow::Result;
 use cli::{
-    construct_league, construct_tournament, load_season_user_list, load_standings,
+    construct_league, construct_tournament, load_season_user_list, load_standings, pick_top4,
     resolve_one_round, BattleResultDetail, Node, Response, User,
 };
 use std::collections::BTreeMap;
@@ -106,6 +106,7 @@ fn main() -> Result<()> {
                 "A2" => Some(23),
                 _ => None,
             };
+            let top4 = pick_top4(&node, &league);
             responses.insert(
                 class_name,
                 Response {
@@ -114,6 +115,7 @@ fn main() -> Result<()> {
                     defending_champion,
                     promotion_rank,
                     drop_rank,
+                    top4,
                 },
             );
         }
