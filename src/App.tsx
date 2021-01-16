@@ -109,15 +109,15 @@ const App = () => {
               >
                 第2期
               </Link>
-              {/*<Link*/}
-              {/*  component={RouterLink}*/}
-              {/*  variant="button"*/}
-              {/*  color="textPrimary"*/}
-              {/*  to="/register"*/}
-              {/*  className={classes.link}*/}
-              {/*>*/}
-              {/*  登録*/}
-              {/*</Link>*/}
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/register"
+                className={classes.link}
+              >
+                登録
+              </Link>
               <Link
                 href="https://github.com/kenkoooo/atcoder-tournament/tree/master/rules"
                 target="_blank"

@@ -93,17 +93,6 @@ export const Tournament = (props: Props) => {
         >
           AtCoder Beginner Contest Tournament
         </Typography>
-        {props.seasonId === "2" && (
-          <Typography
-            variant="h5"
-            align="center"
-            color="textPrimary"
-            display="inline"
-            noWrap
-          >
-            2020/11/22 19:00 JST 登録〆切
-          </Typography>
-        )}
         <Tabs
           variant="fullWidth"
           value={selectedDivision}
