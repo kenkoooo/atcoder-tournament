@@ -220,9 +220,6 @@ export const RegisterPage = () => {
         {registerState.type === "Failed" && (
           <>
             <p>登録に失敗しました。本人確認に失敗したか、既に登録済みです。</p>
-            <p>
-              （登録済みユーザー一覧みたいなページは後で作ります。すみません）
-            </p>
           </>
         )}
         {registerState.type === "Registered" && <p>登録完了しました。</p>}

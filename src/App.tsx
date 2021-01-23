@@ -19,6 +19,7 @@ import {
 } from "react-router-dom";
 import { RegisterPage } from "./pages/RegisterPage";
 import { Tournament } from "./pages/Tournament";
+import { UserListPage } from "./pages/UserListPage";
 import { SEASON_ID } from "./utils/Constants";
 
 const theme = createMuiTheme({
@@ -113,6 +114,15 @@ const App = () => {
                 component={RouterLink}
                 variant="button"
                 color="textPrimary"
+                to="/list"
+                className={classes.link}
+              >
+                第3期
+              </Link>
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
                 to="/register"
                 className={classes.link}
               >
@@ -145,6 +155,9 @@ const App = () => {
             />
             <Route path="/register">
               <RegisterPage />
+            </Route>
+            <Route path="/list">
+              <UserListPage />
             </Route>
             <Redirect path="/" to={`/tournament/${SEASON_ID}`} />
           </Switch>
