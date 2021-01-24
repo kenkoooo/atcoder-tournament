@@ -1,7 +1,8 @@
 use anyhow::Result;
 use cli::{
-    construct_league, construct_tournament, load_season_user_list, load_standings, pick_top4,
-    resolve_one_round, BattleResultDetail, Node, Response, User,
+    construct_league, construct_normal_tournaments, construct_tournament, divide_to_classes,
+    load_season_user_list, load_standings, pick_top4, resolve_one_round, BattleResultDetail, Node,
+    Response, User,
 };
 use std::collections::BTreeMap;
 use std::fs::write;
@@ -11,19 +12,7 @@ type UserId = String;
 
 fn main() -> Result<()> {
     let users = load_season_user_list(2)?;
-
-    let mut classes = vec![vec![]; 4];
-    for user in users.iter() {
-        if user.rating >= 2000 {
-            classes[0].push(user);
-        } else if user.rating >= 1600 {
-            classes[1].push(user);
-        } else if user.rating >= 1200 {
-            classes[2].push(user);
-        } else {
-            classes[3].push(user);
-        }
-    }
+    let classes = divide_to_classes(users);
 
     let mut responses = BTreeMap::new();
     for (i, class) in classes.into_iter().enumerate() {
@@ -96,7 +85,7 @@ fn main() -> Result<()> {
             let class_name = format!("{}{}", CLASS_KEY[i], j + 1);
             let league = construct_league(&losers, &users_result, &user_rank_sum);
             let defending_champion = if class_name.as_str() == "A1" {
-                Some("heno239")
+                Some("heno239".to_string())
             } else {
                 None
             };
@@ -132,7 +121,7 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn construct_2nd_class_a_tournaments(mut users: Vec<&User>) -> Vec<Node> {
+fn construct_2nd_class_a_tournaments(mut users: Vec<User>) -> Vec<Node> {
     users.sort();
     users.reverse();
     const NEXT_A1: [&str; 14] = [
@@ -192,15 +181,5 @@ fn construct_2nd_class_a_tournaments(mut users: Vec<&User>) -> Vec<Node> {
         construct_tournament(&a[0], 0),
         construct_tournament(&a[1], 0),
         construct_tournament(&users, 0),
-    ]
-}
-
-fn construct_normal_tournaments(mut users: Vec<&User>) -> Vec<Node> {
-    let class_limit = users.len() / 6 * 2;
-    users.sort();
-    vec![
-        construct_tournament(&users[..class_limit], 0),
-        construct_tournament(&users[class_limit..(2 * class_limit)], 0),
-        construct_tournament(&users[(2 * class_limit)..], 0),
     ]
 }

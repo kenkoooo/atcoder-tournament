@@ -50,6 +50,9 @@ export const UserListPage = () => {
         >
           第3期ABCトーナメント
         </Typography>
+        <Typography component="h2" variant="h5" align="center">
+          2021/01/30 19:00 JST 〆切
+        </Typography>
         <Typography
           variant="h4"
           align="center"

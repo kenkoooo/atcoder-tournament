@@ -4,7 +4,7 @@ use std::collections::BTreeMap;
 
 const INF_RANK: i64 = 1000000;
 
-#[derive(Serialize, Deserialize, Eq, PartialEq, Debug)]
+#[derive(Serialize, Deserialize, Eq, PartialEq, Debug, Clone)]
 pub struct User {
     pub user_id: String,
     pub rating: i64,
@@ -48,19 +48,19 @@ impl PartialOrd for User {
     }
 }
 
-#[derive(Debug, Serialize, Clone)]
-pub struct Node<'a> {
-    pub user: Option<&'a User>,
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct Node {
+    pub user: Option<User>,
     pub rank: Option<i64>,
-    pub children: Vec<Node<'a>>,
+    pub children: Vec<Node>,
 }
 
-impl<'a> Node<'a> {
+impl Node {
     pub fn resolve_tournament_result(
         &mut self,
         standings: &BTreeMap<String, i64>,
-        battle_results: &mut BTreeMap<String, Vec<BattleResultDetail<'a>>>,
-        losers: &mut Vec<&'a User>,
+        battle_results: &mut BTreeMap<String, Vec<BattleResultDetail>>,
+        losers: &mut Vec<User>,
     ) {
         let children_filled = self
             .children
@@ -74,7 +74,7 @@ impl<'a> Node<'a> {
         }
 
         for child in self.children.iter_mut() {
-            if let Some(&rank) = standings.get(&child.user.unwrap().user_id) {
+            if let Some(&rank) = standings.get(&child.user.as_ref().unwrap().user_id) {
                 child.rank = Some(rank);
             }
         }
@@ -83,28 +83,28 @@ impl<'a> Node<'a> {
             .children
             .iter()
             .map(|node| {
-                let user = node.user.unwrap();
+                let user = node.user.clone().unwrap();
                 (user, node.rank.unwrap_or(INF_RANK))
             })
             .collect::<Vec<_>>();
         user_rank
-            .sort_by_key(|&(user, rank)| (rank, Reverse(user.rating), user.user_id.to_lowercase()));
-        self.user = Some(user_rank[0].0);
-        let winner = user_rank[0].0;
+            .sort_by_key(|(user, rank)| (*rank, Reverse(user.rating), user.user_id.to_lowercase()));
+        let winner = user_rank[0].0.clone();
+        self.user = Some(winner.clone());
 
         for child in self.children.iter_mut() {
-            let user = child.user.unwrap();
+            let user = child.user.clone().unwrap();
             let (result, opponent) = if user.user_id == winner.user_id {
-                let second = user_rank[1].0;
+                let second = user_rank[1].0.clone();
                 if let Some(rank) = child.rank {
                     (BattleResult::Win { rank }, second)
                 } else {
                     (BattleResult::SkipWin, second)
                 }
             } else if let Some(rank) = child.rank {
-                (BattleResult::Lose { rank }, winner)
+                (BattleResult::Lose { rank }, winner.clone())
             } else {
-                (BattleResult::SkipLose, winner)
+                (BattleResult::SkipLose, winner.clone())
             };
             child.rank = Some(child.rank.unwrap_or(INF_RANK));
             battle_results
@@ -122,14 +122,14 @@ impl<'a> Node<'a> {
     }
 }
 
-#[derive(Debug, Serialize, Clone)]
-pub struct Response<'a> {
-    pub node: Node<'a>,
-    pub league: Vec<LeagueEntry<'a>>,
-    pub defending_champion: Option<&'a str>,
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct Response {
+    pub node: Node,
+    pub league: Vec<LeagueEntry>,
+    pub defending_champion: Option<String>,
     pub drop_rank: Option<i32>,
     pub promotion_rank: Option<i32>,
-    pub top4: Option<BTreeMap<i64, Vec<&'a User>>>,
+    pub top4: Option<BTreeMap<i64, Vec<User>>>,
 }
 
 #[derive(Deserialize)]
@@ -155,13 +155,13 @@ pub struct Standings {
     pub standings: Vec<StandingUser>,
 }
 
-#[derive(Serialize, Debug, Clone)]
-pub struct BattleResultDetail<'a> {
-    pub opponent: Option<&'a User>,
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct BattleResultDetail {
+    pub opponent: Option<User>,
     pub result: BattleResult,
 }
 
-#[derive(Serialize, Debug, Copy, Clone)]
+#[derive(Serialize, Deserialize, Debug, Copy, Clone)]
 #[serde(tag = "result")]
 pub enum BattleResult {
     Win { rank: i64 },
@@ -172,12 +172,12 @@ pub enum BattleResult {
     NotYet,
 }
 
-#[derive(Serialize, Debug, Clone)]
-pub struct LeagueEntry<'a> {
-    pub user: &'a User,
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct LeagueEntry {
+    pub user: User,
     pub win_count: i64,
     pub rank_sum: i64,
-    pub results: Vec<BattleResultDetail<'a>>,
+    pub results: Vec<BattleResultDetail>,
     pub provisional_rank: u32,
 }
 

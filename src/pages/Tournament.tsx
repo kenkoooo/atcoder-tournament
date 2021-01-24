@@ -4,12 +4,14 @@ import {
   Container,
   CssBaseline,
   Grid,
+  Link,
   Tab,
   Tabs,
   Typography,
   withStyles,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
 import { GameNode } from "../components/GameNode/GameNode";
 import { LeagueTable } from "../components/LeagueTable/LeagueTable";
 import { TournamentResponse, User } from "../models/TournamentNode";
@@ -93,6 +95,19 @@ export const Tournament = (props: Props) => {
         >
           AtCoder Beginner Contest Tournament
         </Typography>
+        {props.seasonId === "3" && (
+          <>
+            <Typography component="h2" variant="h5" align="center">
+              2021/01/30 19:00 JST 〆切
+            </Typography>
+            <Typography component="h2" variant="h5" align="center">
+              表示中のトーナメントは kenkoooo
+              が手動で生成したもので、たまに更新されます。最新の参加者一覧は
+              <RouterLink to="/list">第3期参加者一覧</RouterLink>
+              を見てください。
+            </Typography>
+          </>
+        )}
         <Tabs
           variant="fullWidth"
           value={selectedDivision}
@@ -118,7 +133,7 @@ export const Tournament = (props: Props) => {
             />
           )}
         </Box>
-        {league && (
+        {league && league.length > 0 && (
           <Box display="flex" justifyContent="center" flexDirection="column">
             <Typography variant="h4" align="center" color="textPrimary">
               順位決定リーグ

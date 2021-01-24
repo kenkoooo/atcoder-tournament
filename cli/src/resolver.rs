@@ -4,13 +4,13 @@ use std::cmp::Reverse;
 use std::collections::BTreeMap;
 
 type UserId = String;
-type UserPair<'a> = (&'a User, &'a User);
+type UserPair = (User, User);
 
-pub fn resolve_one_round<'a>(
+pub fn resolve_one_round(
     standings: &BTreeMap<UserId, i64>,
-    league_users: &mut Vec<&'a User>,
-    users_result: &mut BTreeMap<UserId, Vec<BattleResultDetail<'a>>>,
-    node: &mut Node<'a>,
+    league_users: &mut Vec<User>,
+    users_result: &mut BTreeMap<UserId, Vec<BattleResultDetail>>,
+    node: &mut Node,
     user_rank_sum: &mut BTreeMap<UserId, i64>,
     writers: &[&str],
 ) {
@@ -19,10 +19,10 @@ pub fn resolve_one_round<'a>(
         let results = users_result.get_mut(&user.user_id).unwrap();
         let last = results.last_mut().unwrap();
         if let BattleResult::NotYet = last.result {
-            let opponent = last.opponent.unwrap();
+            let opponent = last.opponent.clone().unwrap();
             let opponent_rank = standings.get(&opponent.user_id).cloned();
             let my_rank = standings.get(&user.user_id).cloned();
-            last.result = user.resolve_league_match_result(opponent, my_rank, opponent_rank);
+            last.result = user.resolve_league_match_result(&opponent, my_rank, opponent_rank);
         } else {
             unreachable!("{:?}", results);
         }
@@ -70,7 +70,7 @@ pub fn resolve_one_round<'a>(
                 .get_mut(&user_a.user_id)
                 .unwrap()
                 .push(BattleResultDetail {
-                    opponent: Some(user_b),
+                    opponent: Some(user_b.clone()),
                     result: BattleResult::NotYet,
                 });
             users_result
@@ -112,14 +112,14 @@ fn is_matched_before(
 ) -> bool {
     users_result[&user_a.user_id]
         .iter()
-        .any(|r| r.opponent == Some(user_b))
+        .any(|r| r.opponent.as_ref() == Some(user_b))
 }
 
-pub fn get_league_matches<'a>(
-    users_result: &BTreeMap<UserId, Vec<BattleResultDetail<'a>>>,
+pub fn get_league_matches(
+    users_result: &BTreeMap<UserId, Vec<BattleResultDetail>>,
     user_rank_sum: &BTreeMap<UserId, i64>,
-    league_users: &[&'a User],
-) -> (Vec<UserPair<'a>>, Option<UserPair<'a>>) {
+    league_users: &[User],
+) -> (Vec<UserPair>, Option<UserPair>) {
     let n = league_users.len();
     assert!(n >= 2);
 
@@ -128,15 +128,15 @@ pub fn get_league_matches<'a>(
         .map(|loser| {
             let results = &users_result[&loser.user_id];
             let win_count = count_wins(results);
-            (*loser, win_count, user_rank_sum[&loser.user_id])
+            (loser.clone(), win_count, user_rank_sum[&loser.user_id])
         })
         .collect::<Vec<_>>();
-    league_users.sort_by_key(|&(user, win, rank)| {
+    league_users.sort_by_key(|(user, win, rank)| {
         (
-            Reverse(win),
-            rank,
+            Reverse(*win),
+            *rank,
             Reverse(user.rating),
-            Reverse(user.user_id.as_str()),
+            Reverse(user.user_id.to_string()),
         )
     });
 
@@ -146,8 +146,8 @@ pub fn get_league_matches<'a>(
         let cur_win_count = league_users[i * 2].1;
         let mut same_win_users = vec![];
         while i * 2 + 1 < n && league_users[i * 2].1 == cur_win_count {
-            same_win_users.push(league_users[i * 2].0);
-            same_win_users.push(league_users[i * 2 + 1].0);
+            same_win_users.push(league_users[i * 2].0.clone());
+            same_win_users.push(league_users[i * 2 + 1].0.clone());
             i += 1;
         }
 
@@ -157,8 +157,8 @@ pub fn get_league_matches<'a>(
             same_win_users.shuffle(&mut rng);
             let mut ok = true;
             for i in 0..pairs {
-                let user_a = same_win_users[i];
-                let user_b = same_win_users[pairs + i];
+                let user_a = &same_win_users[i];
+                let user_b = &same_win_users[pairs + i];
                 if is_matched_before(user_a, user_b, users_result) {
                     ok = false;
                     break;
@@ -169,8 +169,8 @@ pub fn get_league_matches<'a>(
             }
         }
         for i in 0..pairs {
-            let user_a = same_win_users[i];
-            let user_b = same_win_users[pairs + i];
+            let user_a = same_win_users[i].clone();
+            let user_b = same_win_users[pairs + i].clone();
             result.push((user_a, user_b));
         }
     }
@@ -178,26 +178,26 @@ pub fn get_league_matches<'a>(
     assert!((n % 2 == 0 && n == i * 2) || (n % 2 == 1 && n == i * 2 + 1));
 
     if n % 2 == 1 {
-        let user_a = league_users[n - 1].0;
-        let user_b = league_users[n - 2].0;
+        let user_a = league_users[n - 1].0.clone();
+        let user_b = league_users[n - 2].0.clone();
         (result, Some((user_a, user_b)))
     } else {
         (result, None)
     }
 }
 
-pub fn construct_league<'a>(
-    losers: &[&'a User],
-    users_result: &BTreeMap<UserId, Vec<BattleResultDetail<'a>>>,
+pub fn construct_league(
+    losers: &[User],
+    users_result: &BTreeMap<UserId, Vec<BattleResultDetail>>,
     user_rank_sum: &BTreeMap<UserId, i64>,
-) -> Vec<LeagueEntry<'a>> {
+) -> Vec<LeagueEntry> {
     let mut league = losers
         .iter()
-        .map(|&loser| {
+        .map(|loser| {
             let results = users_result[&loser.user_id].clone();
             let win_count = count_wins(&results);
             let rank_sum = user_rank_sum[&loser.user_id];
-            (loser, win_count, rank_sum, results)
+            (loser.clone(), win_count, rank_sum, results)
         })
         .collect::<Vec<_>>();
     league.sort_by_key(|(user, win_count, rank_sum, _)| {
