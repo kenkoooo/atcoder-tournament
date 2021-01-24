@@ -13,10 +13,12 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
+    "@wasm-tool/wasm-pack-plugin": "^1.3.1",
     "http-proxy-middleware": "^1.0.5",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.1",
     "react": "^16.13.1",
+    "react-app-rewired": "^2.1.8",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
@@ -24,9 +26,9 @@
   },
   "homepage": "https://abc.kenkoooo.com/",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && mv docs/CNAME build/ && rm -rf docs && mv build docs",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build && mv docs/CNAME build/ && rm -rf docs && mv build docs",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

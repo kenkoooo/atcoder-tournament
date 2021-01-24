@@ -1,5 +1,6 @@
+use crate::common::RatingStorage;
 use crate::types::Standings;
-use crate::{Node, RatingStorage, Response, User};
+use crate::{Node, Response, User};
 use anyhow::{Context, Result};
 use std::collections::BTreeMap;
 use std::fs::File;
@@ -24,7 +25,6 @@ pub fn load_season_user_list(season_id: u32) -> Result<Vec<User>> {
     ))?;
 
     let rating_storage = RatingStorage::new(&ratings);
-
     let mut result = vec![];
     for user_id in users {
         if let Some(user) = rating_storage.get_rating(&user_id) {
@@ -48,8 +48,18 @@ pub fn load_standings(filename: &str) -> Result<BTreeMap<String, i64>> {
 
 pub fn load_previous_ranking(season_id: &str) -> Result<BTreeMap<String, BTreeMap<String, u32>>> {
     let filepath = format!("./public/bracket-{}.json", season_id);
-
     let responses: BTreeMap<String, Response> = read_from_file(filepath)?;
+    convert_previous_ranking(responses)
+}
+
+pub fn parse_previous_ranking(content: &str) -> Result<BTreeMap<String, BTreeMap<String, u32>>> {
+    let responses: BTreeMap<String, Response> = serde_json::from_str(content)?;
+    convert_previous_ranking(responses)
+}
+
+fn convert_previous_ranking(
+    responses: BTreeMap<String, Response>,
+) -> Result<BTreeMap<String, BTreeMap<String, u32>>> {
     responses
         .into_iter()
         .map(|(class, Response { league, node, .. })| {

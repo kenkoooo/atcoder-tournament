@@ -99,11 +99,16 @@ export const Tournament = (props: Props) => {
             <Typography component="h2" variant="h5" align="center">
               2021/01/30 19:00 JST 〆切
             </Typography>
-            <Typography component="h2" variant="h5" align="center">
-              表示中のトーナメントは kenkoooo
-              が手動で生成したもので、たまに更新されます。最新の参加者一覧は
-              <RouterLink to="/list">第3期参加者一覧</RouterLink>
-              を見てください。
+            <Typography
+              variant="h4"
+              align="center"
+              color="textPrimary"
+              display="inline"
+              noWrap
+            >
+              <Button component={RouterLink} to="/register">
+                登録
+              </Button>
             </Typography>
           </>
         )}

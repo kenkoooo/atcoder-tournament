@@ -1,5 +1,7 @@
 mod io;
-pub use io::{load_previous_ranking, load_season_user_list, load_standings};
+pub use io::{
+    load_previous_ranking, load_season_user_list, load_standings, parse_previous_ranking,
+};
 
 mod resolver;
 pub use resolver::{construct_league, get_league_matches, resolve_one_round};
@@ -15,5 +17,4 @@ pub use types::{
     BattleResult, BattleResultDetail, LeagueEntry, Node, Response, StandingUser, User,
 };
 
-mod common;
-pub use common::RatingStorage;
+pub mod common;

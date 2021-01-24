@@ -117,16 +117,7 @@ const App = () => {
                 to="/tournament/3"
                 className={classes.link}
               >
-                第3期（仮）
-              </Link>
-              <Link
-                component={RouterLink}
-                variant="button"
-                color="textPrimary"
-                to="/list"
-                className={classes.link}
-              >
-                第3期参加者一覧
+                第3期
               </Link>
               <Link
                 component={RouterLink}
