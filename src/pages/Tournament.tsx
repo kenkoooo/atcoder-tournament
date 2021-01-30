@@ -94,24 +94,6 @@ export const Tournament = (props: Props) => {
         >
           AtCoder Beginner Contest Tournament
         </Typography>
-        {props.seasonId === "3" && (
-          <>
-            <Typography component="h2" variant="h5" align="center">
-              2021/01/30 19:00 JST 〆切
-            </Typography>
-            <Typography
-              variant="h4"
-              align="center"
-              color="textPrimary"
-              display="inline"
-              noWrap
-            >
-              <Button component={RouterLink} to="/register">
-                登録
-              </Button>
-            </Typography>
-          </>
-        )}
         <Tabs
           variant="fullWidth"
           value={selectedDivision}
