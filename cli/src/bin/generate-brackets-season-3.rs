@@ -12,6 +12,23 @@ fn main() -> Result<()> {
     let users = load_season_user_list(3)?;
     let primitive_response_map = construct_season_3_tournament(users, previous_ranks);
 
+    let results = vec![(
+        "./data/season-3/abc190.json",
+        vec![
+            "beet",
+            "gazelle",
+            "kyopro_friends",
+            "tatyam",
+            "ynymxiaolongbao",
+        ],
+    )]
+    .into_iter()
+    .map(|(filename, writers)| {
+        let standings = load_standings(filename)?;
+        Ok((standings, writers, filename))
+    })
+    .collect::<Result<Vec<_>>>()?;
+
     let mut response_map = BTreeMap::new();
     for (class_id, response) in primitive_response_map {
         let Response {
@@ -28,11 +45,8 @@ fn main() -> Result<()> {
         let mut losers = vec![];
         let mut users_result = BTreeMap::new();
         let mut user_rank_sum = BTreeMap::new();
-        for (filename, writers) in vec![(
-            "./data/season-2/abc184.json",
-            vec!["beet", "evima", "kyopro_friends", "tatyam", "sheyasutaka"],
-        )] {
-            let standings = load_standings(filename)?;
+
+        for (standings, writers, filename) in results.iter() {
             eprintln!("Resolving {} ...", filename);
             resolve_one_round(
                 &standings,
