@@ -12,16 +12,29 @@ fn main() -> Result<()> {
     let users = load_season_user_list(3)?;
     let primitive_response_map = construct_season_3_tournament(users, previous_ranks);
 
-    let results = vec![(
-        "./data/season-3/abc190.json",
-        vec![
-            "beet",
-            "gazelle",
-            "kyopro_friends",
-            "tatyam",
-            "ynymxiaolongbao",
-        ],
-    )]
+    let results = vec![
+        (
+            "./data/season-3/abc190.json",
+            vec![
+                "beet",
+                "gazelle",
+                "kyopro_friends",
+                "tatyam",
+                "ynymxiaolongbao",
+            ],
+        ),
+        (
+            "./data/season-3/abc191.json",
+            vec![
+                "evima",
+                "June_boy",
+                "kyopro_friends",
+                "QCFium",
+                "tatyam",
+                "tozangezan",
+            ],
+        ),
+    ]
     .into_iter()
     .map(|(filename, writers)| {
         let standings = load_standings(filename)?;
