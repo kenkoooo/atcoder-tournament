@@ -9,12 +9,11 @@ import {
   Typography,
   withStyles,
 } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import React, { useState } from "react";
 import { GameNode } from "../components/GameNode/GameNode";
 import { LeagueTable } from "../components/LeagueTable/LeagueTable";
-import { TournamentResponse, User } from "../models/TournamentNode";
-import { fetchTournament } from "../utils/API";
+import { User } from "../models/TournamentNode";
+import { useTournament } from "../utils/API";
 
 interface Props {
   seasonId: string;
@@ -59,11 +58,11 @@ const AntTab = withStyles(() => ({
 }))(Tab);
 
 export const Tournament = (props: Props) => {
-  const [tournament, setTournament] = useState<TournamentResponse>({});
+  const tournament = useTournament(props.seasonId).data ?? {};
   const [selectedDivision, setSelectedDivision] = useState<number>(0);
   const [showTop16, setShowTop16] = useState(false);
-  const keys = Object.keys(tournament);
 
+  const keys = Object.keys(tournament);
   const bracket = keys[selectedDivision]
     ? tournament[keys[selectedDivision]]
     : null;
@@ -71,12 +70,6 @@ export const Tournament = (props: Props) => {
   const node = bracket?.node;
   const league = bracket?.league;
   const defendingChampion = bracket?.defending_champion;
-
-  useEffect(() => {
-    fetchTournament(props.seasonId).then((response) => {
-      setTournament(response);
-    });
-  }, [props.seasonId]);
   const depthLimit = showTop16 ? 4 : 100;
   return (
     <>

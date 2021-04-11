@@ -1,13 +1,5 @@
+import useSWR from "swr";
 import { TournamentResponse } from "../models/TournamentNode";
-
-export const fetchTournament = (seasonId: string) => {
-  // if (seasonId === "3") {
-  //   return fetchTournamentSeason3();
-  // }
-  return fetch(`./bracket-${seasonId}.json`)
-    .then((response) => response.json())
-    .then((response) => response as TournamentResponse);
-};
 
 const fetchTournamentSeason3 = async (): Promise<TournamentResponse> => {
   const usersText = await fetch(
@@ -27,4 +19,18 @@ const fetchTournamentSeason3 = async (): Promise<TournamentResponse> => {
     m.construct_tournament(usersText, previousBracketsText, ratingText)
   );
   return JSON.parse(result);
+};
+
+export const useTournament = (seasonId: string) => {
+  const fetcher = (url: string) => {
+    if (seasonId === "400") {
+      return fetchTournamentSeason3();
+    } else {
+      return fetch(url)
+        .then((response) => response.json())
+        .then((response) => response as TournamentResponse);
+    }
+  };
+  const url = `./bracket-${seasonId}.json`;
+  return useSWR(url, fetcher);
 };

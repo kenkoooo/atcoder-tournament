@@ -2,7 +2,7 @@ use actix_web::dev::HttpResponseBuilder;
 use actix_web::{get, post, web, App, HttpResponse, HttpServer};
 use reqwest::StatusCode;
 use serde::Deserialize;
-use sqlx::postgres::PgRow;
+use sqlx::postgres::{PgPoolOptions, PgRow};
 use sqlx::{PgPool, Row};
 use std::env;
 use std::time::Duration;
@@ -87,11 +87,12 @@ async fn main() -> anyhow::Result<()> {
     let address = format!("0.0.0.0:{}", port);
 
     let database_url = env::var("DATABASE_URL").unwrap();
-    let pg_pool = sqlx::PgPool::builder()
+    let pg_pool = PgPoolOptions::new()
         .max_lifetime(Some(Duration::from_secs(60 * 5)))
-        .max_size(15)
-        .build(&database_url)
+        .max_connections(15)
+        .connect(&database_url)
         .await?;
+
     sqlx::query(
         r"
         CREATE TABLE IF NOT EXISTS tbl_users (

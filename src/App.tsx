@@ -19,7 +19,6 @@ import {
 } from "react-router-dom";
 import { RegisterPage } from "./pages/RegisterPage";
 import { Tournament } from "./pages/Tournament";
-import { UserListPage } from "./pages/UserListPage";
 import { SEASON_ID } from "./utils/Constants";
 
 const theme = createMuiTheme({
@@ -119,15 +118,15 @@ const App = () => {
               >
                 第3期
               </Link>
-              {/*<Link*/}
-              {/*  component={RouterLink}*/}
-              {/*  variant="button"*/}
-              {/*  color="textPrimary"*/}
-              {/*  to="/register"*/}
-              {/*  className={classes.link}*/}
-              {/*>*/}
-              {/*  参加登録*/}
-              {/*</Link>*/}
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/register"
+                className={classes.link}
+              >
+                参加登録
+              </Link>
               <Link
                 href="https://github.com/kenkoooo/atcoder-tournament/tree/master/rules"
                 target="_blank"
@@ -153,11 +152,8 @@ const App = () => {
                 );
               }}
             />
-            {/*<Route path="/register">*/}
-            {/*  <RegisterPage />*/}
-            {/*</Route>*/}
-            <Route path="/list">
-              <UserListPage />
+            <Route path="/register">
+              <RegisterPage />
             </Route>
             <Redirect path="/" to={`/tournament/${SEASON_ID}`} />
           </Switch>

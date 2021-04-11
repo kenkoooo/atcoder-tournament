@@ -1,4 +1,4 @@
-FROM rust:1.44.0 AS builder
+FROM rust:1.51.0 AS builder
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ RUN rm -rf ./src
 ADD ./server/src ./src
 RUN cargo build --release
 
-FROM rust:1.44.0
+FROM rust:1.51.0
 COPY --from=builder /app/target/release/server /usr/bin/server
 
 CMD server
