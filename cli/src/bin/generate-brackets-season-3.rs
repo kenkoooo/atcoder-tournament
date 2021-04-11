@@ -58,6 +58,16 @@ fn main() -> Result<()> {
                 "ynymxiaolongbao",
             ],
         ),
+        (
+            "./data/season-3/abc198.json",
+            vec![
+                "Kmcode",
+                "kyopro_friends",
+                "sheyasutaka",
+                "tatyam",
+                "ynymxiaolongbao",
+            ],
+        ),
     ]
     .into_iter()
     .map(|(filename, writers)| {
