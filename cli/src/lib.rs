@@ -1,6 +1,7 @@
 mod io;
 pub use io::{
     load_previous_ranking, load_season_user_list, load_standings, parse_previous_ranking,
+    read_from_file,
 };
 
 mod resolver;

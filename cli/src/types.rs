@@ -125,7 +125,7 @@ impl Node {
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Response {
     pub node: Node,
-    pub league: Vec<LeagueEntry>,
+    pub league: Option<Vec<LeagueEntry>>,
     pub defending_champion: Option<String>,
     pub drop_rank: Option<i32>,
     pub promotion_rank: Option<i32>,

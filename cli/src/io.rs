@@ -7,7 +7,7 @@ use std::fs::File;
 use std::io::BufReader;
 use std::path::Path;
 
-fn read_from_file<T: serde::de::DeserializeOwned, P: AsRef<Path>>(path: P) -> Result<T> {
+pub fn read_from_file<T: serde::de::DeserializeOwned, P: AsRef<Path>>(path: P) -> Result<T> {
     let file = File::open(path)?;
     let reader = BufReader::new(file);
     let result = serde_json::from_reader(reader)?;
@@ -64,6 +64,7 @@ fn convert_previous_ranking(
         .into_iter()
         .map(|(class, Response { league, node, .. })| {
             let mut rank_by_user = league
+                .unwrap_or_else(Vec::new)
                 .into_iter()
                 .map(|entry| {
                     let rank = entry.provisional_rank;

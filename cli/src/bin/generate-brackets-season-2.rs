@@ -104,7 +104,7 @@ fn main() -> Result<()> {
                 class_name,
                 Response {
                     node,
-                    league,
+                    league: Some(league),
                     defending_champion,
                     promotion_rank,
                     drop_rank,

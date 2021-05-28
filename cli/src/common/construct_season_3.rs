@@ -32,7 +32,7 @@ pub fn construct_season_3_tournament(
                     class_name,
                     Response {
                         node,
-                        league: vec![],
+                        league: Some(vec![]),
                         defending_champion: Some(defending_champion.clone()),
                         drop_rank,
                         promotion_rank,
@@ -47,7 +47,7 @@ pub fn construct_season_3_tournament(
                     class_name,
                     Response {
                         node,
-                        league: vec![],
+                        league: Some(vec![]),
                         defending_champion: None,
                         drop_rank: None,
                         promotion_rank: None,

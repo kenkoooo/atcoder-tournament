@@ -87,6 +87,7 @@ fn main() -> Result<()> {
             promotion_rank,
             top4,
         } = response;
+        let league = league.unwrap_or_else(Vec::new);
         assert!(league.is_empty());
         assert!(top4.is_none());
 
@@ -112,7 +113,7 @@ fn main() -> Result<()> {
             class_id,
             Response {
                 node,
-                league,
+                league: Some(league),
                 defending_champion,
                 promotion_rank,
                 drop_rank,
