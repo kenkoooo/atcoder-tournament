@@ -6,6 +6,7 @@ use std::collections::BTreeMap;
 pub fn construct_season_3_tournament(
     users: Vec<User>,
     previous_ranks: BTreeMap<String, BTreeMap<String, u32>>,
+    defending_champion: String,
 ) -> BTreeMap<String, Response> {
     let classes = divide_to_classes(users);
     let mut response_map = BTreeMap::new();
@@ -32,7 +33,7 @@ pub fn construct_season_3_tournament(
                     Response {
                         node,
                         league: vec![],
-                        defending_champion: Some("heno239".to_string()),
+                        defending_champion: Some(defending_champion.clone()),
                         drop_rank,
                         promotion_rank,
                         top4: None,

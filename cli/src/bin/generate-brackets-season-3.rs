@@ -10,7 +10,8 @@ use std::fs::write;
 fn main() -> Result<()> {
     let previous_ranks = load_previous_ranking("2")?;
     let users = load_season_user_list(3)?;
-    let primitive_response_map = construct_season_3_tournament(users, previous_ranks);
+    let primitive_response_map =
+        construct_season_3_tournament(users, previous_ranks, "heno239".to_string());
 
     let results = vec![
         (
