@@ -19,6 +19,7 @@ import {
 } from "react-router-dom";
 import { RegisterPage } from "./pages/RegisterPage";
 import { Tournament } from "./pages/Tournament";
+import { UserHistoryPage } from "./pages/UserHistoryPage";
 import { SEASON_ID } from "./utils/Constants";
 
 const theme = createMuiTheme({
@@ -163,6 +164,9 @@ const App = () => {
             />
             <Route path="/register">
               <RegisterPage />
+            </Route>
+            <Route path="/user/:user_id([0-9a-zA-Z_]+)">
+              <UserHistoryPage />
             </Route>
             <Redirect path="/" to={`/tournament/${SEASON_ID}`} />
           </Switch>

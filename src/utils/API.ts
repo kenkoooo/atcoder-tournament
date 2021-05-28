@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import { TournamentResponse } from "../models/TournamentNode";
+import { UserHistory } from "../models/UserHistory";
 
 const fetchTournamentSeason4 = async (): Promise<TournamentResponse> => {
   const usersText = await fetch(
@@ -37,6 +38,20 @@ export const useTournament = (seasonId: string) => {
     }
   };
   const url = `./bracket-${seasonId}.json`;
+  return useSWR(url, fetcher, {
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+  });
+};
+
+export const useUserHistories = () => {
+  const fetcher = (url: string) => {
+    return fetch(url)
+      .then((response) => response.json())
+      .then((response) => response as UserHistory[]);
+  };
+
+  const url = "./histories.json";
   return useSWR(url, fetcher, {
     revalidateOnFocus: false,
     revalidateOnReconnect: false,

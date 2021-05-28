@@ -9,6 +9,7 @@ import {
   red,
   yellow,
 } from "@material-ui/core/colors";
+import { Link as RouterLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 
@@ -77,7 +78,7 @@ export const RatingName = (props: {
   const screenUserId =
     userId.length <= 13 ? userId : userId.slice(0, 10) + "...";
   return (
-    <Link className={c} href={`https://atcoder.jp/users/${userId}`}>
+    <Link className={c} component={RouterLink} to={`/user/${userId}`}>
       {screenUserId}
     </Link>
   );
