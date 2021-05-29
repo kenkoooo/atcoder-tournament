@@ -19,6 +19,7 @@ import {
 } from "react-router-dom";
 import { RegisterPage } from "./pages/RegisterPage";
 import { Tournament } from "./pages/Tournament";
+import { TournamentListPage } from "./pages/TournamentListPage";
 import { UserHistoryPage } from "./pages/UserHistoryPage";
 import { SEASON_ID } from "./utils/Constants";
 
@@ -96,19 +97,10 @@ const App = () => {
                 component={RouterLink}
                 variant="button"
                 color="textPrimary"
-                to="/tournament/1"
+                to="/tournament/4"
                 className={classes.link}
               >
-                第1期
-              </Link>
-              <Link
-                component={RouterLink}
-                variant="button"
-                color="textPrimary"
-                to="/tournament/2"
-                className={classes.link}
-              >
-                第2期
+                第4期
               </Link>
               <Link
                 component={RouterLink}
@@ -123,10 +115,10 @@ const App = () => {
                 component={RouterLink}
                 variant="button"
                 color="textPrimary"
-                to="/tournament/4"
+                to="/past"
                 className={classes.link}
               >
-                第4期
+                過去の開催
               </Link>
               <Link
                 component={RouterLink}
@@ -167,6 +159,9 @@ const App = () => {
             </Route>
             <Route path="/user/:user_id([0-9a-zA-Z_]+)">
               <UserHistoryPage />
+            </Route>
+            <Route path="/past">
+              <TournamentListPage />
             </Route>
             <Redirect path="/" to={`/tournament/${SEASON_ID}`} />
           </Switch>

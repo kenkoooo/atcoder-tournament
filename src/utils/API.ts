@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import { TournamentHistory } from "../models/TournamentHistory";
 import { TournamentResponse } from "../models/TournamentNode";
 import { UserHistory } from "../models/UserHistory";
 
@@ -52,6 +53,20 @@ export const useUserHistories = () => {
   };
 
   const url = "./histories.json";
+  return useSWR(url, fetcher, {
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+  });
+};
+
+export const useTournamentList = () => {
+  const fetcher = (url: string) => {
+    return fetch(url)
+      .then((response) => response.json())
+      .then((response) => response as TournamentHistory[]);
+  };
+
+  const url = "./tournaments.json";
   return useSWR(url, fetcher, {
     revalidateOnFocus: false,
     revalidateOnReconnect: false,

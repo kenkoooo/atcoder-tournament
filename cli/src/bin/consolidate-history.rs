@@ -40,6 +40,56 @@ fn main() -> Result<()> {
         }
     }
 
+    let mut winners = BTreeMap::new();
+    for (user_id, history) in user_histories.iter() {
+        for (&season, history) in history.into_iter() {
+            let winners = winners
+                .entry(season)
+                .or_insert_with(|| [Vec::new(), Vec::new()]);
+            if history.class.as_str() != "A" && history.class.as_str() != "A1" {
+                continue;
+            }
+            if let Some(final_rank) = history.final_rank {
+                if final_rank > 4 {
+                    continue;
+                }
+                winners[1].push((final_rank, user_id.clone()));
+            } else {
+                let top_k = history.top_k;
+                let rank = top_k / 2 + 1;
+                winners[0].push((rank, user_id.clone()));
+            }
+        }
+    }
+
+    let mut tournament_histories = vec![];
+    for (season, winners) in winners {
+        let [mut w0, mut w1] = winners;
+        let winners = if w1.is_empty() {
+            w0.sort();
+            w0
+        } else {
+            w0.sort();
+            w1.sort();
+            w0.truncate(2);
+            w0.extend(w1);
+            w0
+        };
+
+        tournament_histories.push(TournamentHistory {
+            season: season.to_string(),
+            top4: winners
+                .into_iter()
+                .map(|(rank, user_id)| (rank.to_string(), user_id))
+                .take(4)
+                .collect(),
+        });
+    }
+    write(
+        "./public/tournaments.json",
+        serde_json::to_string(&tournament_histories)?,
+    )?;
+
     let user_histories = user_histories
         .into_iter()
         .map(|(user_id, histories)| UserHistory {
@@ -58,7 +108,7 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn traverse(node: Node, user_top_k: &mut BTreeMap<String, i64>, top_k: i64) {
+fn traverse(node: Node, user_top_k: &mut BTreeMap<String, u32>, top_k: u32) {
     if let Some(user_id) = node.user.as_ref().map(|user| user.user_id.clone()) {
         let cur = user_top_k.entry(user_id).or_insert(top_k);
         *cur = top_k.min(*cur);
@@ -66,6 +116,12 @@ fn traverse(node: Node, user_top_k: &mut BTreeMap<String, i64>, top_k: i64) {
     for node in node.children {
         traverse(node, user_top_k, top_k * 2);
     }
+}
+
+#[derive(Serialize)]
+struct TournamentHistory {
+    season: String,
+    top4: Vec<(String, String)>,
 }
 
 #[derive(Serialize)]
@@ -77,6 +133,6 @@ struct UserHistory {
 #[derive(Serialize)]
 struct UserTournamentHistory {
     class: String,
-    top_k: i64,
+    top_k: u32,
     final_rank: Option<u32>,
 }
