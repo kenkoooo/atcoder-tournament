@@ -4,9 +4,8 @@ import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import { useParams } from "react-router-dom";
 import { TournamentHistory } from "../models/TournamentHistory";
-import { useTournamentList, useUserHistories } from "../utils/API";
+import { useTournamentList } from "../utils/API";
 import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -31,12 +30,13 @@ const useStyles = makeStyles((theme) => ({
 
 const Winners = (e: TournamentHistory) => {
   const classes = useStyles();
-  const winners = e.top4
-    .map(([rank, userId]) => ({
-      rank: parseInt(rank),
-      userId,
+  const winners = e.ranking
+    .map(([rank, entry]) => ({
+      rank: rank + 1,
+      userId: entry.user_id,
     }))
-    .sort((a, b) => a.rank - b.rank);
+    .sort((a, b) => a.rank - b.rank)
+    .slice(0, 4);
   return (
     <Paper className={classes.paper}>
       <Grid container spacing={2}>
@@ -82,6 +82,17 @@ const Winners = (e: TournamentHistory) => {
               );
             }
           })}
+          {e.expandable && (
+            <Box marginTop={2}>
+              <Link
+                className={classes.link}
+                component={RouterLink}
+                to={`/ranking/${e.season}`}
+              >
+                全てのランキングを表示
+              </Link>
+            </Box>
+          )}
         </Grid>
       </Grid>
     </Paper>

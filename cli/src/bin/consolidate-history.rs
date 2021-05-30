@@ -1,6 +1,7 @@
 use anyhow::Result;
-use cli::{read_from_file, Node, Response};
+use cli::{load_previous_ranking, read_from_file, Node, Response};
 use serde::Serialize;
+use std::cmp::Ordering;
 use std::collections::BTreeMap;
 use std::fs::write;
 
@@ -40,51 +41,51 @@ fn main() -> Result<()> {
         }
     }
 
-    let mut winners = BTreeMap::new();
-    for (user_id, history) in user_histories.iter() {
-        for (&season, history) in history.into_iter() {
-            let winners = winners
-                .entry(season)
-                .or_insert_with(|| [Vec::new(), Vec::new()]);
-            if history.class.as_str() != "A" && history.class.as_str() != "A1" {
-                continue;
-            }
-            if let Some(final_rank) = history.final_rank {
-                if final_rank > 4 {
-                    continue;
+    let mut tournament_histories = vec![];
+    for season in 1..=3 {
+        if let Ok(ranking) = load_previous_ranking(&season.to_string()) {
+            let mut entries = vec![];
+            for (class, ranking) in ranking {
+                for (user_id, rank) in ranking {
+                    entries.push(RankingEntry {
+                        class: class.to_string(),
+                        user_id,
+                        rank,
+                    });
                 }
-                winners[1].push((final_rank, user_id.clone()));
-            } else {
-                let top_k = history.top_k;
-                let rank = top_k / 2 + 1;
-                winners[0].push((rank, user_id.clone()));
             }
+
+            entries.sort();
+            tournament_histories.push(TournamentHistory {
+                season: season.to_string(),
+                ranking: entries.into_iter().enumerate().collect(),
+                expandable: true,
+            });
+        } else {
+            let mut entries = vec![];
+            for (user_id, history) in user_histories.iter() {
+                if let Some(history) = history.get(&season) {
+                    let user_id = user_id.clone();
+                    let class = history.class.to_string();
+                    let rank = history.top_k / 2 + 1;
+                    entries.push(RankingEntry {
+                        class,
+                        user_id,
+                        rank,
+                    });
+                }
+            }
+
+            entries.sort();
+            entries.truncate(4);
+            tournament_histories.push(TournamentHistory {
+                season: season.to_string(),
+                ranking: entries.into_iter().enumerate().collect(),
+                expandable: false,
+            });
         }
     }
 
-    let mut tournament_histories = vec![];
-    for (season, winners) in winners {
-        let [mut w0, mut w1] = winners;
-        let winners = if w1.is_empty() {
-            w0.sort();
-            w0
-        } else {
-            w0.sort();
-            w1.sort();
-            w0.truncate(2);
-            w0.extend(w1);
-            w0
-        };
-
-        tournament_histories.push(TournamentHistory {
-            season: season.to_string(),
-            top4: winners
-                .into_iter()
-                .map(|(rank, user_id)| (rank.to_string(), user_id))
-                .take(4)
-                .collect(),
-        });
-    }
     write(
         "./public/tournaments.json",
         serde_json::to_string(&tournament_histories)?,
@@ -121,7 +122,29 @@ fn traverse(node: Node, user_top_k: &mut BTreeMap<String, u32>, top_k: u32) {
 #[derive(Serialize)]
 struct TournamentHistory {
     season: String,
-    top4: Vec<(String, String)>,
+    ranking: Vec<(usize, RankingEntry)>,
+    expandable: bool,
+}
+#[derive(Serialize, Eq, PartialEq)]
+struct RankingEntry {
+    class: String,
+    user_id: String,
+    rank: u32,
+}
+
+impl Ord for RankingEntry {
+    fn cmp(&self, other: &Self) -> Ordering {
+        self.partial_cmp(other).unwrap()
+    }
+}
+impl PartialOrd for RankingEntry {
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        Some(
+            self.class
+                .cmp(&other.class)
+                .then_with(|| self.rank.cmp(&other.rank)),
+        )
+    }
 }
 
 #[derive(Serialize)]

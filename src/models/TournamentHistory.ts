@@ -1,4 +1,12 @@
 export interface TournamentHistory {
   season: string;
-  top4: [string, string][];
+  ranking: [
+    number,
+    {
+      class: string;
+      user_id: string;
+      rank: number;
+    }
+  ][];
+  expandable: boolean;
 }
