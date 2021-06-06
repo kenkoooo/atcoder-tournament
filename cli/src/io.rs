@@ -19,6 +19,12 @@ pub fn load_season_user_list(season_id: u32) -> Result<Vec<User>> {
         "./data/season-{season_id}/users-{season_id}.json",
         season_id = season_id
     ))?;
+    let mut users = users
+        .into_iter()
+        .map(|user_id| user_id.to_lowercase())
+        .collect::<Vec<_>>();
+    users.sort();
+    users.dedup();
     let ratings: Vec<User> = read_from_file(format!(
         "./data/season-{season_id}/ratings-{season_id}.json",
         season_id = season_id
