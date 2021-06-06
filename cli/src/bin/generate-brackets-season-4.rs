@@ -13,7 +13,7 @@ fn main() -> Result<()> {
     let primitive_response_map =
         construct_season_3_tournament(users, previous_ranks, "Tiramister".to_string());
 
-    let results = vec![]
+    let results = vec![("./data/season-4/abc204.json", vec!["kyopro_friends"])]
         .into_iter()
         .map(|(filename, writers): (&str, Vec<&str>)| {
             let standings = load_standings(filename)?;
