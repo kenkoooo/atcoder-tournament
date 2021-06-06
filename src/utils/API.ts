@@ -30,7 +30,7 @@ const fetchTournamentSeason4 = async (): Promise<TournamentResponse> => {
 
 export const useTournament = (seasonId: string) => {
   const fetcher = (url: string) => {
-    if (seasonId === "4") {
+    if (seasonId === "xxx") {
       return fetchTournamentSeason4();
     } else {
       return fetch(url)
