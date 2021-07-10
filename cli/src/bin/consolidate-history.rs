@@ -7,7 +7,7 @@ use std::fs::write;
 
 fn main() -> Result<()> {
     let mut user_histories = BTreeMap::new();
-    for season in 1..=3 {
+    for season in 1..=4 {
         let filepath = format!("./public/bracket-{}.json", season);
         let responses: BTreeMap<String, Response> = read_from_file(filepath)?;
         for (class, response) in responses {
@@ -42,7 +42,7 @@ fn main() -> Result<()> {
     }
 
     let mut tournament_histories = vec![];
-    for season in 1..=3 {
+    for season in 1..=4 {
         if let Ok(ranking) = load_previous_ranking(&season.to_string()) {
             let mut entries = vec![];
             for (class, ranking) in ranking {
