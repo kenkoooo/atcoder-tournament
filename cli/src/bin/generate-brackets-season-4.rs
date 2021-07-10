@@ -31,6 +31,10 @@ fn main() -> Result<()> {
             vec!["penguinman", "ynymxiaolongbao"],
         ),
         ("./data/season-4/abc208.json", vec!["Nyaan", "KoD"]),
+        (
+            "./data/season-4/abc209.json",
+            vec!["blackyuki", "penguinman"],
+        ),
     ]
     .into_iter()
     .map(|(filename, writers): (&str, Vec<&str>)| {
