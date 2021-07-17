@@ -1,17 +1,70 @@
 use crate::{BattleResult, BattleResultDetail, LeagueEntry, Node, User};
 use rand::prelude::*;
-use std::cmp::Reverse;
+use std::cmp::{Ordering, Reverse};
 use std::collections::BTreeMap;
 
 type UserId = String;
 type UserPair = (User, User);
 
-pub fn resolve_one_round(
+pub trait AggregatedUserRank {
+    fn add_rank(&mut self, rank: i64);
+    fn to_f64(&self) -> f64;
+}
+
+impl AggregatedUserRank for i64 {
+    fn add_rank(&mut self, rank: i64) {
+        *self += rank;
+    }
+    fn to_f64(&self) -> f64 {
+        *self as f64
+    }
+}
+
+#[derive(Clone)]
+pub struct HarmonicMean {
+    count: u32,
+    sum: f64,
+}
+
+impl Default for HarmonicMean {
+    fn default() -> Self {
+        Self { count: 0, sum: 0.0 }
+    }
+}
+
+impl AggregatedUserRank for HarmonicMean {
+    fn add_rank(&mut self, rank: i64) {
+        self.count += 1;
+        self.sum += 1.0 / rank as f64;
+    }
+
+    fn to_f64(&self) -> f64 {
+        self.count as f64 / self.sum
+    }
+}
+impl Ord for HarmonicMean {
+    fn cmp(&self, other: &Self) -> Ordering {
+        self.partial_cmp(&other).unwrap()
+    }
+}
+impl Eq for HarmonicMean {}
+impl PartialOrd for HarmonicMean {
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        self.to_f64().partial_cmp(&other.to_f64())
+    }
+}
+impl PartialEq for HarmonicMean {
+    fn eq(&self, other: &Self) -> bool {
+        self.to_f64() == other.to_f64()
+    }
+}
+
+pub fn resolve_one_round<T: AggregatedUserRank + Default + Clone + Ord>(
     standings: &BTreeMap<UserId, i64>,
     league_users: &mut Vec<User>,
     users_result: &mut BTreeMap<UserId, Vec<BattleResultDetail>>,
     node: &mut Node,
-    user_rank_sum: &mut BTreeMap<UserId, i64>,
+    user_rank_sum: &mut BTreeMap<UserId, T>,
     writers: &[&str],
 ) {
     // resolve league results
@@ -50,13 +103,15 @@ pub fn resolve_one_round(
 
     // update rank sum
     for (user_id, user_result) in users_result.iter() {
-        let cur_sum = user_rank_sum.entry(user_id.clone()).or_insert(0);
+        let cur_sum = user_rank_sum
+            .entry(user_id.clone())
+            .or_insert_with(Default::default);
         match user_result.last().unwrap().result {
             BattleResult::Win { rank } | BattleResult::Lose { rank } => {
-                *cur_sum += rank;
+                cur_sum.add_rank(rank);
             }
             BattleResult::SkipLose | BattleResult::SkipWin => {
-                *cur_sum += standings.len() as i64 + 1;
+                cur_sum.add_rank(standings.len() as i64 + 1);
             }
             BattleResult::Writer | BattleResult::NotYet => {}
         }
@@ -115,9 +170,9 @@ fn is_matched_before(
         .any(|r| r.opponent.as_ref() == Some(user_b))
 }
 
-pub fn get_league_matches(
+fn get_league_matches<T: AggregatedUserRank + Clone + Ord>(
     users_result: &BTreeMap<UserId, Vec<BattleResultDetail>>,
-    user_rank_sum: &BTreeMap<UserId, i64>,
+    user_rank_sum: &BTreeMap<UserId, T>,
     league_users: &[User],
 ) -> (Vec<UserPair>, Option<UserPair>) {
     let n = league_users.len();
@@ -128,13 +183,17 @@ pub fn get_league_matches(
         .map(|loser| {
             let results = &users_result[&loser.user_id];
             let win_count = count_wins(results);
-            (loser.clone(), win_count, user_rank_sum[&loser.user_id])
+            (
+                loser.clone(),
+                win_count,
+                user_rank_sum[&loser.user_id].clone(),
+            )
         })
         .collect::<Vec<_>>();
     league_users.sort_by_key(|(user, win, rank)| {
         (
             Reverse(*win),
-            *rank,
+            rank.clone(),
             Reverse(user.rating),
             Reverse(user.user_id.to_string()),
         )
@@ -186,22 +245,22 @@ pub fn get_league_matches(
     }
 }
 
-pub fn construct_league(
+pub fn construct_league<T: AggregatedUserRank + Clone + Ord>(
     losers: &[User],
     users_result: &BTreeMap<UserId, Vec<BattleResultDetail>>,
-    user_rank_sum: &BTreeMap<UserId, i64>,
+    user_rank_sum: &BTreeMap<UserId, T>,
 ) -> Vec<LeagueEntry> {
     let mut league = losers
         .iter()
         .map(|loser| {
             let results = users_result[&loser.user_id].clone();
             let win_count = count_wins(&results);
-            let rank_sum = user_rank_sum[&loser.user_id];
+            let rank_sum = user_rank_sum[&loser.user_id].clone();
             (loser.clone(), win_count, rank_sum, results)
         })
         .collect::<Vec<_>>();
     league.sort_by_key(|(user, win_count, rank_sum, _)| {
-        (Reverse(*win_count), *rank_sum, Reverse(user.rating))
+        (Reverse(*win_count), rank_sum.clone(), Reverse(user.rating))
     });
 
     let tournament_count = users_result.len() - league.len();
@@ -211,7 +270,7 @@ pub fn construct_league(
         .map(|(i, (user, win_count, rank_sum, results))| LeagueEntry {
             user,
             win_count,
-            rank_sum,
+            rank_sum: rank_sum.to_f64(),
             results,
             provisional_rank: (tournament_count + 1 + i) as u32,
         })

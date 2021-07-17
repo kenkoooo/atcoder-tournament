@@ -93,7 +93,7 @@ fn main() -> Result<()> {
 
         let mut losers = vec![];
         let mut users_result = BTreeMap::new();
-        let mut user_rank_sum = BTreeMap::new();
+        let mut user_rank_sum: BTreeMap<_, i64> = BTreeMap::new();
 
         for (standings, writers, filename) in results.iter() {
             eprintln!("Resolving {} ...", filename);

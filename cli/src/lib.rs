@@ -5,7 +5,7 @@ pub use io::{
 };
 
 mod resolver;
-pub use resolver::{construct_league, get_league_matches, resolve_one_round};
+pub use resolver::{construct_league, resolve_one_round, HarmonicMean};
 
 mod constructor;
 pub use constructor::{construct_normal_tournaments, construct_tournament, divide_to_classes};

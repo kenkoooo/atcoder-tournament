@@ -176,7 +176,7 @@ pub enum BattleResult {
 pub struct LeagueEntry {
     pub user: User,
     pub win_count: i64,
-    pub rank_sum: i64,
+    pub rank_sum: f64,
     pub results: Vec<BattleResultDetail>,
     pub provisional_rank: u32,
 }

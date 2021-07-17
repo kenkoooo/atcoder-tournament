@@ -24,7 +24,7 @@ fn main() -> Result<()> {
         for (j, mut node) in nodes.into_iter().enumerate() {
             let mut losers = vec![];
             let mut users_result: BTreeMap<UserId, Vec<BattleResultDetail>> = BTreeMap::new();
-            let mut user_rank_sum = BTreeMap::new();
+            let mut user_rank_sum: BTreeMap<_, i64> = BTreeMap::new();
             for (filename, writers) in vec![
                 (
                     "./data/season-2/abc184.json",
