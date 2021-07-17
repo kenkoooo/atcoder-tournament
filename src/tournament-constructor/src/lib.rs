@@ -32,7 +32,7 @@ pub fn construct_tournament(
         .flat_map(|user_id| rating_storage.get_rating(&user_id))
         .collect::<Vec<_>>();
 
-    let responses = cli::common::construct_season_3::construct_season_3_tournament(
+    let responses = cli::common::construct_season_3::construct_season_5_tournament(
         users,
         previous_ranking,
         previous_winner,

@@ -121,15 +121,15 @@ const App = () => {
               >
                 過去の開催
               </Link>
-              {/*<Link*/}
-              {/*  component={RouterLink}*/}
-              {/*  variant="button"*/}
-              {/*  color="textPrimary"*/}
-              {/*  to="/register"*/}
-              {/*  className={classes.link}*/}
-              {/*>*/}
-              {/*  参加登録*/}
-              {/*</Link>*/}
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/register"
+                className={classes.link}
+              >
+                参加登録
+              </Link>
               <Link
                 href="https://github.com/kenkoooo/atcoder-tournament/tree/master/rules"
                 target="_blank"
@@ -155,9 +155,9 @@ const App = () => {
                 );
               }}
             />
-            {/*<Route path="/register">*/}
-            {/*  <RegisterPage />*/}
-            {/*</Route>*/}
+            <Route path="/register">
+              <RegisterPage />
+            </Route>
             <Route path="/user/:user_id([0-9a-zA-Z_]+)">
               <UserHistoryPage />
             </Route>

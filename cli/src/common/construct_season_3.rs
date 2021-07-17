@@ -1,29 +1,58 @@
 use crate::{
     construct_normal_tournaments, construct_tournament, divide_to_classes, Response, User,
 };
+use std::cmp::Reverse;
 use std::collections::BTreeMap;
+
+const A1_TO_A1: usize = 16;
+const A1_TO_A2: usize = 10;
+const A1_TO_A3: usize = 6;
+
+const A2_TO_A1: usize = A1_TO_A2;
+const A2_TO_A2: usize = 12;
+const A2_TO_A3: usize = 10;
+
+const A3_TO_A1: usize = A1_TO_A3;
+const A3_TO_A2: usize = A2_TO_A3;
 
 pub fn construct_season_3_tournament(
     users: Vec<User>,
     previous_ranks: BTreeMap<String, BTreeMap<String, u32>>,
     defending_champion: String,
 ) -> BTreeMap<String, Response> {
+    construct_whole_tournament(users, previous_ranks, defending_champion, true)
+}
+
+pub fn construct_season_5_tournament(
+    users: Vec<User>,
+    previous_ranks: BTreeMap<String, BTreeMap<String, u32>>,
+    defending_champion: String,
+) -> BTreeMap<String, Response> {
+    construct_whole_tournament(users, previous_ranks, defending_champion, false)
+}
+
+fn construct_whole_tournament(
+    users: Vec<User>,
+    previous_ranks: BTreeMap<String, BTreeMap<String, u32>>,
+    defending_champion: String,
+    sort_a3_by_previous_rank: bool,
+) -> BTreeMap<String, Response> {
     let classes = divide_to_classes(users);
     let mut response_map = BTreeMap::new();
     for (i, class) in classes.into_iter().enumerate() {
         let class_head = ('A' as u8 + i as u8) as char;
         if i == 0 {
-            let sorted_users = construct_class_a(class, &previous_ranks);
+            let sorted_users = construct_class_a(class, &previous_ranks, sort_a3_by_previous_rank);
             for (i, sorted_users) in sorted_users.into_iter().enumerate() {
                 let class_name = format!("{}{}", class_head, i + 1);
                 let promotion_rank = match class_name.as_str() {
-                    "A2" => Some(10),
-                    "A3" => Some(16),
+                    "A2" => Some(A2_TO_A1 as i32),
+                    "A3" => Some((A3_TO_A1 + A3_TO_A2) as i32),
                     _ => None,
                 };
                 let drop_rank = match class_name.as_str() {
-                    "A1" => Some(17),
-                    "A2" => Some(23),
+                    "A1" => Some((A1_TO_A3 + A1_TO_A3) as i32 + 1),
+                    "A2" => Some((A2_TO_A3 + A2_TO_A3) as i32 + 1),
                     _ => None,
                 };
 
@@ -41,27 +70,41 @@ pub fn construct_season_3_tournament(
                 );
             }
         } else {
-            for (i, node) in construct_normal_tournaments(class).into_iter().enumerate() {
-                let class_name = format!("{}{}", class_head, i + 1);
-                response_map.insert(
-                    class_name,
-                    Response {
-                        node,
-                        league: Some(vec![]),
-                        defending_champion: None,
-                        drop_rank: None,
-                        promotion_rank: None,
-                        top4: None,
-                    },
-                );
+            let responses = construct_non_a_season_tournament(class, class_head);
+            for (class_name, response) in responses {
+                response_map.insert(class_name, response);
             }
         }
     }
     response_map
 }
+
+fn construct_non_a_season_tournament(
+    class: Vec<User>,
+    class_head: char,
+) -> Vec<(String, Response)> {
+    let mut responses = vec![];
+    for (i, node) in construct_normal_tournaments(class).into_iter().enumerate() {
+        let class_name = format!("{}{}", class_head, i + 1);
+        responses.push((
+            class_name,
+            Response {
+                node,
+                league: Some(vec![]),
+                defending_champion: None,
+                drop_rank: None,
+                promotion_rank: None,
+                top4: None,
+            },
+        ));
+    }
+    responses
+}
+
 fn construct_class_a(
     users: Vec<User>,
     prev_ranks: &BTreeMap<String, BTreeMap<String, u32>>,
+    sort_a3_by_previous_rank: bool,
 ) -> Vec<Vec<User>> {
     const INF: u32 = 1 << 30;
     let mut prev_classes = vec![vec![]; 3];
@@ -112,6 +155,11 @@ fn construct_class_a(
     for iter in prev_classes.into_iter() {
         next_classes[2].extend(iter.map(|e| e.1));
     }
+
+    if !sort_a3_by_previous_rank {
+        next_classes[2].sort_by_key(|user| (Reverse(user.rating), user.user_id.to_string()));
+    }
+
     next_classes
 }
 

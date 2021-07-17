@@ -13,7 +13,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
 const RegistrationForm = (props: {
   state: InputState;
-  setState: (input: InputState) => void;
+  onChange: (input: InputState) => void;
   register: (input: InputState) => void;
 }) => {
   const classes = useStyles();
@@ -37,7 +37,7 @@ const RegistrationForm = (props: {
         onChange={(e) => {
           const inputValue = e.target.value;
           if (/^[a-zA-Z0-9\-_]*$/.test(inputValue)) {
-            props.setState({
+            props.onChange({
               ...props.state,
               userId: inputValue,
             });
@@ -143,7 +143,7 @@ export const RegisterPage = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ user_id: input.userId }),
+      body: JSON.stringify({ user_id: input.userId.trim() }),
     })
       .then((response) => response.json())
       .then((response) => {
@@ -207,7 +207,7 @@ export const RegisterPage = () => {
         {registerState.type === "Input" && (
           <RegistrationForm
             state={registerState}
-            setState={setRegisterState}
+            onChange={setRegisterState}
             register={getVerificationCode}
           />
         )}
