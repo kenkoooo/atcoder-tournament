@@ -4,17 +4,6 @@ use crate::{
 use std::cmp::Reverse;
 use std::collections::BTreeMap;
 
-const A1_TO_A1: usize = 16;
-const A1_TO_A2: usize = 10;
-const A1_TO_A3: usize = 6;
-
-const A2_TO_A1: usize = A1_TO_A2;
-const A2_TO_A2: usize = 12;
-const A2_TO_A3: usize = 10;
-
-const A3_TO_A1: usize = A1_TO_A3;
-const A3_TO_A2: usize = A2_TO_A3;
-
 pub fn construct_season_3_tournament(
     users: Vec<User>,
     previous_ranks: BTreeMap<String, BTreeMap<String, u32>>,
@@ -45,17 +34,7 @@ fn construct_whole_tournament(
             let sorted_users = construct_class_a(class, &previous_ranks, sort_a3_by_previous_rank);
             for (i, sorted_users) in sorted_users.into_iter().enumerate() {
                 let class_name = format!("{}{}", class_head, i + 1);
-                let promotion_rank = match class_name.as_str() {
-                    "A2" => Some(A2_TO_A1 as i32),
-                    "A3" => Some((A3_TO_A1 + A3_TO_A2) as i32),
-                    _ => None,
-                };
-                let drop_rank = match class_name.as_str() {
-                    "A1" => Some((A1_TO_A3 + A1_TO_A3) as i32 + 1),
-                    "A2" => Some((A2_TO_A3 + A2_TO_A3) as i32 + 1),
-                    _ => None,
-                };
-
+                let (promotion_rank, drop_rank) = promotion_drop(&class_name);
                 let node = construct_tournament(&sorted_users, 0);
                 response_map.insert(
                     class_name,
@@ -77,6 +56,15 @@ fn construct_whole_tournament(
         }
     }
     response_map
+}
+
+fn promotion_drop(class: &str) -> (Option<i32>, Option<i32>) {
+    match class {
+        "A1" => (None, Some(17)),
+        "A2" => (Some(10), Some(23)),
+        "A3" => (Some(16), None),
+        _ => (None, None),
+    }
 }
 
 fn construct_non_a_season_tournament(
