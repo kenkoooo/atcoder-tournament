@@ -23,6 +23,7 @@ import { TournamentListPage } from "./pages/TournamentListPage";
 import { TournamentRankingPage } from "./pages/TournamentRankingPage";
 import { UserHistoryPage } from "./pages/UserHistoryPage";
 import { SEASON_ID } from "./utils/Constants";
+import { RecordPage } from "./pages/RecordPage";
 
 const theme = createMuiTheme({
   palette: {
@@ -134,6 +135,15 @@ const App = () => {
                 component={RouterLink}
                 variant="button"
                 color="textPrimary"
+                to="/record"
+                className={classes.link}
+              >
+                記録
+              </Link>
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
                 to="/register"
                 className={classes.link}
               >
@@ -172,6 +182,9 @@ const App = () => {
             </Route>
             <Route path="/past">
               <TournamentListPage />
+            </Route>
+            <Route path="/record">
+              <RecordPage />
             </Route>
             <Route path="/ranking/:seasonId([0-9]+)">
               <TournamentRankingPage />

@@ -62,48 +62,72 @@ export const UserHistoryPage = () => {
       season: parseInt(season),
       result,
     }))
-    .sort((a, b) => a.season - b.season);
+    .sort((a, b) => b.season - a.season);
+
+  const winCount = sorted
+    .filter((e) => e.result.class === "A" || e.result.class === "A1")
+    .filter((e) => e.result.top_k === 1).length;
+  const secondCount = sorted
+    .filter((e) => e.result.class === "A" || e.result.class === "A1")
+    .filter((e) => e.result.top_k === 2).length;
+  const a1Count = sorted.filter((e) => e.result.class === "A1").length;
+
   return (
     <Container className={classes.root}>
-      <Typography variant="h2">
-        <Link
-          className={classes.link}
-          href={`https://atcoder.jp/users/${user_id}`}
-        >
-          {user_id}
-        </Link>
-      </Typography>
-      <Container>
-        {sorted.map((e) => (
-          <Paper key={e.season} className={classes.paper}>
-            <Grid container spacing={2}>
-              <Grid item xs={6}>
-                <Typography variant="h5">
-                  <Link
-                    component={RouterLink}
-                    to={`/tournament/${e.season}`}
-                    className={classes.link}
-                  >
-                    第{e.season}期 {e.result.class}クラス
-                  </Link>
-                </Typography>
-              </Grid>
-              <Grid item xs={4} direction="column">
-                <Typography variant="body1">トーナメント</Typography>
-                <Typography variant="h4">
-                  {formatTopK(e.season, e.result.top_k, e.result.class)}
-                </Typography>
-              </Grid>
-              {e.result.final_rank && (
-                <Grid item xs direction="column">
-                  <Typography variant="body1">最終順位</Typography>
-                  <Typography variant="h4">{e.result.final_rank}位</Typography>
+      <Grid container>
+        <Grid item>
+          <Typography variant="h2">
+            <Link
+              className={classes.link}
+              href={`https://atcoder.jp/users/${user_id}`}
+            >
+              {user_id}
+            </Link>
+          </Typography>
+          {winCount > 0 && (
+            <Typography variant="h6">優勝{winCount}回</Typography>
+          )}
+          {secondCount > 0 && (
+            <Typography variant="h6">準優勝{secondCount}回</Typography>
+          )}
+          {a1Count > 0 && (
+            <Typography variant="h6">A1在籍{a1Count}期</Typography>
+          )}
+        </Grid>
+        <Grid item xs={12}>
+          {sorted.map((e) => (
+            <Paper key={e.season} className={classes.paper}>
+              <Grid container spacing={2}>
+                <Grid item xs={6}>
+                  <Typography variant="h5">
+                    <Link
+                      component={RouterLink}
+                      to={`/tournament/${e.season}`}
+                      className={classes.link}
+                    >
+                      第{e.season}期 {e.result.class}クラス
+                    </Link>
+                  </Typography>
                 </Grid>
-              )}
-            </Grid>
-          </Paper>
-        ))}
-      </Container>
+                <Grid item xs={4} direction="column">
+                  <Typography variant="body1">トーナメント</Typography>
+                  <Typography variant="h4">
+                    {formatTopK(e.season, e.result.top_k, e.result.class)}
+                  </Typography>
+                </Grid>
+                {e.result.final_rank && (
+                  <Grid item xs direction="column">
+                    <Typography variant="body1">最終順位</Typography>
+                    <Typography variant="h4">
+                      {e.result.final_rank}位
+                    </Typography>
+                  </Grid>
+                )}
+              </Grid>
+            </Paper>
+          ))}
+        </Grid>
+      </Grid>
     </Container>
   );
 };
