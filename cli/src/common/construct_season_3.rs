@@ -20,7 +20,7 @@ pub fn construct_season_5_tournament(
     construct_whole_tournament(users, previous_ranks, defending_champion, false)
 }
 
-fn construct_whole_tournament(
+pub fn construct_whole_tournament(
     users: Vec<User>,
     previous_ranks: BTreeMap<String, BTreeMap<String, u32>>,
     defending_champion: String,

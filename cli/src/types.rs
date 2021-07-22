@@ -38,8 +38,11 @@ impl User {
 
 impl Ord for User {
     fn cmp(&self, other: &Self) -> Ordering {
-        (Reverse(self.rating), self.user_id.to_lowercase().as_str())
-            .cmp(&(Reverse(other.rating), other.user_id.to_lowercase().as_str()))
+        Reverse(self.rating).cmp(&Reverse(other.rating)).then(
+            self.user_id
+                .to_lowercase()
+                .cmp(&other.user_id.to_lowercase()),
+        )
     }
 }
 impl PartialOrd for User {

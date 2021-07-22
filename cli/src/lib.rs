@@ -19,3 +19,5 @@ pub use types::{
 };
 
 pub mod common;
+
+pub mod bracket_generator;
