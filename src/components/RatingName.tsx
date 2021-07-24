@@ -12,6 +12,7 @@ import {
 import { Link as RouterLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
+import { DUMMY_USER_ID_PREFIX } from "../utils/Constants";
 
 const useRatingColorStyle = makeStyles(() => ({
   red: {
@@ -54,6 +55,9 @@ export const RatingName = (props: {
   const classes = useRatingColorStyle();
   const userId = props.children;
   const rating = props.rating;
+  if (userId.startsWith(DUMMY_USER_ID_PREFIX)) {
+    return <>-</>;
+  }
   if (!rating) {
     return <p>{userId}</p>;
   }

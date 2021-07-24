@@ -1516,12 +1516,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "w2w2",
-                        "rating": 1999
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "w2w2",
+                            "rating": 1999
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user31",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -1608,12 +1622,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "RheoTommy",
-                        "rating": 1961
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "RheoTommy",
+                            "rating": 1961
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user28",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -1644,12 +1672,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "tomo0608",
-                        "rating": 1957
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tomo0608",
+                            "rating": 1957
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user27",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -1692,12 +1734,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "primenumber_zz",
-                        "rating": 1980
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "primenumber_zz",
+                            "rating": 1980
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user30",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -1784,12 +1840,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "nasubi24",
-                        "rating": 1966
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "nasubi24",
+                            "rating": 1966
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user29",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -1820,12 +1890,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "kai1000_don",
-                        "rating": 1953
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "kai1000_don",
+                            "rating": 1953
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user26",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -1881,12 +1965,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "x0214sh7",
-                        "rating": 1858
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "x0214sh7",
+                            "rating": 1858
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user31",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -1973,12 +2071,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "z____z",
-                        "rating": 1838
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "z____z",
+                            "rating": 1838
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user28",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2009,12 +2121,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "scol",
-                        "rating": 1835
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "scol",
+                            "rating": 1835
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user27",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2057,12 +2183,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "so4649",
-                        "rating": 1850
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "so4649",
+                            "rating": 1850
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user30",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2149,12 +2289,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "yamake",
-                        "rating": 1850
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "yamake",
+                            "rating": 1850
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user29",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2185,12 +2339,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "unos",
-                        "rating": 1833
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "unos",
+                            "rating": 1833
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user26",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2246,12 +2414,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "prd_xxx",
-                        "rating": 1734
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "prd_xxx",
+                            "rating": 1734
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user31",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2338,12 +2520,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "unidayo",
-                        "rating": 1723
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "unidayo",
+                            "rating": 1723
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user28",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2436,12 +2632,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "Ebishu0309",
-                        "rating": 1733
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Ebishu0309",
+                            "rating": 1733
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user30",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2528,12 +2738,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "milkcoffee",
-                        "rating": 1732
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "milkcoffee",
+                            "rating": 1732
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user29",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2639,12 +2863,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "Diary",
-                        "rating": 1599
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Diary",
+                            "rating": 1599
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user31",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2731,12 +2969,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "w0mbat",
-                        "rating": 1576
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "w0mbat",
+                            "rating": 1576
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user28",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2767,12 +3019,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "daiju",
-                        "rating": 1572
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "daiju",
+                            "rating": 1572
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user27",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2815,12 +3081,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "sten",
-                        "rating": 1598
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "sten",
+                            "rating": 1598
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user30",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2907,12 +3187,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "piddy",
-                        "rating": 1593
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "piddy",
+                            "rating": 1593
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user29",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -2943,12 +3237,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "rlangevin",
-                        "rating": 1572
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "rlangevin",
+                            "rating": 1572
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user26",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3004,12 +3312,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "tdk",
-                        "rating": 1478
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tdk",
+                            "rating": 1478
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user31",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3096,12 +3418,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "Sugsugar",
-                        "rating": 1469
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Sugsugar",
+                            "rating": 1469
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user28",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3132,12 +3468,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "oginoshikibu",
-                        "rating": 1458
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "oginoshikibu",
+                            "rating": 1458
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user27",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3180,12 +3530,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "nabefuta",
-                        "rating": 1477
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "nabefuta",
+                            "rating": 1477
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user30",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3272,12 +3636,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "shama",
-                        "rating": 1471
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "shama",
+                            "rating": 1471
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user29",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3308,12 +3686,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "recta",
-                        "rating": 1457
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "recta",
+                            "rating": 1457
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user26",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3369,12 +3761,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "highjump",
-                        "rating": 1334
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "highjump",
+                            "rating": 1334
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user31",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3461,12 +3867,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "US_cube",
-                        "rating": 1322
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "US_cube",
+                            "rating": 1322
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user28",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3497,12 +3917,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "KuonAyano",
-                        "rating": 1319
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "KuonAyano",
+                            "rating": 1319
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user27",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3545,12 +3979,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "uuuu_s",
-                        "rating": 1327
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "uuuu_s",
+                            "rating": 1327
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user30",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3637,12 +4085,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "Jessica_n_w",
-                        "rating": 1326
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Jessica_n_w",
+                            "rating": 1326
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user29",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3673,12 +4135,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "Tommy6",
-                        "rating": 1318
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Tommy6",
+                            "rating": 1318
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user26",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3734,12 +4210,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "k1832",
-                        "rating": 1198
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "k1832",
+                            "rating": 1198
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user31",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3826,12 +4316,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "NSpenguin",
-                        "rating": 1173
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "NSpenguin",
+                            "rating": 1173
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user28",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -3924,12 +4428,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "rxive",
-                        "rating": 1193
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "rxive",
+                            "rating": 1193
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user30",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -4016,12 +4534,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "qwertyam",
-                        "rating": 1192
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "qwertyam",
+                            "rating": 1192
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user29",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -4127,12 +4659,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "atree",
-                        "rating": 1009
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "atree",
+                            "rating": 1009
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user31",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -4219,12 +4765,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "Cyclone_28",
-                        "rating": 995
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Cyclone_28",
+                            "rating": 995
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user28",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -4317,12 +4877,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "serpent",
-                        "rating": 1006
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "serpent",
+                            "rating": 1006
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user30",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,
@@ -4409,12 +4983,26 @@
                   "rank": null,
                   "children": [
                     {
-                      "user": {
-                        "user_id": "onNok",
-                        "rating": 1004
-                      },
+                      "user": null,
                       "rank": null,
-                      "children": []
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "onNok",
+                            "rating": 1004
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "---non-existing-user29",
+                            "rating": 0
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "user": null,

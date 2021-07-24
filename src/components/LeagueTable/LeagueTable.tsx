@@ -10,6 +10,9 @@ import {
 import React, { Fragment } from "react";
 import { BattleResult, LeagueEntry } from "../../models/TournamentNode";
 import { RatingName } from "../RatingName";
+import { DUMMY_USER_ID_PREFIX } from "../../utils/Constants";
+
+const isUsingRankSum = (seasonId: string) => ["2", "3", "4"].includes(seasonId);
 
 const UserEntryRow = (props: {
   entry: LeagueEntry;
@@ -49,12 +52,13 @@ const UserEntryRow = (props: {
         }
       })}
       <TableCell align="right">{entry.win_count}</TableCell>
-      <TableCell align="right">{entry.rank_sum}</TableCell>
+      <TableCell align="right">{entry.rank_sum.toFixed(2)}</TableCell>
     </TableRow>
   );
 };
 
 interface Props {
+  seasonId: string;
   league: LeagueEntry[];
   promotionRank?: number;
   dropRank?: number;
@@ -63,7 +67,9 @@ interface Props {
 export const LeagueTable = (props: Props) => {
   const { league } = props;
   const maxResultCount = Math.max(...league.map((e) => e.results.length));
-
+  const leage = props.league.filter(
+    (entry) => !entry.user.user_id.startsWith(DUMMY_USER_ID_PREFIX)
+  );
   return (
     <TableContainer>
       <Table>
@@ -77,14 +83,16 @@ export const LeagueTable = (props: Props) => {
               </TableCell>
             ))}
             <TableCell align="right">勝利数</TableCell>
-            <TableCell align="right">順位合計</TableCell>
+            <TableCell align="right">
+              {isUsingRankSum(props.seasonId) ? "順位合計" : "順位調和平均"}
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.league.map((entry) => {
+          {leage.map((entry, idx) => {
             if (entry.provisional_rank === props.promotionRank) {
               return (
-                <Fragment key={entry.user.user_id}>
+                <Fragment key={idx}>
                   <UserEntryRow entry={entry} maxResultCount={maxResultCount} />
                   <TableRow>
                     <TableCell colSpan={maxResultCount + 4}>
@@ -95,7 +103,7 @@ export const LeagueTable = (props: Props) => {
               );
             } else if (entry.provisional_rank === props.dropRank) {
               return (
-                <Fragment key={entry.user.user_id}>
+                <Fragment key={idx}>
                   <TableRow>
                     <TableCell colSpan={maxResultCount + 4}>
                       残留ライン
@@ -109,7 +117,7 @@ export const LeagueTable = (props: Props) => {
                 <UserEntryRow
                   entry={entry}
                   maxResultCount={maxResultCount}
-                  key={entry.user.user_id}
+                  key={idx}
                 />
               );
             }

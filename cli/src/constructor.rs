@@ -1,12 +1,34 @@
 use crate::{Node, User};
 
+const MAX_DEPTH: usize = 4;
+
+const STATIC_MINIMUM_PARTICIPANTS: usize = 2 << MAX_DEPTH;
+const FIX_SEED_NON_EXISTING_USER_PREFIX: &str = "---non-existing-user";
+
 pub fn construct_normal_tournaments(mut users: Vec<User>) -> Vec<Node> {
     let class_limit = users.len() / 6 * 2;
     users.sort();
+
+    let mut sorted_user_lists = vec![
+        users[..class_limit].to_vec(),
+        users[class_limit..(2 * class_limit)].to_vec(),
+        users[(2 * class_limit)..].to_vec(),
+    ];
+
+    // fix seed
+    for users in sorted_user_lists.iter_mut() {
+        while users.len() < STATIC_MINIMUM_PARTICIPANTS {
+            users.push(User {
+                user_id: format!("{}{}", FIX_SEED_NON_EXISTING_USER_PREFIX, users.len()),
+                rating: 0,
+            });
+        }
+    }
+
     vec![
-        construct_tournament(&users[..class_limit], 0),
-        construct_tournament(&users[class_limit..(2 * class_limit)], 0),
-        construct_tournament(&users[(2 * class_limit)..], 0),
+        construct_tournament(&sorted_user_lists[0], 0),
+        construct_tournament(&sorted_user_lists[1], 0),
+        construct_tournament(&sorted_user_lists[2], 0),
     ]
 }
 
@@ -17,7 +39,7 @@ pub fn construct_tournament(sorted_users: &[User], depth: usize) -> Node {
             rank: None,
             children: vec![],
         }
-    } else if depth == 4 {
+    } else if depth == MAX_DEPTH {
         let children = sorted_users
             .iter()
             .map(|user| Node {

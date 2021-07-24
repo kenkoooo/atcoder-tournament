@@ -128,6 +128,7 @@ export const Tournament = (props: Props) => {
                   順位決定リーグ
                 </Typography>
                 <LeagueTable
+                  seasonId={props.seasonId}
                   league={league}
                   promotionRank={bracket?.promotion_rank}
                   dropRank={bracket?.drop_rank}
