@@ -7,16 +7,31 @@ fn main() -> Result<()> {
         5,
         "SSRS",
         true,
-        &vec![(
-            "./data/season-5/abc211.json",
-            vec![
-                "kyopro_friends",
-                "physics0523",
-                "sugarrr",
-                "tatyam",
-                "blackyuki",
-            ],
-        )],
+        &vec![
+            (
+                "./data/season-5/abc211.json",
+                vec![
+                    "kyopro_friends",
+                    "physics0523",
+                    "sugarrr",
+                    "tatyam",
+                    "blackyuki",
+                ],
+            ),
+            (
+                "./data/season-5/abc212.json",
+                vec![
+                    "kyopro_friends",
+                    "mechanicalpenciI",
+                    "Nyaan",
+                    "penguinman",
+                    "sugarrr",
+                    "blackyuki",
+                    "KoD",
+                    "leaf1415",
+                ],
+            ),
+        ],
     )?;
 
     Ok(())
