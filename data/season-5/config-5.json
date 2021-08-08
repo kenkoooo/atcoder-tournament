@@ -1,0 +1,29 @@
+{
+  "season": 5,
+  "defending_champion": "SSRS",
+  "matches": [
+    {
+      "standings": "abc211",
+      "writers": [
+        "kyopro_friends",
+        "physics0523",
+        "sugarrr",
+        "tatyam",
+        "blackyuki"
+      ]
+    },
+    {
+      "standings": "abc212",
+      "writers": [
+        "kyopro_friends",
+        "mechanicalpenciI",
+        "Nyaan",
+        "penguinman",
+        "sugarrr",
+        "blackyuki",
+        "KoD",
+        "leaf1415"
+      ]
+    }
+  ]
+}
