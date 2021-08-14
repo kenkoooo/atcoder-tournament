@@ -31,6 +31,22 @@ fn main() -> Result<()> {
                     "leaf1415",
                 ],
             ),
+            (
+                "./data/season-5/abc213.json",
+                vec!["kyopro_friends", "Nyaan", "sugarrr", "physics0523"],
+            ),
+            (
+                "./data/season-5/abc214.json",
+                vec![
+                    "blackyuki",
+                    "KoD",
+                    "physics0523",
+                    "ynymxiaolongbao",
+                    "mechanicalpenciI",
+                    "Nyaan",
+                    "penguinman",
+                ],
+            ),
         ],
     )?;
 

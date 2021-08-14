@@ -79,11 +79,9 @@ export const RatingName = (props: {
   } else {
     c = classes.red;
   }
-  const screenUserId =
-    userId.length <= 13 ? userId : userId.slice(0, 10) + "...";
   return (
     <Link className={c} component={RouterLink} to={`/user/${userId}`}>
-      {screenUserId}
+      {userId}
     </Link>
   );
 };
