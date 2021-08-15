@@ -20,9 +20,13 @@ pub fn construct_tournament(
     }
 
     let mut previous_map = BTreeMap::new();
+    let mut defending_champion = None;
     for (class, bracket) in previous_brackets {
         let ranking = bracket.get_user_ranking();
         assert!(!ranking.is_empty());
+        if &class == "A1" {
+            defending_champion = Some(ranking[0].clone());
+        }
         let ranking = ranking
             .into_iter()
             .flat_map(|user_id| registered_users.remove(&user_id))
@@ -122,7 +126,7 @@ pub fn construct_tournament(
 
         let bracket = Bracket::create(
             next_a_users,
-            Some("SSRS".to_string()),
+            defending_champion.clone(),
             drop_rank,
             promotion_rank,
         );

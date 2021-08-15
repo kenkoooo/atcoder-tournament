@@ -1,2 +1,2 @@
 [workspace]
-members = ["server", "cli", "src/tournament-constructor", "rating-downloader", "tournament-tools"]
+members = ["server", "cli", "rating-downloader", "tournament-tools", "wasm"]

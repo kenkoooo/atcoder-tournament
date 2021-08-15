@@ -117,6 +117,8 @@ impl Bracket {
     ) {
         self.league.refresh_league_ranking(tournament_battle_result);
     }
+
+    #[cfg(feature = "league_matching")]
     pub(crate) fn match_new_league_games(&mut self) {
         self.league.match_new_games();
     }

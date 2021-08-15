@@ -18,6 +18,7 @@ use crate::types::{ClassId, Rank, SeasonId, UserId};
 use anyhow::Result;
 use std::collections::BTreeMap;
 
+#[cfg(feature = "league_matching")]
 pub fn update_tournament(
     brackets: &mut BTreeMap<ClassId, Bracket>,
     standings_list: &[BTreeMap<UserId, Rank>],

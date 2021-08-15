@@ -1,6 +1,5 @@
 use crate::bracket::User;
 use crate::types::{Rank, UserId, INF_RANK};
-use rand::prelude::*;
 use serde::{Deserialize, Serialize};
 use std::cmp::Ordering;
 use std::collections::BTreeMap;
@@ -15,6 +14,8 @@ pub(crate) trait LeagueUtil {
         &mut self,
         tournament_battle_result: &BTreeMap<UserId, (User, Vec<LeagueBattleResult>)>,
     );
+
+    #[cfg(feature = "league_matching")]
     fn match_new_games(&mut self);
 }
 
@@ -101,6 +102,8 @@ impl LeagueUtil for Vec<UserLeagueEntry> {
             entry.provisional_rank = i + remaining_user_count + 1;
         }
     }
+
+    #[cfg(feature = "league_matching")]
     fn match_new_games(&mut self) {
         let n = self.len();
         assert!(n >= 2);
@@ -117,6 +120,7 @@ impl LeagueUtil for Vec<UserLeagueEntry> {
 
             assert_eq!(same_win_idx.len() % 2, 0);
             let pairs = same_win_idx.len() / 2;
+            use rand::prelude::*;
             let mut rng = StdRng::seed_from_u64(717);
             for _ in 0..20 {
                 same_win_idx.shuffle(&mut rng);
