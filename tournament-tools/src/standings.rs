@@ -3,6 +3,7 @@ use crate::types::{Rank, SeasonId, UserId};
 use anyhow::Result;
 use serde::Deserialize;
 use std::collections::BTreeMap;
+use std::path::Path;
 
 pub fn read_standings(season_id: SeasonId, standings_name: &str) -> Result<BTreeMap<UserId, Rank>> {
     let path = format!(
@@ -10,6 +11,10 @@ pub fn read_standings(season_id: SeasonId, standings_name: &str) -> Result<BTree
         season_id = season_id,
         standings_name = standings_name
     );
+    read_standings_from_path(path)
+}
+
+pub fn read_standings_from_path<P: AsRef<Path>>(path: P) -> Result<BTreeMap<UserId, Rank>> {
     let standings: Standings = read_json(path)?;
     let mut map = BTreeMap::new();
     for user in standings

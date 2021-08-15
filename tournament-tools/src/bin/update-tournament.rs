@@ -15,13 +15,14 @@ fn main() -> Result<()> {
     }
 
     let mut brackets = read_brackets(season_id)?;
-    for (_, bracket) in brackets.iter_mut() {
+    for bracket in brackets.values_mut() {
         bracket.update_tournament_result(&standings_list);
         bracket.update_league_result(&standings_list);
 
         let tournament_battle_result = bracket.consolidate_tournament_battle_result();
         bracket.extend_league(&tournament_battle_result);
         bracket.refresh_league_ranking(&tournament_battle_result);
+        bracket.match_new_league_games();
     }
 
     write_brackets(season_id, &brackets)?;
