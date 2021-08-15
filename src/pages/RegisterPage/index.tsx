@@ -196,14 +196,14 @@ export const RegisterPage = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          第5期
+          第6期
         </Typography>
         <Typography component="h1" variant="h5">
           ABCトーナメント参加登録
         </Typography>
-        <Typography component="h3" variant="h6">
-          2021-07-24(土) 20:30〆切
-        </Typography>
+        {/*<Typography component="h3" variant="h6">*/}
+        {/*  2021-07-24(土) 20:30〆切*/}
+        {/*</Typography>*/}
         {registerState.type === "Input" && (
           <RegistrationForm
             state={registerState}

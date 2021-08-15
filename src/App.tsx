@@ -174,9 +174,9 @@ const App = () => {
                 );
               }}
             />
-            {/*<Route path="/register">*/}
-            {/*  <RegisterPage />*/}
-            {/*</Route>*/}
+            <Route path="/register">
+              <RegisterPage />
+            </Route>
             <Route path="/user/:user_id([0-9a-zA-Z_]+)">
               <UserHistoryPage />
             </Route>
