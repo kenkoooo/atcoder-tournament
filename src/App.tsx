@@ -140,15 +140,15 @@ const App = () => {
               >
                 記録
               </Link>
-              {/*<Link*/}
-              {/*  component={RouterLink}*/}
-              {/*  variant="button"*/}
-              {/*  color="textPrimary"*/}
-              {/*  to="/register"*/}
-              {/*  className={classes.link}*/}
-              {/*>*/}
-              {/*  参加登録*/}
-              {/*</Link>*/}
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/register"
+                className={classes.link}
+              >
+                参加登録
+              </Link>
               <Link
                 href="https://github.com/kenkoooo/atcoder-tournament/tree/master/rules"
                 target="_blank"

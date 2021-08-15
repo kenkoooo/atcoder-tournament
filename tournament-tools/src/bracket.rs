@@ -18,6 +18,7 @@ pub fn write_brackets(season_id: SeasonId, brackets: &BTreeMap<ClassId, Bracket>
 #[derive(Serialize, Deserialize)]
 pub struct Bracket {
     node: BracketNode,
+    #[serde(default)]
     league: Vec<UserLeagueEntry>,
     defending_champion: Option<UserId>,
     drop_rank: Option<usize>,
@@ -73,7 +74,7 @@ impl Bracket {
             top4: None,
         }
     }
-    pub(crate) fn get_user_ranking(&self) -> Vec<User> {
+    pub fn get_user_ranking(&self) -> Vec<User> {
         let mut ranking = vec![];
         let winner = match self.node.user.as_ref() {
             Some(user) => user.clone(),
@@ -126,6 +127,12 @@ impl Bracket {
     #[cfg(feature = "league_matching")]
     pub(crate) fn match_new_league_games(&mut self) {
         self.league.match_new_games();
+    }
+
+    pub fn user_top_k(&self) -> BTreeMap<UserId, Rank> {
+        let mut user_top_k = BTreeMap::new();
+        self.node.traverse(&mut user_top_k, 1);
+        user_top_k
     }
 }
 
@@ -253,6 +260,16 @@ impl BracketNode {
                 .or_insert_with(|| (player.clone(), Vec::new()))
                 .1
                 .push(battle_result);
+        }
+    }
+
+    fn traverse(&self, user_top_k: &mut BTreeMap<UserId, Rank>, top_k: Rank) {
+        if let Some(user) = self.user.as_ref() {
+            let cur = user_top_k.entry(user.user_id.clone()).or_insert(top_k);
+            *cur = (*cur).min(top_k);
+        }
+        for child in self.children.iter() {
+            child.traverse(user_top_k, top_k * 2);
         }
     }
 }

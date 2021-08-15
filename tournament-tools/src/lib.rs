@@ -12,9 +12,9 @@ pub use config::{Match, TournamentConfig};
 pub use construct::construct_tournament;
 pub use rating::{load_rating, load_user_ids};
 pub use standings::{read_standings, read_standings_from_path};
+pub use types::{ClassId, Rank, SeasonId, UserId};
 
 use crate::config::read_config;
-use crate::types::{ClassId, Rank, SeasonId, UserId};
 use anyhow::Result;
 use std::collections::BTreeMap;
 
