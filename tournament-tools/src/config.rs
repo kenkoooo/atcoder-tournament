@@ -1,6 +1,7 @@
 use crate::io::read_json;
 use crate::types::{SeasonId, UserId};
 use anyhow::Result;
+use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize)]
 pub struct TournamentConfig {
@@ -19,6 +20,6 @@ pub fn read_config(season_id: SeasonId) -> Result<TournamentConfig> {
     let path = format!(
         "./data/season-{season_id}/config-{season_id}.json",
         season_id = season_id
-    )?;
+    );
     read_json(path)
 }

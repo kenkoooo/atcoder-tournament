@@ -2,16 +2,16 @@ use crate::io::read_json;
 use crate::types::{Rank, SeasonId, UserId};
 use anyhow::Result;
 use serde::Deserialize;
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 
-pub fn read_standings(season_id: SeasonId, standings_name: &str) -> Result<HashMap<UserId, Rank>> {
+pub fn read_standings(season_id: SeasonId, standings_name: &str) -> Result<BTreeMap<UserId, Rank>> {
     let path = format!(
         "./data/season-{season_id}/{standings_name}.json",
         season_id = season_id,
         standings_name = standings_name
     );
     let standings: Standings = read_json(path)?;
-    let mut map = HashMap::new();
+    let mut map = BTreeMap::new();
     for user in standings
         .standings
         .into_iter()
