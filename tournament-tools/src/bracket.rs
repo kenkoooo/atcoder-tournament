@@ -22,6 +22,7 @@ pub struct Bracket {
     defending_champion: Option<UserId>,
     drop_rank: Option<usize>,
     promotion_rank: Option<usize>,
+    pub(crate) top4: Option<BTreeMap<usize, Vec<User>>>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -53,6 +54,10 @@ impl Ord for User {
 }
 
 impl Bracket {
+    pub fn tournament_finished(&self) -> bool {
+        self.node.user.is_some()
+    }
+
     pub fn create(
         sorted_users: Vec<User>,
         defending_champion: Option<UserId>,
@@ -65,12 +70,13 @@ impl Bracket {
             defending_champion,
             drop_rank,
             promotion_rank,
+            top4: None,
         }
     }
-    pub(crate) fn get_user_ranking(&self) -> Vec<UserId> {
+    pub(crate) fn get_user_ranking(&self) -> Vec<User> {
         let mut ranking = vec![];
         let winner = match self.node.user.as_ref() {
-            Some(user) => user.user_id.clone(),
+            Some(user) => user.clone(),
             None => return vec![],
         };
         let second = self
@@ -78,14 +84,13 @@ impl Bracket {
             .children
             .iter()
             .flat_map(|child| child.user.as_ref())
-            .find(|user| user.user_id != winner)
+            .find(|user| user.user_id != winner.user_id)
             .expect("Second is not filled")
-            .user_id
             .clone();
         ranking.push(winner);
         ranking.push(second);
         for entry in self.league.iter() {
-            ranking.push(entry.user.user_id.clone());
+            ranking.push(entry.user.clone());
         }
         ranking
     }

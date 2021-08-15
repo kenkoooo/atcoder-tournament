@@ -69,12 +69,14 @@ impl LeagueUtil for Vec<UserLeagueEntry> {
             .iter()
             .all(|entry| entry.results.len() == league_length));
         assert!(league_length > 0);
+
+        let mut new_losers = vec![];
         for (user, results) in tournament_battle_result.values() {
             assert!(results.len() <= league_length);
             if results.len() == league_length && !results[results.len() - 1].result.is_win() {
                 let results = results.clone();
                 let user = user.clone();
-                self.push(UserLeagueEntry {
+                new_losers.push(UserLeagueEntry {
                     user,
                     win_count: 0,
                     rank_sum: 0.0,
@@ -82,6 +84,10 @@ impl LeagueUtil for Vec<UserLeagueEntry> {
                     provisional_rank: 0,
                 });
             }
+        }
+
+        if new_losers.len() > 1 {
+            self.extend(new_losers);
         }
     }
 

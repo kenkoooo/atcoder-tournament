@@ -2329,7 +2329,8 @@
     ],
     "defending_champion": "SSRS",
     "drop_rank": 17,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "A2": {
     "node": {
@@ -4662,7 +4663,8 @@
     ],
     "defending_champion": "SSRS",
     "drop_rank": 23,
-    "promotion_rank": 10
+    "promotion_rank": 10,
+    "top4": null
   },
   "A3": {
     "node": {
@@ -8257,7 +8259,8 @@
     ],
     "defending_champion": "SSRS",
     "drop_rank": null,
-    "promotion_rank": 16
+    "promotion_rank": 16,
+    "top4": null
   },
   "B1": {
     "node": {
@@ -10562,7 +10565,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "B2": {
     "node": {
@@ -12858,7 +12862,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "B3": {
     "node": {
@@ -15155,7 +15160,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "C1": {
     "node": {
@@ -17455,7 +17461,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "C2": {
     "node": {
@@ -19755,7 +19762,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "C3": {
     "node": {
@@ -22057,7 +22065,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "D1": {
     "node": {
@@ -24364,7 +24373,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "D2": {
     "node": {
@@ -26677,7 +26687,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "D3": {
     "node": {
@@ -28989,6 +29000,7 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   }
 }

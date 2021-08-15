@@ -25,11 +25,11 @@ pub fn construct_tournament(
         let ranking = bracket.get_user_ranking();
         assert!(!ranking.is_empty());
         if &class == "A1" {
-            defending_champion = Some(ranking[0].clone());
+            defending_champion = Some(ranking[0].user_id.clone());
         }
         let ranking = ranking
             .into_iter()
-            .flat_map(|user_id| registered_users.remove(&user_id))
+            .flat_map(|user| registered_users.remove(&user.user_id))
             .collect::<Vec<_>>();
 
         previous_map.insert(class, ranking);

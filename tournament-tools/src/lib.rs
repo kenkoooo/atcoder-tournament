@@ -30,7 +30,18 @@ pub fn update_tournament(
         let tournament_battle_result = bracket.consolidate_tournament_battle_result();
         bracket.extend_league(&tournament_battle_result);
         bracket.refresh_league_ranking(&tournament_battle_result);
-        bracket.match_new_league_games();
+
+        if bracket.tournament_finished() {
+            let ranking = bracket.get_user_ranking();
+            assert!(!ranking.is_empty());
+            let mut top4 = BTreeMap::new();
+            for (rank, user) in ranking.into_iter().take(4).enumerate() {
+                top4.entry(rank + 1).or_insert_with(Vec::new).push(user);
+            }
+            bracket.top4 = Some(top4);
+        } else {
+            bracket.match_new_league_games();
+        }
     }
 }
 
