@@ -2,7 +2,7 @@ use anyhow::Result;
 use std::collections::BTreeMap;
 use std::fs::{read_to_string, File};
 use std::io::BufReader;
-use tournament_tools::{read_standings_from_path, Bracket};
+use tournament_tools::{read_standings_from_path, update_tournament, Bracket};
 
 #[test]
 fn update_integration_test() -> Result<()> {
@@ -16,15 +16,7 @@ fn update_integration_test() -> Result<()> {
         read_standings_from_path("../data/season-5/abc213.json")?,
         read_standings_from_path("../data/season-5/abc214.json")?,
     ];
-    for bracket in brackets.values_mut() {
-        bracket.update_tournament_result(&standings_list);
-        bracket.update_league_result(&standings_list);
-
-        let tournament_battle_result = bracket.consolidate_tournament_battle_result();
-        bracket.extend_league(&tournament_battle_result);
-        bracket.refresh_league_ranking(&tournament_battle_result);
-        bracket.match_new_league_games();
-    }
+    update_tournament(&mut brackets, &standings_list);
 
     assert_eq!(
         serde_json::to_string_pretty(&brackets)?,

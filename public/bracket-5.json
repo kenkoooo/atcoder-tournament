@@ -599,7 +599,7 @@
           "rating": 2798
         },
         "win_count": 3,
-        "rank_sum": 4.0,
+        "rank_sum": 3.9994892747701742,
         "results": [
           {
             "opponent": {
@@ -1078,7 +1078,7 @@
           "rating": 2278
         },
         "win_count": 2,
-        "rank_sum": 18.813493874398848,
+        "rank_sum": 18.802893726791574,
         "results": [
           {
             "opponent": {
@@ -1137,7 +1137,7 @@
           "rating": 2849
         },
         "win_count": 2,
-        "rank_sum": 37.714285714285715,
+        "rank_sum": 37.668932091904594,
         "results": [
           {
             "opponent": {
@@ -1256,7 +1256,7 @@
           "rating": 2498
         },
         "win_count": 2,
-        "rank_sum": 43.51357733175915,
+        "rank_sum": 43.45321451697821,
         "results": [
           {
             "opponent": {
@@ -1735,7 +1735,7 @@
           "rating": 2539
         },
         "win_count": 1,
-        "rank_sum": 30.094710963633677,
+        "rank_sum": 30.065825051400083,
         "results": [
           {
             "opponent": {
@@ -2154,7 +2154,7 @@
           "rating": 2099
         },
         "win_count": 1,
-        "rank_sum": 322.14192779549023,
+        "rank_sum": 318.90078338811577,
         "results": [
           {
             "opponent": {
@@ -2273,7 +2273,7 @@
           "rating": 2242
         },
         "win_count": 0,
-        "rank_sum": 425.57407265969096,
+        "rank_sum": 419.86964050240675,
         "results": [
           {
             "opponent": {
@@ -2329,7 +2329,8 @@
     ],
     "defending_champion": "SSRS",
     "drop_rank": 17,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "A2": {
     "node": {
@@ -3891,7 +3892,7 @@
           "rating": 2637
         },
         "win_count": 2,
-        "rank_sum": 193.42995169082124,
+        "rank_sum": 191.15542459334276,
         "results": [
           {
             "opponent": {
@@ -4069,7 +4070,7 @@
           "rating": 2820
         },
         "win_count": 1,
-        "rank_sum": 43.86377708978328,
+        "rank_sum": 43.74573889819875,
         "results": [
           {
             "opponent": {
@@ -4127,7 +4128,7 @@
           "rating": 2052
         },
         "win_count": 1,
-        "rank_sum": 93.1411208642809,
+        "rank_sum": 92.8682204935892,
         "results": [
           {
             "opponent": {
@@ -4186,7 +4187,7 @@
           "rating": 2042
         },
         "win_count": 1,
-        "rank_sum": 192.16264987769176,
+        "rank_sum": 191.00465013924784,
         "results": [
           {
             "opponent": {
@@ -4662,7 +4663,8 @@
     ],
     "defending_champion": "SSRS",
     "drop_rank": 23,
-    "promotion_rank": 10
+    "promotion_rank": 10,
+    "top4": null
   },
   "A3": {
     "node": {
@@ -6016,7 +6018,7 @@
           "rating": 2249
         },
         "win_count": 2,
-        "rank_sum": 101.7102711141802,
+        "rank_sum": 101.40122323253419,
         "results": [
           {
             "opponent": {
@@ -6075,7 +6077,7 @@
           "rating": 2126
         },
         "win_count": 2,
-        "rank_sum": 110.24326785481982,
+        "rank_sum": 109.86115488394933,
         "results": [
           {
             "opponent": {
@@ -6134,7 +6136,7 @@
           "rating": 2060
         },
         "win_count": 2,
-        "rank_sum": 121.0497632300407,
+        "rank_sum": 120.58377429733488,
         "results": [
           {
             "opponent": {
@@ -6193,7 +6195,7 @@
           "rating": 2173
         },
         "win_count": 2,
-        "rank_sum": 140.76879804987811,
+        "rank_sum": 140.14637764565603,
         "results": [
           {
             "opponent": {
@@ -6252,7 +6254,7 @@
           "rating": 2107
         },
         "win_count": 2,
-        "rank_sum": 144.12339331619538,
+        "rank_sum": 143.4633109769547,
         "results": [
           {
             "opponent": {
@@ -6851,7 +6853,7 @@
           "rating": 2400
         },
         "win_count": 2,
-        "rank_sum": 300.6963264821665,
+        "rank_sum": 298.01111589245915,
         "results": [
           {
             "opponent": {
@@ -6910,7 +6912,7 @@
           "rating": 2186
         },
         "win_count": 2,
-        "rank_sum": 300.98327420172325,
+        "rank_sum": 298.11873730809936,
         "results": [
           {
             "opponent": {
@@ -6969,7 +6971,7 @@
           "rating": 2003
         },
         "win_count": 2,
-        "rank_sum": 420.7112893353876,
+        "rank_sum": 415.5828023993601,
         "results": [
           {
             "opponent": {
@@ -7028,7 +7030,7 @@
           "rating": 2033
         },
         "win_count": 2,
-        "rank_sum": 574.3888615015655,
+        "rank_sum": 564.0459389906655,
         "results": [
           {
             "opponent": {
@@ -7087,7 +7089,7 @@
           "rating": 2436
         },
         "win_count": 1,
-        "rank_sum": 98.01869158878505,
+        "rank_sum": 97.43121873824195,
         "results": [
           {
             "opponent": {
@@ -7145,7 +7147,7 @@
           "rating": 2289
         },
         "win_count": 1,
-        "rank_sum": 216.67823070251518,
+        "rank_sum": 215.28045448346,
         "results": [
           {
             "opponent": {
@@ -7188,8 +7190,8 @@
           },
           {
             "opponent": {
-              "user_id": "kanra824",
-              "rating": 2038
+              "user_id": "yuji9511",
+              "rating": 2109
             },
             "result": {
               "result": "NotYet"
@@ -7204,7 +7206,7 @@
           "rating": 2076
         },
         "win_count": 1,
-        "rank_sum": 277.4736055877425,
+        "rank_sum": 275.2334897605002,
         "results": [
           {
             "opponent": {
@@ -7307,8 +7309,8 @@
           },
           {
             "opponent": {
-              "user_id": "itohdak",
-              "rating": 2046
+              "user_id": "yatuba",
+              "rating": 2289
             },
             "result": {
               "result": "NotYet"
@@ -7367,8 +7369,8 @@
           },
           {
             "opponent": {
-              "user_id": "centipede_human",
-              "rating": 2019
+              "user_id": "MTGS",
+              "rating": 2102
             },
             "result": {
               "result": "NotYet"
@@ -7383,7 +7385,7 @@
           "rating": 2019
         },
         "win_count": 1,
-        "rank_sum": 397.4193548387097,
+        "rank_sum": 392.49802994483844,
         "results": [
           {
             "opponent": {
@@ -7426,8 +7428,8 @@
           },
           {
             "opponent": {
-              "user_id": "mkawa2",
-              "rating": 2009
+              "user_id": "kenkoooo",
+              "rating": 2091
             },
             "result": {
               "result": "NotYet"
@@ -7442,7 +7444,7 @@
           "rating": 2139
         },
         "win_count": 1,
-        "rank_sum": 432.9976905311778,
+        "rank_sum": 421.7636624602022,
         "results": [
           {
             "opponent": {
@@ -7484,8 +7486,8 @@
           },
           {
             "opponent": {
-              "user_id": "bin101",
-              "rating": 2081
+              "user_id": "itohdak",
+              "rating": 2046
             },
             "result": {
               "result": "NotYet"
@@ -7500,7 +7502,7 @@
           "rating": 2091
         },
         "win_count": 1,
-        "rank_sum": 498.3573825051764,
+        "rank_sum": 491.02471465367944,
         "results": [
           {
             "opponent": {
@@ -7543,8 +7545,8 @@
           },
           {
             "opponent": {
-              "user_id": "auaua",
-              "rating": 2102
+              "user_id": "centipede_human",
+              "rating": 2019
             },
             "result": {
               "result": "NotYet"
@@ -7559,7 +7561,7 @@
           "rating": 2062
         },
         "win_count": 1,
-        "rank_sum": 513.8421542623267,
+        "rank_sum": 506.05029362935335,
         "results": [
           {
             "opponent": {
@@ -7602,8 +7604,8 @@
           },
           {
             "opponent": {
-              "user_id": "vltmtt",
-              "rating": 2152
+              "user_id": "auaua",
+              "rating": 2102
             },
             "result": {
               "result": "NotYet"
@@ -7618,7 +7620,7 @@
           "rating": 2027
         },
         "win_count": 1,
-        "rank_sum": 689.546485260771,
+        "rank_sum": 661.3239652207832,
         "results": [
           {
             "opponent": {
@@ -7660,8 +7662,8 @@
           },
           {
             "opponent": {
-              "user_id": "MTGS",
-              "rating": 2102
+              "user_id": "vltmtt",
+              "rating": 2152
             },
             "result": {
               "result": "NotYet"
@@ -7676,7 +7678,7 @@
           "rating": 2046
         },
         "win_count": 1,
-        "rank_sum": 697.5346683265162,
+        "rank_sum": 683.2534455785659,
         "results": [
           {
             "opponent": {
@@ -7719,8 +7721,8 @@
           },
           {
             "opponent": {
-              "user_id": "yuji9511",
-              "rating": 2109
+              "user_id": "koikotya",
+              "rating": 2139
             },
             "result": {
               "result": "NotYet"
@@ -7779,8 +7781,8 @@
           },
           {
             "opponent": {
-              "user_id": "ningenMe",
-              "rating": 2027
+              "user_id": "mkawa2",
+              "rating": 2009
             },
             "result": {
               "result": "NotYet"
@@ -7795,7 +7797,7 @@
           "rating": 2152
         },
         "win_count": 1,
-        "rank_sum": 868.406104844061,
+        "rank_sum": 824.1138238071017,
         "results": [
           {
             "opponent": {
@@ -7837,8 +7839,8 @@
           },
           {
             "opponent": {
-              "user_id": "freedom_uk5",
-              "rating": 2062
+              "user_id": "ningenMe",
+              "rating": 2027
             },
             "result": {
               "result": "NotYet"
@@ -7849,69 +7851,11 @@
       },
       {
         "user": {
-          "user_id": "bin101",
-          "rating": 2081
-        },
-        "win_count": 1,
-        "rank_sum": 1055.4215962441315,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "satanic0258",
-              "rating": 2516
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 583
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "kaikey",
-              "rating": 2038
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 482
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "vltmtt",
-              "rating": 2152
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "sojisan",
-              "rating": 2000
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "koikotya",
-              "rating": 2139
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 45
-      },
-      {
-        "user": {
           "user_id": "ganmodokix",
           "rating": 2005
         },
         "win_count": 1,
-        "rank_sum": 1976.479445269936,
+        "rank_sum": 1763.0250618192244,
         "results": [
           {
             "opponent": {
@@ -7961,64 +7905,7 @@
             }
           }
         ],
-        "provisional_rank": 46
-      },
-      {
-        "user": {
-          "user_id": "kanra824",
-          "rating": 2038
-        },
-        "win_count": 1,
-        "rank_sum": 2076.0,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "MMNMM",
-              "rating": 2400
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 519
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "tabae326",
-              "rating": 2034
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "ningenMe",
-              "rating": 2027
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "kyon2326",
-              "rating": 2010
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "yatuba",
-              "rating": 2289
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 47
+        "provisional_rank": 45
       },
       {
         "user": {
@@ -8070,15 +7957,15 @@
           },
           {
             "opponent": {
-              "user_id": "kenkoooo",
-              "rating": 2091
+              "user_id": "freedom_uk5",
+              "rating": 2062
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 48
+        "provisional_rank": 46
       },
       {
         "user": {
@@ -8086,7 +7973,7 @@
           "rating": 2010
         },
         "win_count": 0,
-        "rank_sum": 584.0082585924403,
+        "rank_sum": 573.963919943834,
         "results": [
           {
             "opponent": {
@@ -8129,15 +8016,15 @@
           },
           {
             "opponent": {
-              "user_id": "fairy_lettuce",
-              "rating": 2073
+              "user_id": "bin101",
+              "rating": 2081
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 49
+        "provisional_rank": 47
       },
       {
         "user": {
@@ -8145,7 +8032,7 @@
           "rating": 2073
         },
         "win_count": 0,
-        "rank_sum": 1003.4486692015208,
+        "rank_sum": 945.1097764849778,
         "results": [
           {
             "opponent": {
@@ -8187,6 +8074,64 @@
           },
           {
             "opponent": {
+              "user_id": "sojisan",
+              "rating": 2000
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 48
+      },
+      {
+        "user": {
+          "user_id": "bin101",
+          "rating": 2081
+        },
+        "win_count": 0,
+        "rank_sum": 991.0767135492532,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "satanic0258",
+              "rating": 2516
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 583
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "kaikey",
+              "rating": 2038
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 482
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "vltmtt",
+              "rating": 2152
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "sojisan",
+              "rating": 2000
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
               "user_id": "kyon2326",
               "rating": 2010
             },
@@ -8195,7 +8140,7 @@
             }
           }
         ],
-        "provisional_rank": 50
+        "provisional_rank": 49
       },
       {
         "user": {
@@ -8203,7 +8148,7 @@
           "rating": 2000
         },
         "win_count": 0,
-        "rank_sum": 1232.0,
+        "rank_sum": 1104.816508195155,
         "results": [
           {
             "opponent": {
@@ -8252,12 +8197,70 @@
             }
           }
         ],
+        "provisional_rank": 50
+      },
+      {
+        "user": {
+          "user_id": "kanra824",
+          "rating": 2038
+        },
+        "win_count": 0,
+        "rank_sum": 1738.7224122772946,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "MMNMM",
+              "rating": 2400
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 519
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "tabae326",
+              "rating": 2034
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "ningenMe",
+              "rating": 2027
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "kyon2326",
+              "rating": 2010
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "sojisan",
+              "rating": 2000
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
         "provisional_rank": 51
       }
     ],
     "defending_champion": "SSRS",
     "drop_rank": null,
-    "promotion_rank": 16
+    "promotion_rank": 16,
+    "top4": null
   },
   "B1": {
     "node": {
@@ -8979,7 +8982,7 @@
           "rating": 1966
         },
         "win_count": 3,
-        "rank_sum": 302.1977892819173,
+        "rank_sum": 299.54258841325986,
         "results": [
           {
             "opponent": {
@@ -9158,7 +9161,7 @@
           "rating": 1933
         },
         "win_count": 3,
-        "rank_sum": 714.62843933538,
+        "rank_sum": 698.6884996068766,
         "results": [
           {
             "opponent": {
@@ -9277,7 +9280,7 @@
           "rating": 1888
         },
         "win_count": 2,
-        "rank_sum": 236.51211851296233,
+        "rank_sum": 234.84771926772837,
         "results": [
           {
             "opponent": {
@@ -9336,7 +9339,7 @@
           "rating": 1939
         },
         "win_count": 2,
-        "rank_sum": 295.7131053945915,
+        "rank_sum": 292.9797025157264,
         "results": [
           {
             "opponent": {
@@ -9995,7 +9998,7 @@
           "rating": 1869
         },
         "win_count": 1,
-        "rank_sum": 651.8184314679144,
+        "rank_sum": 638.6840907858243,
         "results": [
           {
             "opponent": {
@@ -10054,7 +10057,7 @@
           "rating": 1932
         },
         "win_count": 1,
-        "rank_sum": 932.0,
+        "rank_sum": 857.3382770504629,
         "results": [
           {
             "opponent": {
@@ -10111,7 +10114,7 @@
           "rating": 1898
         },
         "win_count": 1,
-        "rank_sum": 1791.1102284011918,
+        "rank_sum": 1613.3510792559664,
         "results": [
           {
             "opponent": {
@@ -10229,7 +10232,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -10269,7 +10272,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user27",
+              "user_id": "---non-existing-user29",
               "rating": 0
             },
             "result": {
@@ -10285,7 +10288,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -10325,7 +10328,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user29",
+              "user_id": "---non-existing-user30",
               "rating": 0
             },
             "result": {
@@ -10341,7 +10344,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -10381,7 +10384,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user31",
+              "user_id": "---non-existing-user26",
               "rating": 0
             },
             "result": {
@@ -10397,7 +10400,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -10437,7 +10440,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user26",
+              "user_id": "---non-existing-user28",
               "rating": 0
             },
             "result": {
@@ -10453,7 +10456,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -10493,7 +10496,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user28",
+              "user_id": "---non-existing-user31",
               "rating": 0
             },
             "result": {
@@ -10509,7 +10512,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -10549,7 +10552,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user30",
+              "user_id": "---non-existing-user27",
               "rating": 0
             },
             "result": {
@@ -10562,7 +10565,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "B2": {
     "node": {
@@ -11148,8 +11152,8 @@
           },
           {
             "opponent": {
-              "user_id": "st2d",
-              "rating": 1766
+              "user_id": "t98slider",
+              "rating": 1801
             },
             "result": {
               "result": "NotYet"
@@ -11208,8 +11212,8 @@
           },
           {
             "opponent": {
-              "user_id": "yamake",
-              "rating": 1850
+              "user_id": "st2d",
+              "rating": 1766
             },
             "result": {
               "result": "NotYet"
@@ -11268,8 +11272,8 @@
           },
           {
             "opponent": {
-              "user_id": "hasegawa1",
-              "rating": 1768
+              "user_id": "toam",
+              "rating": 1746
             },
             "result": {
               "result": "NotYet"
@@ -11328,7 +11332,7 @@
           },
           {
             "opponent": {
-              "user_id": "so4649",
+              "user_id": "yamake",
               "rating": 1850
             },
             "result": {
@@ -11388,8 +11392,8 @@
           },
           {
             "opponent": {
-              "user_id": "toam",
-              "rating": 1746
+              "user_id": "x0214sh7",
+              "rating": 1858
             },
             "result": {
               "result": "NotYet"
@@ -11448,8 +11452,8 @@
           },
           {
             "opponent": {
-              "user_id": "x0214sh7",
-              "rating": 1858
+              "user_id": "KowerKoint",
+              "rating": 1817
             },
             "result": {
               "result": "NotYet"
@@ -11460,68 +11464,11 @@
       },
       {
         "user": {
-          "user_id": "so4649",
-          "rating": 1850
-        },
-        "win_count": 3,
-        "rank_sum": 2832.0,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "---non-existing-user30",
-              "rating": 0
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "kabipoyo",
-              "rating": 1785
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "scol",
-              "rating": 1835
-            },
-            "result": {
-              "result": "Win",
-              "rank": 708
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Nzt3",
-              "rating": 1790
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "KowerKoint",
-              "rating": 1817
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 9
-      },
-      {
-        "user": {
           "user_id": "hasegawa1",
           "rating": 1768
         },
         "win_count": 2,
-        "rank_sum": 201.00923822504922,
+        "rank_sum": 199.74251401432312,
         "results": [
           {
             "opponent": {
@@ -11564,15 +11511,15 @@
           },
           {
             "opponent": {
-              "user_id": "t98slider",
-              "rating": 1801
+              "user_id": "takytank",
+              "rating": 1813
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 10
+        "provisional_rank": 9
       },
       {
         "user": {
@@ -11624,15 +11571,15 @@
           },
           {
             "opponent": {
-              "user_id": "tishii24",
-              "rating": 1781
+              "user_id": "hasegawa1",
+              "rating": 1768
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 11
+        "provisional_rank": 10
       },
       {
         "user": {
@@ -11684,15 +11631,15 @@
           },
           {
             "opponent": {
-              "user_id": "MZKi",
-              "rating": 1808
+              "user_id": "Flkanjin",
+              "rating": 1752
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 12
+        "provisional_rank": 11
       },
       {
         "user": {
@@ -11752,7 +11699,7 @@
             }
           }
         ],
-        "provisional_rank": 13
+        "provisional_rank": 12
       },
       {
         "user": {
@@ -11804,15 +11751,15 @@
           },
           {
             "opponent": {
-              "user_id": "Flkanjin",
-              "rating": 1752
+              "user_id": "karudano",
+              "rating": 1830
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 14
+        "provisional_rank": 13
       },
       {
         "user": {
@@ -11864,15 +11811,15 @@
           },
           {
             "opponent": {
-              "user_id": "takytank",
-              "rating": 1813
+              "user_id": "MZKi",
+              "rating": 1808
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 15
+        "provisional_rank": 14
       },
       {
         "user": {
@@ -11924,15 +11871,15 @@
           },
           {
             "opponent": {
-              "user_id": "masutech16",
-              "rating": 1780
+              "user_id": "katand",
+              "rating": 1817
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 16
+        "provisional_rank": 15
       },
       {
         "user": {
@@ -11940,7 +11887,7 @@
           "rating": 1833
         },
         "win_count": 2,
-        "rank_sum": 734.9668085742958,
+        "rank_sum": 719.1290997349953,
         "results": [
           {
             "opponent": {
@@ -11983,15 +11930,15 @@
           },
           {
             "opponent": {
-              "user_id": "karudano",
-              "rating": 1830
+              "user_id": "so4649",
+              "rating": 1850
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 17
+        "provisional_rank": 16
       },
       {
         "user": {
@@ -11999,7 +11946,7 @@
           "rating": 1790
         },
         "win_count": 2,
-        "rank_sum": 777.624060150376,
+        "rank_sum": 743.3473705527578,
         "results": [
           {
             "opponent": {
@@ -12049,7 +11996,7 @@
             }
           }
         ],
-        "provisional_rank": 18
+        "provisional_rank": 17
       },
       {
         "user": {
@@ -12057,7 +12004,7 @@
           "rating": 1830
         },
         "win_count": 2,
-        "rank_sum": 782.4187256176853,
+        "rank_sum": 746.2810964732473,
         "results": [
           {
             "opponent": {
@@ -12092,6 +12039,63 @@
             "opponent": {
               "user_id": "KowerKoint",
               "rating": 1817
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "masutech16",
+              "rating": 1780
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 18
+      },
+      {
+        "user": {
+          "user_id": "so4649",
+          "rating": 1850
+        },
+        "win_count": 2,
+        "rank_sum": 2250.5826511036294,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "---non-existing-user30",
+              "rating": 0
+            },
+            "result": {
+              "result": "SkipWin"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "kabipoyo",
+              "rating": 1785
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "scol",
+              "rating": 1835
+            },
+            "result": {
+              "result": "Win",
+              "rank": 708
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Nzt3",
+              "rating": 1790
             },
             "result": {
               "result": "SkipLose"
@@ -12159,8 +12163,8 @@
           },
           {
             "opponent": {
-              "user_id": "katand",
-              "rating": 1817
+              "user_id": "tishii24",
+              "rating": 1781
             },
             "result": {
               "result": "NotYet"
@@ -12175,7 +12179,7 @@
           "rating": 1743
         },
         "win_count": 1,
-        "rank_sum": 566.581656022214,
+        "rank_sum": 556.515525012018,
         "results": [
           {
             "opponent": {
@@ -12234,7 +12238,7 @@
           "rating": 1819
         },
         "win_count": 1,
-        "rank_sum": 793.1956568022142,
+        "rank_sum": 773.6061709488114,
         "results": [
           {
             "opponent": {
@@ -12277,8 +12281,8 @@
           },
           {
             "opponent": {
-              "user_id": "As_sqr",
-              "rating": 1749
+              "user_id": "qLethon",
+              "rating": 1759
             },
             "result": {
               "result": "NotYet"
@@ -12289,69 +12293,11 @@
       },
       {
         "user": {
-          "user_id": "Yoika",
-          "rating": 1772
-        },
-        "win_count": 1,
-        "rank_sum": 1323.646715328467,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "kabipoyo",
-              "rating": 1785
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Nzt3",
-              "rating": 1790
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 811
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "lynmisakura",
-              "rating": 1819
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 559
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "---non-existing-user26",
-              "rating": 0
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "qLethon",
-              "rating": 1759
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 23
-      },
-      {
-        "user": {
           "user_id": "z____z",
           "rating": 1838
         },
         "win_count": 1,
-        "rank_sum": 1616.6169142004762,
+        "rank_sum": 1541.9226142317805,
         "results": [
           {
             "opponent": {
@@ -12402,7 +12348,7 @@
             }
           }
         ],
-        "provisional_rank": 24
+        "provisional_rank": 23
       },
       {
         "user": {
@@ -12410,7 +12356,7 @@
           "rating": 1759
         },
         "win_count": 1,
-        "rank_sum": 2232.4200700116685,
+        "rank_sum": 1965.3064984817186,
         "results": [
           {
             "opponent": {
@@ -12452,8 +12398,66 @@
           },
           {
             "opponent": {
-              "user_id": "Yoika",
-              "rating": 1772
+              "user_id": "lynmisakura",
+              "rating": 1819
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 24
+      },
+      {
+        "user": {
+          "user_id": "Yoika",
+          "rating": 1772
+        },
+        "win_count": 0,
+        "rank_sum": 1227.315780015988,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "kabipoyo",
+              "rating": 1785
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Nzt3",
+              "rating": 1790
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 811
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "lynmisakura",
+              "rating": 1819
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 559
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "---non-existing-user26",
+              "rating": 0
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "---non-existing-user27",
+              "rating": 0
             },
             "result": {
               "result": "NotYet"
@@ -12467,8 +12471,8 @@
           "user_id": "As_sqr",
           "rating": 1749
         },
-        "win_count": 1,
-        "rank_sum": 4168.0,
+        "win_count": 0,
+        "rank_sum": 3023.2434641230016,
         "results": [
           {
             "opponent": {
@@ -12504,13 +12508,13 @@
               "rating": 0
             },
             "result": {
-              "result": "SkipWin"
+              "result": "SkipLose"
             }
           },
           {
             "opponent": {
-              "user_id": "lynmisakura",
-              "rating": 1819
+              "user_id": "---non-existing-user26",
+              "rating": 0
             },
             "result": {
               "result": "NotYet"
@@ -12525,7 +12529,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -12565,7 +12569,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user27",
+              "user_id": "---non-existing-user30",
               "rating": 0
             },
             "result": {
@@ -12581,7 +12585,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -12637,7 +12641,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -12677,8 +12681,8 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user31",
-              "rating": 0
+              "user_id": "Yoika",
+              "rating": 1772
             },
             "result": {
               "result": "NotYet"
@@ -12693,7 +12697,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -12733,7 +12737,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user26",
+              "user_id": "---non-existing-user31",
               "rating": 0
             },
             "result": {
@@ -12749,7 +12753,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -12805,7 +12809,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -12845,8 +12849,8 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user30",
-              "rating": 0
+              "user_id": "As_sqr",
+              "rating": 1749
             },
             "result": {
               "result": "NotYet"
@@ -12858,7 +12862,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "B3": {
     "node": {
@@ -13444,8 +13449,8 @@
           },
           {
             "opponent": {
-              "user_id": "milkcoffee",
-              "rating": 1732
+              "user_id": "Shiro_S",
+              "rating": 1614
             },
             "result": {
               "result": "NotYet"
@@ -13504,8 +13509,8 @@
           },
           {
             "opponent": {
-              "user_id": "masa_aa",
-              "rating": 1687
+              "user_id": "flour814",
+              "rating": 1620
             },
             "result": {
               "result": "NotYet"
@@ -13564,8 +13569,8 @@
           },
           {
             "opponent": {
-              "user_id": "MoSooN",
-              "rating": 1629
+              "user_id": "milkcoffee",
+              "rating": 1732
             },
             "result": {
               "result": "NotYet"
@@ -13624,8 +13629,8 @@
           },
           {
             "opponent": {
-              "user_id": "miscalculation53",
-              "rating": 1715
+              "user_id": "sounansya",
+              "rating": 1702
             },
             "result": {
               "result": "NotYet"
@@ -13684,8 +13689,8 @@
           },
           {
             "opponent": {
-              "user_id": "sounansya",
-              "rating": 1702
+              "user_id": "ccppjsrb",
+              "rating": 1700
             },
             "result": {
               "result": "NotYet"
@@ -13744,8 +13749,8 @@
           },
           {
             "opponent": {
-              "user_id": "prd_xxx",
-              "rating": 1734
+              "user_id": "MoSooN",
+              "rating": 1629
             },
             "result": {
               "result": "NotYet"
@@ -13756,70 +13761,11 @@
       },
       {
         "user": {
-          "user_id": "miscalculation53",
-          "rating": 1715
-        },
-        "win_count": 3,
-        "rank_sum": 882.5560480429529,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "CleyL",
-              "rating": 1618
-            },
-            "result": {
-              "result": "Win",
-              "rank": 533
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "shacklebolt",
-              "rating": 1643
-            },
-            "result": {
-              "result": "Win",
-              "rank": 749
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "milkcoffee",
-              "rating": 1732
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 757
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Tatsuyaaaa",
-              "rating": 1675
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Shiro_S",
-              "rating": 1614
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 9
-      },
-      {
-        "user": {
           "user_id": "MoSooN",
           "rating": 1629
         },
         "win_count": 3,
-        "rank_sum": 1030.9878648633544,
+        "rank_sum": 998.5089828506077,
         "results": [
           {
             "opponent": {
@@ -13862,15 +13808,15 @@
           },
           {
             "opponent": {
-              "user_id": "ccppjsrb",
-              "rating": 1700
+              "user_id": "masa_aa",
+              "rating": 1687
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 10
+        "provisional_rank": 9
       },
       {
         "user": {
@@ -13878,7 +13824,7 @@
           "rating": 1620
         },
         "win_count": 2,
-        "rank_sum": 501.81916553198016,
+        "rank_sum": 494.38503259100224,
         "results": [
           {
             "opponent": {
@@ -13921,15 +13867,15 @@
           },
           {
             "opponent": {
-              "user_id": "lemondo",
-              "rating": 1652
+              "user_id": "prd_xxx",
+              "rating": 1734
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 11
+        "provisional_rank": 10
       },
       {
         "user": {
@@ -13981,73 +13927,15 @@
           },
           {
             "opponent": {
-              "user_id": "jjjjjjjtgpptmjj",
-              "rating": 1694
+              "user_id": "Ysdr",
+              "rating": 1649
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 12
-      },
-      {
-        "user": {
-          "user_id": "netyo715",
-          "rating": 1720
-        },
-        "win_count": 2,
-        "rank_sum": 616.9934640522875,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "Shiro_S",
-              "rating": 1614
-            },
-            "result": {
-              "result": "Win",
-              "rank": 177
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "saky0080",
-              "rating": 1644
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 1200
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "masa_aa",
-              "rating": 1687
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "wkb89_",
-              "rating": 1661
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "gmmtea",
-              "rating": 1655
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 13
+        "provisional_rank": 11
       },
       {
         "user": {
@@ -14099,8 +13987,125 @@
           },
           {
             "opponent": {
-              "user_id": "saky0080",
-              "rating": 1644
+              "user_id": "unidayo",
+              "rating": 1723
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 12
+      },
+      {
+        "user": {
+          "user_id": "miscalculation53",
+          "rating": 1715
+        },
+        "win_count": 2,
+        "rank_sum": 859.8173158041009,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "CleyL",
+              "rating": 1618
+            },
+            "result": {
+              "result": "Win",
+              "rank": 533
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "shacklebolt",
+              "rating": 1643
+            },
+            "result": {
+              "result": "Win",
+              "rank": 749
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "milkcoffee",
+              "rating": 1732
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 757
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Tatsuyaaaa",
+              "rating": 1675
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "netyo715",
+              "rating": 1720
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 13
+      },
+      {
+        "user": {
+          "user_id": "saky0080",
+          "rating": 1644
+        },
+        "win_count": 2,
+        "rank_sum": 925.49879655543,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "masa_aa",
+              "rating": 1687
+            },
+            "result": {
+              "result": "Win",
+              "rank": 417
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "netyo715",
+              "rating": 1720
+            },
+            "result": {
+              "result": "Win",
+              "rank": 596
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Jupytor",
+              "rating": 1677
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "MoSooN",
+              "rating": 1629
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "jjjjjjjtgpptmjj",
+              "rating": 1694
             },
             "result": {
               "result": "NotYet"
@@ -14115,7 +14120,7 @@
           "rating": 1694
         },
         "win_count": 2,
-        "rank_sum": 967.9108213749798,
+        "rank_sum": 941.1893798143349,
         "results": [
           {
             "opponent": {
@@ -14158,8 +14163,8 @@
           },
           {
             "opponent": {
-              "user_id": "unidayo",
-              "rating": 1723
+              "user_id": "saky0080",
+              "rating": 1644
             },
             "result": {
               "result": "NotYet"
@@ -14230,122 +14235,6 @@
       },
       {
         "user": {
-          "user_id": "saky0080",
-          "rating": 1644
-        },
-        "win_count": 2,
-        "rank_sum": 981.3701875616979,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "masa_aa",
-              "rating": 1687
-            },
-            "result": {
-              "result": "Win",
-              "rank": 417
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "netyo715",
-              "rating": 1720
-            },
-            "result": {
-              "result": "Win",
-              "rank": 596
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Jupytor",
-              "rating": 1677
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "MoSooN",
-              "rating": 1629
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Ysdr",
-              "rating": 1649
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 17
-      },
-      {
-        "user": {
-          "user_id": "lemondo",
-          "rating": 1652
-        },
-        "win_count": 2,
-        "rank_sum": 1280.6541786743517,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "wkb89_",
-              "rating": 1661
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 887
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "jjjjjjjtgpptmjj",
-              "rating": 1694
-            },
-            "result": {
-              "result": "Win",
-              "rank": 501
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Tatsuyaaaa",
-              "rating": 1675
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "y61mpnl",
-              "rating": 1640
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "flour814",
-              "rating": 1620
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 18
-      },
-      {
-        "user": {
           "user_id": "kuruton456",
           "rating": 1649
         },
@@ -14402,7 +14291,7 @@
             }
           }
         ],
-        "provisional_rank": 19
+        "provisional_rank": 17
       },
       {
         "user": {
@@ -14410,7 +14299,7 @@
           "rating": 1655
         },
         "win_count": 2,
-        "rank_sum": 1726.3185437997722,
+        "rank_sum": 1562.135130328991,
         "results": [
           {
             "opponent": {
@@ -14452,15 +14341,15 @@
           },
           {
             "opponent": {
-              "user_id": "netyo715",
-              "rating": 1720
+              "user_id": "Tatsuyaaaa",
+              "rating": 1675
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 20
+        "provisional_rank": 18
       },
       {
         "user": {
@@ -14468,7 +14357,7 @@
           "rating": 1675
         },
         "win_count": 2,
-        "rank_sum": 2289.150587889356,
+        "rank_sum": 2142.206074668468,
         "results": [
           {
             "opponent": {
@@ -14511,15 +14400,73 @@
           },
           {
             "opponent": {
-              "user_id": "oliverx3",
-              "rating": 1626
+              "user_id": "gmmtea",
+              "rating": 1655
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 21
+        "provisional_rank": 19
+      },
+      {
+        "user": {
+          "user_id": "netyo715",
+          "rating": 1720
+        },
+        "win_count": 1,
+        "rank_sum": 594.4321886508048,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "Shiro_S",
+              "rating": 1614
+            },
+            "result": {
+              "result": "Win",
+              "rank": 177
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "saky0080",
+              "rating": 1644
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 1200
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "masa_aa",
+              "rating": 1687
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "wkb89_",
+              "rating": 1661
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "miscalculation53",
+              "rating": 1715
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 20
       },
       {
         "user": {
@@ -14571,15 +14518,15 @@
           },
           {
             "opponent": {
-              "user_id": "Tatsuyaaaa",
-              "rating": 1675
+              "user_id": "wkb89_",
+              "rating": 1661
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 22
+        "provisional_rank": 21
       },
       {
         "user": {
@@ -14587,7 +14534,7 @@
           "rating": 1703
         },
         "win_count": 1,
-        "rank_sum": 1178.2254196642684,
+        "rank_sum": 1098.6005105539418,
         "results": [
           {
             "opponent": {
@@ -14629,8 +14576,66 @@
           },
           {
             "opponent": {
+              "user_id": "CleyL",
+              "rating": 1618
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 22
+      },
+      {
+        "user": {
+          "user_id": "lemondo",
+          "rating": 1652
+        },
+        "win_count": 1,
+        "rank_sum": 1187.1325924309383,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "wkb89_",
+              "rating": 1661
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 887
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "jjjjjjjtgpptmjj",
+              "rating": 1694
+            },
+            "result": {
+              "result": "Win",
+              "rank": 501
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Tatsuyaaaa",
+              "rating": 1675
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
               "user_id": "y61mpnl",
               "rating": 1640
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "shacklebolt",
+              "rating": 1643
             },
             "result": {
               "result": "NotYet"
@@ -14645,7 +14650,7 @@
           "rating": 1661
         },
         "win_count": 1,
-        "rank_sum": 1348.0,
+        "rank_sum": 1197.2045824070087,
         "results": [
           {
             "opponent": {
@@ -14686,8 +14691,8 @@
           },
           {
             "opponent": {
-              "user_id": "CleyL",
-              "rating": 1618
+              "user_id": "oliverx3",
+              "rating": 1626
             },
             "result": {
               "result": "NotYet"
@@ -14702,7 +14707,7 @@
           "rating": 1643
         },
         "win_count": 1,
-        "rank_sum": 1358.6755509994873,
+        "rank_sum": 1250.805183536634,
         "results": [
           {
             "opponent": {
@@ -14744,8 +14749,8 @@
           },
           {
             "opponent": {
-              "user_id": "komite",
-              "rating": 1711
+              "user_id": "lemondo",
+              "rating": 1652
             },
             "result": {
               "result": "NotYet"
@@ -14760,7 +14765,7 @@
           "rating": 1640
         },
         "win_count": 1,
-        "rank_sum": 1456.2839590443687,
+        "rank_sum": 1340.52408152707,
         "results": [
           {
             "opponent": {
@@ -14802,8 +14807,8 @@
           },
           {
             "opponent": {
-              "user_id": "Eldora",
-              "rating": 1703
+              "user_id": "komite",
+              "rating": 1711
             },
             "result": {
               "result": "NotYet"
@@ -14818,7 +14823,7 @@
           "rating": 1711
         },
         "win_count": 1,
-        "rank_sum": 1937.5252525252524,
+        "rank_sum": 1731.964310287586,
         "results": [
           {
             "opponent": {
@@ -14860,8 +14865,8 @@
           },
           {
             "opponent": {
-              "user_id": "shacklebolt",
-              "rating": 1643
+              "user_id": "y61mpnl",
+              "rating": 1640
             },
             "result": {
               "result": "NotYet"
@@ -14876,7 +14881,7 @@
           "rating": 1618
         },
         "win_count": 1,
-        "rank_sum": 3081.9603534750418,
+        "rank_sum": 2577.698717524069,
         "results": [
           {
             "opponent": {
@@ -14918,8 +14923,8 @@
           },
           {
             "opponent": {
-              "user_id": "wkb89_",
-              "rating": 1661
+              "user_id": "Eldora",
+              "rating": 1703
             },
             "result": {
               "result": "NotYet"
@@ -14934,7 +14939,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -14990,7 +14995,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -15046,7 +15051,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -15102,7 +15107,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -15155,7 +15160,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "C1": {
     "node": {
@@ -16057,7 +16063,7 @@
           "rating": 1593
         },
         "win_count": 3,
-        "rank_sum": 1020.7441649327543,
+        "rank_sum": 988.5312451170556,
         "results": [
           {
             "opponent": {
@@ -16356,7 +16362,7 @@
           "rating": 1564
         },
         "win_count": 2,
-        "rank_sum": 800.601736913087,
+        "rank_sum": 780.8777317282564,
         "results": [
           {
             "opponent": {
@@ -16471,6 +16477,65 @@
       },
       {
         "user": {
+          "user_id": "krps",
+          "rating": 1491
+        },
+        "win_count": 2,
+        "rank_sum": 969.5202963498162,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "Powerword",
+              "rating": 1564
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 876
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "maxwatt",
+              "rating": 1508
+            },
+            "result": {
+              "result": "Win",
+              "rank": 563
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "MtSaka",
+              "rating": 1513
+            },
+            "result": {
+              "result": "Win",
+              "rank": 919
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "jbyxm",
+              "rating": 1541
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Manuel1024",
+              "rating": 1559
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 16
+      },
+      {
+        "user": {
           "user_id": "Manuel1024",
           "rating": 1559
         },
@@ -16527,65 +16592,6 @@
             }
           }
         ],
-        "provisional_rank": 16
-      },
-      {
-        "user": {
-          "user_id": "krps",
-          "rating": 1491
-        },
-        "win_count": 2,
-        "rank_sum": 998.5294837216194,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "Powerword",
-              "rating": 1564
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 876
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "maxwatt",
-              "rating": 1508
-            },
-            "result": {
-              "result": "Win",
-              "rank": 563
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "MtSaka",
-              "rating": 1513
-            },
-            "result": {
-              "result": "Win",
-              "rank": 919
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "jbyxm",
-              "rating": 1541
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Manuel1024",
-              "rating": 1559
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
         "provisional_rank": 17
       },
       {
@@ -16594,7 +16600,7 @@
           "rating": 1539
         },
         "win_count": 2,
-        "rank_sum": 1080.99752734461,
+        "rank_sum": 1047.0801402377929,
         "results": [
           {
             "opponent": {
@@ -16653,7 +16659,7 @@
           "rating": 1528
         },
         "win_count": 2,
-        "rank_sum": 1215.3996314883439,
+        "rank_sum": 1173.5614819888099,
         "results": [
           {
             "opponent": {
@@ -16712,7 +16718,7 @@
           "rating": 1544
         },
         "win_count": 1,
-        "rank_sum": 460.0,
+        "rank_sum": 441.04304031131977,
         "results": [
           {
             "opponent": {
@@ -16829,7 +16835,7 @@
           "rating": 1552
         },
         "win_count": 1,
-        "rank_sum": 1106.7974370148002,
+        "rank_sum": 1069.4530437832573,
         "results": [
           {
             "opponent": {
@@ -16948,7 +16954,7 @@
           "rating": 1513
         },
         "win_count": 1,
-        "rank_sum": 1839.9710930442636,
+        "rank_sum": 1647.5525186068917,
         "results": [
           {
             "opponent": {
@@ -17006,7 +17012,7 @@
           "rating": 1508
         },
         "win_count": 1,
-        "rank_sum": 2665.6201508046634,
+        "rank_sum": 2472.312456802055,
         "results": [
           {
             "opponent": {
@@ -17065,7 +17071,7 @@
           "rating": 1572
         },
         "win_count": 1,
-        "rank_sum": 6316.0,
+        "rank_sum": 4013.2370506038746,
         "results": [
           {
             "opponent": {
@@ -17122,7 +17128,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -17162,7 +17168,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user27",
+              "user_id": "---non-existing-user29",
               "rating": 0
             },
             "result": {
@@ -17178,7 +17184,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -17218,7 +17224,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user29",
+              "user_id": "---non-existing-user30",
               "rating": 0
             },
             "result": {
@@ -17234,7 +17240,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -17274,7 +17280,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user31",
+              "user_id": "---non-existing-user26",
               "rating": 0
             },
             "result": {
@@ -17290,7 +17296,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -17330,7 +17336,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user26",
+              "user_id": "---non-existing-user28",
               "rating": 0
             },
             "result": {
@@ -17346,7 +17352,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -17386,7 +17392,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user28",
+              "user_id": "---non-existing-user31",
               "rating": 0
             },
             "result": {
@@ -17402,7 +17408,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -17442,7 +17448,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user30",
+              "user_id": "---non-existing-user27",
               "rating": 0
             },
             "result": {
@@ -17455,7 +17461,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "C2": {
     "node": {
@@ -18041,8 +18048,8 @@
           },
           {
             "opponent": {
-              "user_id": "haruki4936",
-              "rating": 1450
+              "user_id": "ryuusagi",
+              "rating": 1412
             },
             "result": {
               "result": "NotYet"
@@ -18057,7 +18064,7 @@
           "rating": 1443
         },
         "win_count": 3,
-        "rank_sum": 772.0013609552126,
+        "rank_sum": 753.4325026537009,
         "results": [
           {
             "opponent": {
@@ -18100,8 +18107,8 @@
           },
           {
             "opponent": {
-              "user_id": "shama",
-              "rating": 1471
+              "user_id": "haruki4936",
+              "rating": 1450
             },
             "result": {
               "result": "NotYet"
@@ -18220,8 +18227,8 @@
           },
           {
             "opponent": {
-              "user_id": "Tsukumowan",
-              "rating": 1411
+              "user_id": "i8fbnkyw",
+              "rating": 1443
             },
             "result": {
               "result": "NotYet"
@@ -18292,6 +18299,65 @@
       },
       {
         "user": {
+          "user_id": "wolley",
+          "rating": 1438
+        },
+        "win_count": 3,
+        "rank_sum": 969.8111567166358,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "mdstoy",
+              "rating": 1353
+            },
+            "result": {
+              "result": "Win",
+              "rank": 877
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "recta",
+              "rating": 1457
+            },
+            "result": {
+              "result": "Win",
+              "rank": 584
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Deji",
+              "rating": 1416
+            },
+            "result": {
+              "result": "Win",
+              "rank": 868
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "turtle0123__",
+              "rating": 1438
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "jutama",
+              "rating": 1442
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 8
+      },
+      {
+        "user": {
           "user_id": "ryuusagi",
           "rating": 1412
         },
@@ -18340,67 +18406,8 @@
           },
           {
             "opponent": {
-              "user_id": "wolley",
-              "rating": 1438
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 8
-      },
-      {
-        "user": {
-          "user_id": "wolley",
-          "rating": 1438
-        },
-        "win_count": 3,
-        "rank_sum": 998.8380130269009,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "mdstoy",
-              "rating": 1353
-            },
-            "result": {
-              "result": "Win",
-              "rank": 877
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "recta",
-              "rating": 1457
-            },
-            "result": {
-              "result": "Win",
-              "rank": 584
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Deji",
-              "rating": 1416
-            },
-            "result": {
-              "result": "Win",
-              "rank": 868
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "turtle0123__",
-              "rating": 1438
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "ryuusagi",
-              "rating": 1412
+              "user_id": "Tsukumowan",
+              "rating": 1411
             },
             "result": {
               "result": "NotYet"
@@ -18408,64 +18415,6 @@
           }
         ],
         "provisional_rank": 9
-      },
-      {
-        "user": {
-          "user_id": "shama",
-          "rating": 1471
-        },
-        "win_count": 3,
-        "rank_sum": 1936.6679672259072,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "---non-existing-user29",
-              "rating": 0
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Deji",
-              "rating": 1416
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 648
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "tdk",
-              "rating": 1478
-            },
-            "result": {
-              "result": "Win",
-              "rank": 1915
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Sugsugar",
-              "rating": 1469
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "i8fbnkyw",
-              "rating": 1443
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 10
       },
       {
         "user": {
@@ -18517,15 +18466,15 @@
           },
           {
             "opponent": {
-              "user_id": "Deji",
-              "rating": 1416
+              "user_id": "wolley",
+              "rating": 1438
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 11
+        "provisional_rank": 10
       },
       {
         "user": {
@@ -18577,15 +18526,15 @@
           },
           {
             "opponent": {
-              "user_id": "oginoshikibu",
-              "rating": 1458
+              "user_id": "yaumu3",
+              "rating": 1392
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 12
+        "provisional_rank": 11
       },
       {
         "user": {
@@ -18637,15 +18586,15 @@
           },
           {
             "opponent": {
-              "user_id": "wasd314",
-              "rating": 1419
+              "user_id": "mark_0802",
+              "rating": 1359
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 13
+        "provisional_rank": 12
       },
       {
         "user": {
@@ -18653,7 +18602,7 @@
           "rating": 1416
         },
         "win_count": 2,
-        "rank_sum": 1123.2891771253335,
+        "rank_sum": 1086.710890479642,
         "results": [
           {
             "opponent": {
@@ -18696,15 +18645,15 @@
           },
           {
             "opponent": {
-              "user_id": "jutama",
-              "rating": 1442
+              "user_id": "magurofly",
+              "rating": 1344
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 14
+        "provisional_rank": 13
       },
       {
         "user": {
@@ -18712,7 +18661,7 @@
           "rating": 1458
         },
         "win_count": 2,
-        "rank_sum": 1192.9474994321083,
+        "rank_sum": 1149.1818988502528,
         "results": [
           {
             "opponent": {
@@ -18755,15 +18704,15 @@
           },
           {
             "opponent": {
-              "user_id": "mark_0802",
-              "rating": 1359
+              "user_id": "wasd314",
+              "rating": 1419
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 15
+        "provisional_rank": 14
       },
       {
         "user": {
@@ -18815,15 +18764,15 @@
           },
           {
             "opponent": {
-              "user_id": "yaumu3",
-              "rating": 1392
+              "user_id": "oginoshikibu",
+              "rating": 1458
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 16
+        "provisional_rank": 15
       },
       {
         "user": {
@@ -18883,6 +18832,65 @@
             }
           }
         ],
+        "provisional_rank": 16
+      },
+      {
+        "user": {
+          "user_id": "Sugsugar",
+          "rating": 1469
+        },
+        "win_count": 2,
+        "rank_sum": 1332.6223549104207,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "---non-existing-user28",
+              "rating": 0
+            },
+            "result": {
+              "result": "Win",
+              "rank": 964
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "mark_0802",
+              "rating": 1359
+            },
+            "result": {
+              "result": "Win",
+              "rank": 833
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "yururi",
+              "rating": 1426
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 1553
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "shama",
+              "rating": 1471
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "YawpointQ",
+              "rating": 1338
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
         "provisional_rank": 17
       },
       {
@@ -18935,8 +18943,8 @@
           },
           {
             "opponent": {
-              "user_id": "tdk",
-              "rating": 1478
+              "user_id": "shama",
+              "rating": 1471
             },
             "result": {
               "result": "NotYet"
@@ -18947,105 +18955,48 @@
       },
       {
         "user": {
-          "user_id": "Sugsugar",
-          "rating": 1469
+          "user_id": "shama",
+          "rating": 1471
         },
         "win_count": 2,
-        "rank_sum": 1388.0504709143895,
+        "rank_sum": 1737.1714883512025,
         "results": [
           {
             "opponent": {
-              "user_id": "---non-existing-user28",
+              "user_id": "---non-existing-user29",
               "rating": 0
             },
             "result": {
-              "result": "Win",
-              "rank": 964
+              "result": "SkipWin"
             }
           },
           {
             "opponent": {
-              "user_id": "mark_0802",
-              "rating": 1359
-            },
-            "result": {
-              "result": "Win",
-              "rank": 833
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "yururi",
-              "rating": 1426
+              "user_id": "Deji",
+              "rating": 1416
             },
             "result": {
               "result": "Lose",
-              "rank": 1553
+              "rank": 648
             }
           },
           {
             "opponent": {
-              "user_id": "shama",
-              "rating": 1471
+              "user_id": "tdk",
+              "rating": 1478
+            },
+            "result": {
+              "result": "Win",
+              "rank": 1915
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Sugsugar",
+              "rating": 1469
             },
             "result": {
               "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "YawpointQ",
-              "rating": 1338
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 19
-      },
-      {
-        "user": {
-          "user_id": "tdk",
-          "rating": 1478
-        },
-        "win_count": 2,
-        "rank_sum": 1000000.0,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "---non-existing-user31",
-              "rating": 0
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Tsukumowan",
-              "rating": 1411
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "shama",
-              "rating": 1471
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "recta",
-              "rating": 1457
-            },
-            "result": {
-              "result": "SkipWin"
             }
           },
           {
@@ -19058,7 +19009,7 @@
             }
           }
         ],
-        "provisional_rank": 20
+        "provisional_rank": 19
       },
       {
         "user": {
@@ -19066,7 +19017,7 @@
           "rating": 1344
         },
         "win_count": 1,
-        "rank_sum": 739.4099755233149,
+        "rank_sum": 723.3822853077625,
         "results": [
           {
             "opponent": {
@@ -19109,15 +19060,15 @@
           },
           {
             "opponent": {
-              "user_id": "zssa",
-              "rating": 1343
+              "user_id": "Deji",
+              "rating": 1416
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 21
+        "provisional_rank": 20
       },
       {
         "user": {
@@ -19169,15 +19120,15 @@
           },
           {
             "opponent": {
-              "user_id": "magurofly",
-              "rating": 1344
+              "user_id": "recta",
+              "rating": 1457
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 22
+        "provisional_rank": 21
       },
       {
         "user": {
@@ -19229,15 +19180,15 @@
           },
           {
             "opponent": {
-              "user_id": "recta",
-              "rating": 1457
+              "user_id": "mdstoy",
+              "rating": 1353
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 23
+        "provisional_rank": 22
       },
       {
         "user": {
@@ -19289,15 +19240,15 @@
           },
           {
             "opponent": {
-              "user_id": "mdstoy",
-              "rating": 1353
+              "user_id": "tdk",
+              "rating": 1478
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 24
+        "provisional_rank": 23
       },
       {
         "user": {
@@ -19305,7 +19256,7 @@
           "rating": 1457
         },
         "win_count": 1,
-        "rank_sum": 4832.0,
+        "rank_sum": 3357.9470881255097,
         "results": [
           {
             "opponent": {
@@ -19346,8 +19297,64 @@
           },
           {
             "opponent": {
-              "user_id": "goudezhao",
-              "rating": 1357
+              "user_id": "zssa",
+              "rating": 1343
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 24
+      },
+      {
+        "user": {
+          "user_id": "tdk",
+          "rating": 1478
+        },
+        "win_count": 1,
+        "rank_sum": 8145.195579101329,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "---non-existing-user31",
+              "rating": 0
+            },
+            "result": {
+              "result": "SkipWin"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Tsukumowan",
+              "rating": 1411
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "shama",
+              "rating": 1471
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "recta",
+              "rating": 1457
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "useless",
+              "rating": 1348
             },
             "result": {
               "result": "NotYet"
@@ -19406,8 +19413,8 @@
           },
           {
             "opponent": {
-              "user_id": "useless",
-              "rating": 1348
+              "user_id": "goudezhao",
+              "rating": 1357
             },
             "result": {
               "result": "NotYet"
@@ -19422,7 +19429,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -19462,7 +19469,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user27",
+              "user_id": "---non-existing-user29",
               "rating": 0
             },
             "result": {
@@ -19478,7 +19485,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -19518,7 +19525,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user29",
+              "user_id": "---non-existing-user30",
               "rating": 0
             },
             "result": {
@@ -19534,7 +19541,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -19574,7 +19581,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user31",
+              "user_id": "---non-existing-user26",
               "rating": 0
             },
             "result": {
@@ -19590,7 +19597,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -19630,7 +19637,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user26",
+              "user_id": "---non-existing-user28",
               "rating": 0
             },
             "result": {
@@ -19646,7 +19653,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -19686,7 +19693,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user28",
+              "user_id": "---non-existing-user31",
               "rating": 0
             },
             "result": {
@@ -19702,7 +19709,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -19742,7 +19749,7 @@
           },
           {
             "opponent": {
-              "user_id": "---non-existing-user30",
+              "user_id": "---non-existing-user27",
               "rating": 0
             },
             "result": {
@@ -19755,7 +19762,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "C3": {
     "node": {
@@ -20461,8 +20469,8 @@
           },
           {
             "opponent": {
-              "user_id": "take000",
-              "rating": 1280
+              "user_id": "kanzakihikaru",
+              "rating": 1292
             },
             "result": {
               "result": "NotYet"
@@ -20657,7 +20665,7 @@
           "rating": 1215
         },
         "win_count": 3,
-        "rank_sum": 1765.2617762408718,
+        "rank_sum": 1672.1347100980852,
         "results": [
           {
             "opponent": {
@@ -20712,6 +20720,65 @@
       },
       {
         "user": {
+          "user_id": "kanzakihikaru",
+          "rating": 1292
+        },
+        "win_count": 2,
+        "rank_sum": 915.156223559385,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "Fukucchi",
+              "rating": 1208
+            },
+            "result": {
+              "result": "Win",
+              "rank": 397
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Tommy6",
+              "rating": 1318
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 2947
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "US_cube",
+              "rating": 1322
+            },
+            "result": {
+              "result": "Win",
+              "rank": 718
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "hari64",
+              "rating": 1244
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "m1k__",
+              "rating": 1309
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 10
+      },
+      {
+        "user": {
           "user_id": "take000",
           "rating": 1280
         },
@@ -20760,67 +20827,8 @@
           },
           {
             "opponent": {
-              "user_id": "m1k__",
-              "rating": 1309
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 10
-      },
-      {
-        "user": {
-          "user_id": "kanzakihikaru",
-          "rating": 1292
-        },
-        "win_count": 2,
-        "rank_sum": 940.9600546185036,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "Fukucchi",
-              "rating": 1208
-            },
-            "result": {
-              "result": "Win",
-              "rank": 397
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Tommy6",
-              "rating": 1318
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 2947
-            }
-          },
-          {
-            "opponent": {
               "user_id": "US_cube",
               "rating": 1322
-            },
-            "result": {
-              "result": "Win",
-              "rank": 718
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "hari64",
-              "rating": 1244
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "reg7777",
-              "rating": 1252
             },
             "result": {
               "result": "NotYet"
@@ -20835,7 +20843,7 @@
           "rating": 1322
         },
         "win_count": 2,
-        "rank_sum": 1076.774030901658,
+        "rank_sum": 1041.395813832485,
         "results": [
           {
             "opponent": {
@@ -20878,8 +20886,8 @@
           },
           {
             "opponent": {
-              "user_id": "Jessica_n_w",
-              "rating": 1326
+              "user_id": "take000",
+              "rating": 1280
             },
             "result": {
               "result": "NotYet"
@@ -20938,8 +20946,8 @@
           },
           {
             "opponent": {
-              "user_id": "uuuu_s",
-              "rating": 1327
+              "user_id": "Jessica_n_w",
+              "rating": 1326
             },
             "result": {
               "result": "NotYet"
@@ -20998,8 +21006,8 @@
           },
           {
             "opponent": {
-              "user_id": "Fukucchi",
-              "rating": 1208
+              "user_id": "reg7777",
+              "rating": 1252
             },
             "result": {
               "result": "NotYet"
@@ -21014,7 +21022,7 @@
           "rating": 1252
         },
         "win_count": 2,
-        "rank_sum": 1293.1409038885802,
+        "rank_sum": 1245.883401033024,
         "results": [
           {
             "opponent": {
@@ -21057,8 +21065,8 @@
           },
           {
             "opponent": {
-              "user_id": "kanzakihikaru",
-              "rating": 1292
+              "user_id": "besukohu",
+              "rating": 1282
             },
             "result": {
               "result": "NotYet"
@@ -21117,8 +21125,8 @@
           },
           {
             "opponent": {
-              "user_id": "besukohu",
-              "rating": 1282
+              "user_id": "Xenous",
+              "rating": 1208
             },
             "result": {
               "result": "NotYet"
@@ -21133,7 +21141,7 @@
           "rating": 1208
         },
         "win_count": 2,
-        "rank_sum": 1599.8641750665283,
+        "rank_sum": 1522.990802289557,
         "results": [
           {
             "opponent": {
@@ -21176,8 +21184,8 @@
           },
           {
             "opponent": {
-              "user_id": "Linuxmetel",
-              "rating": 1308
+              "user_id": "Fukucchi",
+              "rating": 1208
             },
             "result": {
               "result": "NotYet"
@@ -21236,8 +21244,8 @@
           },
           {
             "opponent": {
-              "user_id": "y_yu",
-              "rating": 1201
+              "user_id": "Linuxmetel",
+              "rating": 1308
             },
             "result": {
               "result": "NotYet"
@@ -21296,8 +21304,8 @@
           },
           {
             "opponent": {
-              "user_id": "Xenous",
-              "rating": 1208
+              "user_id": "uuuu_s",
+              "rating": 1327
             },
             "result": {
               "result": "NotYet"
@@ -21312,7 +21320,7 @@
           "rating": 1326
         },
         "win_count": 2,
-        "rank_sum": 3273.522343888724,
+        "rank_sum": 2741.3860498979407,
         "results": [
           {
             "opponent": {
@@ -21354,8 +21362,8 @@
           },
           {
             "opponent": {
-              "user_id": "US_cube",
-              "rating": 1322
+              "user_id": "y_yu",
+              "rating": 1201
             },
             "result": {
               "result": "NotYet"
@@ -21474,8 +21482,8 @@
           },
           {
             "opponent": {
-              "user_id": "KuonAyano",
-              "rating": 1319
+              "user_id": "Hum1060",
+              "rating": 1253
             },
             "result": {
               "result": "NotYet"
@@ -21534,8 +21542,8 @@
           },
           {
             "opponent": {
-              "user_id": "Hum1060",
-              "rating": 1253
+              "user_id": "KuonAyano",
+              "rating": 1319
             },
             "result": {
               "result": "NotYet"
@@ -21606,68 +21614,11 @@
       },
       {
         "user": {
-          "user_id": "Hum1060",
-          "rating": 1253
-        },
-        "win_count": 1,
-        "rank_sum": 10428.0,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "hari64",
-              "rating": 1244
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Fukucchi",
-              "rating": 1208
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 2607
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "---non-existing-user31",
-              "rating": 0
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "---non-existing-user30",
-              "rating": 0
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "KFrom40",
-              "rating": 1288
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 25
-      },
-      {
-        "user": {
           "user_id": "KuonAyano",
           "rating": 1319
         },
         "win_count": 1,
-        "rank_sum": 14076.0,
+        "rank_sum": 6103.164350700455,
         "results": [
           {
             "opponent": {
@@ -21708,6 +21659,63 @@
           },
           {
             "opponent": {
+              "user_id": "KFrom40",
+              "rating": 1288
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 25
+      },
+      {
+        "user": {
+          "user_id": "Hum1060",
+          "rating": 1253
+        },
+        "win_count": 0,
+        "rank_sum": 5354.952407273336,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "hari64",
+              "rating": 1244
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Fukucchi",
+              "rating": 1208
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 2607
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "---non-existing-user31",
+              "rating": 0
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "---non-existing-user30",
+              "rating": 0
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
               "user_id": "Kanten4205",
               "rating": 1316
             },
@@ -21724,7 +21732,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -21780,7 +21788,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -21836,7 +21844,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -21892,7 +21900,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -21948,7 +21956,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -22004,7 +22012,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -22057,7 +22065,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "D1": {
     "node": {
@@ -22599,7 +22608,7 @@
           "rating": 1134
         },
         "win_count": 3,
-        "rank_sum": 535.667027936395,
+        "rank_sum": 527.3806145148175,
         "results": [
           {
             "opponent": {
@@ -22718,7 +22727,7 @@
           "rating": 1146
         },
         "win_count": 3,
-        "rank_sum": 1160.1792086072576,
+        "rank_sum": 1121.996723827539,
         "results": [
           {
             "opponent": {
@@ -23193,6 +23202,65 @@
       },
       {
         "user": {
+          "user_id": "moharan",
+          "rating": 1052
+        },
+        "win_count": 2,
+        "rank_sum": 1572.3496948881116,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "Eguy",
+              "rating": 1150
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "---non-existing-user29",
+              "rating": 0
+            },
+            "result": {
+              "result": "Win",
+              "rank": 1637
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "NSpenguin",
+              "rating": 1173
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 1338
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "uya116",
+              "rating": 1119
+            },
+            "result": {
+              "result": "Win",
+              "rank": 936
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Anonds",
+              "rating": 1118
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 13
+      },
+      {
+        "user": {
           "user_id": "UMRgurashi",
           "rating": 1110
         },
@@ -23241,67 +23309,8 @@
           },
           {
             "opponent": {
-              "user_id": "Anonds",
-              "rating": 1118
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 13
-      },
-      {
-        "user": {
-          "user_id": "moharan",
-          "rating": 1052
-        },
-        "win_count": 2,
-        "rank_sum": 1648.373992192013,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "Eguy",
-              "rating": 1150
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "---non-existing-user29",
-              "rating": 0
-            },
-            "result": {
-              "result": "Win",
-              "rank": 1637
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "NSpenguin",
-              "rating": 1173
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 1338
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "uya116",
-              "rating": 1119
-            },
-            "result": {
-              "result": "Win",
-              "rank": 936
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "melonoidz",
-              "rating": 1146
+              "user_id": "k1832",
+              "rating": 1198
             },
             "result": {
               "result": "NotYet"
@@ -23360,8 +23369,8 @@
           },
           {
             "opponent": {
-              "user_id": "k1832",
-              "rating": 1198
+              "user_id": "Milky_Way_",
+              "rating": 1131
             },
             "result": {
               "result": "NotYet"
@@ -23420,8 +23429,8 @@
           },
           {
             "opponent": {
-              "user_id": "kota0501",
-              "rating": 1063
+              "user_id": "such_that",
+              "rating": 1158
             },
             "result": {
               "result": "NotYet"
@@ -23480,8 +23489,8 @@
           },
           {
             "opponent": {
-              "user_id": "UMRgurashi",
-              "rating": 1110
+              "user_id": "moharan",
+              "rating": 1052
             },
             "result": {
               "result": "NotYet"
@@ -23540,8 +23549,8 @@
           },
           {
             "opponent": {
-              "user_id": "Milky_Way_",
-              "rating": 1131
+              "user_id": "kota0501",
+              "rating": 1063
             },
             "result": {
               "result": "NotYet"
@@ -23552,70 +23561,11 @@
       },
       {
         "user": {
-          "user_id": "melonoidz",
-          "rating": 1146
-        },
-        "win_count": 2,
-        "rank_sum": 3316.977813561108,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "mattar",
-              "rating": 1082
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 1964
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "sqrt10",
-              "rating": 1117
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 2881
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "---non-existing-user28",
-              "rating": 0
-            },
-            "result": {
-              "result": "Win",
-              "rank": 2860
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "ui_mtc",
-              "rating": 1106
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "moharan",
-              "rating": 1052
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 19
-      },
-      {
-        "user": {
           "user_id": "k1832",
           "rating": 1198
         },
         "win_count": 2,
-        "rank_sum": 3349.1938240898917,
+        "rank_sum": 3025.6845642210023,
         "results": [
           {
             "opponent": {
@@ -23658,15 +23608,15 @@
           },
           {
             "opponent": {
-              "user_id": "DEKA1066",
-              "rating": 1117
+              "user_id": "UMRgurashi",
+              "rating": 1110
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 20
+        "provisional_rank": 19
       },
       {
         "user": {
@@ -23674,7 +23624,7 @@
           "rating": 1131
         },
         "win_count": 2,
-        "rank_sum": 3708.017310064147,
+        "rank_sum": 3315.536561666441,
         "results": [
           {
             "opponent": {
@@ -23717,15 +23667,15 @@
           },
           {
             "opponent": {
-              "user_id": "rxive",
-              "rating": 1193
+              "user_id": "DEKA1066",
+              "rating": 1117
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 21
+        "provisional_rank": 20
       },
       {
         "user": {
@@ -23733,7 +23683,7 @@
           "rating": 1063
         },
         "win_count": 2,
-        "rank_sum": 4067.8635959786634,
+        "rank_sum": 3600.31222811657,
         "results": [
           {
             "opponent": {
@@ -23776,15 +23726,15 @@
           },
           {
             "opponent": {
-              "user_id": "NSpenguin",
-              "rating": 1173
+              "user_id": "rxive",
+              "rating": 1193
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 22
+        "provisional_rank": 21
       },
       {
         "user": {
@@ -23792,7 +23742,7 @@
           "rating": 1158
         },
         "win_count": 1,
-        "rank_sum": 2237.483467381591,
+        "rank_sum": 1966.7785948013848,
         "results": [
           {
             "opponent": {
@@ -23834,15 +23784,15 @@
           },
           {
             "opponent": {
-              "user_id": "ui_mtc",
-              "rating": 1106
+              "user_id": "NSpenguin",
+              "rating": 1173
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 23
+        "provisional_rank": 22
       },
       {
         "user": {
@@ -23894,15 +23844,15 @@
           },
           {
             "opponent": {
-              "user_id": "knk_kei",
-              "rating": 1100
+              "user_id": "ui_mtc",
+              "rating": 1106
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 24
+        "provisional_rank": 23
       },
       {
         "user": {
@@ -23954,15 +23904,15 @@
           },
           {
             "opponent": {
-              "user_id": "uya116",
-              "rating": 1119
+              "user_id": "melonoidz",
+              "rating": 1146
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 25
+        "provisional_rank": 24
       },
       {
         "user": {
@@ -23970,7 +23920,7 @@
           "rating": 1106
         },
         "win_count": 1,
-        "rank_sum": 3415.5192263412387,
+        "rank_sum": 2819.5152443816596,
         "results": [
           {
             "opponent": {
@@ -24012,15 +23962,15 @@
           },
           {
             "opponent": {
-              "user_id": "such_that",
-              "rating": 1158
+              "user_id": "gunmaneko",
+              "rating": 1130
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 26
+        "provisional_rank": 25
       },
       {
         "user": {
@@ -24028,7 +23978,7 @@
           "rating": 1119
         },
         "win_count": 1,
-        "rank_sum": 3502.568337129841,
+        "rank_sum": 2881.6804322017774,
         "results": [
           {
             "opponent": {
@@ -24070,6 +24020,65 @@
           },
           {
             "opponent": {
+              "user_id": "knk_kei",
+              "rating": 1100
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 26
+      },
+      {
+        "user": {
+          "user_id": "melonoidz",
+          "rating": 1146
+        },
+        "win_count": 1,
+        "rank_sum": 3017.0964194387047,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "mattar",
+              "rating": 1082
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 1964
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "sqrt10",
+              "rating": 1117
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 2881
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "---non-existing-user28",
+              "rating": 0
+            },
+            "result": {
+              "result": "Win",
+              "rank": 2860
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "ui_mtc",
+              "rating": 1106
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
               "user_id": "iwbch",
               "rating": 1143
             },
@@ -24086,7 +24095,7 @@
           "rating": 1100
         },
         "win_count": 0,
-        "rank_sum": 14744.0,
+        "rank_sum": 6201.028717767671,
         "results": [
           {
             "opponent": {
@@ -24127,8 +24136,8 @@
           },
           {
             "opponent": {
-              "user_id": "gunmaneko",
-              "rating": 1130
+              "user_id": "uya116",
+              "rating": 1119
             },
             "result": {
               "result": "NotYet"
@@ -24143,7 +24152,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -24199,7 +24208,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -24255,7 +24264,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -24311,7 +24320,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -24364,7 +24373,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "D2": {
     "node": {
@@ -24950,8 +24960,8 @@
           },
           {
             "opponent": {
-              "user_id": "Malice1010",
-              "rating": 899
+              "user_id": "Cyclone_28",
+              "rating": 995
             },
             "result": {
               "result": "NotYet"
@@ -25010,8 +25020,8 @@
           },
           {
             "opponent": {
-              "user_id": "Cyclone_28",
-              "rating": 995
+              "user_id": "Malice1010",
+              "rating": 899
             },
             "result": {
               "result": "NotYet"
@@ -25142,6 +25152,65 @@
       },
       {
         "user": {
+          "user_id": "Cyclone_28",
+          "rating": 995
+        },
+        "win_count": 3,
+        "rank_sum": 2527.2165617766823,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "---non-existing-user28",
+              "rating": 0
+            },
+            "result": {
+              "result": "Win",
+              "rank": 3494
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Malice1010",
+              "rating": 899
+            },
+            "result": {
+              "result": "Win",
+              "rank": 1694
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "nnapapa",
+              "rating": 990
+            },
+            "result": {
+              "result": "SkipWin"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "atree",
+              "rating": 1009
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 1724
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "bokusunny",
+              "rating": 886
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 7
+      },
+      {
+        "user": {
           "user_id": "Malice1010",
           "rating": 899
         },
@@ -25186,65 +25255,6 @@
             "result": {
               "result": "Win",
               "rank": 1665
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "bokusunny",
-              "rating": 886
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 7
-      },
-      {
-        "user": {
-          "user_id": "Cyclone_28",
-          "rating": 995
-        },
-        "win_count": 3,
-        "rank_sum": 2746.177478115378,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "---non-existing-user28",
-              "rating": 0
-            },
-            "result": {
-              "result": "Win",
-              "rank": 3494
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Malice1010",
-              "rating": 899
-            },
-            "result": {
-              "result": "Win",
-              "rank": 1694
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "nnapapa",
-              "rating": 990
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "atree",
-              "rating": 1009
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 1724
             }
           },
           {
@@ -25549,8 +25559,8 @@
           },
           {
             "opponent": {
-              "user_id": "nemoi",
-              "rating": 899
+              "user_id": "nnapapa",
+              "rating": 990
             },
             "result": {
               "result": "NotYet"
@@ -25625,7 +25635,7 @@
           "rating": 980
         },
         "win_count": 2,
-        "rank_sum": 2357.6062390739044,
+        "rank_sum": 2194.3839612482316,
         "results": [
           {
             "opponent": {
@@ -25684,7 +25694,7 @@
           "rating": 1006
         },
         "win_count": 2,
-        "rank_sum": 2386.6669383541334,
+        "rank_sum": 2217.6943373359113,
         "results": [
           {
             "opponent": {
@@ -25739,6 +25749,65 @@
       },
       {
         "user": {
+          "user_id": "nnapapa",
+          "rating": 990
+        },
+        "win_count": 2,
+        "rank_sum": 2394.9595108731573,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "bo9chan",
+              "rating": 862
+            },
+            "result": {
+              "result": "Win",
+              "rank": 1789
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "sepa_38",
+              "rating": 930
+            },
+            "result": {
+              "result": "Win",
+              "rank": 1776
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Cyclone_28",
+              "rating": 995
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Malice1010",
+              "rating": 899
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 2370
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "kokonotsu",
+              "rating": 912
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 17
+      },
+      {
+        "user": {
           "user_id": "nemoi",
           "rating": 899
         },
@@ -25783,65 +25852,6 @@
             "result": {
               "result": "Win",
               "rank": 1702
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "kokonotsu",
-              "rating": 912
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 17
-      },
-      {
-        "user": {
-          "user_id": "nnapapa",
-          "rating": 990
-        },
-        "win_count": 2,
-        "rank_sum": 2590.7147114726126,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "bo9chan",
-              "rating": 862
-            },
-            "result": {
-              "result": "Win",
-              "rank": 1789
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "sepa_38",
-              "rating": 930
-            },
-            "result": {
-              "result": "Win",
-              "rank": 1776
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Cyclone_28",
-              "rating": 995
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Malice1010",
-              "rating": 899
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 2370
             }
           },
           {
@@ -25922,7 +25932,7 @@
           "rating": 940
         },
         "win_count": 2,
-        "rank_sum": 3795.5648956888117,
+        "rank_sum": 3415.3263420354338,
         "results": [
           {
             "opponent": {
@@ -25981,7 +25991,7 @@
           "rating": 923
         },
         "win_count": 2,
-        "rank_sum": 4540.623135843862,
+        "rank_sum": 3965.759756304952,
         "results": [
           {
             "opponent": {
@@ -26024,8 +26034,8 @@
           },
           {
             "opponent": {
-              "user_id": "nnapapa",
-              "rating": 990
+              "user_id": "nemoi",
+              "rating": 899
             },
             "result": {
               "result": "NotYet"
@@ -26144,8 +26154,8 @@
           },
           {
             "opponent": {
-              "user_id": "Junmori",
-              "rating": 907
+              "user_id": "sepa_38",
+              "rating": 930
             },
             "result": {
               "result": "NotYet"
@@ -26204,8 +26214,8 @@
           },
           {
             "opponent": {
-              "user_id": "hotate29",
-              "rating": 890
+              "user_id": "haiXi",
+              "rating": 888
             },
             "result": {
               "result": "NotYet"
@@ -26264,8 +26274,8 @@
           },
           {
             "opponent": {
-              "user_id": "sepa_38",
-              "rating": 930
+              "user_id": "yutaro57",
+              "rating": 928
             },
             "result": {
               "result": "NotYet"
@@ -26273,6 +26283,64 @@
           }
         ],
         "provisional_rank": 25
+      },
+      {
+        "user": {
+          "user_id": "sepa_38",
+          "rating": 930
+        },
+        "win_count": 1,
+        "rank_sum": 3719.8391413913528,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "nemoi",
+              "rating": 899
+            },
+            "result": {
+              "result": "Win",
+              "rank": 1544
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "nnapapa",
+              "rating": 990
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 5507
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "serpent",
+              "rating": 1006
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Knots",
+              "rating": 940
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "hotate29",
+              "rating": 890
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 26
       },
       {
         "user": {
@@ -26324,64 +26392,6 @@
           },
           {
             "opponent": {
-              "user_id": "haiXi",
-              "rating": 888
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 26
-      },
-      {
-        "user": {
-          "user_id": "sepa_38",
-          "rating": 930
-        },
-        "win_count": 1,
-        "rank_sum": 4823.604027797475,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "nemoi",
-              "rating": 899
-            },
-            "result": {
-              "result": "Win",
-              "rank": 1544
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "nnapapa",
-              "rating": 990
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 5507
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "serpent",
-              "rating": 1006
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Knots",
-              "rating": 940
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
               "user_id": "kaede2020",
               "rating": 920
             },
@@ -26397,8 +26407,8 @@
           "user_id": "haiXi",
           "rating": 888
         },
-        "win_count": 1,
-        "rank_sum": 6967.9622431982225,
+        "win_count": 0,
+        "rank_sum": 4877.360155686943,
         "results": [
           {
             "opponent": {
@@ -26435,13 +26445,13 @@
               "rating": 0
             },
             "result": {
-              "result": "SkipWin"
+              "result": "SkipLose"
             }
           },
           {
             "opponent": {
-              "user_id": "yutaro57",
-              "rating": 928
+              "user_id": "Junmori",
+              "rating": 907
             },
             "result": {
               "result": "NotYet"
@@ -26456,7 +26466,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -26512,7 +26522,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -26568,7 +26578,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -26624,7 +26634,7 @@
           "rating": 0
         },
         "win_count": 0,
-        "rank_sum": 1000000.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
@@ -26677,7 +26687,8 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   },
   "D3": {
     "node": {
@@ -27263,8 +27274,8 @@
           },
           {
             "opponent": {
-              "user_id": "gengar_094",
-              "rating": 745
+              "user_id": "Natsuserina",
+              "rating": 806
             },
             "result": {
               "result": "NotYet"
@@ -27335,6 +27346,65 @@
       },
       {
         "user": {
+          "user_id": "shinsatt",
+          "rating": 816
+        },
+        "win_count": 3,
+        "rank_sum": 2749.1802127529986,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "katsudon421",
+              "rating": 360
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Riffle",
+              "rating": 522
+            },
+            "result": {
+              "result": "Win",
+              "rank": 2275
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "burita083",
+              "rating": 713
+            },
+            "result": {
+              "result": "Win",
+              "rank": 2000
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "motimotipurinn",
+              "rating": 640
+            },
+            "result": {
+              "result": "Win",
+              "rank": 2512
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "gengar_094",
+              "rating": 745
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 5
+      },
+      {
+        "user": {
           "user_id": "Natsuserina",
           "rating": 806
         },
@@ -27383,15 +27453,15 @@
           },
           {
             "opponent": {
-              "user_id": "retch",
-              "rating": 769
+              "user_id": "fennel",
+              "rating": 830
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 5
+        "provisional_rank": 6
       },
       {
         "user": {
@@ -27443,15 +27513,15 @@
           },
           {
             "opponent": {
-              "user_id": "fennel",
-              "rating": 830
+              "user_id": "shinsatt",
+              "rating": 816
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 6
+        "provisional_rank": 7
       },
       {
         "user": {
@@ -27499,65 +27569,6 @@
             "result": {
               "result": "Lose",
               "rank": 2688
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Natsuserina",
-              "rating": 806
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 7
-      },
-      {
-        "user": {
-          "user_id": "shinsatt",
-          "rating": 816
-        },
-        "win_count": 3,
-        "rank_sum": 2990.3197111611116,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "katsudon421",
-              "rating": 360
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Riffle",
-              "rating": 522
-            },
-            "result": {
-              "result": "Win",
-              "rank": 2275
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "burita083",
-              "rating": 713
-            },
-            "result": {
-              "result": "Win",
-              "rank": 2000
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "motimotipurinn",
-              "rating": 640
-            },
-            "result": {
-              "result": "Win",
-              "rank": 2512
             }
           },
           {
@@ -27622,8 +27633,8 @@
           },
           {
             "opponent": {
-              "user_id": "shinsatt",
-              "rating": 816
+              "user_id": "retch",
+              "rating": 769
             },
             "result": {
               "result": "NotYet"
@@ -27698,7 +27709,7 @@
           "rating": 791
         },
         "win_count": 2,
-        "rank_sum": 1912.8379774433988,
+        "rank_sum": 1803.969318241154,
         "results": [
           {
             "opponent": {
@@ -27757,7 +27768,7 @@
           "rating": 713
         },
         "win_count": 2,
-        "rank_sum": 3467.8171721319372,
+        "rank_sum": 3147.641067860167,
         "results": [
           {
             "opponent": {
@@ -27816,7 +27827,7 @@
           "rating": 527
         },
         "win_count": 2,
-        "rank_sum": 3554.5816878024934,
+        "rank_sum": 3212.41486927365,
         "results": [
           {
             "opponent": {
@@ -27919,8 +27930,8 @@
           },
           {
             "opponent": {
-              "user_id": "Pachi",
-              "rating": 475
+              "user_id": "tukitoka",
+              "rating": 792
             },
             "result": {
               "result": "NotYet"
@@ -27928,6 +27939,65 @@
           }
         ],
         "provisional_rank": 14
+      },
+      {
+        "user": {
+          "user_id": "tukitoka",
+          "rating": 792
+        },
+        "win_count": 2,
+        "rank_sum": 4033.850858277071,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "yakisoba_tabetai",
+              "rating": 424
+            },
+            "result": {
+              "result": "Win",
+              "rank": 3781
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Natsuserina",
+              "rating": 806
+            },
+            "result": {
+              "result": "Win",
+              "rank": 2999
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "bit_zentansaku",
+              "rating": 853
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 3652
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "taisii",
+              "rating": 276
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "motimotipurinn",
+              "rating": 640
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 15
       },
       {
         "user": {
@@ -27979,15 +28049,15 @@
           },
           {
             "opponent": {
-              "user_id": "motimotipurinn",
-              "rating": 640
+              "user_id": "Yourein",
+              "rating": 376
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 15
+        "provisional_rank": 16
       },
       {
         "user": {
@@ -28039,15 +28109,15 @@
           },
           {
             "opponent": {
-              "user_id": "Maki_python",
-              "rating": 824
+              "user_id": "Pachi",
+              "rating": 475
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 16
+        "provisional_rank": 17
       },
       {
         "user": {
@@ -28099,15 +28169,15 @@
           },
           {
             "opponent": {
-              "user_id": "Yourein",
-              "rating": 376
+              "user_id": "katsudon421",
+              "rating": 360
             },
             "result": {
               "result": "NotYet"
             }
           }
         ],
-        "provisional_rank": 17
+        "provisional_rank": 18
       },
       {
         "user": {
@@ -28159,67 +28229,8 @@
           },
           {
             "opponent": {
-              "user_id": "tukitoka",
-              "rating": 792
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 18
-      },
-      {
-        "user": {
-          "user_id": "tukitoka",
-          "rating": 792
-        },
-        "win_count": 2,
-        "rank_sum": 4588.485462805742,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "yakisoba_tabetai",
-              "rating": 424
-            },
-            "result": {
-              "result": "Win",
-              "rank": 3781
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Natsuserina",
-              "rating": 806
-            },
-            "result": {
-              "result": "Win",
-              "rank": 2999
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "bit_zentansaku",
-              "rating": 853
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 3652
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "taisii",
-              "rating": 276
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "katsudon421",
-              "rating": 360
+              "user_id": "Maki_python",
+              "rating": 824
             },
             "result": {
               "result": "NotYet"
@@ -28234,7 +28245,7 @@
           "rating": 811
         },
         "win_count": 2,
-        "rank_sum": 5578.550907504191,
+        "rank_sum": 4779.583254863873,
         "results": [
           {
             "opponent": {
@@ -28289,6 +28300,65 @@
       },
       {
         "user": {
+          "user_id": "dentaku",
+          "rating": 480
+        },
+        "win_count": 1,
+        "rank_sum": 3258.6113897800183,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "Nikkuniku029",
+              "rating": 791
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 5126
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Rute",
+              "rating": 842
+            },
+            "result": {
+              "result": "Win",
+              "rank": 1675
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "fennel",
+              "rating": 830
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 3169
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Natsuserina",
+              "rating": 806
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "osmanthus_solo",
+              "rating": 371
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 21
+      },
+      {
+        "user": {
           "user_id": "Rute",
           "rating": 842
         },
@@ -28337,65 +28407,6 @@
           },
           {
             "opponent": {
-              "user_id": "kirifugu",
-              "rating": 791
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 21
-      },
-      {
-        "user": {
-          "user_id": "dentaku",
-          "rating": 480
-        },
-        "win_count": 1,
-        "rank_sum": 3611.2302307562977,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "Nikkuniku029",
-              "rating": 791
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 5126
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Rute",
-              "rating": 842
-            },
-            "result": {
-              "result": "Win",
-              "rank": 1675
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "fennel",
-              "rating": 830
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 3169
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Natsuserina",
-              "rating": 806
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
               "user_id": "yakisoba_tabetai",
               "rating": 424
             },
@@ -28405,6 +28416,123 @@
           }
         ],
         "provisional_rank": 22
+      },
+      {
+        "user": {
+          "user_id": "nekosan_iyoiyo",
+          "rating": 335
+        },
+        "win_count": 1,
+        "rank_sum": 4572.854228374958,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "fennel",
+              "rating": 830
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 4340
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Yourein",
+              "rating": 376
+            },
+            "result": {
+              "result": "Win",
+              "rank": 3516
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Kichico",
+              "rating": 353
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "katsudon421",
+              "rating": 360
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 4279
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Squinkd",
+              "rating": 611
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 23
+      },
+      {
+        "user": {
+          "user_id": "kirifugu",
+          "rating": 791
+        },
+        "win_count": 1,
+        "rank_sum": 4978.164159026016,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "Pachi",
+              "rating": 475
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 3971
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Squinkd",
+              "rating": 611
+            },
+            "result": {
+              "result": "Win",
+              "rank": 3272
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "taisii",
+              "rating": 276
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Maki_python",
+              "rating": 824
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "semicoloon",
+              "rating": 18
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 24
       },
       {
         "user": {
@@ -28456,125 +28584,8 @@
           },
           {
             "opponent": {
-              "user_id": "pythonistaharuka",
-              "rating": 698
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 23
-      },
-      {
-        "user": {
-          "user_id": "nekosan_iyoiyo",
-          "rating": 335
-        },
-        "win_count": 1,
-        "rank_sum": 5343.819217835836,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "fennel",
-              "rating": 830
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 4340
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Yourein",
-              "rating": 376
-            },
-            "result": {
-              "result": "Win",
-              "rank": 3516
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Kichico",
-              "rating": 353
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "katsudon421",
-              "rating": 360
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 4279
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "semicoloon",
-              "rating": 18
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 24
-      },
-      {
-        "user": {
-          "user_id": "kirifugu",
-          "rating": 791
-        },
-        "win_count": 1,
-        "rank_sum": 7175.541626397901,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "Pachi",
-              "rating": 475
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 3971
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Squinkd",
-              "rating": 611
-            },
-            "result": {
-              "result": "Win",
-              "rank": 3272
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "taisii",
-              "rating": 276
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Maki_python",
-              "rating": 824
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Rute",
-              "rating": 842
+              "user_id": "dentaku",
+              "rating": 480
             },
             "result": {
               "result": "NotYet"
@@ -28589,7 +28600,7 @@
           "rating": 424
         },
         "win_count": 1,
-        "rank_sum": 9351.485940339997,
+        "rank_sum": 5868.234572715337,
         "results": [
           {
             "opponent": {
@@ -28631,8 +28642,8 @@
           },
           {
             "opponent": {
-              "user_id": "dentaku",
-              "rating": 480
+              "user_id": "Rute",
+              "rating": 842
             },
             "result": {
               "result": "NotYet"
@@ -28647,7 +28658,7 @@
           "rating": 18
         },
         "win_count": 1,
-        "rank_sum": 14266.226613411814,
+        "rank_sum": 7576.603436489564,
         "results": [
           {
             "opponent": {
@@ -28689,8 +28700,8 @@
           },
           {
             "opponent": {
-              "user_id": "nekosan_iyoiyo",
-              "rating": 335
+              "user_id": "kirifugu",
+              "rating": 791
             },
             "result": {
               "result": "NotYet"
@@ -28701,67 +28712,11 @@
       },
       {
         "user": {
-          "user_id": "pythonistaharuka",
-          "rating": 698
-        },
-        "win_count": 1,
-        "rank_sum": 1000000.0,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "negibose2020",
-              "rating": 655
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "phys_crown",
-              "rating": 220
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "komasan",
-              "rating": 750
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Riffle",
-              "rating": 522
-            },
-            "result": {
-              "result": "SkipWin"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "osmanthus_solo",
-              "rating": 371
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
-        "provisional_rank": 28
-      },
-      {
-        "user": {
           "user_id": "Squinkd",
           "rating": 611
         },
         "win_count": 0,
-        "rank_sum": 5538.345954139587,
+        "rank_sum": 4750.039524176554,
         "results": [
           {
             "opponent": {
@@ -28804,8 +28759,65 @@
           },
           {
             "opponent": {
-              "user_id": "phys_crown",
-              "rating": 220
+              "user_id": "nekosan_iyoiyo",
+              "rating": 335
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 28
+      },
+      {
+        "user": {
+          "user_id": "komasan",
+          "rating": 750
+        },
+        "win_count": 0,
+        "rank_sum": 5732.288927552029,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "afoil",
+              "rating": 527
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 3086
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "yakisoba_tabetai",
+              "rating": 424
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "pythonistaharuka",
+              "rating": 698
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "osmanthus_solo",
+              "rating": 371
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Riffle",
+              "rating": 522
             },
             "result": {
               "result": "NotYet"
@@ -28816,11 +28828,68 @@
       },
       {
         "user": {
+          "user_id": "phys_crown",
+          "rating": 220
+        },
+        "win_count": 0,
+        "rank_sum": 5838.649227229118,
+        "results": [
+          {
+            "opponent": {
+              "user_id": "take911",
+              "rating": 849
+            },
+            "result": {
+              "result": "Lose",
+              "rank": 3212
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "pythonistaharuka",
+              "rating": 698
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "Riffle",
+              "rating": 522
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "yakisoba_tabetai",
+              "rating": 424
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "pythonistaharuka",
+              "rating": 698
+            },
+            "result": {
+              "result": "NotYet"
+            }
+          }
+        ],
+        "provisional_rank": 30
+      },
+      {
+        "user": {
           "user_id": "Riffle",
           "rating": 522
         },
         "win_count": 0,
-        "rank_sum": 10210.745274703751,
+        "rank_sum": 6271.51888140918,
         "results": [
           {
             "opponent": {
@@ -28870,87 +28939,38 @@
             }
           }
         ],
-        "provisional_rank": 30
-      },
-      {
-        "user": {
-          "user_id": "komasan",
-          "rating": 750
-        },
-        "win_count": 0,
-        "rank_sum": 12344.0,
-        "results": [
-          {
-            "opponent": {
-              "user_id": "afoil",
-              "rating": 527
-            },
-            "result": {
-              "result": "Lose",
-              "rank": 3086
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "yakisoba_tabetai",
-              "rating": 424
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "pythonistaharuka",
-              "rating": 698
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "osmanthus_solo",
-              "rating": 371
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Riffle",
-              "rating": 522
-            },
-            "result": {
-              "result": "NotYet"
-            }
-          }
-        ],
         "provisional_rank": 31
       },
       {
         "user": {
-          "user_id": "phys_crown",
-          "rating": 220
+          "user_id": "pythonistaharuka",
+          "rating": 698
         },
         "win_count": 0,
-        "rank_sum": 12848.0,
+        "rank_sum": 8145.195579101329,
         "results": [
           {
             "opponent": {
-              "user_id": "take911",
-              "rating": 849
+              "user_id": "negibose2020",
+              "rating": 655
             },
             "result": {
-              "result": "Lose",
-              "rank": 3212
+              "result": "SkipLose"
             }
           },
           {
             "opponent": {
-              "user_id": "pythonistaharuka",
-              "rating": 698
+              "user_id": "phys_crown",
+              "rating": 220
+            },
+            "result": {
+              "result": "SkipLose"
+            }
+          },
+          {
+            "opponent": {
+              "user_id": "komasan",
+              "rating": 750
             },
             "result": {
               "result": "SkipLose"
@@ -28967,17 +28987,8 @@
           },
           {
             "opponent": {
-              "user_id": "yakisoba_tabetai",
-              "rating": 424
-            },
-            "result": {
-              "result": "SkipLose"
-            }
-          },
-          {
-            "opponent": {
-              "user_id": "Squinkd",
-              "rating": 611
+              "user_id": "phys_crown",
+              "rating": 220
             },
             "result": {
               "result": "NotYet"
@@ -28989,6 +29000,7 @@
     ],
     "defending_champion": null,
     "drop_rank": null,
-    "promotion_rank": null
+    "promotion_rank": null,
+    "top4": null
   }
 }

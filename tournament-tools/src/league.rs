@@ -168,13 +168,12 @@ impl LeagueUtil for Vec<UserLeagueEntry> {
 fn is_matched_before(user_results: &[LeagueBattleResult], opponent: &User) -> bool {
     user_results
         .iter()
-        .find(|result| &result.opponent == opponent)
-        .is_some()
+        .any(|result| &result.opponent == opponent)
 }
 
 #[derive(Serialize, Deserialize, PartialEq)]
 pub struct UserLeagueEntry {
-    user: User,
+    pub(crate) user: User,
     win_count: usize,
     rank_sum: f64,
     results: Vec<LeagueBattleResult>,
@@ -282,9 +281,6 @@ pub enum BattleResult {
 
 impl BattleResult {
     fn is_win(&self) -> bool {
-        match self {
-            BattleResult::Win { .. } | BattleResult::SkipWin => true,
-            _ => false,
-        }
+        matches!(self, BattleResult::Win { .. } | BattleResult::SkipWin)
     }
 }

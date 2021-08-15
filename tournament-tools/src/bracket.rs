@@ -3,7 +3,7 @@ use crate::league::{LeagueBattleResult, LeagueUtil, UserLeagueEntry};
 use crate::types::{ClassId, Rank, SeasonId, UserId, INF_RANK};
 use anyhow::Result;
 use serde::{Deserialize, Serialize};
-use std::cmp::Reverse;
+use std::cmp::{Ordering, Reverse};
 use std::collections::BTreeMap;
 
 pub fn read_brackets(season_id: SeasonId) -> Result<BTreeMap<ClassId, Bracket>> {
@@ -37,40 +37,125 @@ pub struct User {
     pub rating: u32,
 }
 
+impl PartialOrd<Self> for User {
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        Some(self.cmp(&other))
+    }
+}
+
+impl Ord for User {
+    fn cmp(&self, other: &Self) -> Ordering {
+        other
+            .rating
+            .cmp(&self.rating)
+            .then(self.user_id.cmp(&self.user_id))
+    }
+}
+
 impl Bracket {
-    pub fn update_tournament_result(&mut self, result: &[BTreeMap<UserId, Rank>]) {
+    pub fn create(
+        sorted_users: Vec<User>,
+        defending_champion: Option<UserId>,
+        drop_rank: Option<usize>,
+        promotion_rank: Option<usize>,
+    ) -> Self {
+        Self {
+            node: BracketNode::create(sorted_users, 4),
+            league: vec![],
+            defending_champion,
+            drop_rank,
+            promotion_rank,
+        }
+    }
+    pub(crate) fn get_user_ranking(&self) -> Vec<UserId> {
+        let mut ranking = vec![];
+        let winner = match self.node.user.as_ref() {
+            Some(user) => user.user_id.clone(),
+            None => return vec![],
+        };
+        let second = self
+            .node
+            .children
+            .iter()
+            .flat_map(|child| child.user.as_ref())
+            .find(|user| user.user_id != winner)
+            .expect("Second is not filled")
+            .user_id
+            .clone();
+        ranking.push(winner);
+        ranking.push(second);
+        for entry in self.league.iter() {
+            ranking.push(entry.user.user_id.clone());
+        }
+        ranking
+    }
+
+    pub(crate) fn update_tournament_result(&mut self, result: &[BTreeMap<UserId, Rank>]) {
         let height = self.node.get_subtree_height();
         self.node.update_subtree_result(result, height - 1);
     }
 
-    pub fn consolidate_tournament_battle_result(
+    pub(crate) fn consolidate_tournament_battle_result(
         &self,
     ) -> BTreeMap<UserId, (User, Vec<LeagueBattleResult>)> {
         let mut result = BTreeMap::new();
         self.node.consolidate_tournament_result(&mut result);
         result
     }
-    pub fn update_league_result(&mut self, standings: &[BTreeMap<UserId, Rank>]) {
+    pub(crate) fn update_league_result(&mut self, standings: &[BTreeMap<UserId, Rank>]) {
         self.league.update_league_result(standings);
     }
-    pub fn extend_league(
+    pub(crate) fn extend_league(
         &mut self,
         tournament_battle_result: &BTreeMap<UserId, (User, Vec<LeagueBattleResult>)>,
     ) {
         self.league.extend_league(tournament_battle_result);
     }
-    pub fn refresh_league_ranking(
+    pub(crate) fn refresh_league_ranking(
         &mut self,
         tournament_battle_result: &BTreeMap<UserId, (User, Vec<LeagueBattleResult>)>,
     ) {
         self.league.refresh_league_ranking(tournament_battle_result);
     }
-    pub fn match_new_league_games(&mut self) {
+    pub(crate) fn match_new_league_games(&mut self) {
         self.league.match_new_games();
     }
 }
 
 impl BracketNode {
+    fn create(sorted_users: Vec<User>, height: usize) -> Self {
+        let children = if height == 0 || sorted_users.len() == 1 {
+            sorted_users
+                .into_iter()
+                .map(|user| Self {
+                    user: Some(user),
+                    rank: None,
+                    children: vec![],
+                })
+                .collect()
+        } else {
+            assert!(sorted_users.len() >= 2);
+            let mut left = vec![];
+            let mut right = vec![];
+            for (i, user) in sorted_users.into_iter().enumerate() {
+                if i % 4 == 0 || i % 4 == 3 {
+                    left.push(user);
+                } else {
+                    right.push(user);
+                }
+            }
+            vec![
+                Self::create(left, height - 1),
+                Self::create(right, height - 1),
+            ]
+        };
+        Self {
+            user: None,
+            rank: None,
+            children,
+        }
+    }
+
     fn get_subtree_height(&self) -> usize {
         let max = self
             .children
