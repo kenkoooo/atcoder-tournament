@@ -109,7 +109,7 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
     let non_a_classes = non_a_classes
         .into_iter()
         .map(|mut users| {
-            let class_count = (users.len() / 32).min(3);
+            let class_count = (users.len() / 32).min(3).max(1);
             let member_count = users.len() / class_count / 2 * 2;
 
             let mut classes = vec![];
@@ -124,6 +124,9 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
 
     let mut brackets = BTreeMap::new();
     for (i, next_a_users) in next_a_users.into_iter().enumerate() {
+        if next_a_users.is_empty() {
+            continue;
+        }
         let class = format!("A{}", i + 1);
 
         let (promotion_rank, drop_rank) = match i {

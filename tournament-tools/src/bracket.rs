@@ -33,7 +33,7 @@ pub struct BracketNode {
     pub children: Vec<BracketNode>,
 }
 
-#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)]
+#[derive(Serialize, Deserialize, Clone, Eq, PartialEq, Debug)]
 pub struct User {
     pub user_id: UserId,
     pub rating: u32,
@@ -148,7 +148,7 @@ impl BracketNode {
                 })
                 .collect()
         } else {
-            assert!(sorted_users.len() >= 2);
+            assert!(sorted_users.len() >= 2, "{:?}", sorted_users);
             let mut left = vec![];
             let mut right = vec![];
             for (i, user) in sorted_users.into_iter().enumerate() {
