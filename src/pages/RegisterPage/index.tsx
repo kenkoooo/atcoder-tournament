@@ -101,13 +101,17 @@ interface FailedState {
 interface PendingState {
   type: "Pending";
 }
+interface Already {
+  type: "Already";
+}
 
 type RegisterState =
   | InputState
   | VerifyState
   | RegisteredState
   | FailedState
-  | PendingState;
+  | PendingState
+  | Already;
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -136,8 +140,29 @@ export const RegisterPage = () => {
     userId: "",
   });
 
-  const getVerificationCode = (input: InputState) => {
+  const getVerificationCode = async (input: InputState) => {
     setRegisterState({ type: "Pending" });
+    const usersResponse = await fetch(
+      "https://atcoder-tournament.herokuapp.com/api/users"
+    );
+    const users = (await usersResponse.json()) as string[];
+
+    const registered = users
+      .map((user) => user.toLowerCase())
+      .includes(input.userId.trim().toLowerCase());
+    fetch("https://atcoder-tournament.herokuapp.com/api/users")
+      .then((response) => response.json())
+      .then((users) => users as string[])
+      .then((users) =>
+        users.find(
+          (user) => user.toLowerCase() === input.userId.trim().toLowerCase()
+        )
+      );
+    if (registered) {
+      setRegisterState({ type: "Already" });
+      return;
+    }
+
     fetch("https://atcoder-auth.kenkoooo.com/api/authorize", {
       method: "POST",
       headers: {
@@ -216,6 +241,11 @@ export const RegisterPage = () => {
             state={registerState}
             confirm={() => confirmRegistration(registerState)}
           />
+        )}
+        {registerState.type === "Already" && (
+          <>
+            <p>既に登録済みです。</p>
+          </>
         )}
         {registerState.type === "Failed" && (
           <>
