@@ -105,7 +105,7 @@ impl LeagueUtil for Vec<UserLeagueEntry> {
             .filter(|user_entry| user_entry.1.iter().all(|result| result.result.is_win()))
             .count();
         for (i, entry) in self.iter_mut().enumerate() {
-            entry.provisional_rank = i + remaining_user_count + 1;
+            entry.provisional_rank = i + remaining_user_count.max(2) + 1;
         }
     }
 
