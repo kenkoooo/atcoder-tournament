@@ -9,7 +9,7 @@ pub(crate) mod types;
 
 pub use bracket::{read_brackets, write_brackets, Bracket, User};
 pub use config::{Match, TournamentConfig};
-pub use construct::construct_tournament;
+pub use construct::{construct_tournament, ConstructConfig};
 pub use rating::{load_rating, load_user_ids};
 pub use standings::{read_standings, read_standings_from_path};
 pub use types::{ClassId, Rank, SeasonId, UserId};

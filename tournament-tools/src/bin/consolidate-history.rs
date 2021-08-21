@@ -3,7 +3,7 @@ use serde::Serialize;
 use std::cmp::Ordering;
 use std::collections::BTreeMap;
 use std::fs::write;
-use tournament_tools::{read_brackets, ClassId, Rank, SeasonId, UserId};
+use tournament_tools::{read_brackets, ClassId, Rank, UserId};
 
 fn main() -> Result<()> {
     let mut user_histories = BTreeMap::new();

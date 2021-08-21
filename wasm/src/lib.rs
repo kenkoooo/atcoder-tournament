@@ -21,7 +21,12 @@ pub fn construct_tournament(
     let ratings = serde_json::from_str(&ratings).unwrap();
     let registered_user_ids = serde_json::from_str(&registered_user_ids).unwrap();
     let previous_brackets = serde_json::from_str(&previous_brackets).unwrap();
-    let brackets =
-        tournament_tools::construct_tournament(ratings, registered_user_ids, previous_brackets);
+    let config = tournament_tools::ConstructConfig {
+        ratings,
+        registered_user_ids,
+        previous_brackets,
+        ..Default::default()
+    };
+    let brackets = tournament_tools::construct_tournament(config);
     serde_json::to_string(&brackets).unwrap()
 }

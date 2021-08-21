@@ -3,11 +3,20 @@ use crate::types::{ClassId, UserId};
 use crate::Bracket;
 use std::collections::BTreeMap;
 
-pub fn construct_tournament(
-    ratings: Vec<User>,
-    registered_user_ids: Vec<UserId>,
-    previous_brackets: BTreeMap<ClassId, Bracket>,
-) -> BTreeMap<ClassId, Bracket> {
+#[derive(Default)]
+pub struct ConstructConfig {
+    pub ratings: Vec<User>,
+    pub registered_user_ids: Vec<UserId>,
+    pub previous_brackets: BTreeMap<ClassId, Bracket>,
+}
+
+pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracket> {
+    let ConstructConfig {
+        ratings,
+        registered_user_ids,
+        previous_brackets,
+        ..
+    } = config;
     let mut users = ratings.into_iter().fold(BTreeMap::new(), |mut map, user| {
         map.insert(user.user_id.clone(), user);
         map

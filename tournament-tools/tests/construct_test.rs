@@ -1,7 +1,7 @@
 use anyhow::Result;
 use std::fs::{read_to_string, File};
 use std::io::BufReader;
-use tournament_tools::{construct_tournament, User};
+use tournament_tools::{construct_tournament, ConstructConfig, User};
 
 #[test]
 fn construct_integration_test() -> Result<()> {
@@ -12,7 +12,12 @@ fn construct_integration_test() -> Result<()> {
         serde_json::from_reader(BufReader::new(File::open("../data/season-5/users-5.json")?))?;
     let previous_brackets =
         serde_json::from_reader(BufReader::new(File::open("../public/bracket-4.json")?))?;
-    let brackets = construct_tournament(ratings, registered_user_ids, previous_brackets);
+    let brackets = construct_tournament(ConstructConfig {
+        ratings,
+        registered_user_ids,
+        previous_brackets,
+        ..Default::default()
+    });
 
     assert_eq!(
         serde_json::to_string_pretty(&brackets)?,
