@@ -7,7 +7,7 @@ use tournament_tools::{read_brackets, ClassId, Rank, UserId};
 
 fn main() -> Result<()> {
     let mut user_histories = BTreeMap::new();
-    for season_id in 1..=4 {
+    for season_id in 1..=5 {
         let brackets = read_brackets(season_id)?;
         for (class, bracket) in brackets {
             let user_top_k = bracket.user_top_k();
@@ -38,7 +38,7 @@ fn main() -> Result<()> {
     }
 
     let mut tournament_histories = vec![];
-    for season_id in 1..=4 {
+    for season_id in 1..=5 {
         let brackets = read_brackets(season_id)?;
         let mut entries = vec![];
         let mut expandable = true;
