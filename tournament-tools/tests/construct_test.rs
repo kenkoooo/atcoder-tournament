@@ -23,5 +23,6 @@ fn construct_integration_test() -> Result<()> {
         serde_json::to_string_pretty(&brackets)?,
         read_to_string("./tests/assets/bracket-5-construct.json",)?
     );
+
     Ok(())
 }

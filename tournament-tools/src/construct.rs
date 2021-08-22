@@ -28,7 +28,8 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
         }
     }
 
-    let mut previous_map = BTreeMap::new();
+    let mut a_users = vec![];
+    let mut non_a_users = vec![];
     let mut defending_champion = None;
     for (class, bracket) in previous_brackets {
         let ranking = bracket.get_user_ranking();
@@ -36,64 +37,76 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
         if &class == "A1" {
             defending_champion = Some(ranking[0].user_id.clone());
         }
-        let ranking = ranking
-            .into_iter()
-            .flat_map(|user| registered_users.remove(&user.user_id))
-            .collect::<Vec<_>>();
 
-        previous_map.insert(class, ranking);
+        for (rank, user) in ranking.into_iter().enumerate() {
+            if let Some(user) = registered_users.remove(&user.user_id) {
+                if user.rating >= 2000 {
+                    a_users.push(((class.clone(), rank), user));
+                } else {
+                    non_a_users.push(user);
+                }
+            }
+        }
     }
 
-    let mut previous_a_users = vec![
-        previous_map.remove("A1").unwrap_or_else(Vec::new),
-        previous_map.remove("A2").unwrap_or_else(Vec::new),
-        previous_map.remove("A3").unwrap_or_else(Vec::new),
-    ];
-
-    let mut new_a_users = vec![];
-    let mut non_a_users = vec![];
     for (_, user) in registered_users {
         if user.rating >= 2000 {
-            new_a_users.push(user);
-        } else {
-            non_a_users.push(user);
-        }
-    }
-    for user in previous_map
-        .into_iter()
-        .flat_map(|(_, users)| users.into_iter())
-    {
-        if user.rating >= 2000 {
-            new_a_users.push(user);
+            a_users.push((("Z0".to_string(), 0), user));
         } else {
             non_a_users.push(user);
         }
     }
 
-    new_a_users.sort();
-    previous_a_users[2].extend(new_a_users);
+    a_users.sort();
 
-    let mut next_a_users = vec![vec![]; 3];
-    for (i, &count) in [16, 10, 6].iter().enumerate() {
-        next_a_users[0].extend(previous_a_users[i].take(count));
+    //A1
+    let mut next_a1 = vec![];
+    let mut remaining_a_users = vec![];
+    for ((class, rank), user) in a_users {
+        if (class == "A1" && rank < 16)
+            || (class == "A2" && rank < 10)
+            || (class == "A3" && rank < 6)
+            || user.rating >= 2800
+        {
+            next_a1.push(user);
+        } else {
+            remaining_a_users.push(((class, rank), user));
+        }
     }
-    for previous_a_users in previous_a_users.iter_mut() {
-        let less = 32 - next_a_users[0].len();
-        next_a_users[0].extend(previous_a_users.take(less));
+    let less = (32.max(next_a1.len()) - next_a1.len()).min(remaining_a_users.len());
+    let a_users = remaining_a_users.split_off(less);
+    assert_eq!(remaining_a_users.len(), less);
+    next_a1.extend(remaining_a_users.into_iter().map(|t| t.1));
+    if next_a1.len() >= 16 {
+        next_a1[16..].sort();
     }
 
-    for (i, &count) in [10, 12, 10].iter().enumerate() {
-        next_a_users[1].extend(previous_a_users[i].take(count));
+    //A2
+    let mut next_a2 = vec![];
+    let mut remaining_a_users = vec![];
+    for ((class, rank), user) in a_users {
+        if (class == "A1" && rank < 26)
+            || (class == "A2" && rank < 22)
+            || (class == "A3" && rank < 16)
+            || user.rating >= 2400
+        {
+            next_a2.push(user);
+        } else {
+            remaining_a_users.push(((class, rank), user));
+        }
     }
-    for previous_a_users in previous_a_users.iter_mut() {
-        let less = 32 - next_a_users[1].len();
-        next_a_users[1].extend(previous_a_users.take(less));
+    let less = (32.max(next_a2.len()) - next_a2.len()).min(remaining_a_users.len());
+    let a_users = remaining_a_users.split_off(less);
+    assert_eq!(remaining_a_users.len(), less);
+    next_a2.extend(remaining_a_users.into_iter().map(|t| t.1));
+    if next_a2.len() >= 16 {
+        next_a2[16..].sort();
     }
-    for previous_a_users in previous_a_users {
-        next_a_users[2].extend(previous_a_users);
-    }
-    next_a_users[2].sort();
 
+    let mut next_a3 = a_users.into_iter().map(|t| t.1).collect::<Vec<_>>();
+    next_a3.sort();
+
+    non_a_users.sort();
     let mut non_a_classes = vec![vec![]; 3];
     for user in non_a_users {
         assert!(user.rating < 2000);
@@ -115,13 +128,16 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
             let mut classes = vec![];
             users.sort();
             for _ in 0..(class_count - 1) {
-                classes.push(users.take(member_count));
+                let t = users.split_off(member_count);
+                classes.push(users);
+                users = t;
             }
             classes.push(users);
             classes
         })
         .collect::<Vec<_>>();
 
+    let next_a_users = vec![next_a1, next_a2, next_a3];
     let mut brackets = BTreeMap::new();
     for (i, next_a_users) in next_a_users.into_iter().enumerate() {
         if next_a_users.is_empty() {
@@ -155,21 +171,4 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
     }
 
     brackets
-}
-
-trait Take<T> {
-    fn take(&mut self, max_size: usize) -> Vec<T>;
-}
-
-impl<T> Take<T> for Vec<T> {
-    fn take(&mut self, max_size: usize) -> Vec<T> {
-        if self.len() >= max_size {
-            let mut suffix = self.split_off(max_size);
-            std::mem::swap(&mut suffix, self);
-            assert_eq!(suffix.len(), max_size);
-            suffix
-        } else {
-            self.split_off(0)
-        }
-    }
 }
