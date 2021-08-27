@@ -226,9 +226,9 @@ export const RegisterPage = () => {
         <Typography component="h1" variant="h5">
           ABCトーナメント参加登録
         </Typography>
-        {/*<Typography component="h3" variant="h6">*/}
-        {/*  2021-07-24(土) 20:30〆切*/}
-        {/*</Typography>*/}
+        <Typography component="h3" variant="h6">
+          2021-08-29(日) 20:30〆切
+        </Typography>
         {registerState.type === "Input" && (
           <RegistrationForm
             state={registerState}

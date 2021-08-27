@@ -3,6 +3,21 @@ use crate::types::{ClassId, UserId};
 use crate::Bracket;
 use std::collections::BTreeMap;
 
+fn get_user_map(registered_user_ids: Vec<UserId>, ratings: Vec<User>) -> BTreeMap<String, User> {
+    let mut users = BTreeMap::new();
+    for user in ratings {
+        users.insert(user.user_id.to_lowercase(), user);
+    }
+
+    let mut registered_users = BTreeMap::new();
+    for user_id in registered_user_ids {
+        if let Some(user) = users.remove(&user_id.to_lowercase()) {
+            registered_users.insert(user.user_id.clone(), user);
+        }
+    }
+    registered_users
+}
+
 #[derive(Default)]
 pub struct ConstructConfig {
     pub ratings: Vec<User>,
@@ -17,17 +32,7 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
         previous_brackets,
         ..
     } = config;
-    let mut users = ratings.into_iter().fold(BTreeMap::new(), |mut map, user| {
-        map.insert(user.user_id.clone(), user);
-        map
-    });
-    let mut registered_users = BTreeMap::new();
-    for user_id in registered_user_ids {
-        if let Some(user) = users.remove(&user_id) {
-            registered_users.insert(user.user_id.clone(), user);
-        }
-    }
-
+    let mut registered_users = get_user_map(registered_user_ids, ratings);
     let mut a_users = vec![];
     let mut non_a_users = vec![];
     let mut defending_champion = None;
