@@ -1,6 +1,6 @@
 use crate::bracket::User;
 use crate::types::{ClassId, UserId};
-use crate::Bracket;
+use crate::{Bracket, Rank};
 use std::collections::BTreeMap;
 
 fn get_user_map(registered_user_ids: Vec<UserId>, ratings: Vec<User>) -> BTreeMap<String, User> {
@@ -64,49 +64,31 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
 
     a_users.sort();
 
-    //A1
-    let mut next_a1 = vec![];
-    let mut remaining_a_users = vec![];
-    for ((class, rank), user) in a_users {
-        if (class == "A1" && rank < 16)
-            || (class == "A2" && rank < 10)
-            || (class == "A3" && rank < 6)
-            || user.rating >= 2800
-        {
-            next_a1.push(user);
-        } else {
-            remaining_a_users.push(((class, rank), user));
-        }
-    }
-    let less = (32.max(next_a1.len()) - next_a1.len()).min(remaining_a_users.len());
-    let a_users = remaining_a_users.split_off(less);
-    assert_eq!(remaining_a_users.len(), less);
-    next_a1.extend(remaining_a_users.into_iter().map(|t| t.1));
-    if next_a1.len() >= 16 {
-        next_a1[16..].sort();
-    }
+    // A1
+    let (next_a1, a_users) = construct_single_a_class(
+        a_users,
+        |class, rank, user| {
+            (class == "A1" && rank < 16)
+                || (class == "A2" && rank < 10)
+                || (class == "A3" && rank < 6)
+                || user.rating >= 2800
+        },
+        4,
+        32,
+    );
 
-    //A2
-    let mut next_a2 = vec![];
-    let mut remaining_a_users = vec![];
-    for ((class, rank), user) in a_users {
-        if (class == "A1" && rank < 26)
-            || (class == "A2" && rank < 22)
-            || (class == "A3" && rank < 16)
-            || user.rating >= 2400
-        {
-            next_a2.push(user);
-        } else {
-            remaining_a_users.push(((class, rank), user));
-        }
-    }
-    let less = (32.max(next_a2.len()) - next_a2.len()).min(remaining_a_users.len());
-    let a_users = remaining_a_users.split_off(less);
-    assert_eq!(remaining_a_users.len(), less);
-    next_a2.extend(remaining_a_users.into_iter().map(|t| t.1));
-    if next_a2.len() >= 16 {
-        next_a2[16..].sort();
-    }
+    // A2
+    let (next_a2, a_users) = construct_single_a_class(
+        a_users,
+        |class, rank, user| {
+            (class == "A1" && rank < 26)
+                || (class == "A2" && rank < 22)
+                || (class == "A3" && rank < 16)
+                || user.rating >= 2400
+        },
+        0,
+        32,
+    );
 
     let mut next_a3 = a_users.into_iter().map(|t| t.1).collect::<Vec<_>>();
     next_a3.sort();
@@ -151,9 +133,9 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
         let class = format!("A{}", i + 1);
 
         let (promotion_rank, drop_rank) = match i {
-            0 => (None, Some(17)),
+            0 => (None, Some(23)),
             1 => (Some(10), Some(23)),
-            2 => (Some(16), None),
+            2 => (Some(10), None),
             _ => unreachable!(),
         };
 
@@ -176,4 +158,35 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
     }
 
     brackets
+}
+
+fn construct_single_a_class<F>(
+    users_sorted_by_prev_rank: Vec<((ClassId, Rank), User)>,
+    filter: F,
+    use_prev_rank: usize,
+    min_members: usize,
+) -> (Vec<User>, Vec<((ClassId, Rank), User)>)
+where
+    F: Fn(&ClassId, Rank, &User) -> bool,
+{
+    let mut selected_users = vec![];
+    let mut remaining_users = vec![];
+    for ((class, rank), user) in users_sorted_by_prev_rank {
+        if filter(&class, rank, &user) {
+            selected_users.push(user);
+        } else {
+            remaining_users.push(((class, rank), user));
+        }
+    }
+
+    let cur_size = selected_users.len();
+    let less = (min_members.max(cur_size) - cur_size).min(remaining_users.len());
+    let rest_users = remaining_users.split_off(less);
+    assert_eq!(remaining_users.len(), less);
+    selected_users.extend(remaining_users.into_iter().map(|t| t.1));
+
+    if selected_users.len() >= use_prev_rank {
+        selected_users[use_prev_rank..].sort();
+    }
+    (selected_users, rest_users)
 }
