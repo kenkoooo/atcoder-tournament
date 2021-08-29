@@ -1,4 +1,5 @@
 import { Box, Tooltip } from "@material-ui/core";
+import { grey, orange } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { User } from "../../models/TournamentNode";
@@ -20,7 +21,7 @@ const useStyle = makeStyles({
     fontSize: "12px",
     minWidth: "120px",
     minHeight: "24px",
-    backgroundColor: "#595a5e",
+    backgroundColor: grey[800],
   },
   nameContainer: {
     padding: "3px",
@@ -35,7 +36,7 @@ const useStyle = makeStyles({
     fontSize: "10px",
     minWidth: "24px",
     backgroundColor: (props: { winner?: boolean }) =>
-      props.winner ? "#f58540" : "#828489",
+      props.winner ? orange[500] : grey[400],
   },
   nodeText: {
     padding: "3px",

@@ -29,7 +29,7 @@ const useRatingColorStyle = makeStyles(() => ({
   },
   blue: {
     fontWeight: "bold",
-    color: blue[600],
+    color: blue[400],
   },
   lightBlue: {
     fontWeight: "bold",
@@ -37,15 +37,15 @@ const useRatingColorStyle = makeStyles(() => ({
   },
   green: {
     fontWeight: "bold",
-    color: green[600],
+    color: green[400],
   },
   brown: {
     fontWeight: "bold",
-    color: brown[400],
+    color: brown[300],
   },
   grey: {
     fontWeight: "bold",
-    color: grey[500],
+    color: grey[400],
   },
 }));
 export const RatingName = (props: {
