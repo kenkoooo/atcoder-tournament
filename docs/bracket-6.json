@@ -1824,6 +1824,14 @@
                           },
                           "rank": null,
                           "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "toam",
+                            "rating": 1864
+                          },
+                          "rank": null,
+                          "children": []
                         }
                       ]
                     },
@@ -2050,6 +2058,14 @@
                           },
                           "rank": null,
                           "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "yamake",
+                            "rating": 1866
+                          },
+                          "rank": null,
+                          "children": []
                         }
                       ]
                     },
@@ -2162,8 +2178,242 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "yamake",
-                            "rating": 1866
+                            "user_id": "t98slider",
+                            "rating": 1864
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "flour814",
+                            "rating": 1725
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "unidayo",
+                            "rating": 1723
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "hotpepsi",
+                            "rating": 1794
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Nzt3",
+                            "rating": 1793
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "scol",
+                            "rating": 1835
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "st2d",
+                            "rating": 1769
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "karudano",
+                            "rating": 1830
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "lemon_",
+                            "rating": 1771
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tishii24",
+                            "rating": 1860
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Jupytor",
+                            "rating": 1740
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "miscalculation53",
+                            "rating": 1715
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "MZKi",
+                            "rating": 1808
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kabipoyo",
+                            "rating": 1785
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Ebishu0309",
+                            "rating": 1851
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "qLethon",
+                            "rating": 1759
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "mannbou",
+                            "rating": 1809
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "masutech16",
+                            "rating": 1780
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "x0214sh7",
+                            "rating": 1864
                           },
                           "rank": null,
                           "children": []
@@ -2178,8 +2428,8 @@
                         },
                         {
                           "user": {
-                            "user_id": "flour814",
-                            "rating": 1725
+                            "user_id": "ikd",
+                            "rating": 1723
                           },
                           "rank": null,
                           "children": []
@@ -2200,8 +2450,8 @@
                         },
                         {
                           "user": {
-                            "user_id": "hotpepsi",
-                            "rating": 1794
+                            "user_id": "oldlick",
+                            "rating": 1791
                           },
                           "rank": null,
                           "children": []
@@ -2220,16 +2470,16 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "so4649",
-                            "rating": 1850
+                            "user_id": "z____z",
+                            "rating": 1838
                           },
                           "rank": null,
                           "children": []
                         },
                         {
                           "user": {
-                            "user_id": "lemon_",
-                            "rating": 1771
+                            "user_id": "milkcoffee",
+                            "rating": 1767
                           },
                           "rank": null,
                           "children": []
@@ -2242,8 +2492,8 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "z____z",
-                            "rating": 1838
+                            "user_id": "takytank",
+                            "rating": 1827
                           },
                           "rank": null,
                           "children": []
@@ -2276,16 +2526,24 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "x0214sh7",
-                            "rating": 1864
+                            "user_id": "nasuo",
+                            "rating": 1862
                           },
                           "rank": null,
                           "children": []
                         },
                         {
                           "user": {
-                            "user_id": "qLethon",
-                            "rating": 1759
+                            "user_id": "prd_xxx",
+                            "rating": 1734
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Strorkis",
+                            "rating": 1717
                           },
                           "rank": null,
                           "children": []
@@ -2298,8 +2556,8 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "mannbou",
-                            "rating": 1809
+                            "user_id": "soraie",
+                            "rating": 1798
                           },
                           "rank": null,
                           "children": []
@@ -2326,8 +2584,8 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "nasuo",
-                            "rating": 1862
+                            "user_id": "so4649",
+                            "rating": 1850
                           },
                           "rank": null,
                           "children": []
@@ -2348,128 +2606,8 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "takytank",
-                            "rating": 1827
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "kabipoyo",
-                            "rating": 1785
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "user": null,
-          "rank": null,
-          "children": [
-            {
-              "user": null,
-              "rank": null,
-              "children": [
-                {
-                  "user": null,
-                  "rank": null,
-                  "children": [
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "toam",
-                            "rating": 1864
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "prd_xxx",
-                            "rating": 1734
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "unidayo",
-                            "rating": 1723
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "soraie",
-                            "rating": 1798
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "Nzt3",
-                            "rating": 1793
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "user": null,
-                  "rank": null,
-                  "children": [
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "Ebishu0309",
-                            "rating": 1851
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "st2d",
-                            "rating": 1769
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "scol",
-                            "rating": 1835
+                            "user_id": "kamojiro",
+                            "rating": 1809
                           },
                           "rank": null,
                           "children": []
@@ -2478,112 +2616,6 @@
                           "user": {
                             "user_id": "toku4388",
                             "rating": 1774
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "user": null,
-              "rank": null,
-              "children": [
-                {
-                  "user": null,
-                  "rank": null,
-                  "children": [
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "t98slider",
-                            "rating": 1864
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "Jupytor",
-                            "rating": 1740
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "MZKi",
-                            "rating": 1808
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "oldlick",
-                            "rating": 1791
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "user": null,
-                  "rank": null,
-                  "children": [
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "tishii24",
-                            "rating": 1860
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "milkcoffee",
-                            "rating": 1767
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "karudano",
-                            "rating": 1830
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "masutech16",
-                            "rating": 1780
                           },
                           "rank": null,
                           "children": []
@@ -2627,120 +2659,6 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "ikd",
-                            "rating": 1723
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "coffee_beans",
-                            "rating": 1619
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "CleyL",
-                            "rating": 1618
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "chomonolis",
-                            "rating": 1666
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "Sooh",
-                            "rating": 1664
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "user": null,
-                  "rank": null,
-                  "children": [
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "G4NP0N",
-                            "rating": 1697
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "MoSooN",
-                            "rating": 1638
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "jjjjjjjtgpptmjj",
-                            "rating": 1694
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "wakuwinmail",
-                            "rating": 1639
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "user": null,
-              "rank": null,
-              "children": [
-                {
-                  "user": null,
-                  "rank": null,
-                  "children": [
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
                             "user_id": "komite",
                             "rating": 1711
                           },
@@ -2749,8 +2667,8 @@
                         },
                         {
                           "user": {
-                            "user_id": "Chris_wsd",
-                            "rating": 1629
+                            "user_id": "turtle0123__",
+                            "rating": 1617
                           },
                           "rank": null,
                           "children": []
@@ -2771,8 +2689,8 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "saky0080",
-                            "rating": 1673
+                            "user_id": "Coki628",
+                            "rating": 1654
                           },
                           "rank": null,
                           "children": []
@@ -2799,8 +2717,8 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "Eldora",
-                            "rating": 1703
+                            "user_id": "masa_aa",
+                            "rating": 1687
                           },
                           "rank": null,
                           "children": []
@@ -2809,14 +2727,6 @@
                           "user": {
                             "user_id": "kohei2019",
                             "rating": 1630
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "new_textfile",
-                            "rating": 1613
                           },
                           "rank": null,
                           "children": []
@@ -2837,8 +2747,122 @@
                         },
                         {
                           "user": {
-                            "user_id": "kuruton456",
-                            "rating": 1649
+                            "user_id": "keep_OC",
+                            "rating": 1636
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tomarint",
+                            "rating": 1699
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "coffee_beans",
+                            "rating": 1619
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "altairrr",
+                            "rating": 1607
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "chomonolis",
+                            "rating": 1666
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "y61mpnl",
+                            "rating": 1640
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "G4NP0N",
+                            "rating": 1697
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "rosso01",
+                            "rating": 1622
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Ysdr",
+                            "rating": 1669
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "wakuwinmail",
+                            "rating": 1639
                           },
                           "rank": null,
                           "children": []
@@ -2869,16 +2893,8 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "Strorkis",
-                            "rating": 1717
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "rosso01",
-                            "rating": 1622
+                            "user_id": "Eldora",
+                            "rating": 1703
                           },
                           "rank": null,
                           "children": []
@@ -2887,6 +2903,14 @@
                           "user": {
                             "user_id": "takepan",
                             "rating": 1618
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "new_textfile",
+                            "rating": 1613
                           },
                           "rank": null,
                           "children": []
@@ -2899,16 +2923,16 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "Ysdr",
-                            "rating": 1669
+                            "user_id": "gmmtea",
+                            "rating": 1655
                           },
                           "rank": null,
                           "children": []
                         },
                         {
                           "user": {
-                            "user_id": "gmmtea",
-                            "rating": 1655
+                            "user_id": "kuruton456",
+                            "rating": 1649
                           },
                           "rank": null,
                           "children": []
@@ -2927,24 +2951,16 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "tomarint",
-                            "rating": 1699
+                            "user_id": "kakel_san",
+                            "rating": 1693
                           },
                           "rank": null,
                           "children": []
                         },
                         {
                           "user": {
-                            "user_id": "Shiro_S",
-                            "rating": 1636
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "altairrr",
-                            "rating": 1607
+                            "user_id": "Chris_wsd",
+                            "rating": 1629
                           },
                           "rank": null,
                           "children": []
@@ -2957,16 +2973,16 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "kakel_san",
-                            "rating": 1693
+                            "user_id": "saky0080",
+                            "rating": 1673
                           },
                           "rank": null,
                           "children": []
                         },
                         {
                           "user": {
-                            "user_id": "y61mpnl",
-                            "rating": 1640
+                            "user_id": "Shiro_S",
+                            "rating": 1636
                           },
                           "rank": null,
                           "children": []
@@ -2991,64 +3007,6 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "miscalculation53",
-                            "rating": 1715
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "rlangevin",
-                            "rating": 1625
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "turtle0123__",
-                            "rating": 1617
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
-                            "user_id": "shacklebolt",
-                            "rating": 1673
-                          },
-                          "rank": null,
-                          "children": []
-                        },
-                        {
-                          "user": {
-                            "user_id": "Coki628",
-                            "rating": 1654
-                          },
-                          "rank": null,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "user": null,
-                  "rank": null,
-                  "children": [
-                    {
-                      "user": null,
-                      "rank": null,
-                      "children": [
-                        {
-                          "user": {
                             "user_id": "Ushiiin",
                             "rating": 1700
                           },
@@ -3057,8 +3015,8 @@
                         },
                         {
                           "user": {
-                            "user_id": "keep_OC",
-                            "rating": 1636
+                            "user_id": "CleyL",
+                            "rating": 1618
                           },
                           "rank": null,
                           "children": []
@@ -3079,8 +3037,8 @@
                       "children": [
                         {
                           "user": {
-                            "user_id": "masa_aa",
-                            "rating": 1687
+                            "user_id": "Sooh",
+                            "rating": 1664
                           },
                           "rank": null,
                           "children": []
@@ -3089,6 +3047,56 @@
                           "user": {
                             "user_id": "Ogtsn99",
                             "rating": 1647
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "jjjjjjjtgpptmjj",
+                            "rating": 1694
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "rlangevin",
+                            "rating": 1625
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "shacklebolt",
+                            "rating": 1673
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "MoSooN",
+                            "rating": 1638
                           },
                           "rank": null,
                           "children": []
