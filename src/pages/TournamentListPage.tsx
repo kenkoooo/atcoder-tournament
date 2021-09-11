@@ -51,11 +51,11 @@ const Winners = (e: TournamentHistory) => {
             </Link>
           </Typography>
         </Grid>
-        <Grid item xs={6} direction="column" spacing={2}>
+        <Grid item xs={6} direction="column" spacing={2} container>
           {winners.map((winner) => {
             if (winner.rank === 1) {
               return (
-                <Box display="flex" alignItems="center">
+                <Box display="flex" alignItems="center" key={winner.userId}>
                   <Typography className={classes.caption} variant="h4">
                     優勝
                   </Typography>
@@ -64,7 +64,7 @@ const Winners = (e: TournamentHistory) => {
               );
             } else if (winner.rank === 2) {
               return (
-                <Box display="flex" alignItems="center">
+                <Box display="flex" alignItems="center" key={winner.userId}>
                   <Typography className={classes.caption} variant="h6">
                     準優勝
                   </Typography>
@@ -73,7 +73,7 @@ const Winners = (e: TournamentHistory) => {
               );
             } else {
               return (
-                <Box display="flex" alignItems="center">
+                <Box display="flex" alignItems="center" key={winner.userId}>
                   <Typography className={classes.caption} variant="h6">
                     第{winner.rank}位
                   </Typography>

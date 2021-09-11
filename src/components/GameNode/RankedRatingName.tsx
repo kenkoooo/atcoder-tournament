@@ -2,6 +2,7 @@ import { Box, Tooltip } from "@material-ui/core";
 import { grey, orange } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
+import { useParams } from "react-router-dom";
 import { User } from "../../models/TournamentNode";
 import { RatingName } from "../RatingName";
 
@@ -50,8 +51,47 @@ const useStyle = makeStyles({
   },
 });
 
+const CHAMPIONS: { [key: string]: string[] } = {
+  heno239: ["1", "2", "5"],
+  Tiramister: ["3"],
+  SSRS: ["4"],
+};
+
+const WinnerTooltip = (props: {
+  defendingChampion: boolean | undefined;
+  userId: string;
+  seasonId: string;
+}) => {
+  if (props.defendingChampion) {
+    return (
+      <Tooltip title="前期王者">
+        <span role="img" aria-label="king">
+          &#x1F451;{" "}
+        </span>
+      </Tooltip>
+    );
+  }
+
+  const pastWonRounds = (CHAMPIONS[props.userId] ?? []).filter(
+    (pastSeasonId) => pastSeasonId < props.seasonId
+  );
+  if (pastWonRounds.length > 0) {
+    const label = pastWonRounds.map((round) => `第${round}期`).join(", ");
+    return (
+      <Tooltip title={`${label}王者`}>
+        <span role="img" aria-label="king">
+          &#x1F3C5;{" "}
+        </span>
+      </Tooltip>
+    );
+  } else {
+    return null;
+  }
+};
+
 export const RankedRatingName = (props: Props) => {
   const { user, rank, winner } = props;
+  const { seasonId } = useParams<{ seasonId: string }>();
   const classes = useStyle({ winner });
 
   if (!user) {
@@ -64,13 +104,11 @@ export const RankedRatingName = (props: Props) => {
 
   const nameElement = (
     <div className={classes.nameContainer}>
-      {props.defendingChampion ? (
-        <Tooltip title="前回優勝者">
-          <span role="img" aria-label="king">
-            👑{" "}
-          </span>
-        </Tooltip>
-      ) : null}
+      <WinnerTooltip
+        defendingChampion={props.defendingChampion}
+        userId={user.user_id}
+        seasonId={seasonId}
+      />
       <RatingName rating={user.rating}>{user.user_id}</RatingName>
     </div>
   );

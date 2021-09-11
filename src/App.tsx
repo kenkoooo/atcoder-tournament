@@ -166,9 +166,9 @@ const App = () => {
           <Switch>
             <Route
               exact
-              path="/tournament/:id([0-9]+)"
+              path="/tournament/:seasonId([0-9]+)"
               render={({ match }) => {
-                const seasonId: string | undefined = match.params.id;
+                const seasonId: string | undefined = match.params.seasonId;
                 return (
                   <Tournament seasonId={seasonId ?? SEASON_ID.toString()} />
                 );
