@@ -184,11 +184,11 @@ fn is_matched_before(user_results: &[LeagueBattleResult], opponent: &User) -> bo
 
 #[derive(Serialize, Deserialize, PartialEq)]
 pub struct UserLeagueEntry {
-    pub(crate) user: User,
-    win_count: usize,
-    rank_sum: f64,
-    results: Vec<LeagueBattleResult>,
-    provisional_rank: usize,
+    pub user: User,
+    pub win_count: usize,
+    pub rank_sum: f64,
+    pub results: Vec<LeagueBattleResult>,
+    pub provisional_rank: usize,
 }
 
 impl Eq for UserLeagueEntry {}
@@ -243,8 +243,8 @@ impl UserLeagueEntry {
 
 #[derive(Serialize, Deserialize, Clone, PartialEq)]
 pub struct LeagueBattleResult {
-    opponent: User,
-    result: BattleResult,
+    pub opponent: User,
+    pub result: BattleResult,
 }
 
 impl LeagueBattleResult {

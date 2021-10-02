@@ -17,9 +17,9 @@ pub fn write_brackets(season_id: SeasonId, brackets: &BTreeMap<ClassId, Bracket>
 
 #[derive(Serialize, Deserialize)]
 pub struct Bracket {
-    node: BracketNode,
+    pub node: BracketNode,
     #[serde(default)]
-    league: Vec<UserLeagueEntry>,
+    pub league: Vec<UserLeagueEntry>,
     defending_champion: Option<UserId>,
     drop_rank: Option<usize>,
     promotion_rank: Option<usize>,

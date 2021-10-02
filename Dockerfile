@@ -10,6 +10,7 @@ ADD ./Cargo.lock .
 RUN cargo build --release
 RUN rm -rf ./src
 ADD ./server/src ./src
+RUN cargo clean
 RUN cargo build --release
 
 FROM rust:1.51.0

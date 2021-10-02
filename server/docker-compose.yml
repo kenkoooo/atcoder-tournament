@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgresql:
+    container_name: postgresql
+    image: postgres:12.3
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpass
+      POSTGRES_DB: test
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8"
+    volumes:
+      - ./db-schema.sql:/docker-entrypoint-initdb.d/init.sql
