@@ -51,7 +51,8 @@ impl LeagueUtil for Vec<UserLeagueEntry> {
                 .get(&opponent.user_id)
                 .cloned()
                 .unwrap_or(INF_RANK);
-            let result = LeagueBattleResult::judge(player, player_rank, opponent, opponent_rank);
+            let result =
+                LeagueBattleResult::judge_for_league(player, player_rank, opponent, opponent_rank);
             entry.results[pos] = result;
         }
     }
@@ -247,15 +248,23 @@ pub struct LeagueBattleResult {
 }
 
 impl LeagueBattleResult {
-    pub(crate) fn judge(
+    fn judge(
         player: &User,
         player_rank: Rank,
         opponent: &User,
         opponent_rank: Rank,
+        is_league: bool,
     ) -> Self {
         let is_win = player_rank < opponent_rank
             || (player_rank == opponent_rank && player.rating > opponent.rating);
         let is_skipped = player_rank == INF_RANK;
+
+        if is_skipped && is_league {
+            return LeagueBattleResult {
+                opponent: opponent.clone(),
+                result: BattleResult::SkipLose,
+            };
+        }
 
         match (is_win, is_skipped) {
             (true, true) => LeagueBattleResult {
@@ -275,6 +284,23 @@ impl LeagueBattleResult {
                 result: BattleResult::Lose { rank: player_rank },
             },
         }
+    }
+    fn judge_for_league(
+        player: &User,
+        player_rank: Rank,
+        opponent: &User,
+        opponent_rank: Rank,
+    ) -> Self {
+        Self::judge(player, player_rank, opponent, opponent_rank, true)
+    }
+
+    pub(crate) fn judge_for_tournament(
+        player: &User,
+        player_rank: Rank,
+        opponent: &User,
+        opponent_rank: Rank,
+    ) -> Self {
+        Self::judge(player, player_rank, opponent, opponent_rank, false)
     }
 }
 

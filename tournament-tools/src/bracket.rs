@@ -250,9 +250,14 @@ impl BracketNode {
                 .rank
                 .expect("Though the winner is filled, rank is not filled");
             let battle_result = if player == winner {
-                LeagueBattleResult::judge(player, player_rank, second_player, second_rank)
+                LeagueBattleResult::judge_for_tournament(
+                    player,
+                    player_rank,
+                    second_player,
+                    second_rank,
+                )
             } else {
-                LeagueBattleResult::judge(player, player_rank, winner, 0)
+                LeagueBattleResult::judge_for_tournament(player, player_rank, winner, 0)
             };
 
             result
