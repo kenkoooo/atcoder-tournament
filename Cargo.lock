@@ -19,6 +19,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "actix-cors"
+version = "0.6.0-beta.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "01552b8facccd5d7a4cc5d8e2b07d306160c97a4968181c2db965533389c8725"
+dependencies = [
+ "actix-service",
+ "actix-web",
+ "derive_more",
+ "futures-util",
+ "log",
+ "once_cell",
+ "smallvec",
+]
+
+[[package]]
 name = "actix-http"
 version = "3.0.0-beta.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -34,7 +49,7 @@ dependencies = [
  "bitflags",
  "brotli2",
  "bytes 1.0.1",
- "bytestring 1.0.0",
+ "bytestring",
  "derive_more",
  "encoding_rs",
  "flate2",
@@ -78,7 +93,7 @@ version = "0.5.0-beta.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "36b95ce0d76d1aa2f98b681702807475ade0f99bd4552546a6843a966d42ea3d"
 dependencies = [
- "bytestring 0.1.5",
+ "bytestring",
  "firestorm",
  "http",
  "log",
@@ -546,15 +561,6 @@ name = "bytes"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b700ce4376041dcd0a327fd0097c41095743c4c8af8887265942faf1100bd040"
-
-[[package]]
-name = "bytestring"
-version = "0.1.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fc7c05fa5172da78a62d9949d662d2ac89d4cc7355d7b49adee5163f1fb3f363"
-dependencies = [
- "bytes 0.5.6",
-]
 
 [[package]]
 name = "bytestring"
@@ -2354,6 +2360,7 @@ dependencies = [
 name = "server"
 version = "0.1.0"
 dependencies = [
+ "actix-cors",
  "actix-web",
  "anyhow",
  "bcrypt",

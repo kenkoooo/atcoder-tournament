@@ -1,6 +1,6 @@
 use crate::auth;
-use actix_web::cookie::{Cookie, CookieJar};
-use actix_web::http::header::ACCESS_CONTROL_ALLOW_ORIGIN;
+use actix_web::cookie::{Cookie, CookieJar, SameSite};
+use actix_web::http::header::{ACCESS_CONTROL_ALLOW_CREDENTIALS, ACCESS_CONTROL_ALLOW_ORIGIN};
 use actix_web::http::StatusCode;
 use actix_web::{get, post, web, HttpRequest, HttpResponse, HttpResponseBuilder};
 use anyhow::Context;
@@ -28,6 +28,7 @@ pub async fn post_stage(
 
     let response = HttpResponseBuilder::new(StatusCode::OK)
         .append_header(("Access-Control-Allow-Origin", "*"))
+        .append_header((ACCESS_CONTROL_ALLOW_CREDENTIALS, "true"))
         .json(&response);
     Ok(response)
 }
@@ -45,9 +46,18 @@ pub async fn post_signup(
     let token = r(auth::signup(&request.user_id, pg_pool.as_ref()).await)?;
     CookieJar::new();
     let response = HttpResponseBuilder::new(StatusCode::OK)
-        .cookie(Cookie::build("token", token).finish())
-        .cookie(Cookie::build("user_id", &request.user_id).finish())
+        .cookie(
+            Cookie::build("token", token)
+                .same_site(SameSite::None)
+                .finish(),
+        )
+        .cookie(
+            Cookie::build("user_id", &request.user_id)
+                .same_site(SameSite::None)
+                .finish(),
+        )
         .append_header((ACCESS_CONTROL_ALLOW_ORIGIN, "*"))
+        .append_header((ACCESS_CONTROL_ALLOW_CREDENTIALS, "true"))
         .finish();
     Ok(response)
 }
@@ -69,7 +79,11 @@ pub async fn get_verify(
     let user_id = r(http_request.cookie("user_id").context("No user_id"))?;
     let verified = r(auth::verify(user_id.value(), token.value(), pg_pool.as_ref()).await)?;
     if verified {
-        Ok(HttpResponse::new(StatusCode::OK))
+        let response = HttpResponseBuilder::new(StatusCode::OK)
+            .append_header(("Access-Control-Allow-Origin", "*"))
+            .append_header((ACCESS_CONTROL_ALLOW_CREDENTIALS, "true"))
+            .finish();
+        Ok(response)
     } else {
         Ok(HttpResponse::new(StatusCode::UNAUTHORIZED))
     }

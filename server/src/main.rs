@@ -1,3 +1,5 @@
+use actix_cors::Cors;
+use actix_web::http::header;
 use actix_web::web::Data;
 use actix_web::{App, HttpServer};
 use server::api;
@@ -20,14 +22,15 @@ async fn main() -> anyhow::Result<()> {
         .connect(&database_url)
         .await?;
 
-    let hash = bcrypt::verify(
-        "xoWXxRFcepBmNRUJFuCZFvTU1GbCu6",
-        "$2b$12$UBz/EvyR4fDdxd70whCpaeOCFewAN.4S2Oy.LMxV0/3WVIbU.1xDi",
-    )?;
-    log::info!("{}", hash);
-
     HttpServer::new(move || {
+        let cors = Cors::default()
+            .allowed_origin_fn(|_, _| true)
+            .allowed_methods(vec!["GET", "POST"])
+            .allowed_header(header::CONTENT_TYPE)
+            .supports_credentials()
+            .max_age(3600);
         App::new()
+            .wrap(cors)
             .service(api::post_signup)
             .service(api::post_stage)
             .service(api::get_verify)

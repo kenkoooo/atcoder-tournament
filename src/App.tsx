@@ -17,6 +17,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { Tournament } from "./pages/Tournament";
 import { TournamentListPage } from "./pages/TournamentListPage";
@@ -140,15 +141,15 @@ const App = () => {
               >
                 記録
               </Link>
-              {/*<Link*/}
-              {/*  component={RouterLink}*/}
-              {/*  variant="button"*/}
-              {/*  color="textPrimary"*/}
-              {/*  to="/register"*/}
-              {/*  className={classes.link}*/}
-              {/*>*/}
-              {/*  参加登録*/}
-              {/*</Link>*/}
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/login"
+                className={classes.link}
+              >
+                ログイン
+              </Link>
               <Link
                 href="https://github.com/kenkoooo/atcoder-tournament/tree/master/rules"
                 target="_blank"
@@ -174,9 +175,9 @@ const App = () => {
                 );
               }}
             />
-            {/*<Route path="/register">*/}
-            {/*  <RegisterPage />*/}
-            {/*</Route>*/}
+            <Route path="/login">
+              <LoginPage />
+            </Route>
             <Route path="/user/:user_id([0-9a-zA-Z_]+)">
               <UserHistoryPage />
             </Route>
