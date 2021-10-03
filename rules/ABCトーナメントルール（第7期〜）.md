@@ -1,4 +1,4 @@
-# ABCトーナメントルール（第6期〜）
+# ABCトーナメントルール（第7期〜）
 
 - AtCoder Beginner Contest の結果を使ったトーナメント戦です。
 - 1回戦を除き、各試合は1対1で行われ、指定されたABCでの順位が高かった方が勝者となり、次の試合に進出します。
@@ -35,37 +35,7 @@
 |1200 - 1599|3-4級|C|
 |0 - 1199|5級以下|D|
 
-## 第6期Aクラスの分割
-
-Aクラスは以下のようにA1、A2、A3の3つに分割します。
-
-### A1
-
-下記のいずれかの条件を満たす参加者はA1に所属します。
-
-- 第5期A1で16位以内
-- 第5期A2で10位以内
-- 第5期A3で6位以内
-- AtCoder五段以上
-
-上記の参加者で32名に満たない場合、32名になるまで第5期上位者をA1に加えます。
-
-### A2
-
-A1に含まれない参加者のうち、下記のいずれかの条件を満たす参加者はA2に所属します。
-
-- 第5期A1で26位以内
-- 第5期A2で22位以内
-- 第5期A3で16位以内
-- AtCoder三段以上
-
-上記の参加者で32名に満たない場合、32名になるまで第5期上位者をA2に加えます。
-
-### A3
-
-A1およびA2に含まれないAtCoder初段以上の参加者はA3に所属します。
-
-## 第7期以降のAクラスの分割
+## Aクラスの分割
 
 Aクラスは以下のようにA1、A2、A3の3つに分割します。
 
@@ -106,11 +76,10 @@ B〜Dクラスは、最高レートの高い順に、人数が均等になるよ
 
 各試合の対象となる ABC は以下のとおりです。他のコンテストとの兼ね合いなどで変更になることがあるので、注意してください。
 
-### 第6期
+### 第7期
 
-- 1回戦: AtCoder Beginner Contest 216
-- 2回戦: AtCoder Beginner Contest 217
-- 準々決勝: AtCoder Beginner Contest 218
-- ~~準決勝: AtCoder Beginner Contest 219~~
-- 準決勝: AtCoder Beginner Contest 220
-- 決勝: AtCoder Beginner Contest 221
+- 1回戦: AtCoder Beginner Contest 223
+- 2回戦: AtCoder Beginner Contest 224
+- 準々決勝: AtCoder Beginner Contest 225
+- 準決勝: AtCoder Beginner Contest 226
+- 決勝: AtCoder Beginner Contest 227

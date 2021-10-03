@@ -68,10 +68,7 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
     let (next_a1, a_users) = construct_single_a_class(
         a_users,
         |class, rank, user| {
-            (class == "A1" && rank < 16)
-                || (class == "A2" && rank < 10)
-                || (class == "A3" && rank < 6)
-                || user.rating >= 2800
+            (class == "A1" && rank < 22) || (class == "A2" && rank < 10) || user.rating >= 2800
         },
         4,
         32,
@@ -81,9 +78,9 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
     let (next_a2, a_users) = construct_single_a_class(
         a_users,
         |class, rank, user| {
-            (class == "A1" && rank < 26)
+            class == "A1"
                 || (class == "A2" && rank < 22)
-                || (class == "A3" && rank < 16)
+                || (class == "A3" && rank < 10)
                 || user.rating >= 2400
         },
         0,
