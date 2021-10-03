@@ -1,4 +1,5 @@
 use crate::auth;
+use crate::db::{self, UserData};
 use actix_web::cookie::{Cookie, CookieJar, SameSite};
 use actix_web::http::header::{ACCESS_CONTROL_ALLOW_CREDENTIALS, ACCESS_CONTROL_ALLOW_ORIGIN};
 use actix_web::http::StatusCode;
@@ -70,15 +71,42 @@ fn r<T>(result: anyhow::Result<T>) -> actix_web::Result<T> {
     Ok(value)
 }
 
+#[derive(Serialize)]
+struct VerifyResponse {
+    user_id: String,
+}
+
 #[get("/api/verify")]
 pub async fn get_verify(
     http_request: HttpRequest,
     pg_pool: web::Data<PgPool>,
 ) -> actix_web::Result<HttpResponse> {
-    let token = r(http_request.cookie("token").context("No token"))?;
-    let user_id = r(http_request.cookie("user_id").context("No user_id"))?;
-    let verified = r(auth::verify(user_id.value(), token.value(), pg_pool.as_ref()).await)?;
+    let token = http_request.get_token()?;
+    let user_id = http_request.get_user_id()?;
+    let verified = r(auth::verify(&user_id, &token, pg_pool.as_ref()).await)?;
     if verified {
+        let response = VerifyResponse { user_id };
+        let response = HttpResponseBuilder::new(StatusCode::OK)
+            .append_header(("Access-Control-Allow-Origin", "*"))
+            .append_header((ACCESS_CONTROL_ALLOW_CREDENTIALS, "true"))
+            .json(&response);
+        Ok(response)
+    } else {
+        Ok(HttpResponse::new(StatusCode::UNAUTHORIZED))
+    }
+}
+
+#[post("/api/save_data")]
+pub async fn post_save_data(
+    http_request: HttpRequest,
+    request: web::Json<UserData>,
+    pg_pool: web::Data<PgPool>,
+) -> actix_web::Result<HttpResponse> {
+    let token = http_request.get_token()?;
+    let user_id = http_request.get_user_id()?;
+    let verified = r(auth::verify(&user_id, &token, pg_pool.as_ref()).await)?;
+    if verified {
+        r(db::put_user_data(&user_id, &request.0, pg_pool.as_ref()).await)?;
         let response = HttpResponseBuilder::new(StatusCode::OK)
             .append_header(("Access-Control-Allow-Origin", "*"))
             .append_header((ACCESS_CONTROL_ALLOW_CREDENTIALS, "true"))
@@ -87,6 +115,36 @@ pub async fn get_verify(
     } else {
         Ok(HttpResponse::new(StatusCode::UNAUTHORIZED))
     }
+}
+
+#[get("/api/data")]
+pub async fn get_data(
+    http_request: HttpRequest,
+    pg_pool: web::Data<PgPool>,
+) -> actix_web::Result<HttpResponse> {
+    let token = http_request.get_token()?;
+    let user_id = http_request.get_user_id()?;
+    let verified = r(auth::verify(&user_id, &token, pg_pool.as_ref()).await)?;
+    if verified {
+        let data = r(db::get_user_data(&user_id, pg_pool.as_ref()).await)?;
+        let response = HttpResponseBuilder::new(StatusCode::OK)
+            .append_header(("Access-Control-Allow-Origin", "*"))
+            .append_header((ACCESS_CONTROL_ALLOW_CREDENTIALS, "true"))
+            .json(&data);
+        Ok(response)
+    } else {
+        Ok(HttpResponse::new(StatusCode::UNAUTHORIZED))
+    }
+}
+
+#[get("/api/users")]
+pub async fn get_users(pg_pool: web::Data<PgPool>) -> actix_web::Result<HttpResponse> {
+    let users = r(db::get_users(pg_pool.as_ref()).await)?;
+    let response = HttpResponseBuilder::new(StatusCode::OK)
+        .append_header(("Access-Control-Allow-Origin", "*"))
+        .append_header((ACCESS_CONTROL_ALLOW_CREDENTIALS, "true"))
+        .json(&users);
+    Ok(response)
 }
 
 #[derive(Debug)]
@@ -99,3 +157,20 @@ impl Display for IntermediateError {
 }
 
 impl actix_web::ResponseError for IntermediateError {}
+
+trait HttpRequestExt {
+    fn get_token(&self) -> actix_web::Result<String>;
+    fn get_user_id(&self) -> actix_web::Result<String>;
+}
+
+impl HttpRequestExt for HttpRequest {
+    fn get_token(&self) -> actix_web::Result<String> {
+        let token = r(self.cookie("token").context("No token"))?;
+        Ok(token.value().to_string())
+    }
+
+    fn get_user_id(&self) -> actix_web::Result<String> {
+        let user_id = r(self.cookie("user_id").context("No user_id"))?;
+        Ok(user_id.value().to_string())
+    }
+}

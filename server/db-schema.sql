@@ -1,5 +1,12 @@
 CREATE TABLE IF NOT EXISTS tbl_user
 (
+    user_id   TEXT NOT NULL,
+    user_data JSONB,
+    PRIMARY KEY (user_id)
+);
+
+CREATE TABLE IF NOT EXISTS tbl_token
+(
     user_id    TEXT NOT NULL,
     token_hash TEXT NOT NULL,
     PRIMARY KEY (user_id)

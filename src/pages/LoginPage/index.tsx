@@ -8,11 +8,10 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import React, { useState } from "react";
-import { signupUser, stageUser, verifyUser } from "./LoginAPI";
+import { signupUser, stageUser, useLoginState } from "../../utils/PrivateAPI";
 import { UsernameInputForm } from "./UsernameInputForm";
 import { VerificationForm } from "./VerificationForm";
-
-interface Props {}
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -41,13 +40,38 @@ type LoginPageState =
       type: "verify";
       token: string;
       userId: string;
+    }
+  | {
+      type: "failed";
+    }
+  | {
+      type: "verified";
     };
 
-export const LoginPage = (props: Props) => {
+export const LoginPage = () => {
   const classes = useStyles();
   const [loginPageState, setLoginPageState] = useState<LoginPageState>({
     type: "input",
   });
+  const loginState = useLoginState();
+  const history = useHistory();
+
+  if (!loginState.error && !loginState.data) {
+    return (
+      <Container maxWidth="xs">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <CircularProgress />
+        </div>
+      </Container>
+    );
+  }
+
+  if (loginState.data) {
+    history.push({ pathname: "/mypage" });
+    return <div />;
+  }
+
   return (
     <Container maxWidth="xs">
       <CssBaseline />
@@ -73,11 +97,15 @@ export const LoginPage = (props: Props) => {
             code={loginPageState.token}
             onConfirm={async () => {
               setLoginPageState({ type: "pending" });
-              const signupResult = await signupUser(loginPageState.userId);
-              await verifyUser();
+              const signupSucceeded = await signupUser(loginPageState.userId);
+              if (signupSucceeded) {
+              } else {
+                setLoginPageState({ type: "failed" });
+              }
             }}
           />
         )}
+        {loginPageState.type === "failed" && <p>認証に失敗しました。</p>}
       </div>
     </Container>
   );

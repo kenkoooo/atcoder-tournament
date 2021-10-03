@@ -1,16 +1,16 @@
 use crate::scraping::get_affiliation;
 use crate::{generate_random_string, now_secs};
 use anyhow::{Context, Result};
-use bcrypt::DEFAULT_COST;
 use sqlx::postgres::PgRow;
 use sqlx::{PgPool, Row};
 
 const EXPIRE_DURATION_SECS: i64 = 600;
+const COST: u32 = 4;
 
 pub(crate) async fn stage(user_id: &str, pg_pool: &PgPool) -> Result<String> {
     let now = now_secs();
     let token = generate_random_string(30);
-    let token_hash = bcrypt::hash(&token, DEFAULT_COST)?;
+    let token_hash = bcrypt::hash(&token, COST)?;
     sqlx::query(
         r#"
         INSERT INTO tbl_stage (user_id, token_hash, expires) VALUES ($1, $2, $3)
@@ -47,10 +47,10 @@ pub(crate) async fn signup(user_id: &str, pg_pool: &PgPool) -> Result<String> {
 
     if verified && !expired {
         let token = generate_random_string(30);
-        let token_hash = bcrypt::hash(&token, DEFAULT_COST)?;
+        let token_hash = bcrypt::hash(&token, COST)?;
         sqlx::query(
             r#"
-        INSERT INTO tbl_user (user_id, token_hash) VALUES ($1, $2)
+        INSERT INTO tbl_token (user_id, token_hash) VALUES ($1, $2)
         ON CONFLICT (user_id)
         DO UPDATE SET token_hash=EXCLUDED.token_hash
         "#,
@@ -66,7 +66,7 @@ pub(crate) async fn signup(user_id: &str, pg_pool: &PgPool) -> Result<String> {
 }
 
 pub(crate) async fn verify(user_id: &str, token: &str, pg_pool: &PgPool) -> Result<bool> {
-    let token_hash = sqlx::query(r"SELECT token_hash FROM tbl_user WHERE user_id=$1")
+    let token_hash = sqlx::query(r"SELECT token_hash FROM tbl_token WHERE user_id=$1")
         .bind(user_id.to_lowercase())
         .try_map(|row: PgRow| row.try_get::<String, _>("token_hash"))
         .fetch_one(pg_pool)

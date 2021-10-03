@@ -4,6 +4,7 @@ use std::time::{SystemTime, UNIX_EPOCH};
 
 pub mod api;
 pub(crate) mod auth;
+pub(crate) mod db;
 pub(crate) mod scraping;
 
 pub(crate) fn generate_random_string(length: usize) -> String {

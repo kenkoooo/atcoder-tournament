@@ -3,13 +3,13 @@ import { TournamentHistory } from "../models/TournamentHistory";
 import { TournamentResponse } from "../models/TournamentNode";
 import { UserHistory } from "../models/UserHistory";
 
-const fetchTournamentSeason6 = async (): Promise<TournamentResponse> => {
+const fetchTournamentSeason7 = async (): Promise<TournamentResponse> => {
   const usersResponse = await fetch(
     "https://atcoder-tournament.herokuapp.com/api/users"
   );
   const usersText = await usersResponse.text();
 
-  const previousBracketsResponse = await fetch("./bracket-5.json");
+  const previousBracketsResponse = await fetch("./bracket-6.json");
   const previousBracketsText = await previousBracketsResponse.text();
 
   const ratingResponse = await fetch("./ratings.json");
@@ -27,8 +27,8 @@ const fetchTournamentSeason6 = async (): Promise<TournamentResponse> => {
 
 export const useTournament = (seasonId: string) => {
   const fetcher = (url: string) => {
-    if (seasonId === "x") {
-      return fetchTournamentSeason6();
+    if (seasonId === "7") {
+      return fetchTournamentSeason7();
     } else {
       return fetch(url)
         .then((response) => response.json())

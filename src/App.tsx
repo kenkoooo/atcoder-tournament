@@ -18,7 +18,7 @@ import {
   Switch,
 } from "react-router-dom";
 import { LoginPage } from "./pages/LoginPage";
-import { RegisterPage } from "./pages/RegisterPage";
+import { MyPage } from "./pages/MyPage";
 import { Tournament } from "./pages/Tournament";
 import { TournamentListPage } from "./pages/TournamentListPage";
 import { TournamentRankingPage } from "./pages/TournamentRankingPage";
@@ -177,6 +177,9 @@ const App = () => {
             />
             <Route path="/login">
               <LoginPage />
+            </Route>
+            <Route path="/mypage">
+              <MyPage />
             </Route>
             <Route path="/user/:user_id([0-9a-zA-Z_]+)">
               <UserHistoryPage />

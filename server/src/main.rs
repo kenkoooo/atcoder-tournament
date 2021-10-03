@@ -34,6 +34,9 @@ async fn main() -> anyhow::Result<()> {
             .service(api::post_signup)
             .service(api::post_stage)
             .service(api::get_verify)
+            .service(api::get_data)
+            .service(api::post_save_data)
+            .service(api::get_users)
             .app_data(Data::new(pg_pool.clone()))
     })
     .bind(address)?
