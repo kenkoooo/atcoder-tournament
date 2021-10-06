@@ -15,7 +15,13 @@ export const VerificationForm = (props: Props) => {
   const classes = useStyles();
   return (
     <>
-      <p>本人確認のため、AtCoder にログインして、所属を一時的に</p>
+      <p>
+        本人確認のため、AtCoder にログインして、
+        <a href="https://atcoder.jp/settings" target="_blank">
+          基本設定のページ
+        </a>
+        の「所属」を一時的に
+      </p>
       <code>{props.code}</code>
       <p>に変更して、「確認」ボタンを押してください。</p>
       <Button
