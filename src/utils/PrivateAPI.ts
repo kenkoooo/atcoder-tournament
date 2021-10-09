@@ -26,15 +26,14 @@ export const signupUser = async (userId: string) => {
   return response.status === 200;
 };
 
-const fetchVerificationState = async () => {
-  const response = await fetch(`${SERVER}/verify`, {
-    credentials: "include",
-  });
-  const body = await response.json();
-  return body.user_id as string;
-};
 export const useLoginState = () => {
-  return useSWR("useVerificationState", () => fetchVerificationState());
+  return useSWR(`${SERVER}/verify`, async (url) => {
+    const response = await fetch(url, {
+      credentials: "include",
+    });
+    const body = await response.json();
+    return body.user_id as string;
+  });
 };
 
 interface UserData {

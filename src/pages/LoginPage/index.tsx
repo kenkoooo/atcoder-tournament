@@ -45,7 +45,7 @@ type LoginPageState =
       type: "failed";
     }
   | {
-      type: "verified";
+      type: "verification_finished";
     };
 
 export const LoginPage = () => {
@@ -99,6 +99,8 @@ export const LoginPage = () => {
               setLoginPageState({ type: "pending" });
               const signupSucceeded = await signupUser(loginPageState.userId);
               if (signupSucceeded) {
+                await loginState.revalidate();
+                setLoginPageState({ type: "verification_finished" });
               } else {
                 setLoginPageState({ type: "failed" });
               }
@@ -106,6 +108,12 @@ export const LoginPage = () => {
           />
         )}
         {loginPageState.type === "failed" && <p>認証に失敗しました。</p>}
+        {loginPageState.type === "verification_finished" &&
+          loginState.error && (
+            <p>
+              ログイン情報の保存に失敗しました。サードパーティのCookieを許可するように、ブラウザの設定を変更してみてください。
+            </p>
+          )}
       </div>
     </Container>
   );
