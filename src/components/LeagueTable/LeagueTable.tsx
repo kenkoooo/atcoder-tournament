@@ -65,9 +65,8 @@ interface Props {
 }
 
 export const LeagueTable = (props: Props) => {
-  const { league } = props;
-  const maxResultCount = Math.max(...league.map((e) => e.results.length));
-  const leage = props.league.filter(
+  const maxResultCount = Math.max(...props.league.map((e) => e.results.length));
+  const league = props.league.filter(
     (entry) => !entry.user.user_id.startsWith(DUMMY_USER_ID_PREFIX)
   );
   return (
@@ -89,7 +88,7 @@ export const LeagueTable = (props: Props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {leage.map((entry, idx) => {
+          {league.map((entry, idx) => {
             if (entry.provisional_rank === props.promotionRank) {
               return (
                 <Fragment key={idx}>

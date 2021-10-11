@@ -52,7 +52,7 @@ const useStyle = makeStyles({
 });
 
 const CHAMPIONS: { [key: string]: string[] } = {
-  heno239: ["1", "2", "5"],
+  heno239: ["1", "2", "5", "6"],
   Tiramister: ["3"],
   SSRS: ["4"],
 };
@@ -76,9 +76,9 @@ const WinnerTooltip = (props: {
     (pastSeasonId) => pastSeasonId < props.seasonId
   );
   if (pastWonRounds.length > 0) {
-    const label = pastWonRounds.map((round) => `第${round}期`).join(", ");
+    const label = pastWonRounds.map((round) => `${round}期`).join("・");
     return (
-      <Tooltip title={`${label}王者`}>
+      <Tooltip title={`第${label}王者`}>
         <span role="img" aria-label="king">
           &#x1F3C5;{" "}
         </span>
