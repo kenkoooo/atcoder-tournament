@@ -21,7 +21,6 @@ import { LoginPage } from "./pages/LoginPage";
 import { MyPage } from "./pages/MyPage";
 import { Tournament } from "./pages/Tournament";
 import { TournamentListPage } from "./pages/TournamentListPage";
-import { TournamentRankingPage } from "./pages/TournamentRankingPage";
 import { UserHistoryPage } from "./pages/UserHistoryPage";
 import { SEASON_ID } from "./utils/Constants";
 import { RecordPage } from "./pages/RecordPage";
@@ -189,9 +188,6 @@ const App = () => {
             </Route>
             <Route path="/record">
               <RecordPage />
-            </Route>
-            <Route path="/ranking/:seasonId([0-9]+)">
-              <TournamentRankingPage />
             </Route>
             <Redirect path="/" to={`/tournament/${SEASON_ID}`} />
           </Switch>

@@ -1,4 +1,13 @@
-import { Box, Grid, Paper, Typography } from "@material-ui/core";
+import {
+  Box,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
@@ -13,89 +22,60 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     maxWidth: 800,
   },
-  paper: {
-    padding: theme.spacing(2),
-    marginLeft: "auto",
-    marginRight: "auto",
-    marginTop: 30,
-  },
-  caption: {
-    marginRight: 20,
-    minWidth: 80,
-  },
   link: {
-    color: "white",
+    color: theme.palette.grey[50],
   },
 }));
 
-const Winners = (e: TournamentHistory) => {
+const HistoryRow = (e: TournamentHistory) => {
   const classes = useStyles();
-  const winners = e.ranking
-    .map(([rank, entry]) => ({
-      rank: rank + 1,
-      userId: entry.user_id,
-    }))
-    .sort((a, b) => a.rank - b.rank)
-    .slice(0, 4);
+  const ranking = e.ranking.map(([rank, entry]) => ({
+    class: entry.class,
+    userId: entry.user_id,
+    rank,
+  }));
+  ranking.sort((a, b) => a.rank - b.rank);
+
+  const first: string | undefined = ranking[0]?.userId;
+  const second: string | undefined = ranking[1]?.userId;
+
   return (
-    <Paper className={classes.paper}>
-      <Grid container spacing={2}>
-        <Grid item xs={4}>
-          <Typography variant="h3">
-            <Link
-              component={RouterLink}
-              to={`/tournament/${e.season}`}
-              className={classes.link}
-            >
-              第{e.season}期
-            </Link>
-          </Typography>
-        </Grid>
-        <Grid item xs={6} direction="column" spacing={2} container>
-          {winners.map((winner) => {
-            if (winner.rank === 1) {
-              return (
-                <Box display="flex" alignItems="center" key={winner.userId}>
-                  <Typography className={classes.caption} variant="h4">
-                    優勝
-                  </Typography>
-                  <Typography variant="h2">{winner.userId}</Typography>
-                </Box>
-              );
-            } else if (winner.rank === 2) {
-              return (
-                <Box display="flex" alignItems="center" key={winner.userId}>
-                  <Typography className={classes.caption} variant="h6">
-                    準優勝
-                  </Typography>
-                  <Typography variant="h4">{winner.userId}</Typography>
-                </Box>
-              );
-            } else {
-              return (
-                <Box display="flex" alignItems="center" key={winner.userId}>
-                  <Typography className={classes.caption} variant="h6">
-                    第{winner.rank}位
-                  </Typography>
-                  <Typography variant="h5">{winner.userId}</Typography>
-                </Box>
-              );
-            }
-          })}
-          {e.expandable && (
-            <Box marginTop={2}>
-              <Link
-                className={classes.link}
-                component={RouterLink}
-                to={`/ranking/${e.season}`}
-              >
-                全てのランキングを表示
-              </Link>
-            </Box>
-          )}
-        </Grid>
-      </Grid>
-    </Paper>
+    <TableRow>
+      <TableCell variant="head">{e.season}</TableCell>
+      <TableCell>
+        <Typography variant="h6">
+          <Link
+            className={classes.link}
+            component={RouterLink}
+            to={`/user/${first}`}
+          >
+            {first}
+          </Link>
+        </Typography>
+      </TableCell>
+      <TableCell>
+        <Typography variant="h6">
+          <Link
+            className={classes.link}
+            component={RouterLink}
+            to={`/user/${second}`}
+          >
+            {second}
+          </Link>
+        </Typography>
+      </TableCell>
+      <TableCell>
+        <Link
+          component={RouterLink}
+          variant="button"
+          color="textPrimary"
+          to={`/tournament/${e.season}`}
+          className={classes.link}
+        >
+          {`第${e.season}期トーナメント表`}
+        </Link>
+      </TableCell>
+    </TableRow>
   );
 };
 
@@ -119,12 +99,23 @@ export const TournamentListPage = () => {
 
   return (
     <Container className={classes.root}>
-      <Typography variant="h2">過去の開催</Typography>
-      <Container>
-        {tournaments.map((e) => (
-          <Winners key={e.season} {...e} />
-        ))}
-      </Container>
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>期</TableCell>
+              <TableCell>優勝</TableCell>
+              <TableCell>準優勝</TableCell>
+              <TableCell>トーナメント表</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {tournaments.map((e) => (
+              <HistoryRow key={e.season} {...e} />
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Container>
   );
 };
