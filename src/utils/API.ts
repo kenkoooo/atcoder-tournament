@@ -4,9 +4,7 @@ import { TournamentResponse } from "../models/TournamentNode";
 import { UserHistory } from "../models/UserHistory";
 
 const fetchTournamentSeason7 = async (): Promise<TournamentResponse> => {
-  const usersResponse = await fetch(
-    "https://atcoder-tournament.herokuapp.com/api/users"
-  );
+  const usersResponse = await fetch("https://abc-api.kenkoooo.com/api/users");
   const usersText = await usersResponse.text();
 
   const previousBracketsResponse = await fetch("./bracket-6.json");
