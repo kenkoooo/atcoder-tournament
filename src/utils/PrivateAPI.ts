@@ -1,5 +1,5 @@
 import useSWR from "swr";
-const SERVER = "https://abc-api.kenkoooo.com/api";
+const SERVER = "https://atcoder-tournament.herokuapp.com/api";
 
 export const stageUser = async (userId: string) => {
   const response = await fetch(`${SERVER}/stage`, {
