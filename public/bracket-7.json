@@ -1,0 +1,4739 @@
+{
+  "A1": {
+    "node": {
+      "user": null,
+      "rank": null,
+      "children": [
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "heno239",
+                            "rating": 3260
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "shiomusubi496",
+                            "rating": 2130
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "yuto1115",
+                            "rating": 2596
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "potato167",
+                            "rating": 2572
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "kobae964",
+                            "rating": 2851
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ygussany",
+                            "rating": 2494
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "risujiroh",
+                            "rating": 2849
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ei13333",
+                            "rating": 2498
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "haruki_K",
+                            "rating": 2359
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "chinerist",
+                            "rating": 2405
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "mtsd",
+                            "rating": 2797
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "enjapma",
+                            "rating": 2546
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "yokozuna57",
+                            "rating": 3050
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "emthrm",
+                            "rating": 2413
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "sansen",
+                            "rating": 2808
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "cuthbert",
+                            "rating": 2544
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "SSRS",
+                            "rating": 2869
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ttttan",
+                            "rating": 2371
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Rubikun",
+                            "rating": 2653
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "torisasami",
+                            "rating": 2562
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "LayCurse",
+                            "rating": 2926
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "PCTprobability",
+                            "rating": 2466
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tute7627",
+                            "rating": 2824
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "tokusakurai",
+                            "rating": 2509
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "snuke",
+                            "rating": 3525
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kiyoshi0205",
+                            "rating": 2402
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "m_99",
+                            "rating": 2700
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Motsu_xe",
+                            "rating": 2552
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "IH19980412",
+                            "rating": 2989
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "zkou",
+                            "rating": 2440
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Nachia",
+                            "rating": 2822
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "carrot46",
+                            "rating": 2520
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "league": [],
+    "defending_champion": "heno239",
+    "drop_rank": 23,
+    "promotion_rank": null,
+    "top4": null
+  },
+  "A2": {
+    "node": {
+      "user": null,
+      "rank": null,
+      "children": [
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "climpet",
+                            "rating": 2755
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Kazu1998k",
+                            "rating": 2006
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "HBit",
+                            "rating": 2270
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "startcpp",
+                            "rating": 2234
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "rin204",
+                            "rating": 2422
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "vwxyz",
+                            "rating": 2139
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "kyuridenamida",
+                            "rating": 2401
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "obakyan",
+                            "rating": 2143
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "fuppy0716",
+                            "rating": 2627
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "toshihoge",
+                            "rating": 2081
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "zundamochi_1117",
+                            "rating": 2326
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "terry_u16",
+                            "rating": 2196
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "satanic0258",
+                            "rating": 2516
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kenkoooo",
+                            "rating": 2091
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "riano_",
+                            "rating": 2327
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "shino16",
+                            "rating": 2194
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "moririn2528",
+                            "rating": 2736
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Rssll_Krkgrd",
+                            "rating": 2039
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "shun0923",
+                            "rating": 2313
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kzyKT",
+                            "rating": 2216
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "se1ka2",
+                            "rating": 2457
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "shakayami",
+                            "rating": 2126
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Series_205",
+                            "rating": 2393
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "nesya",
+                            "rating": 2181
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "olphe",
+                            "rating": 2656
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "KKT89",
+                            "rating": 2042
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Shun_PI",
+                            "rating": 2323
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "phocom",
+                            "rating": 2213
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "SPD_9X2",
+                            "rating": 2460
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "shotoyoo",
+                            "rating": 2107
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "rniya",
+                            "rating": 2381
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "snow39",
+                            "rating": 2190
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "league": [],
+    "defending_champion": "heno239",
+    "drop_rank": 23,
+    "promotion_rank": 10,
+    "top4": null
+  },
+  "A3": {
+    "node": {
+      "user": null,
+      "rank": null,
+      "children": [
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "sapphire15",
+                            "rating": 2383
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "TKO",
+                            "rating": 2056
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kencho",
+                            "rating": 2053
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "kens",
+                            "rating": 2101
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "spica314",
+                            "rating": 2099
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "naoya_t",
+                            "rating": 2017
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Izayoi_R",
+                            "rating": 2016
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "sotanishy",
+                            "rating": 2210
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "misty1999",
+                            "rating": 2074
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "nrvft",
+                            "rating": 2035
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "emak",
+                            "rating": 2000
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "titia",
+                            "rating": 2196
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "udon1206",
+                            "rating": 2074
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "tabae326",
+                            "rating": 2034
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Plan8",
+                            "rating": 2002
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "suisen",
+                            "rating": 2263
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "yunix",
+                            "rating": 2066
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "RheoTommy",
+                            "rating": 2047
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "ks2m",
+                            "rating": 2129
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "takumi152",
+                            "rating": 2089
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "hiikunZ",
+                            "rating": 2021
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kozyy",
+                            "rating": 2008
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "TAB",
+                            "rating": 2259
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "bayashiko",
+                            "rating": 2068
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ecasdqina",
+                            "rating": 2047
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "koikotya",
+                            "rating": 2139
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "gyouzasushi",
+                            "rating": 2080
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kai1000_don",
+                            "rating": 2025
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "magsta",
+                            "rating": 2008
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Trineutron",
+                            "rating": 2381
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kaikey",
+                            "rating": 2059
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "mugen1337",
+                            "rating": 2052
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "hamamu",
+                            "rating": 2105
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "primenumber_zz",
+                            "rating": 2094
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "unos",
+                            "rating": 2018
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kyon2326",
+                            "rating": 2010
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "drogskol",
+                            "rating": 2240
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ir_1st_vil",
+                            "rating": 2071
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "itohdak",
+                            "rating": 2046
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Haa",
+                            "rating": 2176
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "yupiteru",
+                            "rating": 2076
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "unsre",
+                            "rating": 2033
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "tamurahey",
+                            "rating": 2003
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "kusano",
+                            "rating": 2306
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "souta_1326",
+                            "rating": 2063
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "gojira_ku",
+                            "rating": 2051
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "hir35",
+                            "rating": 2111
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "tarattata",
+                            "rating": 2091
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "centipede_human",
+                            "rating": 2019
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "mkawa2",
+                            "rating": 2009
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "cirno3153",
+                            "rating": 2252
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "fumofumofuni",
+                            "rating": 2070
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "nasubi24",
+                            "rating": 2046
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "mban",
+                            "rating": 2143
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "totori0908",
+                            "rating": 2077
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "tonakai",
+                            "rating": 2032
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ganmodokix",
+                            "rating": 2005
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "league": [],
+    "defending_champion": "heno239",
+    "drop_rank": null,
+    "promotion_rank": 10,
+    "top4": null
+  },
+  "B1": {
+    "node": {
+      "user": null,
+      "rank": null,
+      "children": [
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "w2w2",
+                            "rating": 1999
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "t98slider",
+                            "rating": 1864
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "takytank",
+                            "rating": 1847
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Okay",
+                            "rating": 1935
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "onsen_manjuuu",
+                            "rating": 1932
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "zer0star",
+                            "rating": 1960
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "tassei903",
+                            "rating": 1892
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ccppjsrb",
+                            "rating": 1807
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "yamake",
+                            "rating": 1960
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "charhan",
+                            "rating": 1898
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "kuuso",
+                            "rating": 1980
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Example",
+                            "rating": 1872
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "scol",
+                            "rating": 1835
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tada72",
+                            "rating": 1948
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "nasuo",
+                            "rating": 1926
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "FWTB",
+                            "rating": 1975
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "MatsuTaku",
+                            "rating": 1873
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kabipoyo",
+                            "rating": 1819
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "soraie",
+                            "rating": 1954
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "shinchan",
+                            "rating": 1909
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "hasegawa1",
+                            "rating": 1981
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "hamath",
+                            "rating": 1869
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "rikka",
+                            "rating": 1846
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Ebishu0309",
+                            "rating": 1940
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "matsu7874",
+                            "rating": 1932
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "yamate11",
+                            "rating": 1963
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "x0214sh7",
+                            "rating": 1890
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kumakumaaaaa",
+                            "rating": 1809
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "keijak",
+                            "rating": 1956
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "shauuebbit",
+                            "rating": 1899
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "KowerKoint",
+                            "rating": 1981
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "someone_",
+                            "rating": 1871
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "z____z",
+                            "rating": 1838
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "ktr216",
+                            "rating": 1941
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "tishii24",
+                            "rating": 1927
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "nawa",
+                            "rating": 1971
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "yukidaruma6",
+                            "rating": 1882
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kamojiro",
+                            "rating": 1809
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "kwm_t",
+                            "rating": 1955
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "katand",
+                            "rating": 1901
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "league": [],
+    "defending_champion": null,
+    "drop_rank": null,
+    "promotion_rank": null,
+    "top4": null
+  },
+  "B2": {
+    "node": {
+      "user": null,
+      "rank": null,
+      "children": [
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "toku4388",
+                            "rating": 1804
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Tsukumowan",
+                            "rating": 1674
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "coffee_beans",
+                            "rating": 1671
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "qLethon",
+                            "rating": 1759
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Flkanjin",
+                            "rating": 1752
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "i8nd5t",
+                            "rating": 1790
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Shiro_S",
+                            "rating": 1699
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "wakuwinmail",
+                            "rating": 1639
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Tatsuyaaaa",
+                            "rating": 1787
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Strorkis",
+                            "rating": 1721
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "rlangevin",
+                            "rating": 1625
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "MoSooN",
+                            "rating": 1795
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Sooh",
+                            "rating": 1691
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "gmmtea",
+                            "rating": 1655
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Diary",
+                            "rating": 1767
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "prd_xxx",
+                            "rating": 1734
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "hotpepsi",
+                            "rating": 1794
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kakel_san",
+                            "rating": 1693
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Coki628",
+                            "rating": 1654
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Yoika",
+                            "rating": 1772
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "sten",
+                            "rating": 1732
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "st2d",
+                            "rating": 1804
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "jebouin",
+                            "rating": 1685
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "altairrr",
+                            "rating": 1670
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "sounansya",
+                            "rating": 1760
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "AtamaokaC",
+                            "rating": 1751
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Nzt3",
+                            "rating": 1793
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "jjjjjjjtgpptmjj",
+                            "rating": 1694
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "y61mpnl",
+                            "rating": 1640
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "masutech16",
+                            "rating": 1780
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ikd",
+                            "rating": 1723
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "CleyL",
+                            "rating": 1618
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "milkcoffee",
+                            "rating": 1801
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "masa_aa",
+                            "rating": 1687
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "i8fbnkyw",
+                            "rating": 1663
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "chomonolis",
+                            "rating": 1762
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "brthyyjp",
+                            "rating": 1742
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "noya2",
+                            "rating": 1794
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "MtSaka",
+                            "rating": 1694
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "AT274",
+                            "rating": 1645
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "miscalculation53",
+                            "rating": 1772
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "unidayo",
+                            "rating": 1723
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "jutama",
+                            "rating": 1614
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "league": [],
+    "defending_champion": null,
+    "drop_rank": null,
+    "promotion_rank": null,
+    "top4": null
+  },
+  "C1": {
+    "node": {
+      "user": null,
+      "rank": null,
+      "children": [
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "sakapon",
+                            "rating": 1598
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "hari64",
+                            "rating": 1455
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "sotozaki",
+                            "rating": 1452
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "jbyxm",
+                            "rating": 1541
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "dekomori_sanae",
+                            "rating": 1534
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "nahco314",
+                            "rating": 1576
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "mark_0802",
+                            "rating": 1483
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ryuusagi",
+                            "rating": 1412
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "ya_kki",
+                            "rating": 1560
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "T45K",
+                            "rating": 1491
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Manuel1024",
+                            "rating": 1588
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "HIRO15254",
+                            "rating": 1470
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "fky_",
+                            "rating": 1420
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "krps",
+                            "rating": 1546
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "nishigake",
+                            "rating": 1511
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "customfolk",
+                            "rating": 1586
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ryo_n",
+                            "rating": 1473
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "wasd314",
+                            "rating": 1419
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "hal_goldfish",
+                            "rating": 1553
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kaerusan82433413",
+                            "rating": 1505
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "sou1649",
+                            "rating": 1592
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "yururi",
+                            "rating": 1464
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kanzakihikaru",
+                            "rating": 1446
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "T__T",
+                            "rating": 1544
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Capo",
+                            "rating": 1521
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Sugsugar",
+                            "rating": 1581
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "y_yu",
+                            "rating": 1483
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "voyage_",
+                            "rating": 1414
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tako0218",
+                            "rating": 1556
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "aut_jul_dur",
+                            "rating": 1493
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "m_m",
+                            "rating": 1590
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ymduu",
+                            "rating": 1469
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "rigel",
+                            "rating": 1438
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Chippppp",
+                            "rating": 1544
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "koutaaaaaa",
+                            "rating": 1519
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "w0mbat",
+                            "rating": 1584
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "besukohu",
+                            "rating": 1481
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "bokusunny",
+                            "rating": 1418
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "manta1130",
+                            "rating": 1554
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "katonyonko",
+                            "rating": 1494
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "league": [],
+    "defending_champion": null,
+    "drop_rank": null,
+    "promotion_rank": null,
+    "top4": null
+  },
+  "C2": {
+    "node": {
+      "user": null,
+      "rank": null,
+      "children": [
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "NokonoKotlin",
+                            "rating": 1406
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "dlmasa",
+                            "rating": 1263
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "km1234",
+                            "rating": 1250
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "rastel",
+                            "rating": 1341
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "asumoking",
+                            "rating": 1340
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "take000",
+                            "rating": 1376
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Kanten4205",
+                            "rating": 1316
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "yupooh",
+                            "rating": 1208
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "t104",
+                            "rating": 1360
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Tommy6",
+                            "rating": 1318
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "uya116",
+                            "rating": 1200
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Akari__",
+                            "rating": 1391
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "watarimaycry2",
+                            "rating": 1282
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "material",
+                            "rating": 1224
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "useless",
+                            "rating": 1348
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "arad",
+                            "rating": 1332
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tayu0110",
+                            "rating": 1388
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "yatabis",
+                            "rating": 1285
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "shim0",
+                            "rating": 1216
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "reg7777",
+                            "rating": 1349
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "sasayu",
+                            "rating": 1328
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "RedSpica",
+                            "rating": 1395
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "atree",
+                            "rating": 1275
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "zuzuzuzu4z",
+                            "rating": 1238
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Kagemeka",
+                            "rating": 1347
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "YawpointQ",
+                            "rating": 1338
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "highjump",
+                            "rating": 1378
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "harurun",
+                            "rating": 1291
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "phspls",
+                            "rating": 1210
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "goudezhao",
+                            "rating": 1357
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kakitamasziru",
+                            "rating": 1326
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Zaurus",
+                            "rating": 1392
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Fukucchi",
+                            "rating": 1280
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Nagaemon",
+                            "rating": 1226
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Coordinator",
+                            "rating": 1347
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "fennel",
+                            "rating": 1333
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "kusaf_",
+                            "rating": 1379
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "KFrom40",
+                            "rating": 1288
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "S_shun",
+                            "rating": 1214
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "mdstoy",
+                            "rating": 1353
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "uuuu_s",
+                            "rating": 1327
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "league": [],
+    "defending_champion": null,
+    "drop_rank": null,
+    "promotion_rank": null,
+    "top4": null
+  },
+  "D1": {
+    "node": {
+      "user": null,
+      "rank": null,
+      "children": [
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "bo9chan",
+                            "rating": 1184
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Azamingoo",
+                            "rating": 973
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Alex0724",
+                            "rating": 960
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Junmori",
+                            "rating": 1093
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "mtrh",
+                            "rating": 1087
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "yuta28",
+                            "rating": 1144
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "mikam",
+                            "rating": 1033
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kaede2020",
+                            "rating": 920
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "N1flheimr",
+                            "rating": 1143
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "sepa_38",
+                            "rating": 1044
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "e6i24v",
+                            "rating": 920
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tener_18",
+                            "rating": 1169
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "YunaMana",
+                            "rating": 988
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kinntoto",
+                            "rating": 947
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Ll_e_ki",
+                            "rating": 1113
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "fefefe",
+                            "rating": 1065
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "UltimateBlacktea",
+                            "rating": 1168
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "dentaku",
+                            "rating": 1000
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "chacoder",
+                            "rating": 944
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "ytrjpn",
+                            "rating": 1122
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kota0501",
+                            "rating": 1063
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "skyyuki",
+                            "rating": 910
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tatetuke",
+                            "rating": 1174
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "interu",
+                            "rating": 978
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "nemoi",
+                            "rating": 950
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "T0RA",
+                            "rating": 1096
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Nanashima",
+                            "rating": 1085
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "STInverSpinel",
+                            "rating": 1161
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "tmrd",
+                            "rating": 1024
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "yutaro57",
+                            "rating": 931
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "SidewaysOwl",
+                            "rating": 1142
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "saikatoto",
+                            "rating": 1060
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "SeiyaT",
+                            "rating": 913
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "macle",
+                            "rating": 1170
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "shiborimame",
+                            "rating": 983
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "retch",
+                            "rating": 947
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "ngng628",
+                            "rating": 1113
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Ryoga_exe",
+                            "rating": 1075
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "ikoma",
+                            "rating": 1164
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "NAMIDAIRO",
+                            "rating": 1014
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ichinoseac",
+                            "rating": 936
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "gunmaneko",
+                            "rating": 1130
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "rjifu",
+                            "rating": 1063
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "hotate29",
+                            "rating": 911
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "league": [],
+    "defending_champion": null,
+    "drop_rank": null,
+    "promotion_rank": null,
+    "top4": null
+  },
+  "D2": {
+    "node": {
+      "user": null,
+      "rank": null,
+      "children": [
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "teruteru05",
+                            "rating": 907
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "hiroki5345",
+                            "rating": 596
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "warotan",
+                            "rating": 587
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "hashimoto76",
+                            "rating": 793
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kirifugu",
+                            "rating": 791
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "koryou",
+                            "rating": 850
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "negibose2020",
+                            "rating": 691
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "mfham",
+                            "rating": 438
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Natsuserina",
+                            "rating": 850
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "toku_D",
+                            "rating": 724
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "alfy",
+                            "rating": 389
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "SDESTINY",
+                            "rating": 895
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Squinkd",
+                            "rating": 624
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Kichico",
+                            "rating": 551
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "gengar_094",
+                            "rating": 817
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "kemuniku",
+                            "rating": 778
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Yuta_M",
+                            "rating": 102
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "tukitoka",
+                            "rating": 887
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Kohenyan",
+                            "rating": 666
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Hyu0530",
+                            "rating": 521
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "burita083",
+                            "rating": 825
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "huka",
+                            "rating": 776
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "h1j1k1",
+                            "rating": 124
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "user": null,
+          "rank": null,
+          "children": [
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Malice1010",
+                            "rating": 899
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "hayatoroid",
+                            "rating": 615
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "xinShanon",
+                            "rating": 573
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "okeue",
+                            "rating": 801
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "ponyo877",
+                            "rating": 791
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "shinnshinn",
+                            "rating": 875
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "bk_cocoa",
+                            "rating": 677
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "osmanthus_solo",
+                            "rating": 448
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "take911",
+                            "rating": 849
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "k0coon",
+                            "rating": 740
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "KimNa",
+                            "rating": 350
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "user": null,
+              "rank": null,
+              "children": [
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "kaneshige",
+                            "rating": 897
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "korogisu",
+                            "rating": 618
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "katsudon421",
+                            "rating": 572
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "malleus",
+                            "rating": 808
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "n_itsuki",
+                            "rating": 778
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "senbe",
+                            "rating": 42
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "user": null,
+                  "rank": null,
+                  "children": [
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "mark1010",
+                            "rating": 880
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "nekosan_iyoiyo",
+                            "rating": 672
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Yourein",
+                            "rating": 476
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "user": null,
+                      "rank": null,
+                      "children": [
+                        {
+                          "user": {
+                            "user_id": "Rute",
+                            "rating": 842
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "Plantunity",
+                            "rating": 761
+                          },
+                          "rank": null,
+                          "children": []
+                        },
+                        {
+                          "user": {
+                            "user_id": "penryu",
+                            "rating": 218
+                          },
+                          "rank": null,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "league": [],
+    "defending_champion": null,
+    "drop_rank": null,
+    "promotion_rank": null,
+    "top4": null
+  }
+}
