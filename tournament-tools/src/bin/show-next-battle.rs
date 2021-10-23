@@ -1,7 +1,8 @@
 use anyhow::Result;
 use std::collections::BTreeMap;
 use std::env;
-use tournament_tools::{read_brackets, BracketNode, UserId, UserLeagueEntry};
+use tournament_tools::types::UserId;
+use tournament_tools::{read_brackets, BracketNode, UserLeagueEntry};
 
 fn main() -> Result<()> {
     let args: Vec<String> = env::args().collect();

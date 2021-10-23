@@ -241,7 +241,7 @@ impl UserLeagueEntry {
     }
 }
 
-#[derive(Serialize, Deserialize, Clone, PartialEq)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, Debug)]
 pub struct LeagueBattleResult {
     pub opponent: User,
     pub result: BattleResult,

@@ -101,7 +101,7 @@ impl Bracket {
         self.node.update_subtree_result(result, height - 1);
     }
 
-    pub(crate) fn consolidate_tournament_battle_result(
+    pub fn consolidate_tournament_battle_result(
         &self,
     ) -> BTreeMap<UserId, (User, Vec<LeagueBattleResult>)> {
         let mut result = BTreeMap::new();
