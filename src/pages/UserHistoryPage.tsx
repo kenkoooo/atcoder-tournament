@@ -83,7 +83,8 @@ const BattleResultRow = (props: {
             : 0;
         if (
           opponentRank >= INF_RANK ||
-          opponentResult?.result.result === "SkipLose"
+          opponentResult?.result.result === "SkipLose" ||
+          opponentResult?.result.result === "Writer"
         ) {
           return "○ (不戦勝)";
         } else {
