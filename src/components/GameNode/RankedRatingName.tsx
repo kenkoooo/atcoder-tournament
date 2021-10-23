@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { User } from "../../models/TournamentNode";
+import { INF_RANK } from "../../utils/Constants";
 import { RatingName } from "../RatingName";
 
 interface Props {
@@ -117,7 +118,7 @@ export const RankedRatingName = (props: Props) => {
     return <div className={classes.nodeBox}>{nameElement}</div>;
   }
 
-  const rankText = rank > 100000 ? "-" : rank;
+  const rankText = rank >= INF_RANK ? "-" : rank;
   return (
     <Box display="flex" justifyContent="center" className={classes.nodeBox}>
       {nameElement}

@@ -1,12 +1,27 @@
-import { Box, Grid, Paper, Typography } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useUserHistories } from "../utils/API";
+import { RatingName } from "../components/RatingName";
+import { BattleRecord } from "../models/BattleRecord";
+import { BattleResult, User } from "../models/TournamentNode";
+import { useBattleRecords, useUserHistories } from "../utils/API";
 import { Link as RouterLink } from "react-router-dom";
+import { INF_RANK } from "../utils/Constants";
 
 const formatTopK = (season: number, topK: number, klass: string) => {
   if (topK === 1) {
@@ -38,11 +53,87 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const BattleResultRow = (props: {
+  userId: string;
+  opponent: User;
+  season: string;
+  classId: string;
+  result: BattleResult;
+  records: { [key: string]: BattleRecord[] };
+}) => {
+  const classes = useStyles();
+  const { userId, opponent, season, classId, result, records } = props;
+
+  const opponentResult = records[opponent.user_id]
+    ?.find((record) => record.class === classId && record.season === season)
+    ?.battles.find((battle) => battle.opponent?.user_id === userId);
+
+  const formatResult = (result: BattleResult) => {
+    switch (result.result) {
+      case "SkipLose":
+        if (season === "1") {
+          return null;
+        } else {
+          return "不戦敗";
+        }
+      case "Win": {
+        const opponentRank =
+          opponentResult?.result.result === "Lose"
+            ? opponentResult.result.rank
+            : 0;
+        if (
+          opponentRank >= INF_RANK ||
+          opponentResult?.result.result === "SkipLose"
+        ) {
+          return "○ (不戦勝)";
+        } else {
+          return "○";
+        }
+      }
+      case "Lose":
+        if (season === "1" && result.rank >= INF_RANK) {
+          return null;
+        } else {
+          return "×";
+        }
+      case "SkipWin":
+        return "不戦勝";
+      case "Writer":
+      case "NotYet":
+        return null;
+    }
+  };
+
+  const formattedResult = formatResult(result);
+  if (!formattedResult) {
+    return null;
+  } else {
+    return (
+      <TableRow>
+        <TableCell>
+          <RatingName rating={opponent.rating}>{opponent.user_id}</RatingName>
+        </TableCell>
+        <TableCell>{formattedResult}</TableCell>
+        <TableCell>
+          <Link
+            component={RouterLink}
+            to={`/tournament/${season}`}
+            className={classes.link}
+          >
+            第{season}期 {classId}クラス
+          </Link>
+        </TableCell>
+      </TableRow>
+    );
+  }
+};
+
 export const UserHistoryPage = () => {
   const classes = useStyles();
   const { user_id } = useParams<{ user_id: string }>();
   const histories = useUserHistories().data;
-  if (!histories) {
+  const records = useBattleRecords().data;
+  if (!histories || !records) {
     return (
       <Box
         display="flex"
@@ -71,6 +162,30 @@ export const UserHistoryPage = () => {
     .filter((e) => e.result.class === "A" || e.result.class === "A1")
     .filter((e) => e.result.top_k === 2).length;
   const a1Count = sorted.filter((e) => e.result.class === "A1").length;
+
+  const userRecord = (records[user_id] ?? [])
+    .sort((a, b) => b.season.localeCompare(a.season))
+    .flatMap((record) => {
+      const { class: classId, user, battles, season } = record;
+      const reversed = Array.from(battles).reverse();
+      return reversed
+        .filter((battle): battle is {
+          opponent: User;
+          result: BattleResult;
+        } => {
+          return battle.opponent !== null;
+        })
+        .map((battle) => {
+          const { opponent, result } = battle;
+          return {
+            user,
+            opponent,
+            season,
+            classId,
+            result,
+          };
+        });
+    });
 
   return (
     <Container className={classes.root}>
@@ -109,14 +224,14 @@ export const UserHistoryPage = () => {
                     </Link>
                   </Typography>
                 </Grid>
-                <Grid item xs={4} direction="column">
+                <Grid item xs={4} direction="column" container>
                   <Typography variant="body1">トーナメント</Typography>
                   <Typography variant="h4">
                     {formatTopK(e.season, e.result.top_k, e.result.class)}
                   </Typography>
                 </Grid>
                 {e.result.final_rank && (
-                  <Grid item xs direction="column">
+                  <Grid item xs direction="column" container>
                     <Typography variant="body1">最終順位</Typography>
                     <Typography variant="h4">
                       {e.result.final_rank}位
@@ -126,6 +241,29 @@ export const UserHistoryPage = () => {
               </Grid>
             </Paper>
           ))}
+        </Grid>
+        <Grid item xs={12}>
+          <TableContainer>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>対戦相手</TableCell>
+                  <TableCell>勝敗</TableCell>
+                  <TableCell>トーナメント</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {userRecord.map((record, i) => (
+                  <BattleResultRow
+                    key={i}
+                    {...record}
+                    userId={user_id}
+                    records={records}
+                  />
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
         </Grid>
       </Grid>
     </Container>
