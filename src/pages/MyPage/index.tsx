@@ -11,12 +11,13 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { SEASON_ID } from "../../utils/Constants";
 import {
   saveUserData,
   useLoginState,
   useUserData,
 } from "../../utils/PrivateAPI";
+
+const REGISTER_SEASON_ID = 8;
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -96,7 +97,7 @@ export const MyPage = () => {
                 onChange={() => setParticipateNext(!participateNext)}
               />
             }
-            label={`第${SEASON_ID}期トーナメントに参加する`}
+            label={`第${REGISTER_SEASON_ID}期トーナメントに参加する`}
           />
           <FormControlLabel
             control={
@@ -105,7 +106,7 @@ export const MyPage = () => {
                 onChange={() => setParticipateForever(!participateForever)}
               />
             }
-            label={`第${SEASON_ID + 1}期以降も参加する`}
+            label={`第${REGISTER_SEASON_ID + 1}期以降も参加する`}
           />
         </FormGroup>
       </Typography>
