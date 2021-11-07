@@ -100,6 +100,7 @@ const BattleResultRow = (props: {
       case "SkipWin":
         return "不戦勝";
       case "Writer":
+        return "Writer";
       case "NotYet":
         return null;
     }
@@ -108,6 +109,22 @@ const BattleResultRow = (props: {
   const formattedResult = formatResult(result);
   if (!formattedResult) {
     return null;
+  } else if (formattedResult === "Writer") {
+    return (
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell>Writer</TableCell>
+        <TableCell>
+          <Link
+            component={RouterLink}
+            to={`/tournament/${season}`}
+            className={classes.link}
+          >
+            第{season}期 {classId}クラス
+          </Link>
+        </TableCell>
+      </TableRow>
+    );
   } else {
     return (
       <TableRow>
