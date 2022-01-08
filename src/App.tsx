@@ -96,11 +96,20 @@ const App = () => {
             </Typography>
             <nav>
               <Link
-                component={RouterLink}
-                variant="button"
-                color="textPrimary"
-                to="/tournament/7"
-                className={classes.link}
+                  component={RouterLink}
+                  variant="button"
+                  color="textPrimary"
+                  to="/tournament/8"
+                  className={classes.link}
+              >
+                第8期
+              </Link>
+              <Link
+                  component={RouterLink}
+                  variant="button"
+                  color="textPrimary"
+                  to="/tournament/7"
+                  className={classes.link}
               >
                 第7期
               </Link>
@@ -112,15 +121,6 @@ const App = () => {
                 className={classes.link}
               >
                 第6期
-              </Link>
-              <Link
-                component={RouterLink}
-                variant="button"
-                color="textPrimary"
-                to="/tournament/5"
-                className={classes.link}
-              >
-                第5期
               </Link>
               <Link
                 component={RouterLink}

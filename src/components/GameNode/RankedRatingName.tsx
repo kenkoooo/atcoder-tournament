@@ -56,6 +56,7 @@ const CHAMPIONS: { [key: string]: string[] } = {
   heno239: ["1", "2", "5", "6"],
   Tiramister: ["3"],
   SSRS: ["4"],
+  snuke:["7"]
 };
 
 const WinnerTooltip = (props: {
