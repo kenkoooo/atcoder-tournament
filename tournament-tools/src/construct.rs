@@ -3,6 +3,8 @@ use crate::types::{ClassId, UserId};
 use crate::{Bracket, Rank};
 use std::collections::BTreeMap;
 
+const BRACKET_SIZE: usize = 32;
+
 fn get_user_map(registered_user_ids: Vec<UserId>, ratings: Vec<User>) -> BTreeMap<String, User> {
     let mut users = BTreeMap::new();
     for user in ratings {
@@ -25,6 +27,7 @@ pub struct ConstructConfig {
     pub previous_brackets: BTreeMap<ClassId, Bracket>,
 }
 
+/// This function is used from CLI and Wasm.
 pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracket> {
     let ConstructConfig {
         ratings,
@@ -71,7 +74,7 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
             (class == "A1" && rank < 22) || (class == "A2" && rank < 10) || user.rating >= 2800
         },
         4,
-        32,
+        BRACKET_SIZE,
     );
 
     // A2
@@ -84,7 +87,7 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
                 || user.rating >= 2400
         },
         0,
-        32,
+        BRACKET_SIZE,
     );
 
     let mut next_a3 = a_users.into_iter().map(|t| t.1).collect::<Vec<_>>();
@@ -121,28 +124,45 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
         })
         .collect::<Vec<_>>();
 
-    let next_a_users = vec![next_a1, next_a2, next_a3];
     let mut brackets = BTreeMap::new();
-    for (i, next_a_users) in next_a_users.into_iter().enumerate() {
-        if next_a_users.is_empty() {
-            continue;
-        }
-        let class = format!("A{}", i + 1);
-
-        let (promotion_rank, drop_rank) = match i {
-            0 => (None, Some(23)),
-            1 => (Some(10), Some(23)),
-            2 => (Some(10), None),
-            _ => unreachable!(),
-        };
-
-        let bracket = Bracket::create(
-            next_a_users,
-            defending_champion.clone(),
-            drop_rank,
-            promotion_rank,
+    if !next_a1.is_empty() {
+        brackets.insert(
+            "A1".to_string(),
+            Bracket::create(next_a1, defending_champion.clone(), Some(23), None),
         );
-        brackets.insert(class, bracket);
+    }
+
+    if !next_a2.is_empty() {
+        brackets.insert(
+            "A2".to_string(),
+            Bracket::create(next_a2, defending_champion.clone(), Some(23), Some(10)),
+        );
+    }
+
+    if !next_a3.is_empty() {
+        let a3_size = next_a3.len() / BRACKET_SIZE;
+        let promotion_rank = 10 / a3_size;
+        let mut next_a3s = vec![vec![]; a3_size];
+        for (i, user) in next_a3.into_iter().enumerate() {
+            next_a3s[i % a3_size].push(user);
+        }
+
+        for (i, next_a3) in next_a3s.into_iter().enumerate() {
+            let class = if a3_size == 1 {
+                "A3".to_string()
+            } else {
+                format!("A3-{}", i + 1)
+            };
+            brackets.insert(
+                class,
+                Bracket::create(
+                    next_a3,
+                    defending_champion.clone(),
+                    None,
+                    Some(promotion_rank),
+                ),
+            );
+        }
     }
 
     for (i, classes) in non_a_classes.into_iter().enumerate() {
