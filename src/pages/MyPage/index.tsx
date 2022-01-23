@@ -17,7 +17,7 @@ import {
   useUserData,
 } from "../../utils/PrivateAPI";
 
-const REGISTER_SEASON_ID = 8;
+const REGISTER_SEASON_ID = 9;
 
 const useStyles = makeStyles((theme) => ({
   paper: {
