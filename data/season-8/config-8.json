@@ -2,5 +2,15 @@
   "season": 8,
   "defending_champion": "snuke",
   "matches": [
+    {
+      "standings": "abc236",
+      "writers": [
+        "KoD",
+        "leaf1415",
+        "Nyaan",
+        "physics0523",
+        "penguinman"
+      ]
+    }
   ]
 }
