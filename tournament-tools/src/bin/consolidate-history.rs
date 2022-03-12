@@ -8,7 +8,7 @@ use tournament_tools::{read_brackets, LeagueBattleResult, User};
 
 fn main() -> Result<()> {
     let mut tournament_histories = vec![];
-    for season_id in 1..=7 {
+    for season_id in 1..=8 {
         let brackets = read_brackets(season_id)?;
         let mut entries = vec![];
         let mut expandable = true;
@@ -50,7 +50,7 @@ fn main() -> Result<()> {
     )?;
 
     let mut user_histories = BTreeMap::new();
-    for season_id in 1..=7 {
+    for season_id in 1..=8 {
         let brackets = read_brackets(season_id)?;
         for (class, bracket) in brackets {
             let user_top_k = bracket.user_top_k();
@@ -95,7 +95,7 @@ fn main() -> Result<()> {
     )?;
 
     let mut battle_records = BTreeMap::new();
-    for season_id in 1..=7 {
+    for season_id in 1..=8 {
         let brackets = read_brackets(season_id)?;
         for (class, bracket) in brackets {
             let mut battles = bracket.consolidate_tournament_battle_result();
