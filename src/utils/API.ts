@@ -9,11 +9,11 @@ const SWRConfig = {
   revalidateOnReconnect: false,
 };
 
-const fetchTournamentSeason8 = async (): Promise<TournamentResponse> => {
+const fetchTournamentSeason9 = async (): Promise<TournamentResponse> => {
   const usersResponse = await fetch("https://abc-api.kenkoooo.com/api/users");
   const usersText = await usersResponse.text();
 
-  const previousBracketsResponse = await fetch("./bracket-7.json");
+  const previousBracketsResponse = await fetch("./bracket-8.json");
   const previousBracketsText = await previousBracketsResponse.text();
 
   const ratingResponse = await fetch("./ratings.json");
@@ -31,8 +31,8 @@ const fetchTournamentSeason8 = async (): Promise<TournamentResponse> => {
 
 export const useTournament = (seasonId: string) => {
   const fetcher = (url: string) => {
-    if (seasonId === "x") {
-      return fetchTournamentSeason8();
+    if (seasonId === "9") {
+      return fetchTournamentSeason9();
     } else {
       return fetch(url)
         .then((response) => response.json())
