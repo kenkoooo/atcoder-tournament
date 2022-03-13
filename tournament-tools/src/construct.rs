@@ -1,7 +1,7 @@
 use crate::bracket::User;
 use crate::types::{ClassId, UserId};
 use crate::{Bracket, Rank};
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 
 const BRACKET_SIZE: usize = 32;
 
@@ -66,6 +66,13 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
     }
 
     a_users.sort();
+    let prev_a3_bracket_count = a_users
+        .iter()
+        .map(|u| (u.0).0.as_str())
+        .filter(|class| class.starts_with("A3"))
+        .collect::<BTreeSet<_>>()
+        .len();
+    let prev_a3_threshold = 10 / prev_a3_bracket_count;
 
     // A1
     let (next_a1, a_users) = construct_single_a_class(
@@ -83,7 +90,7 @@ pub fn construct_tournament(config: ConstructConfig) -> BTreeMap<ClassId, Bracke
         |class, rank, user| {
             class == "A1"
                 || (class == "A2" && rank < 22)
-                || (class == "A3" && rank < 10)
+                || (class.starts_with("A3") && rank < prev_a3_threshold)
                 || user.rating >= 2400
         },
         0,

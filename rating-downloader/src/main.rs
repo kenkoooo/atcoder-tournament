@@ -1,9 +1,12 @@
 use scraper::{Html, Selector};
-use serde::Serialize;
-use std::fs::File;
+use serde::{Deserialize, Serialize};
+use std::collections::BTreeMap;
+use std::fs::{read_to_string, File};
 use std::io::Write;
 
-#[derive(Serialize)]
+const PATH: &str = "./public/ratings.json";
+
+#[derive(Serialize, Deserialize)]
 struct RatingEntry {
     user_id: String,
     rating: u32,
@@ -17,11 +20,17 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let span_selector = Selector::parse("span").unwrap();
     let tr_selector = Selector::parse("tr").unwrap();
 
-    let mut ratings = vec![];
+    let mut ratings = BTreeMap::new();
+    let content = read_to_string(PATH)?;
+    let old_ratings: Vec<RatingEntry> = serde_json::from_str(&content)?;
+    for rating in old_ratings {
+        ratings.insert(rating.user_id, rating.rating);
+    }
+
     for i in 0.. {
         eprintln!("page={}", i + 1);
         let html = client
-            .get(&format!("https://atcoder.jp/ranking/all?page={}", i + 1))
+            .get(&format!("https://atcoder.jp/ranking?page={}", i + 1))
             .send()
             .await?
             .text()
@@ -30,7 +39,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         let table = document.select(&table_selector).next().unwrap();
         let tbody = table.select(&tbody_selector).next().unwrap();
 
-        let prev_size = ratings.len();
+        let mut pushed = false;
         for tr in tbody.select(&tr_selector) {
             let tds = tr
                 .select(&Selector::parse("td").unwrap())
@@ -44,16 +53,21 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .unwrap()
                 .to_string();
             let rating: u32 = tds[4].text().next().unwrap().parse().unwrap();
-            ratings.push(RatingEntry { user_id, rating });
+            ratings.insert(user_id, rating);
+            pushed = true;
         }
-        if prev_size == ratings.len() {
+        if !pushed {
             break;
         }
     }
 
-    let result = serde_json::to_string(&ratings).unwrap();
-    let mut file = File::create("./public/ratings.json").unwrap();
-    file.write_all(result.as_bytes()).unwrap();
+    let ratings = ratings
+        .into_iter()
+        .map(|(user_id, rating)| RatingEntry { rating, user_id })
+        .collect::<Vec<_>>();
+    let result = serde_json::to_string(&ratings)?;
+    let mut file = File::create(PATH)?;
+    file.write_all(result.as_bytes())?;
 
     Ok(())
 }
