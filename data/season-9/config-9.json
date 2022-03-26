@@ -1,5 +1,20 @@
 {
   "season": 9,
   "defending_champion": "sansen",
-  "matches": []
+  "matches": [
+    {
+      "standings": "abc245",
+      "writers": [
+        "leaf1415",
+        "PCTprobability",
+        "ynymxiaolongbao",
+        "m_99",
+        "penguinman",
+        "sugarrr",
+        "mechanicalpenciI",
+        "Nyaan",
+        "kyopro_friends"
+      ]
+    }
+  ]
 }
