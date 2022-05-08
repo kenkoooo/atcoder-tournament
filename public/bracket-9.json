@@ -1914,7 +1914,7 @@
           "rating": 2820
         },
         "win_count": 1,
-        "rank_sum": 93.56383292172694,
+        "rank_sum": 93.5620356940829,
         "results": [
           {
             "opponent": {
@@ -1953,7 +1953,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1104
+              "rank": 1103
             }
           },
           {
@@ -3435,7 +3435,7 @@
           "rating": 2627
         },
         "win_count": 2,
-        "rank_sum": 72.77952713459665,
+        "rank_sum": 72.7794325399821,
         "results": [
           {
             "opponent": {
@@ -3473,7 +3473,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 3742
+              "rank": 3741
             }
           },
           {
@@ -4497,7 +4497,7 @@
           "rating": 2496
         },
         "win_count": 1,
-        "rank_sum": 12872.0,
+        "rank_sum": 12868.0,
         "results": [
           {
             "opponent": {
@@ -4533,7 +4533,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 3218
+              "rank": 3217
             }
           },
           {
@@ -6074,7 +6074,7 @@
           "rating": 2109
         },
         "win_count": 2,
-        "rank_sum": 245.91759128353814,
+        "rank_sum": 245.902244012028,
         "results": [
           {
             "opponent": {
@@ -6113,7 +6113,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 993
+              "rank": 992
             }
           },
           {
@@ -6550,7 +6550,7 @@
           "rating": 2033
         },
         "win_count": 2,
-        "rank_sum": 623.9409418194316,
+        "rank_sum": 623.8623147129886,
         "results": [
           {
             "opponent": {
@@ -6589,7 +6589,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1113
+              "rank": 1112
             }
           },
           {
@@ -7740,7 +7740,7 @@
                 "user_id": "drogskol",
                 "rating": 2240
               },
-              "rank": 3442,
+              "rank": 3441,
               "children": [
                 {
                   "user": {
@@ -8236,7 +8236,7 @@
           "rating": 2240
         },
         "win_count": 3,
-        "rank_sum": 151.23965006940693,
+        "rank_sum": 151.2391672614584,
         "results": [
           {
             "opponent": {
@@ -8275,7 +8275,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 3442
+              "rank": 3441
             }
           },
           {
@@ -8836,7 +8836,7 @@
           "rating": 2158
         },
         "win_count": 2,
-        "rank_sum": 212.68711965843073,
+        "rank_sum": 212.67332796964203,
         "results": [
           {
             "opponent": {
@@ -8875,7 +8875,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 906
+              "rank": 905
             }
           },
           {
@@ -9192,7 +9192,7 @@
           "rating": 2143
         },
         "win_count": 2,
-        "rank_sum": 490.95007328125956,
+        "rank_sum": 490.89680206060774,
         "results": [
           {
             "opponent": {
@@ -9231,7 +9231,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1064
+              "rank": 1063
             }
           },
           {
@@ -11570,7 +11570,7 @@
           "rating": 1939
         },
         "win_count": 2,
-        "rank_sum": 481.44578313253015,
+        "rank_sum": 481.3987138263666,
         "results": [
           {
             "opponent": {
@@ -11607,7 +11607,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1110
+              "rank": 1109
             }
           },
           {
@@ -11687,7 +11687,7 @@
           "rating": 1910
         },
         "win_count": 2,
-        "rank_sum": 815.1556894391302,
+        "rank_sum": 815.0266437613403,
         "results": [
           {
             "opponent": {
@@ -11726,7 +11726,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1135
+              "rank": 1134
             }
           },
           {
@@ -11747,7 +11747,7 @@
           "rating": 1885
         },
         "win_count": 2,
-        "rank_sum": 923.2109836533513,
+        "rank_sum": 923.1805158969812,
         "results": [
           {
             "opponent": {
@@ -11786,7 +11786,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2645
+              "rank": 2644
             }
           },
           {
@@ -11924,7 +11924,7 @@
           "rating": 1963
         },
         "win_count": 2,
-        "rank_sum": 954.888831583631,
+        "rank_sum": 954.7534469453517,
         "results": [
           {
             "opponent": {
@@ -11963,7 +11963,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1298
+              "rank": 1297
             }
           },
           {
@@ -12104,7 +12104,7 @@
           "rating": 1899
         },
         "win_count": 1,
-        "rank_sum": 514.2037307817305,
+        "rank_sum": 514.169397483229,
         "results": [
           {
             "opponent": {
@@ -12143,7 +12143,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1388
+              "rank": 1387
             }
           },
           {
@@ -12282,7 +12282,7 @@
           "rating": 1874
         },
         "win_count": 1,
-        "rank_sum": 605.2194447718385,
+        "rank_sum": 605.196426051206,
         "results": [
           {
             "opponent": {
@@ -12321,7 +12321,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1995
+              "rank": 1994
             }
           },
           {
@@ -12572,7 +12572,7 @@
           "rating": 1870
         },
         "win_count": 0,
-        "rank_sum": 3252.0,
+        "rank_sum": 3248.0,
         "results": [
           {
             "opponent": {
@@ -12608,7 +12608,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 813
+              "rank": 812
             }
           },
           {
@@ -12629,7 +12629,7 @@
           "rating": 1921
         },
         "win_count": 0,
-        "rank_sum": 15040.0,
+        "rank_sum": 15036.0,
         "results": [
           {
             "opponent": {
@@ -12665,7 +12665,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 3760
+              "rank": 3759
             }
           },
           {
@@ -13150,7 +13150,7 @@
                 "user_id": "wasd314",
                 "rating": 1775
               },
-              "rank": 1111,
+              "rank": 1110,
               "children": [
                 {
                   "user": {
@@ -13726,7 +13726,7 @@
           "rating": 1775
         },
         "win_count": 3,
-        "rank_sum": 517.1623477996224,
+        "rank_sum": 517.1081338262204,
         "results": [
           {
             "opponent": {
@@ -13765,7 +13765,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1111
+              "rank": 1110
             }
           },
           {
@@ -13786,7 +13786,7 @@
           "rating": 1849
         },
         "win_count": 3,
-        "rank_sum": 699.27532840094,
+        "rank_sum": 699.1771001642186,
         "results": [
           {
             "opponent": {
@@ -13825,7 +13825,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1116
+              "rank": 1115
             }
           },
           {
@@ -14024,7 +14024,7 @@
           "rating": 1780
         },
         "win_count": 2,
-        "rank_sum": 474.77389496870205,
+        "rank_sum": 474.7044112893622,
         "results": [
           {
             "opponent": {
@@ -14062,7 +14062,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 901
+              "rank": 900
             }
           },
           {
@@ -14202,7 +14202,7 @@
           "rating": 1862
         },
         "win_count": 2,
-        "rank_sum": 532.6130999534132,
+        "rank_sum": 532.560081229605,
         "results": [
           {
             "opponent": {
@@ -14241,7 +14241,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1157
+              "rank": 1156
             }
           },
           {
@@ -14380,7 +14380,7 @@
           "rating": 1734
         },
         "win_count": 2,
-        "rank_sum": 647.1311176427937,
+        "rank_sum": 646.9529696762796,
         "results": [
           {
             "opponent": {
@@ -14419,7 +14419,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 767
+              "rank": 766
             }
           },
           {
@@ -14440,7 +14440,7 @@
           "rating": 1783
         },
         "win_count": 2,
-        "rank_sum": 705.8979522897457,
+        "rank_sum": 705.7817934470309,
         "results": [
           {
             "opponent": {
@@ -14479,7 +14479,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1036
+              "rank": 1035
             }
           },
           {
@@ -14500,7 +14500,7 @@
           "rating": 1795
         },
         "win_count": 1,
-        "rank_sum": 454.2417653498115,
+        "rank_sum": 454.19384806410426,
         "results": [
           {
             "opponent": {
@@ -14539,7 +14539,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1038
+              "rank": 1037
             }
           },
           {
@@ -14799,7 +14799,7 @@
           "rating": 1761
         },
         "win_count": 1,
-        "rank_sum": 837.3667791734194,
+        "rank_sum": 837.1312030860933,
         "results": [
           {
             "opponent": {
@@ -14838,7 +14838,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 863
+              "rank": 862
             }
           },
           {
@@ -15448,7 +15448,7 @@
                 "user_id": "manta1130",
                 "rating": 1650
               },
-              "rank": 1241,
+              "rank": 1240,
               "children": [
                 {
                   "user": {
@@ -15886,7 +15886,7 @@
                 "user_id": "boatmuscles",
                 "rating": 1700
               },
-              "rank": 1004,
+              "rank": 1003,
               "children": [
                 {
                   "user": {
@@ -16095,7 +16095,7 @@
           "rating": 1663
         },
         "win_count": 3,
-        "rank_sum": 465.8478597234474,
+        "rank_sum": 465.7926784848538,
         "results": [
           {
             "opponent": {
@@ -16134,7 +16134,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 992
+              "rank": 991
             }
           },
           {
@@ -16155,7 +16155,7 @@
           "rating": 1633
         },
         "win_count": 3,
-        "rank_sum": 532.3596638645372,
+        "rank_sum": 532.2663943840022,
         "results": [
           {
             "opponent": {
@@ -16194,7 +16194,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 872
+              "rank": 871
             }
           },
           {
@@ -16215,7 +16215,7 @@
           "rating": 1650
         },
         "win_count": 3,
-        "rank_sum": 610.1466479186598,
+        "rank_sum": 610.0861734649021,
         "results": [
           {
             "opponent": {
@@ -16254,7 +16254,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1241
+              "rank": 1240
             }
           },
           {
@@ -16275,7 +16275,7 @@
           "rating": 1700
         },
         "win_count": 3,
-        "rank_sum": 690.3250166902142,
+        "rank_sum": 690.2067293778541,
         "results": [
           {
             "opponent": {
@@ -16313,7 +16313,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1004
+              "rank": 1003
             }
           },
           {
@@ -16334,7 +16334,7 @@
           "rating": 1680
         },
         "win_count": 3,
-        "rank_sum": 870.6279027590266,
+        "rank_sum": 870.4745435643747,
         "results": [
           {
             "opponent": {
@@ -16373,7 +16373,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1112
+              "rank": 1111
             }
           },
           {
@@ -16394,7 +16394,7 @@
           "rating": 1671
         },
         "win_count": 3,
-        "rank_sum": 1011.7711303142507,
+        "rank_sum": 1011.6143413401936,
         "results": [
           {
             "opponent": {
@@ -16433,7 +16433,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1278
+              "rank": 1277
             }
           },
           {
@@ -16633,7 +16633,7 @@
           "rating": 1649
         },
         "win_count": 2,
-        "rank_sum": 545.1119334438085,
+        "rank_sum": 545.016780417908,
         "results": [
           {
             "opponent": {
@@ -16672,7 +16672,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 884
+              "rank": 883
             }
           },
           {
@@ -16693,7 +16693,7 @@
           "rating": 1687
         },
         "win_count": 2,
-        "rank_sum": 585.203923787993,
+        "rank_sum": 585.1239340613755,
         "results": [
           {
             "opponent": {
@@ -16732,7 +16732,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1035
+              "rank": 1034
             }
           },
           {
@@ -16872,7 +16872,7 @@
           "rating": 1657
         },
         "win_count": 2,
-        "rank_sum": 745.2031853316437,
+        "rank_sum": 745.1252369883891,
         "results": [
           {
             "opponent": {
@@ -16911,7 +16911,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1335
+              "rank": 1334
             }
           },
           {
@@ -16991,7 +16991,7 @@
           "rating": 1695
         },
         "win_count": 2,
-        "rank_sum": 953.940429820003,
+        "rank_sum": 953.7331389506652,
         "results": [
           {
             "opponent": {
@@ -17030,7 +17030,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1048
+              "rank": 1047
             }
           },
           {
@@ -17110,7 +17110,7 @@
           "rating": 1669
         },
         "win_count": 2,
-        "rank_sum": 1095.8210241501513,
+        "rank_sum": 1095.7550752043926,
         "results": [
           {
             "opponent": {
@@ -17149,7 +17149,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2134
+              "rank": 2133
             }
           },
           {
@@ -17170,7 +17170,7 @@
           "rating": 1717
         },
         "win_count": 2,
-        "rank_sum": 1132.8725882471306,
+        "rank_sum": 1132.6138726577838,
         "results": [
           {
             "opponent": {
@@ -17208,7 +17208,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1114
+              "rank": 1113
             }
           },
           {
@@ -17229,7 +17229,7 @@
           "rating": 1655
         },
         "win_count": 2,
-        "rank_sum": 1453.3378322643628,
+        "rank_sum": 1453.3017695043281,
         "results": [
           {
             "opponent": {
@@ -17268,7 +17268,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 3827
+              "rank": 3826
             }
           },
           {
@@ -17289,7 +17289,7 @@
           "rating": 1723
         },
         "win_count": 1,
-        "rank_sum": 867.8682545735088,
+        "rank_sum": 867.7367452723593,
         "results": [
           {
             "opponent": {
@@ -17327,7 +17327,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1197
+              "rank": 1196
             }
           },
           {
@@ -17523,7 +17523,7 @@
           "rating": 1658
         },
         "win_count": 1,
-        "rank_sum": 1146.7029700151065,
+        "rank_sum": 1146.5235555449462,
         "results": [
           {
             "opponent": {
@@ -17562,7 +17562,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1354
+              "rank": 1353
             }
           },
           {
@@ -17583,7 +17583,7 @@
           "rating": 1694
         },
         "win_count": 1,
-        "rank_sum": 1380.9546629131992,
+        "rank_sum": 1380.6732642280635,
         "results": [
           {
             "opponent": {
@@ -17621,7 +17621,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1302
+              "rank": 1301
             }
           },
           {
@@ -17758,7 +17758,7 @@
           "rating": 1639
         },
         "win_count": 1,
-        "rank_sum": 2750.0136534297717,
+        "rank_sum": 2749.7431278290437,
         "results": [
           {
             "opponent": {
@@ -17796,7 +17796,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2644
+              "rank": 2643
             }
           },
           {
@@ -18563,7 +18563,7 @@
                 "user_id": "ttakezawa",
                 "rating": 1580
               },
-              "rank": 1441,
+              "rank": 1440,
               "children": [
                 {
                   "user": {
@@ -18698,7 +18698,7 @@
                 "user_id": "bayashi_cl",
                 "rating": 1563
               },
-              "rank": 1023,
+              "rank": 1022,
               "children": [
                 {
                   "user": {
@@ -19079,7 +19079,7 @@
           "rating": 1590
         },
         "win_count": 3,
-        "rank_sum": 716.6242701725887,
+        "rank_sum": 716.4680659123596,
         "results": [
           {
             "opponent": {
@@ -19118,7 +19118,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 907
+              "rank": 906
             }
           },
           {
@@ -19139,7 +19139,7 @@
           "rating": 1505
         },
         "win_count": 3,
-        "rank_sum": 747.1920560657616,
+        "rank_sum": 747.0731845873908,
         "results": [
           {
             "opponent": {
@@ -19178,7 +19178,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1084
+              "rank": 1083
             }
           },
           {
@@ -19199,7 +19199,7 @@
           "rating": 1580
         },
         "win_count": 3,
-        "rank_sum": 848.9623957418862,
+        "rank_sum": 848.8755704953832,
         "results": [
           {
             "opponent": {
@@ -19238,7 +19238,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1441
+              "rank": 1440
             }
           },
           {
@@ -19259,7 +19259,7 @@
           "rating": 1566
         },
         "win_count": 3,
-        "rank_sum": 987.3817572308797,
+        "rank_sum": 987.156682298393,
         "results": [
           {
             "opponent": {
@@ -19298,7 +19298,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1041
+              "rank": 1040
             }
           },
           {
@@ -19319,7 +19319,7 @@
           "rating": 1553
         },
         "win_count": 3,
-        "rank_sum": 1109.5460684910784,
+        "rank_sum": 1109.3210893553228,
         "results": [
           {
             "opponent": {
@@ -19358,7 +19358,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1170
+              "rank": 1169
             }
           },
           {
@@ -19379,7 +19379,7 @@
           "rating": 1527
         },
         "win_count": 2,
-        "rank_sum": 770.0872824111522,
+        "rank_sum": 769.8857067434459,
         "results": [
           {
             "opponent": {
@@ -19418,7 +19418,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 858
+              "rank": 857
             }
           },
           {
@@ -19498,7 +19498,7 @@
           "rating": 1555
         },
         "win_count": 2,
-        "rank_sum": 856.0497207534622,
+        "rank_sum": 855.883738461018,
         "results": [
           {
             "opponent": {
@@ -19537,7 +19537,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1051
+              "rank": 1050
             }
           },
           {
@@ -19558,7 +19558,7 @@
           "rating": 1510
         },
         "win_count": 2,
-        "rank_sum": 900.6749378182134,
+        "rank_sum": 900.5351738465099,
         "results": [
           {
             "opponent": {
@@ -19597,7 +19597,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1205
+              "rank": 1204
             }
           },
           {
@@ -19618,7 +19618,7 @@
           "rating": 1539
         },
         "win_count": 2,
-        "rank_sum": 979.6060005566989,
+        "rank_sum": 979.456693334592,
         "results": [
           {
             "opponent": {
@@ -19657,7 +19657,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1268
+              "rank": 1267
             }
           },
           {
@@ -19678,7 +19678,7 @@
           "rating": 1581
         },
         "win_count": 2,
-        "rank_sum": 1062.184041742846,
+        "rank_sum": 1061.8519843049185,
         "results": [
           {
             "opponent": {
@@ -19716,7 +19716,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 922
+              "rank": 921
             }
           },
           {
@@ -19737,7 +19737,7 @@
           "rating": 1476
         },
         "win_count": 2,
-        "rank_sum": 1102.990851920838,
+        "rank_sum": 1102.8056805853814,
         "results": [
           {
             "opponent": {
@@ -19776,7 +19776,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1282
+              "rank": 1281
             }
           },
           {
@@ -19797,7 +19797,7 @@
           "rating": 1575
         },
         "win_count": 2,
-        "rank_sum": 1177.7439505283314,
+        "rank_sum": 1177.5053785479329,
         "results": [
           {
             "opponent": {
@@ -19836,7 +19836,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1206
+              "rank": 1205
             }
           },
           {
@@ -19916,7 +19916,7 @@
           "rating": 1579
         },
         "win_count": 2,
-        "rank_sum": 1457.9687504042108,
+        "rank_sum": 1457.6189998104671,
         "results": [
           {
             "opponent": {
@@ -19955,7 +19955,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1233
+              "rank": 1232
             }
           },
           {
@@ -19976,7 +19976,7 @@
           "rating": 1567
         },
         "win_count": 2,
-        "rank_sum": 1987.0409191657143,
+        "rank_sum": 1986.2508121275869,
         "results": [
           {
             "opponent": {
@@ -20014,7 +20014,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1118
+              "rank": 1117
             }
           },
           {
@@ -20035,7 +20035,7 @@
           "rating": 1556
         },
         "win_count": 1,
-        "rank_sum": 866.6486107141942,
+        "rank_sum": 866.565109774848,
         "results": [
           {
             "opponent": {
@@ -20074,7 +20074,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1500
+              "rank": 1499
             }
           },
           {
@@ -20155,7 +20155,7 @@
           "rating": 1582
         },
         "win_count": 1,
-        "rank_sum": 945.201501122622,
+        "rank_sum": 945.0682338430943,
         "results": [
           {
             "opponent": {
@@ -20194,7 +20194,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1295
+              "rank": 1294
             }
           },
           {
@@ -20215,7 +20215,7 @@
           "rating": 1474
         },
         "win_count": 1,
-        "rank_sum": 1033.496999248516,
+        "rank_sum": 1033.3618417938565,
         "results": [
           {
             "opponent": {
@@ -20254,7 +20254,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1406
+              "rank": 1405
             }
           },
           {
@@ -20335,7 +20335,7 @@
           "rating": 1562
         },
         "win_count": 1,
-        "rank_sum": 1367.2947347185798,
+        "rank_sum": 1366.9348848058567,
         "results": [
           {
             "opponent": {
@@ -20374,7 +20374,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1140
+              "rank": 1139
             }
           },
           {
@@ -20395,7 +20395,7 @@
           "rating": 1574
         },
         "win_count": 1,
-        "rank_sum": 1555.3344042995707,
+        "rank_sum": 1555.1606447951426,
         "results": [
           {
             "opponent": {
@@ -20434,7 +20434,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1866
+              "rank": 1865
             }
           },
           {
@@ -20513,7 +20513,7 @@
           "rating": 1491
         },
         "win_count": 1,
-        "rank_sum": 2231.094209161625,
+        "rank_sum": 2229.679204496325,
         "results": [
           {
             "opponent": {
@@ -20550,7 +20550,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 938
+              "rank": 937
             }
           },
           {
@@ -20571,7 +20571,7 @@
           "rating": 1583
         },
         "win_count": 1,
-        "rank_sum": 2950.4562352145995,
+        "rank_sum": 2949.3455037187287,
         "results": [
           {
             "opponent": {
@@ -20608,7 +20608,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1400
+              "rank": 1399
             }
           },
           {
@@ -20687,7 +20687,7 @@
           "rating": 1507
         },
         "win_count": 0,
-        "rank_sum": 1269.578782373433,
+        "rank_sum": 1269.316132308157,
         "results": [
           {
             "opponent": {
@@ -20726,7 +20726,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1239
+              "rank": 1238
             }
           },
           {
@@ -21013,7 +21013,7 @@
                 "user_id": "atree",
                 "rating": 1455
               },
-              "rank": 1060,
+              "rank": 1059,
               "children": [
                 {
                   "user": {
@@ -21157,7 +21157,7 @@
                 "user_id": "Yutchy591",
                 "rating": 1386
               },
-              "rank": 888,
+              "rank": 887,
               "children": [
                 {
                   "user": {
@@ -21292,7 +21292,7 @@
                 "user_id": "NokonoKotlin",
                 "rating": 1442
               },
-              "rank": 1303,
+              "rank": 1302,
               "children": [
                 {
                   "user": {
@@ -21553,7 +21553,7 @@
           "rating": 1419
         },
         "win_count": 3,
-        "rank_sum": 934.6040017672766,
+        "rank_sum": 934.4491713912347,
         "results": [
           {
             "opponent": {
@@ -21592,7 +21592,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1188
+              "rank": 1187
             }
           },
           {
@@ -21613,7 +21613,7 @@
           "rating": 1442
         },
         "win_count": 3,
-        "rank_sum": 999.8631935482152,
+        "rank_sum": 999.7158938737241,
         "results": [
           {
             "opponent": {
@@ -21652,7 +21652,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1303
+              "rank": 1302
             }
           },
           {
@@ -21673,7 +21673,7 @@
           "rating": 1455
         },
         "win_count": 3,
-        "rank_sum": 1015.102328398146,
+        "rank_sum": 1014.872893403152,
         "results": [
           {
             "opponent": {
@@ -21712,7 +21712,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1060
+              "rank": 1059
             }
           },
           {
@@ -21733,7 +21733,7 @@
           "rating": 1393
         },
         "win_count": 3,
-        "rank_sum": 1189.2246779749084,
+        "rank_sum": 1188.9889211777056,
         "results": [
           {
             "opponent": {
@@ -21772,7 +21772,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1225
+              "rank": 1224
             }
           },
           {
@@ -21793,7 +21793,7 @@
           "rating": 1376
         },
         "win_count": 3,
-        "rank_sum": 1287.9351813906255,
+        "rank_sum": 1287.7593205593585,
         "results": [
           {
             "opponent": {
@@ -21832,7 +21832,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1536
+              "rank": 1535
             }
           },
           {
@@ -21853,7 +21853,7 @@
           "rating": 1454
         },
         "win_count": 3,
-        "rank_sum": 1843.1799721075074,
+        "rank_sum": 1842.6497884682537,
         "results": [
           {
             "opponent": {
@@ -21891,7 +21891,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1266
+              "rank": 1265
             }
           },
           {
@@ -21912,7 +21912,7 @@
           "rating": 1460
         },
         "win_count": 2,
-        "rank_sum": 889.6474641486226,
+        "rank_sum": 889.5491379451528,
         "results": [
           {
             "opponent": {
@@ -21951,7 +21951,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1419
+              "rank": 1418
             }
           },
           {
@@ -22031,7 +22031,7 @@
           "rating": 1410
         },
         "win_count": 2,
-        "rank_sum": 1355.0107783540668,
+        "rank_sum": 1354.7734183749453,
         "results": [
           {
             "opponent": {
@@ -22070,7 +22070,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1391
+              "rank": 1390
             }
           },
           {
@@ -22091,7 +22091,7 @@
           "rating": 1435
         },
         "win_count": 2,
-        "rank_sum": 1372.2381001754884,
+        "rank_sum": 1371.7689102926815,
         "results": [
           {
             "opponent": {
@@ -22130,7 +22130,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1002
+              "rank": 1001
             }
           },
           {
@@ -22151,7 +22151,7 @@
           "rating": 1358
         },
         "win_count": 2,
-        "rank_sum": 1434.591879607447,
+        "rank_sum": 1434.2046240054972,
         "results": [
           {
             "opponent": {
@@ -22190,7 +22190,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1153
+              "rank": 1152
             }
           },
           {
@@ -22270,7 +22270,7 @@
           "rating": 1361
         },
         "win_count": 2,
-        "rank_sum": 1811.1433286071542,
+        "rank_sum": 1810.9780675158572,
         "results": [
           {
             "opponent": {
@@ -22309,7 +22309,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2228
+              "rank": 2227
             }
           },
           {
@@ -22389,7 +22389,7 @@
           "rating": 1388
         },
         "win_count": 2,
-        "rank_sum": 2124.866444073456,
+        "rank_sum": 2123.0797494780795,
         "results": [
           {
             "opponent": {
@@ -22426,7 +22426,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 795
+              "rank": 794
             }
           },
           {
@@ -22447,7 +22447,7 @@
           "rating": 1343
         },
         "win_count": 2,
-        "rank_sum": 2338.052711629061,
+        "rank_sum": 2337.292431248699,
         "results": [
           {
             "opponent": {
@@ -22485,7 +22485,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1341
+              "rank": 1340
             }
           },
           {
@@ -22506,7 +22506,7 @@
           "rating": 1356
         },
         "win_count": 2,
-        "rank_sum": 2378.955126028346,
+        "rank_sum": 2377.4414515489966,
         "results": [
           {
             "opponent": {
@@ -22544,7 +22544,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 967
+              "rank": 966
             }
           },
           {
@@ -22680,7 +22680,7 @@
           "rating": 1424
         },
         "win_count": 1,
-        "rank_sum": 1493.9652980608455,
+        "rank_sum": 1493.6287641928584,
         "results": [
           {
             "opponent": {
@@ -22718,7 +22718,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1288
+              "rank": 1287
             }
           },
           {
@@ -22798,7 +22798,7 @@
           "rating": 1377
         },
         "win_count": 1,
-        "rank_sum": 2848.8160010872766,
+        "rank_sum": 2848.530246105817,
         "results": [
           {
             "opponent": {
@@ -22836,7 +22836,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2665
+              "rank": 2664
             }
           },
           {
@@ -22857,7 +22857,7 @@
           "rating": 1406
         },
         "win_count": 1,
-        "rank_sum": 2937.056489226658,
+        "rank_sum": 2936.2801720351026,
         "results": [
           {
             "opponent": {
@@ -22895,7 +22895,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1667
+              "rank": 1666
             }
           },
           {
@@ -23090,7 +23090,7 @@
           "rating": 1464
         },
         "win_count": 1,
-        "rank_sum": 4860.0,
+        "rank_sum": 4856.0,
         "results": [
           {
             "opponent": {
@@ -23126,7 +23126,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1215
+              "rank": 1214
             }
           },
           {
@@ -23147,7 +23147,7 @@
           "rating": 1357
         },
         "win_count": 1,
-        "rank_sum": 9708.0,
+        "rank_sum": 9704.0,
         "results": [
           {
             "opponent": {
@@ -23183,7 +23183,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2427
+              "rank": 2426
             }
           },
           {
@@ -23204,7 +23204,7 @@
           "rating": 1416
         },
         "win_count": 0,
-        "rank_sum": 1374.981308487505,
+        "rank_sum": 1374.8595939925865,
         "results": [
           {
             "opponent": {
@@ -23243,7 +23243,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1971
+              "rank": 1970
             }
           },
           {
@@ -23454,7 +23454,7 @@
                 "user_id": "theanine",
                 "rating": 1303
               },
-              "rank": 1009,
+              "rank": 1008,
               "children": [
                 {
                   "user": {
@@ -23589,7 +23589,7 @@
                 "user_id": "Ryoga_exe",
                 "rating": 1320
               },
-              "rank": 1178,
+              "rank": 1177,
               "children": [
                 {
                   "user": {
@@ -23733,7 +23733,7 @@
                 "user_id": "EventHorizon",
                 "rating": 1303
               },
-              "rank": 1271,
+              "rank": 1270,
               "children": [
                 {
                   "user": {
@@ -23868,7 +23868,7 @@
                 "user_id": "Berling",
                 "rating": 1225
               },
-              "rank": 1171,
+              "rank": 1170,
               "children": [
                 {
                   "user": {
@@ -24129,7 +24129,7 @@
           "rating": 1320
         },
         "win_count": 3,
-        "rank_sum": 1156.45428054304,
+        "rank_sum": 1156.2131875203759,
         "results": [
           {
             "opponent": {
@@ -24168,7 +24168,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1178
+              "rank": 1177
             }
           },
           {
@@ -24189,7 +24189,7 @@
           "rating": 1303
         },
         "win_count": 3,
-        "rank_sum": 1194.7174178904756,
+        "rank_sum": 1194.4963932080425,
         "results": [
           {
             "opponent": {
@@ -24228,7 +24228,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1271
+              "rank": 1270
             }
           },
           {
@@ -24249,7 +24249,7 @@
           "rating": 1282
         },
         "win_count": 3,
-        "rank_sum": 1208.313368216114,
+        "rank_sum": 1207.7083075757357,
         "results": [
           {
             "opponent": {
@@ -24288,7 +24288,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 777
+              "rank": 776
             }
           },
           {
@@ -24309,7 +24309,7 @@
           "rating": 1208
         },
         "win_count": 3,
-        "rank_sum": 1331.5967099400057,
+        "rank_sum": 1331.3886399619025,
         "results": [
           {
             "opponent": {
@@ -24348,7 +24348,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1460
+              "rank": 1459
             }
           },
           {
@@ -24369,7 +24369,7 @@
           "rating": 1224
         },
         "win_count": 3,
-        "rank_sum": 1682.8847386834177,
+        "rank_sum": 1682.4830624983217,
         "results": [
           {
             "opponent": {
@@ -24408,7 +24408,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1328
+              "rank": 1327
             }
           },
           {
@@ -24429,7 +24429,7 @@
           "rating": 1301
         },
         "win_count": 3,
-        "rank_sum": 2656.346983823248,
+        "rank_sum": 2656.2505756567302,
         "results": [
           {
             "opponent": {
@@ -24467,7 +24467,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 4278
+              "rank": 4277
             }
           },
           {
@@ -24488,7 +24488,7 @@
           "rating": 1204
         },
         "win_count": 2,
-        "rank_sum": 1008.822169406305,
+        "rank_sum": 1008.6482761637972,
         "results": [
           {
             "opponent": {
@@ -24527,7 +24527,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1210
+              "rank": 1209
             }
           },
           {
@@ -24548,7 +24548,7 @@
           "rating": 1239
         },
         "win_count": 2,
-        "rank_sum": 1508.0013398492115,
+        "rank_sum": 1507.6283870037867,
         "results": [
           {
             "opponent": {
@@ -24587,7 +24587,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1235
+              "rank": 1234
             }
           },
           {
@@ -24608,7 +24608,7 @@
           "rating": 1258
         },
         "win_count": 2,
-        "rank_sum": 1548.6712027853853,
+        "rank_sum": 1548.4844046761102,
         "results": [
           {
             "opponent": {
@@ -24647,7 +24647,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1792
+              "rank": 1791
             }
           },
           {
@@ -24668,7 +24668,7 @@
           "rating": 1318
         },
         "win_count": 2,
-        "rank_sum": 1678.643287943323,
+        "rank_sum": 1678.2513458977799,
         "results": [
           {
             "opponent": {
@@ -24707,7 +24707,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1341
+              "rank": 1340
             }
           },
           {
@@ -24728,7 +24728,7 @@
           "rating": 1205
         },
         "win_count": 2,
-        "rank_sum": 2133.8900250182505,
+        "rank_sum": 2133.4232526557853,
         "results": [
           {
             "opponent": {
@@ -24767,7 +24767,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1562
+              "rank": 1561
             }
           },
           {
@@ -24906,7 +24906,7 @@
           "rating": 1263
         },
         "win_count": 2,
-        "rank_sum": 2290.4264792494673,
+        "rank_sum": 2288.4847466948163,
         "results": [
           {
             "opponent": {
@@ -24944,7 +24944,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 822
+              "rank": 821
             }
           },
           {
@@ -24965,7 +24965,7 @@
           "rating": 1218
         },
         "win_count": 2,
-        "rank_sum": 2356.2941100321664,
+        "rank_sum": 2356.0024782596665,
         "results": [
           {
             "opponent": {
@@ -25004,7 +25004,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2182
+              "rank": 2181
             }
           },
           {
@@ -25025,7 +25025,7 @@
           "rating": 1310
         },
         "win_count": 2,
-        "rank_sum": 2751.7735314932766,
+        "rank_sum": 2750.422654867257,
         "results": [
           {
             "opponent": {
@@ -25062,7 +25062,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1184
+              "rank": 1183
             }
           },
           {
@@ -25083,7 +25083,7 @@
           "rating": 1333
         },
         "win_count": 1,
-        "rank_sum": 1264.1347122638488,
+        "rank_sum": 1263.9584721766298,
         "results": [
           {
             "opponent": {
@@ -25122,7 +25122,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1506
+              "rank": 1505
             }
           },
           {
@@ -25202,7 +25202,7 @@
           "rating": 1300
         },
         "win_count": 1,
-        "rank_sum": 1852.4840625957527,
+        "rank_sum": 1852.0186263277865,
         "results": [
           {
             "opponent": {
@@ -25241,7 +25241,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1358
+              "rank": 1357
             }
           },
           {
@@ -25321,7 +25321,7 @@
           "rating": 1231
         },
         "win_count": 1,
-        "rank_sum": 2164.9477590083843,
+        "rank_sum": 2164.3932691801815,
         "results": [
           {
             "opponent": {
@@ -25360,7 +25360,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1454
+              "rank": 1453
             }
           },
           {
@@ -25381,7 +25381,7 @@
           "rating": 1306
         },
         "win_count": 1,
-        "rank_sum": 2210.9450356424863,
+        "rank_sum": 2210.4656732859444,
         "results": [
           {
             "opponent": {
@@ -25419,7 +25419,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1597
+              "rank": 1596
             }
           },
           {
@@ -25440,7 +25440,7 @@
           "rating": 1301
         },
         "win_count": 1,
-        "rank_sum": 3549.159403992128,
+        "rank_sum": 3548.0629921259842,
         "results": [
           {
             "opponent": {
@@ -25477,7 +25477,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1695
+              "rank": 1694
             }
           },
           {
@@ -25498,7 +25498,7 @@
           "rating": 1255
         },
         "win_count": 1,
-        "rank_sum": 3943.989090133157,
+        "rank_sum": 3943.501011514803,
         "results": [
           {
             "opponent": {
@@ -25536,7 +25536,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2823
+              "rank": 2822
             }
           },
           {
@@ -26174,7 +26174,7 @@
                 "user_id": "ngng628",
                 "rating": 1170
               },
-              "rank": 1386,
+              "rank": 1385,
               "children": [
                 {
                   "user": {
@@ -26626,7 +26626,7 @@
           "rating": 1163
         },
         "win_count": 3,
-        "rank_sum": 1117.7217848574153,
+        "rank_sum": 1117.2196630606147,
         "results": [
           {
             "opponent": {
@@ -26665,7 +26665,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 789
+              "rank": 788
             }
           },
           {
@@ -26745,7 +26745,7 @@
           "rating": 1170
         },
         "win_count": 3,
-        "rank_sum": 1377.4271149263914,
+        "rank_sum": 1377.1800640720007,
         "results": [
           {
             "opponent": {
@@ -26784,7 +26784,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1386
+              "rank": 1385
             }
           },
           {
@@ -26805,7 +26805,7 @@
           "rating": 1169
         },
         "win_count": 3,
-        "rank_sum": 1524.2729899908009,
+        "rank_sum": 1524.1614083358504,
         "results": [
           {
             "opponent": {
@@ -26844,7 +26844,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2282
+              "rank": 2281
             }
           },
           {
@@ -26924,7 +26924,7 @@
           "rating": 1005
         },
         "win_count": 3,
-        "rank_sum": 1756.8835083598317,
+        "rank_sum": 1756.6760478707397,
         "results": [
           {
             "opponent": {
@@ -26963,7 +26963,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1929
+              "rank": 1928
             }
           },
           {
@@ -26984,7 +26984,7 @@
           "rating": 1038
         },
         "win_count": 3,
-        "rank_sum": 1972.8751796982247,
+        "rank_sum": 1971.5710298127144,
         "results": [
           {
             "opponent": {
@@ -27023,7 +27023,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 864
+              "rank": 863
             }
           },
           {
@@ -27044,7 +27044,7 @@
           "rating": 1190
         },
         "win_count": 3,
-        "rank_sum": 2399.216082958154,
+        "rank_sum": 2398.8887198268317,
         "results": [
           {
             "opponent": {
@@ -27083,7 +27083,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2097
+              "rank": 2096
             }
           },
           {
@@ -27104,7 +27104,7 @@
           "rating": 1071
         },
         "win_count": 2,
-        "rank_sum": 1288.570128911286,
+        "rank_sum": 1288.2140134028173,
         "results": [
           {
             "opponent": {
@@ -27143,7 +27143,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1080
+              "rank": 1079
             }
           },
           {
@@ -27164,7 +27164,7 @@
           "rating": 1067
         },
         "win_count": 2,
-        "rank_sum": 1368.0579063998614,
+        "rank_sum": 1367.908994556036,
         "results": [
           {
             "opponent": {
@@ -27203,7 +27203,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1773
+              "rank": 1772
             }
           },
           {
@@ -27224,7 +27224,7 @@
           "rating": 1161
         },
         "win_count": 2,
-        "rank_sum": 1688.6376314629078,
+        "rank_sum": 1688.3852421134347,
         "results": [
           {
             "opponent": {
@@ -27263,7 +27263,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1681
+              "rank": 1680
             }
           },
           {
@@ -27284,7 +27284,7 @@
           "rating": 1124
         },
         "win_count": 2,
-        "rank_sum": 1735.8655700058712,
+        "rank_sum": 1735.3368872734434,
         "results": [
           {
             "opponent": {
@@ -27323,7 +27323,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1194
+              "rank": 1193
             }
           },
           {
@@ -27344,7 +27344,7 @@
           "rating": 1059
         },
         "win_count": 2,
-        "rank_sum": 1909.895814574333,
+        "rank_sum": 1909.3929716427456,
         "results": [
           {
             "opponent": {
@@ -27383,7 +27383,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1347
+              "rank": 1346
             }
           },
           {
@@ -27404,7 +27404,7 @@
           "rating": 1121
         },
         "win_count": 2,
-        "rank_sum": 1960.714708152727,
+        "rank_sum": 1960.626161898287,
         "results": [
           {
             "opponent": {
@@ -27443,7 +27443,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 3295
+              "rank": 3294
             }
           },
           {
@@ -27464,7 +27464,7 @@
           "rating": 1198
         },
         "win_count": 2,
-        "rank_sum": 2074.1429964638514,
+        "rank_sum": 2072.927803062508,
         "results": [
           {
             "opponent": {
@@ -27503,7 +27503,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 941
+              "rank": 940
             }
           },
           {
@@ -27524,7 +27524,7 @@
           "rating": 1188
         },
         "win_count": 2,
-        "rank_sum": 2246.0315683580693,
+        "rank_sum": 2245.841159752358,
         "results": [
           {
             "opponent": {
@@ -27563,7 +27563,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2574
+              "rank": 2573
             }
           },
           {
@@ -27584,7 +27584,7 @@
           "rating": 1134
         },
         "win_count": 2,
-        "rank_sum": 2249.0097049736255,
+        "rank_sum": 2248.886031178112,
         "results": [
           {
             "opponent": {
@@ -27623,7 +27623,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 3198
+              "rank": 3197
             }
           },
           {
@@ -27644,7 +27644,7 @@
           "rating": 1141
         },
         "win_count": 2,
-        "rank_sum": 2407.5976851820774,
+        "rank_sum": 2407.2510512233875,
         "results": [
           {
             "opponent": {
@@ -27683,7 +27683,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2045
+              "rank": 2044
             }
           },
           {
@@ -27704,7 +27704,7 @@
           "rating": 1023
         },
         "win_count": 2,
-        "rank_sum": 2552.359439367993,
+        "rank_sum": 2551.591950403197,
         "results": [
           {
             "opponent": {
@@ -27743,7 +27743,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1457
+              "rank": 1456
             }
           },
           {
@@ -27940,7 +27940,7 @@
           "rating": 1171
         },
         "win_count": 1,
-        "rank_sum": 1949.2533635770435,
+        "rank_sum": 1948.8692941392612,
         "results": [
           {
             "opponent": {
@@ -27979,7 +27979,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1573
+              "rank": 1572
             }
           },
           {
@@ -28000,7 +28000,7 @@
           "rating": 1063
         },
         "win_count": 1,
-        "rank_sum": 2462.79774101313,
+        "rank_sum": 2462.5335253403764,
         "results": [
           {
             "opponent": {
@@ -28039,7 +28039,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2396
+              "rank": 2395
             }
           },
           {
@@ -28060,7 +28060,7 @@
           "rating": 1093
         },
         "win_count": 1,
-        "rank_sum": 2895.224138784867,
+        "rank_sum": 2894.1137360462285,
         "results": [
           {
             "opponent": {
@@ -28098,7 +28098,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1374
+              "rank": 1373
             }
           },
           {
@@ -28292,7 +28292,7 @@
           "rating": 1170
         },
         "win_count": 1,
-        "rank_sum": 5904.0,
+        "rank_sum": 5900.0,
         "results": [
           {
             "opponent": {
@@ -28328,7 +28328,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1476
+              "rank": 1475
             }
           },
           {
@@ -28520,7 +28520,7 @@
           "rating": 1195
         },
         "win_count": 0,
-        "rank_sum": 8380.0,
+        "rank_sum": 8376.0,
         "results": [
           {
             "opponent": {
@@ -28556,7 +28556,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2095
+              "rank": 2094
             }
           },
           {
@@ -28988,7 +28988,7 @@
                 "user_id": "okeue",
                 "rating": 897
               },
-              "rank": 2957,
+              "rank": 2956,
               "children": [
                 {
                   "user": {
@@ -29139,7 +29139,7 @@
                 "user_id": "Dr_pilot",
                 "rating": 906
               },
-              "rank": 1407,
+              "rank": 1406,
               "children": [
                 {
                   "user": {
@@ -29291,7 +29291,7 @@
                 "user_id": "burita083",
                 "rating": 825
               },
-              "rank": 1932,
+              "rank": 1931,
               "children": [
                 {
                   "user": {
@@ -29442,7 +29442,7 @@
                 "user_id": "SYUKING",
                 "rating": 906
               },
-              "rank": 1195,
+              "rank": 1194,
               "children": [
                 {
                   "user": {
@@ -29591,7 +29591,7 @@
           "rating": 871
         },
         "win_count": 3,
-        "rank_sum": 1784.6482501829703,
+        "rank_sum": 1784.416508731609,
         "results": [
           {
             "opponent": {
@@ -29630,7 +29630,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1854
+              "rank": 1853
             }
           },
           {
@@ -29651,7 +29651,7 @@
           "rating": 1003
         },
         "win_count": 3,
-        "rank_sum": 2172.0814586311685,
+        "rank_sum": 2171.372358126771,
         "results": [
           {
             "opponent": {
@@ -29690,7 +29690,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1290
+              "rank": 1289
             }
           },
           {
@@ -29711,7 +29711,7 @@
           "rating": 896
         },
         "win_count": 3,
-        "rank_sum": 2481.0652353768382,
+        "rank_sum": 2480.7890758417566,
         "results": [
           {
             "opponent": {
@@ -29750,7 +29750,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2361
+              "rank": 2360
             }
           },
           {
@@ -29771,7 +29771,7 @@
           "rating": 825
         },
         "win_count": 3,
-        "rank_sum": 2610.3733847051235,
+        "rank_sum": 2609.916843568469,
         "results": [
           {
             "opponent": {
@@ -29810,7 +29810,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1932
+              "rank": 1931
             }
           },
           {
@@ -29831,7 +29831,7 @@
           "rating": 897
         },
         "win_count": 3,
-        "rank_sum": 2836.895806572729,
+        "rank_sum": 2836.66564342495,
         "results": [
           {
             "opponent": {
@@ -29870,7 +29870,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2957
+              "rank": 2956
             }
           },
           {
@@ -29891,7 +29891,7 @@
           "rating": 929
         },
         "win_count": 3,
-        "rank_sum": 3242.581713504806,
+        "rank_sum": 3242.3968295504865,
         "results": [
           {
             "opponent": {
@@ -29930,7 +29930,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 3771
+              "rank": 3770
             }
           },
           {
@@ -29951,7 +29951,7 @@
           "rating": 920
         },
         "win_count": 3,
-        "rank_sum": 3579.222661650575,
+        "rank_sum": 3579.0071080938155,
         "results": [
           {
             "opponent": {
@@ -29990,7 +29990,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 3855
+              "rank": 3854
             }
           },
           {
@@ -30011,7 +30011,7 @@
           "rating": 899
         },
         "win_count": 3,
-        "rank_sum": 3597.815033514229,
+        "rank_sum": 3597.5939203618527,
         "results": [
           {
             "opponent": {
@@ -30049,7 +30049,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 3826
+              "rank": 3825
             }
           },
           {
@@ -30070,7 +30070,7 @@
           "rating": 819
         },
         "win_count": 3,
-        "rank_sum": 4009.4046728734584,
+        "rank_sum": 4008.8495697347525,
         "results": [
           {
             "opponent": {
@@ -30108,7 +30108,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2691
+              "rank": 2690
             }
           },
           {
@@ -30129,7 +30129,7 @@
           "rating": 901
         },
         "win_count": 2,
-        "rank_sum": 2342.764998885122,
+        "rank_sum": 2342.5705785018085,
         "results": [
           {
             "opponent": {
@@ -30168,7 +30168,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2657
+              "rank": 2656
             }
           },
           {
@@ -30189,7 +30189,7 @@
           "rating": 986
         },
         "win_count": 2,
-        "rank_sum": 2369.844835095198,
+        "rank_sum": 2369.7489983893797,
         "results": [
           {
             "opponent": {
@@ -30228,7 +30228,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 3828
+              "rank": 3827
             }
           },
           {
@@ -30249,7 +30249,7 @@
           "rating": 823
         },
         "win_count": 2,
-        "rank_sum": 2531.458689200301,
+        "rank_sum": 2531.0548097012106,
         "results": [
           {
             "opponent": {
@@ -30288,7 +30288,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1992
+              "rank": 1991
             }
           },
           {
@@ -30309,7 +30309,7 @@
           "rating": 944
         },
         "win_count": 2,
-        "rank_sum": 2681.961364839747,
+        "rank_sum": 2681.651150239555,
         "results": [
           {
             "opponent": {
@@ -30348,7 +30348,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2408
+              "rank": 2407
             }
           },
           {
@@ -30369,7 +30369,7 @@
           "rating": 864
         },
         "win_count": 2,
-        "rank_sum": 2792.8885315515017,
+        "rank_sum": 2792.412356353005,
         "results": [
           {
             "opponent": {
@@ -30408,7 +30408,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2024
+              "rank": 2023
             }
           },
           {
@@ -30547,7 +30547,7 @@
           "rating": 1003
         },
         "win_count": 2,
-        "rank_sum": 5118.562201834862,
+        "rank_sum": 5117.007891356212,
         "results": [
           {
             "opponent": {
@@ -30584,7 +30584,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2053
+              "rank": 2052
             }
           },
           {
@@ -30663,7 +30663,7 @@
           "rating": 897
         },
         "win_count": 1,
-        "rank_sum": 2642.3750384874797,
+        "rank_sum": 2642.1145492485225,
         "results": [
           {
             "opponent": {
@@ -30702,7 +30702,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2589
+              "rank": 2588
             }
           },
           {
@@ -30723,7 +30723,7 @@
           "rating": 887
         },
         "win_count": 1,
-        "rank_sum": 3171.442621065977,
+        "rank_sum": 3171.0313531595557,
         "results": [
           {
             "opponent": {
@@ -30761,7 +30761,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2473
+              "rank": 2472
             }
           },
           {
@@ -30782,7 +30782,7 @@
           "rating": 920
         },
         "win_count": 1,
-        "rank_sum": 3489.126996437139,
+        "rank_sum": 3488.9590992745466,
         "results": [
           {
             "opponent": {
@@ -30821,7 +30821,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 4258
+              "rank": 4257
             }
           },
           {
@@ -30842,7 +30842,7 @@
           "rating": 917
         },
         "win_count": 1,
-        "rank_sum": 3516.6863200576245,
+        "rank_sum": 3516.508143322476,
         "results": [
           {
             "opponent": {
@@ -30880,7 +30880,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 4166
+              "rank": 4165
             }
           },
           {
@@ -31019,7 +31019,7 @@
           "rating": 833
         },
         "win_count": 1,
-        "rank_sum": 3683.99187161751,
+        "rank_sum": 3683.6125173179335,
         "results": [
           {
             "opponent": {
@@ -31057,7 +31057,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2991
+              "rank": 2990
             }
           },
           {
@@ -31137,7 +31137,7 @@
           "rating": 960
         },
         "win_count": 1,
-        "rank_sum": 4896.495443788693,
+        "rank_sum": 4895.662611800414,
         "results": [
           {
             "opponent": {
@@ -31175,7 +31175,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2683
+              "rank": 2682
             }
           },
           {
@@ -31253,7 +31253,7 @@
           "rating": 963
         },
         "win_count": 1,
-        "rank_sum": 7376.0,
+        "rank_sum": 7372.0,
         "results": [
           {
             "opponent": {
@@ -31289,7 +31289,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1844
+              "rank": 1843
             }
           },
           {
@@ -31310,7 +31310,7 @@
           "rating": 818
         },
         "win_count": 1,
-        "rank_sum": 15408.0,
+        "rank_sum": 15404.0,
         "results": [
           {
             "opponent": {
@@ -31346,7 +31346,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 3852
+              "rank": 3851
             }
           },
           {
@@ -31945,7 +31945,7 @@
                 "user_id": "paleApricot",
                 "rating": 815
               },
-              "rank": 2939,
+              "rank": 2938,
               "children": [
                 {
                   "user": {
@@ -32096,7 +32096,7 @@
                 "user_id": "coffeeaddict",
                 "rating": 690
               },
-              "rank": 2761,
+              "rank": 2760,
               "children": [
                 {
                   "user": {
@@ -32248,7 +32248,7 @@
                 "user_id": "broad",
                 "rating": 724
               },
-              "rank": 1732,
+              "rank": 1731,
               "children": [
                 {
                   "user": {
@@ -32399,7 +32399,7 @@
                 "user_id": "tonko_2",
                 "rating": 701
               },
-              "rank": 1012,
+              "rank": 1011,
               "children": [
                 {
                   "user": {
@@ -32548,7 +32548,7 @@
           "rating": 344
         },
         "win_count": 3,
-        "rank_sum": 1804.8895794209288,
+        "rank_sum": 1804.3348757667443,
         "results": [
           {
             "opponent": {
@@ -32587,7 +32587,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1212
+              "rank": 1211
             }
           },
           {
@@ -32608,7 +32608,7 @@
           "rating": 724
         },
         "win_count": 3,
-        "rank_sum": 1826.8461981917244,
+        "rank_sum": 1826.5679496661132,
         "results": [
           {
             "opponent": {
@@ -32647,7 +32647,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 1732
+              "rank": 1731
             }
           },
           {
@@ -32668,7 +32668,7 @@
           "rating": 815
         },
         "win_count": 3,
-        "rank_sum": 2222.6560205506225,
+        "rank_sum": 2222.512997776705,
         "results": [
           {
             "opponent": {
@@ -32707,7 +32707,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2939
+              "rank": 2938
             }
           },
           {
@@ -32728,7 +32728,7 @@
           "rating": 744
         },
         "win_count": 3,
-        "rank_sum": 2638.2178113510254,
+        "rank_sum": 2637.9424149847423,
         "results": [
           {
             "opponent": {
@@ -32767,7 +32767,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2514
+              "rank": 2513
             }
           },
           {
@@ -32788,7 +32788,7 @@
           "rating": 569
         },
         "win_count": 3,
-        "rank_sum": 2674.4873319397607,
+        "rank_sum": 2673.7006870103496,
         "results": [
           {
             "opponent": {
@@ -32827,7 +32827,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 1508
+              "rank": 1507
             }
           },
           {
@@ -32848,7 +32848,7 @@
           "rating": 715
         },
         "win_count": 3,
-        "rank_sum": 2710.769176799294,
+        "rank_sum": 2710.412240800152,
         "results": [
           {
             "opponent": {
@@ -32887,7 +32887,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2269
+              "rank": 2268
             }
           },
           {
@@ -32908,7 +32908,7 @@
           "rating": 104
         },
         "win_count": 3,
-        "rank_sum": 3240.02292839454,
+        "rank_sum": 3239.6211093113393,
         "results": [
           {
             "opponent": {
@@ -32947,7 +32947,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2556
+              "rank": 2555
             }
           },
           {
@@ -32968,7 +32968,7 @@
           "rating": 476
         },
         "win_count": 3,
-        "rank_sum": 3283.6126638806104,
+        "rank_sum": 3283.5076993763214,
         "results": [
           {
             "opponent": {
@@ -33007,7 +33007,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 5068
+              "rank": 5067
             }
           },
           {
@@ -33028,7 +33028,7 @@
           "rating": 640
         },
         "win_count": 3,
-        "rank_sum": 4610.419743181687,
+        "rank_sum": 4609.7315104587315,
         "results": [
           {
             "opponent": {
@@ -33066,7 +33066,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2779
+              "rank": 2778
             }
           },
           {
@@ -33087,7 +33087,7 @@
           "rating": 724
         },
         "win_count": 2,
-        "rank_sum": 2809.5457085627813,
+        "rank_sum": 2809.3660911609186,
         "results": [
           {
             "opponent": {
@@ -33126,7 +33126,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 3315
+              "rank": 3314
             }
           },
           {
@@ -33147,7 +33147,7 @@
           "rating": 722
         },
         "win_count": 2,
-        "rank_sum": 3005.0424820613885,
+        "rank_sum": 3004.6325226215267,
         "results": [
           {
             "opponent": {
@@ -33186,7 +33186,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 2347
+              "rank": 2346
             }
           },
           {
@@ -33207,7 +33207,7 @@
           "rating": 636
         },
         "win_count": 2,
-        "rank_sum": 3005.548478708249,
+        "rank_sum": 3005.471534040487,
         "results": [
           {
             "opponent": {
@@ -33246,7 +33246,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 5418
+              "rank": 5417
             }
           },
           {
@@ -33267,7 +33267,7 @@
           "rating": 792
         },
         "win_count": 2,
-        "rank_sum": 3100.140386150775,
+        "rank_sum": 3099.8303039399616,
         "results": [
           {
             "opponent": {
@@ -33306,7 +33306,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2784
+              "rank": 2783
             }
           },
           {
@@ -33327,7 +33327,7 @@
           "rating": 627
         },
         "win_count": 2,
-        "rank_sum": 3251.0173914365487,
+        "rank_sum": 3250.666379580044,
         "results": [
           {
             "opponent": {
@@ -33365,7 +33365,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 2744
+              "rank": 2743
             }
           },
           {
@@ -33386,7 +33386,7 @@
           "rating": 473
         },
         "win_count": 2,
-        "rank_sum": 4255.244616019578,
+        "rank_sum": 4255.037637120276,
         "results": [
           {
             "opponent": {
@@ -33425,7 +33425,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 4677
+              "rank": 4676
             }
           },
           {
@@ -33446,7 +33446,7 @@
           "rating": 590
         },
         "win_count": 2,
-        "rank_sum": 4591.246357975365,
+        "rank_sum": 4590.741447990689,
         "results": [
           {
             "opponent": {
@@ -33484,7 +33484,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 3231
+              "rank": 3230
             }
           },
           {
@@ -33505,7 +33505,7 @@
           "rating": 661
         },
         "win_count": 2,
-        "rank_sum": 5176.024707876981,
+        "rank_sum": 5175.822592797512,
         "results": [
           {
             "opponent": {
@@ -33543,7 +33543,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 5757
+              "rank": 5756
             }
           },
           {
@@ -33737,7 +33737,7 @@
           "rating": 484
         },
         "win_count": 2,
-        "rank_sum": 7735.798837623059,
+        "rank_sum": 7735.290628706999,
         "results": [
           {
             "opponent": {
@@ -33774,7 +33774,7 @@
             },
             "result": {
               "result": "Win",
-              "rank": 5426
+              "rank": 5425
             }
           },
           {
@@ -33913,7 +33913,7 @@
           "rating": 597
         },
         "win_count": 1,
-        "rank_sum": 4847.181198025911,
+        "rank_sum": 4846.794752020418,
         "results": [
           {
             "opponent": {
@@ -33951,7 +33951,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 3899
+              "rank": 3898
             }
           },
           {
@@ -33972,7 +33972,7 @@
           "rating": 429
         },
         "win_count": 1,
-        "rank_sum": 5353.608427493804,
+        "rank_sum": 5353.378764789349,
         "results": [
           {
             "opponent": {
@@ -34010,7 +34010,7 @@
             },
             "result": {
               "result": "Lose",
-              "rank": 5586
+              "rank": 5585
             }
           },
           {
