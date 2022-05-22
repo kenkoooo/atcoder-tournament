@@ -55,7 +55,7 @@ const useStyle = makeStyles({
 const CHAMPIONS: { [key: string]: string[] } = {
   heno239: ["1", "2", "5", "6"],
   Tiramister: ["3"],
-  SSRS: ["4"],
+  SSRS: ["4", "9"],
   snuke: ["7"],
   sansen: ["8"]
 };
@@ -76,7 +76,7 @@ const WinnerTooltip = (props: {
   }
 
   const pastWonRounds = (CHAMPIONS[props.userId] ?? []).filter(
-    (pastSeasonId) => pastSeasonId < props.seasonId
+    (pastSeasonId) => Number(pastSeasonId) < Number(props.seasonId)
   );
   if (pastWonRounds.length > 0) {
     const label = pastWonRounds.map((round) => `${round}期`).join("・");
