@@ -106,4 +106,8 @@ B〜Dクラスは、最高レートの高い順に、人数が均等になるよ
 - 2回戦: AtCoder Beginner Contest 259
 - 準々決勝: AtCoder Beginner Contest 260
 - 準決勝: AtCoder Beginner Contest 261
-- 決勝: AtCoder Beginner Contest 262
+- ~~決勝: AtCoder Beginner Contest 262~~
+- ~~決勝: AtCoder Beginner Contest 263~~
+- ~~決勝: AtCoder Beginner Contest 264~~
+- 決勝: AtCoder Beginner Contest 265
+
