@@ -10,11 +10,12 @@ import {
   withStyles,
 } from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { GameNode } from "../components/GameNode/GameNode";
 import { LeagueTable } from "../components/LeagueTable/LeagueTable";
 import { User } from "../models/TournamentNode";
-import { useTournament } from "../utils/API";
+import { useTournament, useUserHistories } from "../utils/API";
+import { UserHistory } from "../models/UserHistory";
 
 interface Props {
   seasonId: string;
@@ -62,6 +63,14 @@ export const Tournament = (props: Props) => {
   const tournament = useTournament(props.seasonId).data;
   const [selectedDivision, setSelectedDivision] = useState<number>(0);
   const [showTop16, setShowTop16] = useState(false);
+  const histories = useUserHistories().data ?? [];
+  const historyMap = useMemo(() => {
+    const map = new Map<string, UserHistory>();
+    histories.forEach((history) => {
+      map.set(history.user_id, history);
+    });
+    return map;
+  }, [histories]);
 
   const keys = Object.keys(tournament ?? {});
   const bracket =
@@ -115,6 +124,7 @@ export const Tournament = (props: Props) => {
                   tournament={node}
                   depth={0}
                   config={{ depthLimit, defendingChampion }}
+                  histories={historyMap}
                 />
               )}
             </Box>

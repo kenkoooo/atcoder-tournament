@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { User } from "../../models/TournamentNode";
+import { UserHistory } from "../../models/UserHistory";
 import { INF_RANK } from "../../utils/Constants";
 import { RatingName } from "../RatingName";
 
@@ -12,6 +13,7 @@ interface Props {
   rank: number | null;
   winner?: boolean;
   defendingChampion?: boolean;
+  histories: UserHistory["histories"];
 }
 
 const useStyle = makeStyles({
@@ -52,17 +54,9 @@ const useStyle = makeStyles({
   },
 });
 
-const CHAMPIONS: { [key: string]: string[] } = {
-  heno239: ["1", "2", "5", "6"],
-  Tiramister: ["3"],
-  SSRS: ["4", "9"],
-  snuke: ["7"],
-  sansen: ["8"]
-};
-
 const WinnerTooltip = (props: {
   defendingChampion: boolean | undefined;
-  userId: string;
+  histories: UserHistory["histories"];
   seasonId: string;
 }) => {
   if (props.defendingChampion) {
@@ -75,25 +69,54 @@ const WinnerTooltip = (props: {
     );
   }
 
-  const pastWonRounds = (CHAMPIONS[props.userId] ?? []).filter(
-    (pastSeasonId) => Number(pastSeasonId) < Number(props.seasonId)
+  const pastA1 = Object.entries(props.histories).filter(
+    ([seasonId, history]) =>
+      parseInt(seasonId) < parseInt(props.seasonId) &&
+      (history.class === "A" || history.class === "A1")
   );
+
+  const pastWonRounds = pastA1
+    .filter(([, history]) => history.top_k === 1)
+    .map(([seasonId]) => parseInt(seasonId))
+    .sort();
+
   if (pastWonRounds.length > 0) {
     const label = pastWonRounds.map((round) => `${round}期`).join("・");
     return (
       <Tooltip title={`第${label}王者`}>
-        <span role="img" aria-label="king">
-          &#x1F3C5;{" "}
+        <span role="img" aria-label="gold">
+          &#x1F3C6;{" "}
         </span>
       </Tooltip>
     );
-  } else {
-    return null;
   }
+
+  const pastSilver = pastA1.filter(([, history]) => history.top_k === 2);
+  if (pastSilver.length > 0) {
+    return (
+      <Tooltip title="A1決勝経験者">
+        <span role="img" aria-label="silver">
+          &#x1F948;{" "}
+        </span>
+      </Tooltip>
+    );
+  }
+
+  const pastBronze = pastA1.filter(([, history]) => history.top_k === 4);
+  if (pastBronze.length > 0) {
+    return (
+      <Tooltip title="A1準決勝経験者">
+        <span role="img" aria-label="bronze">
+          &#x1F949;{" "}
+        </span>
+      </Tooltip>
+    );
+  }
+  return null;
 };
 
 export const RankedRatingName = (props: Props) => {
-  const { user, rank, winner } = props;
+  const { user, rank, winner, histories } = props;
   const { seasonId } = useParams<{ seasonId: string }>();
   const classes = useStyle({ winner });
 
@@ -109,7 +132,7 @@ export const RankedRatingName = (props: Props) => {
     <div className={classes.nameContainer}>
       <WinnerTooltip
         defendingChampion={props.defendingChampion}
-        userId={user.user_id}
+        histories={histories}
         seasonId={seasonId}
       />
       <RatingName rating={user.rating}>{user.user_id}</RatingName>

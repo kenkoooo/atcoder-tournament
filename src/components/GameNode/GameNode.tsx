@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
-import React from "react";
+import React, { useMemo } from "react";
 import { TournamentNode } from "../../models/TournamentNode";
+import { UserHistory } from "../../models/UserHistory";
 import { RankedRatingName } from "./RankedRatingName";
 
 const SIDE_MARGIN = "60px";
@@ -108,17 +109,24 @@ interface Props {
     depthLimit: number;
     defendingChampion?: string;
   };
+  histories: Map<string, UserHistory>;
 }
 
 export const GameNode = (props: Props) => {
-  const { tournament, depth, config, promotedUser } = props;
+  const { tournament, depth, config, promotedUser, histories } = props;
   const classes = useStyle();
   const nextPromotedUser = tournament.user?.user_id;
+  const userHistory = useMemo(() => {
+    if (tournament.user?.user_id) {
+      return histories.get(tournament.user.user_id);
+    }
+  }, [tournament, histories]);
   if (tournament.children.length === 0 || config.depthLimit <= depth) {
     return (
       <RankedRatingName
         user={tournament.user}
         rank={tournament.rank}
+        histories={userHistory?.histories ?? {}}
         defendingChampion={
           tournament.user?.user_id === config.defendingChampion
         }
@@ -135,6 +143,7 @@ export const GameNode = (props: Props) => {
           <RankedRatingName
             user={tournament.user}
             rank={tournament.rank}
+            histories={userHistory?.histories ?? {}}
             defendingChampion={
               tournament.user?.user_id === config.defendingChampion
             }
@@ -152,6 +161,7 @@ export const GameNode = (props: Props) => {
                 promotedUser={nextPromotedUser}
                 depth={depth + 1}
                 config={config}
+                histories={histories}
               />
             </div>
           ))}
