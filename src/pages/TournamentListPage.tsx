@@ -95,7 +95,11 @@ export const TournamentListPage = () => {
     );
   }
 
-  tournaments.sort((a, b) => b.season.localeCompare(a.season));
+  tournaments.sort((a, b) => {
+    const aSeason = parseInt(a.season);
+    const bSeason = parseInt(b.season);
+    return bSeason - aSeason;
+  });
 
   return (
     <Container className={classes.root}>

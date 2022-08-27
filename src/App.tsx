@@ -96,31 +96,31 @@ const App = () => {
             </Typography>
             <nav>
               <Link
-                  component={RouterLink}
-                  variant="button"
-                  color="textPrimary"
-                  to="/tournament/10"
-                  className={classes.link}
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/tournament/11"
+                className={classes.link}
+              >
+                第11期
+              </Link>
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/tournament/10"
+                className={classes.link}
               >
                 第10期
               </Link>
               <Link
-                  component={RouterLink}
-                  variant="button"
-                  color="textPrimary"
-                  to="/tournament/9"
-                  className={classes.link}
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
+                to="/tournament/9"
+                className={classes.link}
               >
                 第9期
-              </Link>
-              <Link
-                  component={RouterLink}
-                  variant="button"
-                  color="textPrimary"
-                  to="/tournament/8"
-                  className={classes.link}
-              >
-                第8期
               </Link>
               <Link
                 component={RouterLink}
