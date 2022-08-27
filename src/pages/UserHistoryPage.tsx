@@ -182,7 +182,11 @@ export const UserHistoryPage = () => {
   const a1Count = sorted.filter((e) => e.result.class === "A1").length;
 
   const userRecord = (records[user_id] ?? [])
-    .sort((a, b) => b.season.localeCompare(a.season))
+    .sort((a, b) => {
+      const aSeason = parseInt(a.season);
+      const bSeason = parseInt(b.season);
+      return bSeason - aSeason;
+    })
     .flatMap((record) => {
       const { class: classId, user, battles, season } = record;
       const reversed = Array.from(battles).reverse();
