@@ -11,13 +11,13 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { REGISTER_SEASON_ID } from "../../utils/Constants";
 import {
   saveUserData,
   useLoginState,
   useUserData,
 } from "../../utils/PrivateAPI";
 
-const REGISTER_SEASON_ID = 10;
 
 const useStyles = makeStyles((theme) => ({
   paper: {

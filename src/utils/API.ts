@@ -13,7 +13,7 @@ const fetchTournamentSeason9 = async (): Promise<TournamentResponse> => {
   const usersResponse = await fetch("https://abc-api.kenkoooo.com/api/users");
   const usersText = await usersResponse.text();
 
-  const previousBracketsResponse = await fetch("./bracket-9.json");
+  const previousBracketsResponse = await fetch("./bracket-10.json");
   const previousBracketsText = await previousBracketsResponse.text();
 
   const ratingResponse = await fetch("./ratings.json");
@@ -31,7 +31,7 @@ const fetchTournamentSeason9 = async (): Promise<TournamentResponse> => {
 
 export const useTournament = (seasonId: string) => {
   const fetcher = (url: string) => {
-    if (seasonId === "X") {
+    if (seasonId === "11") {
       return fetchTournamentSeason9();
     } else {
       return fetch(url)
