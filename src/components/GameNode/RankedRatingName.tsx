@@ -94,7 +94,7 @@ const WinnerTooltip = (props: {
   const pastSilver = pastA1.filter(([, history]) => history.top_k === 2);
   if (pastSilver.length > 0) {
     return (
-      <Tooltip title="A1決勝経験者">
+      <Tooltip title="A1準優勝経験者">
         <span role="img" aria-label="silver">
           &#x1F948;{" "}
         </span>

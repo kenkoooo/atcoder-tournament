@@ -99,6 +99,15 @@ const App = () => {
                 component={RouterLink}
                 variant="button"
                 color="textPrimary"
+                to="/tournament/12"
+                className={classes.link}
+              >
+                第12期
+              </Link>
+              <Link
+                component={RouterLink}
+                variant="button"
+                color="textPrimary"
                 to="/tournament/11"
                 className={classes.link}
               >
@@ -112,15 +121,6 @@ const App = () => {
                 className={classes.link}
               >
                 第10期
-              </Link>
-              <Link
-                component={RouterLink}
-                variant="button"
-                color="textPrimary"
-                to="/tournament/9"
-                className={classes.link}
-              >
-                第9期
               </Link>
               <Link
                 component={RouterLink}
