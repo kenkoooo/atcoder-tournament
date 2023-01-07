@@ -5,4 +5,4 @@ export const INF_RANK = 100000;
 export const SEASON_ID = 12;
 
 // 登録受付中の Season
-export const REGISTER_SEASON_ID = 12;
+export const REGISTER_SEASON_ID = 13;
