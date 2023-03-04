@@ -33742,7 +33742,7 @@
       "children": [
         {
           "user": {
-            "user_id": "minamiKH",
+            "user_id": "rurun",
             "rating": 905
           },
           "rank": 1395,
@@ -33916,21 +33916,21 @@
             },
             {
               "user": {
-                "user_id": "minamiKH",
+                "user_id": "rurun",
                 "rating": 905
               },
               "rank": 1771,
               "children": [
                 {
                   "user": {
-                    "user_id": "minamiKH",
+                    "user_id": "rurun",
                     "rating": 905
                   },
                   "rank": 1425,
                   "children": [
                     {
                       "user": {
-                        "user_id": "minamiKH",
+                        "user_id": "rurun",
                         "rating": 905
                       },
                       "rank": 2393,
@@ -33953,7 +33953,7 @@
                         },
                         {
                           "user": {
-                            "user_id": "minamiKH",
+                            "user_id": "rurun",
                             "rating": 905
                           },
                           "rank": 1695,
@@ -34423,7 +34423,7 @@
         "results": [
           {
             "opponent": {
-              "user_id": "minamiKH",
+              "user_id": "rurun",
               "rating": 905
             },
             "result": {
@@ -34797,7 +34797,7 @@
           },
           {
             "opponent": {
-              "user_id": "minamiKH",
+              "user_id": "rurun",
               "rating": 905
             },
             "result": {
@@ -34937,7 +34937,7 @@
           },
           {
             "opponent": {
-              "user_id": "minamiKH",
+              "user_id": "rurun",
               "rating": 905
             },
             "result": {
@@ -35590,7 +35590,7 @@
           },
           {
             "opponent": {
-              "user_id": "minamiKH",
+              "user_id": "rurun",
               "rating": 905
             },
             "result": {
@@ -36891,7 +36891,7 @@
         "results": [
           {
             "opponent": {
-              "user_id": "minamiKH",
+              "user_id": "rurun",
               "rating": 905
             },
             "result": {
@@ -37230,7 +37230,7 @@
       ],
       "2": [
         {
-          "user_id": "minamiKH",
+          "user_id": "rurun",
           "rating": 905
         }
       ],
