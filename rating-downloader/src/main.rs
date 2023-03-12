@@ -9,6 +9,7 @@ const PATH: &str = "./public/ratings.json";
 #[derive(Serialize, Deserialize)]
 struct RatingEntry {
     user_id: String,
+    birth: Option<u32>,
     rating: u32,
 }
 
@@ -24,13 +25,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let content = read_to_string(PATH)?;
     let old_ratings: Vec<RatingEntry> = serde_json::from_str(&content)?;
     for rating in old_ratings {
-        ratings.insert(rating.user_id, rating.rating);
+        ratings.insert(rating.user_id.clone(), rating);
     }
 
     for i in 0.. {
         eprintln!("page={}", i + 1);
         let html = client
-            .get(&format!("https://atcoder.jp/ranking?page={}", i + 1))
+            .get(&format!(
+                "https://atcoder.jp/ranking/all?contestType=algo&page={}",
+                i + 1
+            ))
             .send()
             .await?
             .text()
@@ -52,8 +56,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .next()
                 .unwrap()
                 .to_string();
+            let birth: Option<u32> = tds[2].text().next().and_then(|x| x.parse().ok());
             let rating: u32 = tds[4].text().next().unwrap().parse().unwrap();
-            ratings.insert(user_id, rating);
+            ratings.insert(
+                user_id.clone(),
+                RatingEntry {
+                    rating,
+                    birth,
+                    user_id,
+                },
+            );
             pushed = true;
         }
         if !pushed {
@@ -61,10 +73,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
     }
 
-    let ratings = ratings
-        .into_iter()
-        .map(|(user_id, rating)| RatingEntry { rating, user_id })
-        .collect::<Vec<_>>();
+    let ratings = ratings.into_values().collect::<Vec<_>>();
     let result = serde_json::to_string(&ratings)?;
     let mut file = File::create(PATH)?;
     file.write_all(result.as_bytes())?;
