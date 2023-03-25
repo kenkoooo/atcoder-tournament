@@ -6,7 +6,7 @@ use std::fs::write;
 use tournament_tools::types::{ClassId, Rank, UserId, DUMMY_USER_ID_PREFIX};
 use tournament_tools::{read_brackets, LeagueBattleResult, User};
 
-const FINISHED: u32 = 11;
+const FINISHED: u32 = 12;
 
 fn main() -> Result<()> {
     let mut tournament_histories = vec![];
